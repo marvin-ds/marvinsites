@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/layout/Header.astro';
+import Footer from '../../components/layout/Footer.astro';
+import WhatsAppButton from '../../components/layout/WhatsAppButton.astro';
+import CidadeHero from '../../components/sections/CidadeHero.astro';
+import CidadeNichos from '../../components/sections/CidadeNichos.astro';
+import CidadeCTA from '../../components/sections/CidadeCTA.astro';
+
+const cidade = 'Guarujá';
+const uf = 'SP';
+const mensagemWpp = 'Olá! Tenho um negócio em Guarujá e gostaria de saber como a Marvin Sites pode melhorar minha presença digital.';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Criação de site para pequenos negócios em Guarujá SP',
+  provider: { '@type': 'LocalBusiness', name: 'Marvin Sites' },
+  areaServed: { '@type': 'City', name: 'Guarujá', containedInPlace: { '@type': 'State', name: 'São Paulo' } },
+  description: 'Sites e presença digital para pequenos negócios em Guarujá SP — pousadas, clínicas, estética, reformas e mais.',
+};
+
+const diferenciais = [
+  { titulo: 'Cidade turística, concorrência real', texto: 'Em Guarujá, quem aparece melhor no Google quando o turista pesquisa leva a vantagem. Pousadas, restaurantes e serviços locais competem diretamente pela primeira impressão digital.' },
+  { titulo: 'Reservas diretas para pousadas', texto: 'Negócios de hospedagem em Guarujá que têm site próprio captam reservas diretas sem pagar comissão para plataformas. A diferença na margem é significativa.' },
+  { titulo: 'Visibilidade além da temporada', texto: 'No baixo verão, quem aparece bem no Google mantém movimento. Presença digital constante reduz a sazonalidade.' },
+];
+---
+
+<BaseLayout
+  title="Criação de Site para Pequenos Negócios em Guarujá SP | Marvin Sites"
+  description="Sites profissionais para pequenos negócios em Guarujá SP. Pousadas, clínicas, estética, reformas e mais. Entrega em 7 dias úteis. Diagnóstico gratuito."
+  canonical="https://marvinsites.com.br/cidades/guaruja"
+  {schema}
+>
+  <Header />
+  <main>
+    <CidadeHero
+      {cidade} {uf}
+      descricaoCidade="Guarujá recebe turistas e moradores que pesquisam tudo no celular — pousadas, clínicas, serviços locais. A Marvin Sites cria páginas profissionais para que seu negócio apareça bem nessa busca, transmita confiança e receba contatos pelo WhatsApp."
+      {mensagemWpp}
+    />
+
+    <section class="bg-white py-16 px-4 sm:px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-bold text-petroleo mb-8 text-center">
+          Por que a Marvin Sites para negócios em Guarujá?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {diferenciais.map((d) => (
+            <div class="bg-gelo rounded-xl border border-nevoa p-6">
+              <h3 class="font-semibold text-petroleo mb-2">{d.titulo}</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">{d.texto}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CidadeNichos {cidade} />
+
+    <section class="bg-gelo py-12 px-4 sm:px-6">
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-xl font-semibold text-petroleo mb-4">Atendemos em todos os bairros do Guarujá</h2>
+        <p class="text-gray-500 text-sm leading-relaxed max-w-2xl mx-auto">
+          Pitangueiras, Enseada, Astúrias, Pernambuco, Santa Cruz dos Navegantes, Jardim Virgínia, Perequê, Morrinhos, Tombo e toda a região da ilha.
+        </p>
+      </div>
+    </section>
+
+    <CidadeCTA {cidade} {mensagemWpp} />
+  </main>
+  <Footer />
+  <WhatsAppButton origem="cidade-guaruja" />
+</BaseLayout>

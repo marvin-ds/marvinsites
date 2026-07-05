@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/layout/Header.astro';
+import Footer from '../../components/layout/Footer.astro';
+import WhatsAppButton from '../../components/layout/WhatsAppButton.astro';
+import CidadeHero from '../../components/sections/CidadeHero.astro';
+import CidadeNichos from '../../components/sections/CidadeNichos.astro';
+import CidadeCTA from '../../components/sections/CidadeCTA.astro';
+
+const cidade = 'Praia Grande';
+const uf = 'SP';
+const mensagemWpp = 'Olá! Tenho um negócio em Praia Grande e gostaria de saber como a Marvin Sites pode melhorar minha presença digital.';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Criação de site para pequenos negócios em Praia Grande SP',
+  provider: { '@type': 'LocalBusiness', name: 'Marvin Sites' },
+  areaServed: { '@type': 'City', name: 'Praia Grande', containedInPlace: { '@type': 'State', name: 'São Paulo' } },
+  description: 'Sites e presença digital para pequenos negócios em Praia Grande SP — clínicas, estética, reformas, contadores e mais.',
+};
+
+const diferenciais = [
+  { titulo: 'Uma das maiores cidades da Baixada', texto: 'Praia Grande tem mais de 300 mil habitantes e um comércio local muito ativo. O pequeno empresário que aparece bem no Google tem vantagem real sobre quem não tem presença digital.' },
+  { titulo: 'Público que pesquisa no celular', texto: 'O morador de Praia Grande pesquisa no Google antes de contratar qualquer serviço local. Ter uma página clara e profissional é a diferença entre ser encontrado ou não.' },
+  { titulo: 'Mercado em crescimento', texto: 'A cidade cresce e novos negócios surgem todo mês. Quem estabelece presença digital agora tem vantagem competitiva antes que o nicho fique saturado online.' },
+];
+---
+
+<BaseLayout
+  title="Criação de Site para Pequenos Negócios em Praia Grande SP | Marvin Sites"
+  description="Sites profissionais para pequenos negócios em Praia Grande SP. Clínicas, estética, reformas, contadores e mais. Entrega em 7 dias úteis. Diagnóstico gratuito."
+  canonical="https://marvinsites.com.br/cidades/praia-grande"
+  {schema}
+>
+  <Header />
+  <main>
+    <CidadeHero
+      {cidade} {uf}
+      descricaoCidade="Praia Grande tem um mercado local forte e crescente. A Marvin Sites ajuda pequenos negócios da cidade a terem uma presença digital clara — para serem encontrados no Google, transmitirem confiança e receberem mais contatos pelo WhatsApp."
+      {mensagemWpp}
+    />
+
+    <section class="bg-white py-16 px-4 sm:px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-bold text-petroleo mb-8 text-center">
+          Por que a Marvin Sites para negócios em Praia Grande?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {diferenciais.map((d) => (
+            <div class="bg-gelo rounded-xl border border-nevoa p-6">
+              <h3 class="font-semibold text-petroleo mb-2">{d.titulo}</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">{d.texto}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CidadeNichos {cidade} />
+
+    <section class="bg-gelo py-12 px-4 sm:px-6">
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-xl font-semibold text-petroleo mb-4">Atendemos em todos os bairros de Praia Grande</h2>
+        <p class="text-gray-500 text-sm leading-relaxed max-w-2xl mx-auto">
+          Boqueirão, Caiçara, Tupi, Ocian, Quietude, Guilhermina, Real, Mirim, Flórida, Vila Sônia, Melvi, Samambaia e toda a orla e região continental.
+        </p>
+      </div>
+    </section>
+
+    <CidadeCTA {cidade} {mensagemWpp} />
+  </main>
+  <Footer />
+  <WhatsAppButton origem="cidade-praia-grande" />
+</BaseLayout>

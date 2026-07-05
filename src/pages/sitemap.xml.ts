@@ -8,8 +8,12 @@ const pages = [
   { url: '/nichos/estetica',     priority: '0.9', changefreq: 'monthly' },
   { url: '/nichos/turismo',      priority: '0.9', changefreq: 'monthly' },
   { url: '/nichos/professores',  priority: '0.9', changefreq: 'monthly' },
-  { url: '/privacidade',         priority: '0.3', changefreq: 'yearly' },
-  { url: '/termos',              priority: '0.3', changefreq: 'yearly' },
+  { url: '/cidades/santos',       priority: '0.8', changefreq: 'monthly' },
+  { url: '/cidades/guaruja',      priority: '0.8', changefreq: 'monthly' },
+  { url: '/cidades/praia-grande', priority: '0.8', changefreq: 'monthly' },
+  { url: '/cidades/sao-vicente',  priority: '0.8', changefreq: 'monthly' },
+  { url: '/privacidade',          priority: '0.3', changefreq: 'yearly' },
+  { url: '/termos',               priority: '0.3', changefreq: 'yearly' },
 ];
 
 const today = new Date().toISOString().split('T')[0];

@@ -1,0 +1,65 @@
+---
+import { gerarLinkWhatsApp, WHATSAPP_NUMERO } from '../../lib/whatsapp';
+
+interface Props {
+  cidade: string;
+}
+
+const { cidade } = Astro.props;
+
+const nichos = [
+  { slug: 'clinicas',    label: 'Clínicas e Consultórios', cor: 'bg-blue-50 text-confianca',    icone: '🏥' },
+  { slug: 'contadores',  label: 'Contadores',              cor: 'bg-orange-50 text-orange-700', icone: '📊' },
+  { slug: 'reformas',    label: 'Reformas e Construção',   cor: 'bg-green-50 text-resultado',   icone: '🔨' },
+  { slug: 'estetica',    label: 'Estética e Beleza',       cor: 'bg-pink-50 text-pink-700',     icone: '✨' },
+  { slug: 'turismo',     label: 'Turismo e Hospedagem',    cor: 'bg-purple-50 text-purple-700', icone: '🏖️' },
+  { slug: 'professores', label: 'Professores e Cursos',    cor: 'bg-yellow-50 text-yellow-700', icone: '📚' },
+];
+
+const cidadeSlug = cidade.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ /g, '-');
+---
+
+<section class="bg-white py-16 px-4 sm:px-6">
+  <div class="max-w-5xl mx-auto">
+
+    <div class="text-center mb-10">
+      <h2 class="text-2xl sm:text-3xl font-bold text-petroleo">
+        Atendemos todos os segmentos em {cidade}
+      </h2>
+      <p class="text-gray-500 mt-3 text-sm max-w-lg mx-auto">
+        Clínicas, contadores, reformas, estética, turismo, professores — e muito mais. Se tem negócio em {cidade}, a Marvin Sites atende.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+      {nichos.map((nicho) => (
+        <a
+          href={`/nichos/${nicho.slug}`}
+          class="group bg-gelo rounded-xl border border-nevoa p-5 flex items-center gap-3 hover:border-confianca hover:shadow-sm transition-all duration-200"
+        >
+          <span class={`w-10 h-10 rounded-lg ${nicho.cor} flex items-center justify-center text-lg flex-shrink-0`}>
+            {nicho.icone}
+          </span>
+          <span class="text-sm font-medium text-petroleo group-hover:text-confianca transition-colors leading-snug">
+            {nicho.label}
+          </span>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-8 p-5 bg-gelo rounded-xl border border-nevoa text-center">
+      <p class="text-sm text-gray-500">
+        Seu segmento não está na lista?
+        <a
+          href={gerarLinkWhatsApp({ numero: WHATSAPP_NUMERO, mensagem: `Olá! Tenho um negócio em ${cidade} e gostaria de saber mais sobre a Marvin Sites.`, origem: `cidade-${cidadeSlug}-outro` })}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-confianca hover:underline ml-1"
+        >
+          Fale com a gente pelo WhatsApp.
+        </a>
+      </p>
+    </div>
+
+  </div>
+</section>

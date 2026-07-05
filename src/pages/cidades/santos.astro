@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/layout/Header.astro';
+import Footer from '../../components/layout/Footer.astro';
+import WhatsAppButton from '../../components/layout/WhatsAppButton.astro';
+import CidadeHero from '../../components/sections/CidadeHero.astro';
+import CidadeNichos from '../../components/sections/CidadeNichos.astro';
+import CidadeCTA from '../../components/sections/CidadeCTA.astro';
+import { schemaService } from '../../lib/schema';
+
+const cidade = 'Santos';
+const uf = 'SP';
+const mensagemWpp = 'Olá! Tenho um negócio em Santos e gostaria de saber como a Marvin Sites pode melhorar minha presença digital.';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Criação de site para pequenos negócios em Santos SP',
+  provider: { '@type': 'LocalBusiness', name: 'Marvin Sites' },
+  areaServed: { '@type': 'City', name: 'Santos', containedInPlace: { '@type': 'State', name: 'São Paulo' } },
+  description: 'Sites e presença digital para pequenos negócios em Santos SP — clínicas, contadores, reformas, estética e mais.',
+};
+
+const diferenciais = [
+  { titulo: 'Conhecemos o mercado local', texto: 'Santos tem um mercado competitivo e diversificado. Nossos sites são pensados para o cliente da Baixada Santista, que pesquisa no celular antes de escolher qualquer serviço.' },
+  { titulo: 'Presença no Google Maps', texto: 'Ajudamos seu negócio a aparecer quando alguém busca por "clínica em Santos", "contador Santos SP" ou qualquer serviço da sua área na cidade.' },
+  { titulo: 'Atendimento direto, sem intermediário', texto: 'Você fala direto com quem cria o site. Sem terceiros, sem demora. WhatsApp com resposta em até 24 horas úteis.' },
+];
+---
+
+<BaseLayout
+  title="Criação de Site para Pequenos Negócios em Santos SP | Marvin Sites"
+  description="Sites profissionais para pequenos negócios em Santos SP. Clínicas, contadores, reformas, estética e mais. Entrega em 7 dias úteis. Diagnóstico gratuito."
+  canonical="https://marvinsites.com.br/cidades/santos"
+  {schema}
+>
+  <Header />
+  <main>
+    <CidadeHero
+      {cidade} {uf}
+      descricaoCidade="Santos é uma cidade dinâmica com milhares de pequenos negócios. Mas muitos ainda aparecem de forma fraca no Google. A Marvin Sites cria páginas profissionais para negócios santistas serem encontrados, transmitirem confiança e receberem contatos pelo WhatsApp."
+      {mensagemWpp}
+    />
+
+    <!-- Diferenciais locais -->
+    <section class="bg-white py-16 px-4 sm:px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-bold text-petroleo mb-8 text-center">
+          Por que a Marvin Sites para negócios em Santos?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {diferenciais.map((d) => (
+            <div class="bg-gelo rounded-xl border border-nevoa p-6">
+              <h3 class="font-semibold text-petroleo mb-2">{d.titulo}</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">{d.texto}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CidadeNichos {cidade} />
+
+    <!-- Bairros atendidos -->
+    <section class="bg-gelo py-12 px-4 sm:px-6">
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-xl font-semibold text-petroleo mb-4">Atendemos em todos os bairros de Santos</h2>
+        <p class="text-gray-500 text-sm leading-relaxed max-w-2xl mx-auto">
+          Gonzaga, Boqueirão, Embaré, Pompéia, Aparecida, Vila Mathias, Ponta da Praia, José Menino, Encruzilhada, Marapé, Vila Nova, Jardim Rádio Clube e toda a região.
+        </p>
+      </div>
+    </section>
+
+    <CidadeCTA {cidade} {mensagemWpp} />
+  </main>
+  <Footer />
+  <WhatsAppButton origem="cidade-santos" />
+</BaseLayout>

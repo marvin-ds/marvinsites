@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/layout/Header.astro';
+import Footer from '../../components/layout/Footer.astro';
+import WhatsAppButton from '../../components/layout/WhatsAppButton.astro';
+import CidadeHero from '../../components/sections/CidadeHero.astro';
+import CidadeNichos from '../../components/sections/CidadeNichos.astro';
+import CidadeCTA from '../../components/sections/CidadeCTA.astro';
+
+const cidade = 'São Vicente';
+const uf = 'SP';
+const mensagemWpp = 'Olá! Tenho um negócio em São Vicente e gostaria de saber como a Marvin Sites pode melhorar minha presença digital.';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Criação de site para pequenos negócios em São Vicente SP',
+  provider: { '@type': 'LocalBusiness', name: 'Marvin Sites' },
+  areaServed: { '@type': 'City', name: 'São Vicente', containedInPlace: { '@type': 'State', name: 'São Paulo' } },
+  description: 'Sites e presença digital para pequenos negócios em São Vicente SP — clínicas, contadores, estética, reformas e mais.',
+};
+
+const diferenciais = [
+  { titulo: 'Cidade com tradição e movimento', texto: 'São Vicente é a cidade mais antiga do Brasil e tem um comércio local consolidado. Negócios estabelecidos aqui precisam de presença digital à altura da sua reputação.' },
+  { titulo: 'Próxima de Santos, mas com mercado próprio', texto: 'Moradores de São Vicente pesquisam por serviços na própria cidade antes de ir a Santos. Uma página otimizada para "São Vicente SP" captura esse público local.' },
+  { titulo: 'Diferencial competitivo real', texto: 'Muitos negócios vicentinos ainda não têm site ou têm uma presença fraca. Quem investe agora em presença digital sai na frente de forma clara e mensurável.' },
+];
+---
+
+<BaseLayout
+  title="Criação de Site para Pequenos Negócios em São Vicente SP | Marvin Sites"
+  description="Sites profissionais para pequenos negócios em São Vicente SP. Clínicas, contadores, estética, reformas e mais. Entrega em 7 dias úteis. Diagnóstico gratuito."
+  canonical="https://marvinsites.com.br/cidades/sao-vicente"
+  {schema}
+>
+  <Header />
+  <main>
+    <CidadeHero
+      {cidade} {uf}
+      descricaoCidade="São Vicente tem um mercado local ativo e clientes que pesquisam no Google antes de contratar qualquer serviço. A Marvin Sites cria páginas profissionais para que negócios vicentinos apareçam bem nessa busca, transmitam confiança e recebam contatos pelo WhatsApp."
+      {mensagemWpp}
+    />
+
+    <section class="bg-white py-16 px-4 sm:px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-bold text-petroleo mb-8 text-center">
+          Por que a Marvin Sites para negócios em São Vicente?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {diferenciais.map((d) => (
+            <div class="bg-gelo rounded-xl border border-nevoa p-6">
+              <h3 class="font-semibold text-petroleo mb-2">{d.titulo}</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">{d.texto}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <CidadeNichos {cidade} />
+
+    <section class="bg-gelo py-12 px-4 sm:px-6">
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-xl font-semibold text-petroleo mb-4">Atendemos em todos os bairros de São Vicente</h2>
+        <p class="text-gray-500 text-sm leading-relaxed max-w-2xl mx-auto">
+          Centro, Itararé, Gonzaguinha, Japuí, Jarivatuba, Vila Valença, Parque Bitaru, Catiapoa, Vila São Jorge, Rio Branco, Ilha Porchat e toda a região.
+        </p>
+      </div>
+    </section>
+
+    <CidadeCTA {cidade} {mensagemWpp} />
+  </main>
+  <Footer />
+  <WhatsAppButton origem="cidade-sao-vicente" />
+</BaseLayout>
