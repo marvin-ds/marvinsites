@@ -41,7 +41,7 @@ const diferenciais = [
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
       {passos.map((passo) => (
         <div class="bg-white rounded-2xl p-7 border border-nevoa">
-          <span class="text-4xl font-bold text-nevoa">{passo.numero}</span>
+          <span class="text-4xl font-bold text-gray-200" aria-hidden="true">{passo.numero}</span>
           <h3 class="text-lg font-semibold text-petroleo mt-3 mb-2">{passo.titulo}</h3>
           <p class="text-gray-500 text-sm leading-relaxed">{passo.descricao}</p>
         </div>
@@ -50,7 +50,7 @@ const diferenciais = [
 
     <!-- Diferenciais -->
     <div class="bg-petroleo rounded-2xl p-8 sm:p-10">
-      <p class="text-white/60 text-xs uppercase font-medium tracking-widest mb-6">O que toda página inclui</p>
+      <p class="text-white/80 text-xs uppercase font-medium tracking-widest mb-6">O que toda página inclui</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {diferenciais.map((item) => (
           <div class="flex items-center gap-3 text-white text-sm">

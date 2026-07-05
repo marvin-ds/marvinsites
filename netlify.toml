@@ -5,9 +5,21 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Redirect www → apex
+# Redirect www → apex (cobre http e https em um único salto)
 [[redirects]]
   from  = "https://www.marvinsites.com.br/*"
+  to    = "https://marvinsites.com.br/:splat"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from  = "http://www.marvinsites.com.br/*"
+  to    = "https://marvinsites.com.br/:splat"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from  = "http://marvinsites.com.br/*"
   to    = "https://marvinsites.com.br/:splat"
   status = 301
   force  = true
