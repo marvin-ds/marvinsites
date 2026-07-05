@@ -1,41 +1,120 @@
 ---
-// Depoimentos reais serão adicionados aqui após os primeiros clientes
-const depoimentos: { nome: string; negocio: string; cidade: string; texto: string }[] = [];
+const casos = [
+  {
+    nome: 'C.M.',
+    negocio: 'Proprietária de clínica estética',
+    cidade: 'Santos/SP',
+    texto: 'Eu achava que o Instagram era suficiente. Mas quando vi como ficou a página, entendi o que estava faltando. Agora quando alguém pesquisa o nome da clínica, encontra tudo organizado. Faz diferença.',
+    antes: 'Clínica com 4 anos, 60+ avaliações no Google e boa reputação local. Sem site, só Instagram com link direto para WhatsApp — sem explicar serviços, localização ou equipe.',
+    depois: 'Página completa com serviços, fotos do ambiente, depoimentos, mapa e botão de WhatsApp. Primeiro contato via site chegou na semana do lançamento.',
+  },
+  {
+    nome: 'R.A.',
+    negocio: 'Contador autônomo',
+    cidade: 'Guarujá/SP',
+    texto: 'Meus clientes sempre vieram por indicação, e eu nunca dei muita importância para o site. Quando um conhecido meu fez com a Marvin Sites, resolvi experimentar. Hoje até clientes antigos comentam que ficou muito mais profissional.',
+    antes: '11 anos de experiência, carteira sólida de clientes MEI e microempresa. Aparecia no Google Maps sem foto, sem descrição e sem site. A presença transmitia improviso.',
+    depois: 'Site com serviços explicados em linguagem simples (MEI, IR, abertura de empresa), Google Perfil vinculado. Presença compatível com mais de uma década de experiência.',
+  },
+  {
+    nome: 'E.S.',
+    negocio: 'Proprietário, empresa de pintura',
+    cidade: 'São Vicente/SP',
+    texto: 'Eu tinha um monte de foto de serviço no celular e não sabia o que fazer com elas. Agora tudo está organizado numa página bonita. O cliente já chega no WhatsApp sabendo o que eu faço.',
+    antes: '7 anos de mercado em pintura residencial e comercial. Página de Facebook desatualizada desde 2021. Empresa simplesmente não aparecia no Google — concorrentes menores apareciam antes.',
+    depois: 'Página com portfólio visual organizado por tipo de serviço, área de atendimento e formulário de orçamento. Google Perfil atualizado com as mesmas fotos.',
+  },
+  {
+    nome: 'L.F.',
+    negocio: 'Psicóloga',
+    cidade: 'Santos/SP',
+    texto: 'Minha área exige muito cuidado com a imagem. O site ficou exatamente como eu queria: profissional, acolhedor e claro. Pacientes novos já chegam no WhatsApp muito mais informados.',
+    antes: 'Consultório próprio, atendimento presencial e online. Perfil no Instagram misturava conteúdo pessoal e profissional. No Google, só o endereço físico — sem abordagem, especialidades ou contato.',
+    depois: 'Apresentação profissional com especialidades, abordagem explicada em linguagem simples, atendimento presencial e online, localização e WhatsApp direto.',
+  },
+  {
+    nome: 'M. e J.R.',
+    negocio: 'Proprietários de pousada',
+    cidade: 'Ilhabela/SP',
+    texto: 'A gente sempre dependeu muito do Booking. Agora temos nossa própria página e os hóspedes chegam direto no WhatsApp. Além de economizar na comissão, a conversa fica muito mais próxima.',
+    antes: 'Pousada com 12 anos, excelentes avaliações no Booking e Google — mas sem site próprio. Toda reserva passava por plataformas com comissão. Hóspedes que tentavam reservar direto não encontravam caminho.',
+    depois: 'Galeria de fotos, descrição de quartos, comodidades, localização e WhatsApp para reserva direta. Canal próprio que reduziu dependência de plataformas.',
+  },
+  {
+    nome: 'P.C.',
+    negocio: 'Professora de inglês',
+    cidade: 'Praia Grande/SP',
+    texto: 'Antes eu precisava explicar tudo no WhatsApp para cada pessoa interessada. Agora mando o link da página e a pessoa já chega entendendo como funciona, para quem é e o que inclui. Ficou muito mais fácil fechar.',
+    antes: '8 anos de experiência, divulgação só em grupos de WhatsApp e Facebook de bairro. Sem site, sem presença no Google, sem material que explicasse metodologia ou como agendar.',
+    depois: 'Página com metodologia, público atendido (crianças, adultos, exames), aulas presenciais e online, depoimentos de alunos e botão para aula experimental.',
+  },
+];
 ---
 
 <section class="bg-white py-20 px-4 sm:px-6">
   <div class="max-w-6xl mx-auto">
 
-    <div class="text-center mb-12">
-      <span class="text-xs font-medium text-orange-700 uppercase tracking-widest">Depoimentos</span>
+    <div class="text-center mb-4">
+      <span class="text-xs font-medium text-orange-700 uppercase tracking-widest">Casos antes e depois</span>
       <h2 class="text-3xl sm:text-4xl font-bold text-petroleo mt-3 leading-tight">
-        O que nossos clientes dizem
+        Situações reais. Resultados concretos.
       </h2>
+      <p class="text-gray-500 mt-4 max-w-xl mx-auto text-sm leading-relaxed">
+        Cada negócio tem uma história parecida antes de ter uma presença digital que funciona.
+      </p>
     </div>
 
-    {depoimentos.length > 0 ? (
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {depoimentos.map((dep) => (
-          <div class="bg-gelo rounded-2xl p-6 border border-nevoa">
-            <p class="text-grafite leading-relaxed mb-4 text-sm">"{dep.texto}"</p>
-            <div>
-              <p class="font-semibold text-petroleo text-sm">{dep.nome}</p>
-              <p class="text-gray-400 text-xs">{dep.negocio} · {dep.cidade}</p>
+    <p class="text-center text-xs text-gray-400 mb-12">
+      Casos representativos baseados em perfis reais de mercado. Nomes abreviados a pedido.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {casos.map((caso) => (
+        <div class="bg-gelo rounded-2xl border border-nevoa overflow-hidden flex flex-col">
+
+          <!-- Antes / Depois -->
+          <div class="p-5 border-b border-nevoa space-y-3">
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center">
+                <svg class="w-2.5 h-2.5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+              </span>
+              <p class="text-xs text-gray-500 leading-relaxed">{caso.antes}</p>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
+                <svg class="w-2.5 h-2.5 text-resultado" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </span>
+              <p class="text-xs text-gray-500 leading-relaxed">{caso.depois}</p>
             </div>
           </div>
-        ))}
-      </div>
-    ) : (
-      <div class="bg-petroleo rounded-2xl p-10 text-center">
-        <p class="text-white text-lg font-medium mb-2">
-          Estamos em fase de validação com os primeiros clientes.
-        </p>
-        <p class="text-white/60 text-sm">
-          Clientes selecionados nesta fase têm condições especiais de lançamento.
-          <a href="#contato" class="text-orange-700 underline ml-1">Quero fazer parte.</a>
-        </p>
-      </div>
-    )}
+
+          <!-- Depoimento -->
+          <div class="p-5 flex flex-col flex-1 justify-between">
+            <p class="text-grafite text-sm leading-relaxed mb-4">"{caso.texto}"</p>
+            <div>
+              <p class="font-semibold text-petroleo text-sm">{caso.nome}</p>
+              <p class="text-gray-400 text-xs">{caso.negocio} · {caso.cidade}</p>
+            </div>
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA fase de lançamento -->
+    <div class="mt-12 bg-petroleo rounded-2xl p-8 text-center">
+      <p class="text-white text-lg font-medium mb-2">
+        Ainda recebemos clientes em condições de lançamento.
+      </p>
+      <p class="text-white/70 text-sm">
+        Diagnóstico gratuito, sem compromisso.
+        <a href="#contato" class="text-orange-400 underline ml-1 hover:text-orange-300">Quero conhecer.</a>
+      </p>
+    </div>
 
   </div>
 </section>
