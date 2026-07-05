@@ -1,0 +1,46 @@
+---
+---
+
+<div
+  id="cookie-banner"
+  role="dialog"
+  aria-label="Aviso de cookies"
+  class="fixed bottom-0 left-0 right-0 z-[100] bg-petroleo text-white px-4 py-5 sm:px-6 shadow-2xl hidden"
+>
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
+    <p class="text-sm text-white/80 leading-relaxed flex-1">
+      Usamos analytics sem cookies (Umami) para entender como o site é usado — sem rastreamento pessoal.
+      Ao continuar navegando, você concorda com nossa
+      <a href="/privacidade" class="text-conversao hover:underline">Política de Privacidade</a>.
+    </p>
+    <div class="flex gap-3 flex-shrink-0">
+      <button
+        id="cookie-accept"
+        class="bg-conversao text-white text-sm font-medium px-5 py-2 rounded-lg hover:bg-orange-600 transition-colors"
+      >
+        Entendi
+      </button>
+      <a
+        href="/privacidade"
+        class="text-white/50 text-sm hover:text-white transition-colors px-2 py-2"
+      >
+        Saiba mais
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const COOKIE_KEY = 'marvin_cookie_consent';
+  const banner = document.getElementById('cookie-banner');
+  const btnAccept = document.getElementById('cookie-accept');
+
+  if (!localStorage.getItem(COOKIE_KEY)) {
+    banner?.classList.remove('hidden');
+  }
+
+  btnAccept?.addEventListener('click', () => {
+    localStorage.setItem(COOKIE_KEY, '1');
+    banner?.classList.add('hidden');
+  });
+</script>

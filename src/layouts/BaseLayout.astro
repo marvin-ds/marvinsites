@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { schemaLocalBusiness } from '../lib/schema';
+import CookieBanner from '../components/ui/CookieBanner.astro';
 
 interface Props {
   title: string;
@@ -61,5 +62,6 @@ const siteUrl = 'https://marvinsites.com.br';
   </head>
   <body>
     <slot />
+    <CookieBanner />
   </body>
 </html>
