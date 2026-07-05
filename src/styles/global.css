@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-petroleo:  #0B1F33;
+    --color-confianca: #2563EB;
+    --color-conversao: #FF6B2C;
+    --color-resultado: #16A34A;
+    --color-gelo:      #F8FAFC;
+    --color-nevoa:     #E5E7EB;
+    --color-grafite:   #111827;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-gelo text-grafite font-sans;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+}

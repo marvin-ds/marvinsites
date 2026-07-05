@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+---
+
+<BaseLayout
+  title="Política de Privacidade — Marvin Sites"
+  description="Como a Marvin Sites coleta, usa e protege seus dados pessoais, em conformidade com a LGPD."
+>
+  <Header />
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 py-16">
+    <h1 class="text-3xl font-bold text-petroleo mb-2">Política de Privacidade</h1>
+    <p class="text-gray-400 text-sm mb-10">Última atualização: julho de 2025</p>
+
+    <div class="prose prose-slate max-w-none space-y-8 text-grafite">
+
+      <section>
+        <h2 class="text-xl font-semibold text-petroleo mb-3">1. Quem somos</h2>
+        <p class="text-gray-500 leading-relaxed">
+          A <strong>Marvin Sites</strong> é uma empresa de presença digital para pequenos negócios locais. Para dúvidas sobre privacidade, entre em contato: <a href="mailto:privacidade@marvinsites.com.br" class="text-confianca hover:underline">privacidade@marvinsites.com.br</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-petroleo mb-3">2. Dados que coletamos</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="bg-gelo">
+                <th class="text-left p-3 border border-nevoa font-medium text-petroleo">Dado</th>
+                <th class="text-left p-3 border border-nevoa font-medium text-petroleo">Finalidade</th>
+                <th class="text-left p-3 border border-nevoa font-medium text-petroleo">Base legal</th>
+              </tr>
+            </thead>
+            <tbody class="text-gray-500">
+              <tr><td class="p-3 border border-nevoa">Nome</td><td class="p-3 border border-nevoa">Identificação do lead</td><td class="p-3 border border-nevoa">Consentimento</td></tr>
+              <tr><td class="p-3 border border-nevoa">WhatsApp</td><td class="p-3 border border-nevoa">Contato comercial</td><td class="p-3 border border-nevoa">Consentimento explícito</td></tr>
+              <tr><td class="p-3 border border-nevoa">Cidade</td><td class="p-3 border border-nevoa">Segmentação regional</td><td class="p-3 border border-nevoa">Legítimo interesse</td></tr>
+              <tr><td class="p-3 border border-nevoa">Segmento</td><td class="p-3 border border-nevoa">Qualificação do lead</td><td class="p-3 border border-nevoa">Legítimo interesse</td></tr>
+              <tr><td class="p-3 border border-nevoa">IP / pageviews</td><td class="p-3 border border-nevoa">Análise de tráfego</td><td class="p-3 border border-nevoa">Legítimo interesse (Umami, sem cookies)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-petroleo mb-3">3. Com quem compartilhamos</h2>
+        <ul class="list-disc list-inside text-gray-500 space-y-2 text-sm leading-relaxed">
+          <li><strong>Netlify</strong> — hospedagem e processamento de formulários</li>
+          <li><strong>Resend</strong> — envio de notificações por email</li>
+          <li><strong>Umami</strong> — analytics sem cookies</li>
+          <li>Não vendemos nem compartilhamos dados com terceiros para fins de marketing.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-petroleo mb-3">4. Por quanto tempo armazenamos</h2>
+        <p class="text-gray-500 leading-relaxed text-sm">
+          Leads que não respondem em 6 meses são excluídos da base. Clientes ativos têm dados mantidos pelo tempo da relação comercial + 5 anos para fins fiscais.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-petroleo mb-3">5. Seus direitos (LGPD)</h2>
+        <p class="text-gray-500 leading-relaxed text-sm mb-3">Você tem direito a:</p>
+        <ul class="list-disc list-inside text-gray-500 space-y-1 text-sm">
+          <li>Confirmar a existência de tratamento dos seus dados</li>
+          <li>Acessar os dados que temos sobre você</li>
+          <li>Corrigir dados incompletos ou desatualizados</li>
+          <li>Solicitar a exclusão dos seus dados</li>
+          <li>Revogar o consentimento a qualquer momento</li>
+        </ul>
+        <p class="text-gray-500 text-sm mt-3">
+          Para exercer seus direitos: <a href="mailto:privacidade@marvinsites.com.br" class="text-confianca hover:underline">privacidade@marvinsites.com.br</a>. Respondemos em até 15 dias.
+        </p>
+      </section>
+
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

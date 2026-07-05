@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+---
+
+<BaseLayout
+  title="Termos de Uso — Marvin Sites"
+  description="Termos e condições de uso dos serviços da Marvin Sites."
+>
+  <Header />
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 py-16">
+    <h1 class="text-3xl font-bold text-petroleo mb-2">Termos de Uso</h1>
+    <p class="text-gray-400 text-sm mb-10">Última atualização: julho de 2025</p>
+
+    <div class="space-y-8 text-sm text-gray-500 leading-relaxed">
+
+      <section>
+        <h2 class="text-xl font-semibold text-petroleo mb-3">1. Serviços</h2>
+        <p>A Marvin Sites presta serviços de criação e manutenção de páginas e sites para pequenos negócios locais. O escopo de cada projeto é definido na proposta comercial aceita pelo cliente.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-petroleo mb-3">2. Responsabilidades do cliente</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Fornecer informações verídicas sobre o negócio</li>
+          <li>Enviar materiais (fotos, textos, logo) dentro do prazo combinado</li>
+          <li>Revisar e aprovar o site dentro do prazo de revisão (5 dias úteis)</li>
+          <li>Manter o pagamento da mensalidade em dia</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-petroleo mb-3">3. Prazo e entrega</h2>
+        <p>O prazo padrão de entrega é de 7 dias úteis após o recebimento completo dos materiais e informações. Atrasos causados pelo cliente não contam no prazo de entrega.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-petroleo mb-3">4. Revisões</h2>
+        <p>Cada projeto inclui até 2 rodadas de revisão dentro do escopo contratado. Alterações estruturais ou fora do escopo são orçadas separadamente.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-petroleo mb-3">5. Cancelamento</h2>
+        <p>O serviço mensal tem compromisso mínimo de 3 meses. Após esse período, o cancelamento pode ser solicitado com 30 dias de antecedência. O setup não é reembolsável após o início da produção.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-petroleo mb-3">6. Propriedade</h2>
+        <p>O domínio registrado em nome do cliente pertence ao cliente. Os arquivos do site pertencem à Marvin Sites enquanto a mensalidade estiver ativa. Em caso de cancelamento, o cliente pode solicitar a exportação dos arquivos mediante aviso prévio.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-petroleo mb-3">7. Contato</h2>
+        <p>Dúvidas: <a href="mailto:contato@marvinsites.com.br" class="text-confianca hover:underline">contato@marvinsites.com.br</a></p>
+      </section>
+
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

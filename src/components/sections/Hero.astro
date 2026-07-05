@@ -1,0 +1,86 @@
+---
+import Button from '../ui/Button.astro';
+import { LINKS } from '../../lib/whatsapp';
+---
+
+<section class="bg-gelo pt-16 pb-20 px-4 sm:px-6">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+    <!-- Copy -->
+    <div>
+      <span class="inline-flex items-center gap-2 bg-blue-50 text-confianca text-xs font-medium px-3 py-1 rounded-full mb-6">
+        <span class="w-1.5 h-1.5 bg-confianca rounded-full"></span>
+        Presença digital para pequenos negócios
+      </span>
+
+      <h1 class="text-4xl sm:text-5xl font-bold text-petroleo leading-tight tracking-tight mb-5">
+        Seu negócio merece aparecer tão bem online quanto é no atendimento
+      </h1>
+
+      <p class="text-lg text-gray-500 leading-relaxed mb-8 max-w-lg">
+        Criamos páginas simples, rápidas e profissionais para pequenos negócios serem encontrados no Google, transmitirem confiança e receberem contatos pelo WhatsApp.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <Button href={LINKS.hero} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">
+          Quero ver como ficaria meu negócio
+        </Button>
+        <Button href="#exemplos" variant="ghost" size="lg">
+          Ver exemplos
+        </Button>
+      </div>
+
+      <!-- Prova social rápida -->
+      <div class="flex items-center gap-4 mt-8 text-sm text-gray-400">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-resultado" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          Entrega em 7 dias úteis
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-resultado" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          Sem contrato longo
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-resultado" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          Domínio no seu nome
+        </span>
+      </div>
+    </div>
+
+    <!-- Visual placeholder (substituir por mockup real) -->
+    <div class="relative flex justify-center lg:justify-end">
+      <div class="w-64 h-[500px] bg-petroleo rounded-[2.5rem] shadow-2xl p-3 flex flex-col overflow-hidden">
+        <div class="bg-white rounded-[2rem] flex-1 overflow-hidden flex flex-col">
+          <!-- Barra simulada de navegador mobile -->
+          <div class="bg-nevoa px-4 py-2 flex items-center gap-2">
+            <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+            <div class="flex-1 bg-white rounded text-xs text-gray-400 px-2 py-0.5 text-center">marvinsites.com.br</div>
+          </div>
+          <!-- Conteúdo simulado -->
+          <div class="flex-1 p-4 space-y-3">
+            <div class="h-3 bg-petroleo rounded w-3/4"></div>
+            <div class="h-2 bg-nevoa rounded w-full"></div>
+            <div class="h-2 bg-nevoa rounded w-5/6"></div>
+            <div class="h-8 bg-conversao rounded-lg w-full mt-4"></div>
+            <div class="space-y-2 mt-4">
+              <div class="h-2 bg-nevoa rounded w-full"></div>
+              <div class="h-2 bg-nevoa rounded w-4/5"></div>
+              <div class="h-2 bg-nevoa rounded w-full"></div>
+            </div>
+            <div class="h-16 bg-nevoa rounded-lg mt-2"></div>
+            <div class="h-8 bg-resultado rounded-lg w-full"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Glow de fundo decorativo -->
+      <div class="absolute inset-0 bg-confianca/5 rounded-full blur-3xl -z-10"></div>
+    </div>
+
+  </div>
+</section>

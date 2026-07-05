@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /obrigado
+Disallow: /.netlify/
+
+Sitemap: https://marvinsites.com.br/sitemap.xml

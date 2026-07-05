@@ -1,0 +1,44 @@
+---
+const perdas = [
+  'O cliente pesquisa e não encontra informações suficientes para confiar.',
+  'Ele compara com concorrentes que têm site e parecem mais profissionais.',
+  'O Instagram não explica serviços, localização nem facilita o contato.',
+  'Sem botão de WhatsApp claro, o cliente desiste antes de chegar até você.',
+  'A presença improvisada transmite dúvida — mesmo quando o serviço é excelente.',
+];
+---
+
+<section class="bg-white py-20 px-4 sm:px-6">
+  <div class="max-w-4xl mx-auto">
+
+    <div class="text-center mb-12">
+      <span class="text-xs font-medium text-conversao uppercase tracking-widest">O problema</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-petroleo mt-3 leading-tight">
+        O que acontece quando o cliente pesquisa e não encontra nada claro?
+      </h2>
+      <p class="text-gray-500 mt-4 leading-relaxed max-w-xl mx-auto">
+        Muita gente pesquisa no Google antes de ligar ou chamar no WhatsApp. Se sua presença não passa confiança, a decisão vai para quem aparece melhor.
+      </p>
+    </div>
+
+    <div class="space-y-4">
+      {perdas.map((perda) => (
+        <div class="flex items-start gap-4 p-5 rounded-xl bg-gelo border border-nevoa">
+          <div class="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg class="w-3.5 h-3.5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </div>
+          <p class="text-grafite leading-relaxed">{perda}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-10 p-6 bg-petroleo rounded-2xl text-white text-center">
+      <p class="text-lg font-medium leading-relaxed">
+        Essas perdas raramente aparecem como "perdi uma venda por não ter site". O empresário simplesmente sente que o movimento oscila e que os concorrentes parecem mais estruturados.
+      </p>
+    </div>
+
+  </div>
+</section>

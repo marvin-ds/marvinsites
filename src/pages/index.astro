@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import WhatsAppButton from '../components/layout/WhatsAppButton.astro';
+import Hero from '../components/sections/Hero.astro';
+import Problem from '../components/sections/Problem.astro';
+import Solution from '../components/sections/Solution.astro';
+import Services from '../components/sections/Services.astro';
+import Portfolio from '../components/sections/Portfolio.astro';
+import Testimonials from '../components/sections/Testimonials.astro';
+import FAQ from '../components/sections/FAQ.astro';
+import FinalCTA from '../components/sections/FinalCTA.astro';
+---
+
+<BaseLayout
+  title="Marvin Sites — Sites para pequenos negócios locais"
+  description="Sites e presença digital para pequenos negócios serem encontrados no Google, transmitirem confiança e receberem contatos pelo WhatsApp. Entrega em 7 dias úteis."
+>
+  <Header />
+  <main>
+    <Hero />
+    <Problem />
+    <Solution />
+    <Services />
+    <Portfolio />
+    <Testimonials />
+    <FAQ />
+    <FinalCTA />
+  </main>
+  <Footer />
+  <WhatsAppButton />
+</BaseLayout>

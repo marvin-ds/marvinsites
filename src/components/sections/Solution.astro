@@ -1,0 +1,69 @@
+---
+const passos = [
+  {
+    numero: '01',
+    titulo: 'Diagnóstico gratuito',
+    descricao: 'Avaliamos sua presença digital atual em 3 minutos e mostramos o que está faltando — sem compromisso.',
+  },
+  {
+    numero: '02',
+    titulo: 'Página pronta em 7 dias',
+    descricao: 'Criamos uma página clara, profissional e conectada ao seu WhatsApp. Você só precisa nos enviar as informações do negócio.',
+  },
+  {
+    numero: '03',
+    titulo: 'Manutenção mensal inclusa',
+    descricao: 'Qualquer ajuste, atualização ou dúvida — é só mandar mensagem. Você foca no negócio, a gente cuida da presença digital.',
+  },
+];
+
+const diferenciais = [
+  'Domínio no seu nome — o site é seu',
+  'Abre rápido no celular',
+  'Botão de WhatsApp sempre visível',
+  'Seus serviços explicados com clareza',
+  'Localização e horário de funcionamento',
+  'SEO local para aparecer no Google',
+];
+---
+
+<section class="bg-gelo py-20 px-4 sm:px-6">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-14">
+      <span class="text-xs font-medium text-confianca uppercase tracking-widest">Como funciona</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-petroleo mt-3 leading-tight">
+        Simples. Rápido. Sem você precisar aprender tecnologia.
+      </h2>
+    </div>
+
+    <!-- 3 passos -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+      {passos.map((passo) => (
+        <div class="bg-white rounded-2xl p-7 border border-nevoa">
+          <span class="text-4xl font-bold text-nevoa">{passo.numero}</span>
+          <h3 class="text-lg font-semibold text-petroleo mt-3 mb-2">{passo.titulo}</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">{passo.descricao}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Diferenciais -->
+    <div class="bg-petroleo rounded-2xl p-8 sm:p-10">
+      <p class="text-white/60 text-xs uppercase font-medium tracking-widest mb-6">O que toda página inclui</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {diferenciais.map((item) => (
+          <div class="flex items-center gap-3 text-white text-sm">
+            <div class="w-5 h-5 rounded-full bg-resultado/20 flex items-center justify-center flex-shrink-0">
+              <svg class="w-3 h-3 text-resultado" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            {item}
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>

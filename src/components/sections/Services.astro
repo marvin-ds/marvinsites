@@ -1,0 +1,129 @@
+---
+import Button from '../ui/Button.astro';
+import { gerarLinkWhatsApp, WHATSAPP_NUMERO } from '../../lib/whatsapp';
+
+const planos = [
+  {
+    nome: 'Página Local Essencial',
+    descricao: 'Para MEIs, autônomos e prestadores que precisam de uma presença rápida e profissional.',
+    setup: 'R$ 897',
+    mensalidade: 'R$ 147/mês',
+    itens: [
+      'Página única completa',
+      'Serviços e diferenciais',
+      'Botão de WhatsApp',
+      'Localização e horário',
+      'Fotos do negócio',
+      'SEO básico',
+      'Domínio + hospedagem',
+      'Manutenção mensal inclusa',
+    ],
+    destaque: false,
+    mensagem: 'Olá! Tenho interesse na Página Local Essencial. Pode me dar mais informações?',
+  },
+  {
+    nome: 'Site Local Profissional',
+    descricao: 'Para clínicas, escritórios, consultorias e empresas que precisam de autoridade online.',
+    setup: 'R$ 2.497',
+    mensalidade: 'R$ 247/mês',
+    itens: [
+      'Site com 4 a 7 páginas',
+      'Página inicial + Sobre + Serviços',
+      'Páginas individuais por serviço',
+      'Depoimentos e avaliações',
+      'Copy comercial incluído',
+      'SEO local inicial',
+      'Formulário de contato',
+      'Manutenção mensal inclusa',
+    ],
+    destaque: true,
+    mensagem: 'Olá! Tenho interesse no Site Local Profissional. Pode me dar mais informações?',
+  },
+  {
+    nome: 'Crescimento Local',
+    descricao: 'Para negócios que querem melhorar presença continuamente e captar mais clientes pelo Google.',
+    setup: 'A partir de R$ 4.997',
+    mensalidade: 'A partir de R$ 497/mês',
+    itens: [
+      'Site completo com todas as páginas',
+      'Páginas por cidade ou região',
+      'SEO local avançado',
+      'Google Perfil da Empresa',
+      'Relatórios mensais',
+      'Novas páginas e landing pages',
+      'Suporte prioritário',
+      'Melhorias mensais contínuas',
+    ],
+    destaque: false,
+    mensagem: 'Olá! Tenho interesse no plano Crescimento Local. Pode me dar mais informações?',
+  },
+];
+---
+
+<section id="servicos" class="bg-white py-20 px-4 sm:px-6">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-12">
+      <span class="text-xs font-medium text-conversao uppercase tracking-widest">Planos</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-petroleo mt-3 leading-tight">
+        Escolha o que faz sentido para o seu negócio agora
+      </h2>
+      <p class="text-gray-500 mt-4 max-w-xl mx-auto">
+        Todos os planos incluem manutenção mensal. Sem contrato longo — mínimo de 3 meses, depois mês a mês.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {planos.map((plano) => (
+        <div class={`rounded-2xl border p-7 flex flex-col ${plano.destaque ? 'border-confianca bg-petroleo text-white shadow-xl scale-[1.02]' : 'border-nevoa bg-gelo'}`}>
+
+          {plano.destaque && (
+            <span class="inline-flex self-start bg-confianca text-white text-xs font-medium px-3 py-1 rounded-full mb-4">
+              Mais popular
+            </span>
+          )}
+
+          <h3 class={`text-lg font-bold mb-2 ${plano.destaque ? 'text-white' : 'text-petroleo'}`}>
+            {plano.nome}
+          </h3>
+          <p class={`text-sm leading-relaxed mb-6 ${plano.destaque ? 'text-white/60' : 'text-gray-500'}`}>
+            {plano.descricao}
+          </p>
+
+          <div class="mb-6">
+            <div class={`text-2xl font-bold ${plano.destaque ? 'text-white' : 'text-petroleo'}`}>{plano.setup}</div>
+            <div class={`text-sm mt-1 ${plano.destaque ? 'text-white/50' : 'text-gray-400'}`}>+ {plano.mensalidade}</div>
+          </div>
+
+          <ul class="space-y-2.5 mb-8 flex-1">
+            {plano.itens.map((item) => (
+              <li class={`flex items-start gap-2.5 text-sm ${plano.destaque ? 'text-white/80' : 'text-grafite'}`}>
+                <svg class={`w-4 h-4 mt-0.5 flex-shrink-0 ${plano.destaque ? 'text-resultado' : 'text-resultado'}`} fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <Button
+            href={gerarLinkWhatsApp({ numero: WHATSAPP_NUMERO, mensagem: plano.mensagem, origem: 'card-servico', nicho: plano.nome })}
+            variant={plano.destaque ? 'primary' : 'ghost'}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full justify-center"
+          >
+            Quero este plano
+          </Button>
+
+        </div>
+      ))}
+    </div>
+
+    <p class="text-center text-sm text-gray-400 mt-8">
+      Não tem certeza qual plano escolher?
+      <a href="#contato" class="text-confianca hover:underline ml-1">Peça um diagnóstico gratuito.</a>
+    </p>
+
+  </div>
+</section>

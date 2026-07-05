@@ -1,0 +1,18 @@
+---
+interface Props {
+  variant?: 'blue' | 'orange' | 'green' | 'dark' | 'gray';
+}
+const { variant = 'blue' } = Astro.props;
+
+const variants = {
+  blue:   'bg-blue-50 text-confianca',
+  orange: 'bg-orange-50 text-orange-700',
+  green:  'bg-green-50 text-resultado',
+  dark:   'bg-petroleo text-white',
+  gray:   'bg-nevoa text-grafite',
+};
+---
+
+<span class={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${variants[variant]}`}>
+  <slot />
+</span>

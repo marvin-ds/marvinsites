@@ -1,0 +1,41 @@
+---
+// Depoimentos reais serão adicionados aqui após os primeiros clientes
+const depoimentos: { nome: string; negocio: string; cidade: string; texto: string }[] = [];
+---
+
+<section class="bg-white py-20 px-4 sm:px-6">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="text-center mb-12">
+      <span class="text-xs font-medium text-conversao uppercase tracking-widest">Depoimentos</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-petroleo mt-3 leading-tight">
+        O que nossos clientes dizem
+      </h2>
+    </div>
+
+    {depoimentos.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {depoimentos.map((dep) => (
+          <div class="bg-gelo rounded-2xl p-6 border border-nevoa">
+            <p class="text-grafite leading-relaxed mb-4 text-sm">"{dep.texto}"</p>
+            <div>
+              <p class="font-semibold text-petroleo text-sm">{dep.nome}</p>
+              <p class="text-gray-400 text-xs">{dep.negocio} · {dep.cidade}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <div class="bg-petroleo rounded-2xl p-10 text-center">
+        <p class="text-white text-lg font-medium mb-2">
+          Estamos em fase de validação com os primeiros clientes.
+        </p>
+        <p class="text-white/60 text-sm">
+          Clientes selecionados nesta fase têm condições especiais de lançamento.
+          <a href="#contato" class="text-conversao underline ml-1">Quero fazer parte.</a>
+        </p>
+      </div>
+    )}
+
+  </div>
+</section>

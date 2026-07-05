@@ -1,0 +1,49 @@
+---
+interface Props {
+  href?: string;
+  variant?: 'primary' | 'secondary' | 'ghost' | 'whatsapp';
+  size?: 'sm' | 'md' | 'lg';
+  target?: string;
+  rel?: string;
+  class?: string;
+  type?: 'button' | 'submit';
+  ariaLabel?: string;
+}
+
+const {
+  href,
+  variant = 'primary',
+  size = 'md',
+  target,
+  rel,
+  class: className = '',
+  type = 'button',
+  ariaLabel,
+} = Astro.props;
+
+const variants = {
+  primary:   'bg-conversao text-white hover:bg-orange-600',
+  secondary: 'bg-petroleo text-white hover:bg-slate-800',
+  ghost:     'border border-petroleo text-petroleo hover:bg-petroleo hover:text-white',
+  whatsapp:  'bg-resultado text-white hover:bg-green-700',
+};
+
+const sizes = {
+  sm: 'px-4 py-2 text-sm',
+  md: 'px-6 py-3 text-sm',
+  lg: 'px-8 py-4 text-base',
+};
+
+const base = 'inline-flex items-center justify-center gap-2 font-medium rounded-lg transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confianca';
+const classes = `${base} ${variants[variant]} ${sizes[size]} ${className}`;
+---
+
+{href ? (
+  <a href={href} class={classes} target={target} rel={rel} aria-label={ariaLabel}>
+    <slot />
+  </a>
+) : (
+  <button type={type} class={classes} aria-label={ariaLabel}>
+    <slot />
+  </button>
+)}

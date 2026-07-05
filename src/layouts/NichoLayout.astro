@@ -1,0 +1,26 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import WhatsAppButton from '../components/layout/WhatsAppButton.astro';
+import { schemaService } from '../lib/schema';
+
+interface Props {
+  title: string;
+  description: string;
+  nicho: string;
+  nomeNicho: string;
+}
+
+const { title, description, nicho, nomeNicho } = Astro.props;
+const schema = schemaService(`Site para ${nomeNicho}`, description);
+---
+
+<BaseLayout {title} {description} {schema}>
+  <Header />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+  <WhatsAppButton origem={`pagina-${nicho}`} nicho={nicho} />
+</BaseLayout>
