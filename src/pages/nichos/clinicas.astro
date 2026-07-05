@@ -1,0 +1,62 @@
+---
+import NichoLayout from '../../layouts/NichoLayout.astro';
+import NichoHero from '../../components/sections/NichoHero.astro';
+import NichoChecklist from '../../components/sections/NichoChecklist.astro';
+import NichoCTA from '../../components/sections/NichoCTA.astro';
+
+const mensagemWpp = 'Olá! Tenho uma clínica/consultório e gostaria de saber como a Marvin Sites pode melhorar minha presença digital.';
+
+const itens = [
+  'Apresentação profissional da clínica e da equipe',
+  'Listagem clara de tratamentos e procedimentos',
+  'Fotos reais do espaço e do atendimento',
+  'Botão de agendamento direto pelo WhatsApp',
+  'Depoimentos de pacientes (quando disponíveis)',
+  'Localização com mapa integrado',
+  'Horários de atendimento sempre visíveis',
+  'Formulário de contato e pré-agendamento',
+  'SEO local para aparecer em buscas da sua cidade',
+  'Certificações e diferenciais da clínica em destaque',
+];
+---
+
+<NichoLayout
+  title="Site para Clínicas e Consultórios | Marvin Sites"
+  description="Seu paciente pesquisa antes de agendar. Tenha uma página profissional que transmite confiança, mostra seus serviços e facilita o agendamento pelo WhatsApp."
+  nicho="clinicas"
+  nomeNicho="Clínicas e Consultórios"
+>
+  <NichoHero
+    nicho="clinicas"
+    badge="Saúde e bem-estar"
+    headline="Seu paciente pesquisa antes de agendar. O que ele encontra sobre sua clínica?"
+    subheadline="Clínicas e consultórios dependem de confiança antes da primeira consulta. Uma presença digital clara e profissional faz toda a diferença na decisão do paciente."
+    argumentoCentral="Seu cliente precisa confiar antes de agendar."
+    mensagemWpp={mensagemWpp}
+    cor="bg-blue-50 text-confianca"
+  />
+
+  <NichoChecklist itens={itens} titulo="O que sua página de clínica vai ter" />
+
+  <section class="bg-gelo py-16 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-bold text-petroleo mb-8 text-center">
+        Por que clínicas precisam de presença digital própria?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { titulo: 'Confiança antes da consulta', texto: 'O paciente não te conhece. Ele vai pesquisar no Google antes de ligar. Uma página profissional é a primeira impressão que você tem controle.' },
+          { titulo: 'Mais que Instagram', texto: 'O Instagram mostra movimento, mas não organiza serviços, não tem localização clara, não tem botão de agendamento fácil. A página resolve tudo isso.' },
+          { titulo: 'Agendamento simplificado', texto: 'Botão de WhatsApp com mensagem pré-preenchida por procedimento. O paciente chega já dizendo o que quer — menos fricção, mais agendamentos.' },
+        ].map((card) => (
+          <div class="bg-white rounded-xl border border-nevoa p-6">
+            <h3 class="font-semibold text-petroleo mb-2">{card.titulo}</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">{card.texto}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <NichoCTA nicho="clinicas" nomeNicho="clínica" mensagemWpp={mensagemWpp} />
+</NichoLayout>

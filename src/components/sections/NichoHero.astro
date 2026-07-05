@@ -1,0 +1,63 @@
+---
+import Button from '../ui/Button.astro';
+import { gerarLinkWhatsApp, WHATSAPP_NUMERO } from '../../lib/whatsapp';
+
+interface Props {
+  nicho: string;
+  badge: string;
+  headline: string;
+  subheadline: string;
+  argumentoCentral: string;
+  mensagemWpp: string;
+  cor: string;
+}
+
+const { nicho, badge, headline, subheadline, argumentoCentral, mensagemWpp, cor } = Astro.props;
+
+const linkWpp = gerarLinkWhatsApp({
+  numero: WHATSAPP_NUMERO,
+  mensagem: mensagemWpp,
+  origem: `hero-${nicho}`,
+  nicho,
+});
+---
+
+<section class="bg-gelo pt-16 pb-20 px-4 sm:px-6">
+  <div class="max-w-4xl mx-auto text-center">
+
+    <!-- Breadcrumb -->
+    <nav class="flex justify-center items-center gap-2 text-xs text-gray-400 mb-8" aria-label="Breadcrumb">
+      <a href="/" class="hover:text-confianca transition-colors">Início</a>
+      <span>/</span>
+      <a href="/#exemplos" class="hover:text-confianca transition-colors">Segmentos</a>
+      <span>/</span>
+      <span class="text-grafite">{badge}</span>
+    </nav>
+
+    <span class={`inline-flex items-center gap-2 ${cor} text-xs font-medium px-3 py-1 rounded-full mb-6`}>
+      {badge}
+    </span>
+
+    <h1 class="text-4xl sm:text-5xl font-bold text-petroleo leading-tight tracking-tight mb-5">
+      {headline}
+    </h1>
+
+    <p class="text-lg text-gray-500 leading-relaxed mb-4 max-w-2xl mx-auto">
+      {subheadline}
+    </p>
+
+    <p class="text-base font-medium text-petroleo bg-white border border-nevoa rounded-xl px-6 py-4 inline-block mb-10 max-w-xl mx-auto">
+      "{argumentoCentral}"
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <Button href={linkWpp} variant="primary" size="lg" target="_blank" rel="noopener noreferrer">
+        Quero ver como ficaria meu negócio
+      </Button>
+      <Button href="/#servicos" variant="ghost" size="lg">
+        Ver planos e preços
+      </Button>
+    </div>
+
+  </div>
+</section>

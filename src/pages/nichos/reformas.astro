@@ -1,0 +1,62 @@
+---
+import NichoLayout from '../../layouts/NichoLayout.astro';
+import NichoHero from '../../components/sections/NichoHero.astro';
+import NichoChecklist from '../../components/sections/NichoChecklist.astro';
+import NichoCTA from '../../components/sections/NichoCTA.astro';
+
+const mensagemWpp = 'Olá! Tenho uma empresa de reforma/construção e gostaria de saber como a Marvin Sites pode melhorar minha presença digital.';
+
+const itens = [
+  'Portfólio de obras com fotos antes e depois',
+  'Tipos de serviço descritos com clareza',
+  'Regiões e cidades atendidas',
+  'Depoimentos de clientes com projetos realizados',
+  'Diferenciais: prazo, garantia, materiais',
+  'Botão de WhatsApp para solicitar orçamento',
+  'Formulário de contato rápido',
+  'Localização e área de atuação',
+  'SEO local para "empresa de reforma em [cidade]"',
+  'Galeria de projetos por tipo de serviço',
+];
+---
+
+<NichoLayout
+  title="Site para Empresas de Reforma e Construção | Marvin Sites"
+  description="Quem contrata reforma quer ver prova antes de chamar. Uma página com portfólio, depoimentos e orçamento fácil para sua empresa de reforma ou construção."
+  nicho="reformas"
+  nomeNicho="Reformas e Construção"
+>
+  <NichoHero
+    nicho="reformas"
+    badge="Reformas e construção"
+    headline="Quem contrata reforma quer ver prova antes de chamar. Mostre seu trabalho."
+    subheadline="Empresa de reforma vende confiança e prova visual. Quem está pensando em reformar pesquisa, compara e só chama quem parece experiente e organizado."
+    argumentoCentral="Quem contrata reforma quer ver prova antes de chamar."
+    mensagemWpp={mensagemWpp}
+    cor="bg-green-50 text-resultado"
+  />
+
+  <NichoChecklist itens={itens} titulo="O que sua página de reforma vai ter" />
+
+  <section class="bg-gelo py-16 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-bold text-petroleo mb-8 text-center">
+        Por que empresas de reforma precisam de presença digital própria?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { titulo: 'O portfólio vende sozinho', texto: 'Foto de obra bem apresentada vale mais do que qualquer texto. Uma página com galeria de projetos antes/depois transforma dúvida em orçamento.' },
+          { titulo: 'WhatsApp com contexto', texto: 'Em vez de "Oi, tudo bem?", o cliente chega dizendo "quero um orçamento de banheiro" — com link de WhatsApp configurado para cada tipo de serviço.' },
+          { titulo: 'Diferencial de mercado', texto: 'A maioria das empresas de reforma não tem site. Quem tem aparece mais profissional, cobra mais e fecha mais rápido.' },
+        ].map((card) => (
+          <div class="bg-white rounded-xl border border-nevoa p-6">
+            <h3 class="font-semibold text-petroleo mb-2">{card.titulo}</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">{card.texto}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <NichoCTA nicho="reformas" nomeNicho="empresa de reforma" mensagemWpp={mensagemWpp} />
+</NichoLayout>

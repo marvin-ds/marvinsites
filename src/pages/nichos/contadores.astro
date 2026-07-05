@@ -1,0 +1,62 @@
+---
+import NichoLayout from '../../layouts/NichoLayout.astro';
+import NichoHero from '../../components/sections/NichoHero.astro';
+import NichoChecklist from '../../components/sections/NichoChecklist.astro';
+import NichoCTA from '../../components/sections/NichoCTA.astro';
+
+const mensagemWpp = 'Olá! Tenho um escritório de contabilidade/consultoria e gostaria de saber como a Marvin Sites pode melhorar minha presença digital.';
+
+const itens = [
+  'Apresentação do escritório e dos sócios',
+  'Serviços contábeis descritos com clareza (não com jargão)',
+  'Diferenciais e anos de experiência em destaque',
+  'Setores e portes de empresa atendidos',
+  'Depoimentos de clientes e cases de resultado',
+  'Localização e formas de atendimento (presencial e remoto)',
+  'Botão de WhatsApp com mensagem pré-preenchida',
+  'Formulário para solicitar proposta',
+  'SEO local para buscas como "contador em [cidade]"',
+  'Blog ou área de conteúdo (planos superiores)',
+];
+---
+
+<NichoLayout
+  title="Site para Contadores e Consultorias | Marvin Sites"
+  description="Antes da reunião, o cliente já está avaliando se sua empresa parece confiável. Um site profissional para contadores e consultorias que transmite autoridade e facilita o contato."
+  nicho="contadores"
+  nomeNicho="Contadores e Consultorias"
+>
+  <NichoHero
+    nicho="contadores"
+    badge="Contabilidade e consultoria"
+    headline="Antes da reunião, o cliente já está avaliando se seu escritório parece confiável."
+    subheadline="Contadores e consultores vendem confiança, segurança e relacionamento. Uma presença digital profissional é parte do que o cliente avalia antes de assinar qualquer contrato."
+    argumentoCentral="Antes da reunião, o cliente já está avaliando se sua empresa parece confiável."
+    mensagemWpp={mensagemWpp}
+    cor="bg-orange-50 text-orange-700"
+  />
+
+  <NichoChecklist itens={itens} titulo="O que seu site de contabilidade vai ter" />
+
+  <section class="bg-gelo py-16 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-bold text-petroleo mb-8 text-center">
+        Por que escritórios contábeis precisam de site próprio?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { titulo: 'Autoridade antes do contato', texto: 'Quando um empresário está procurando trocar de contador, ele pesquisa. Seu site é a vitrine que mostra experiência, serviços e credibilidade antes de qualquer conversa.' },
+          { titulo: 'Captação além da indicação', texto: 'Indicação é ótima, mas tem limite. Um site bem posicionado no Google pode trazer empresas que nunca ouviriam falar de você por outro canal.' },
+          { titulo: 'Recorrência natural', texto: 'Contador é serviço recorrente. Cada cliente captado pelo site vira receita mensal previsível — o retorno do investimento digital é calculável.' },
+        ].map((card) => (
+          <div class="bg-white rounded-xl border border-nevoa p-6">
+            <h3 class="font-semibold text-petroleo mb-2">{card.titulo}</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">{card.texto}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <NichoCTA nicho="contadores" nomeNicho="contabilidade" mensagemWpp={mensagemWpp} />
+</NichoLayout>

@@ -1,0 +1,62 @@
+---
+import NichoLayout from '../../layouts/NichoLayout.astro';
+import NichoHero from '../../components/sections/NichoHero.astro';
+import NichoChecklist from '../../components/sections/NichoChecklist.astro';
+import NichoCTA from '../../components/sections/NichoCTA.astro';
+
+const mensagemWpp = 'Olá! Tenho uma pousada/serviço de turismo e gostaria de saber como a Marvin Sites pode melhorar minha presença digital.';
+
+const itens = [
+  'Apresentação da pousada/experiência com fotos de qualidade',
+  'Tipos de acomodação ou pacotes descritos com clareza',
+  'Reserva direta pelo WhatsApp (sem comissão de plataforma)',
+  'Localização com mapa e como chegar',
+  'Avaliações e depoimentos de hóspedes',
+  'Atrações e atividades da região',
+  'Políticas de check-in, check-out e cancelamento',
+  'Galeria de fotos do espaço e da região',
+  'SEO local para "pousada em [cidade]"',
+  'Formulário de consulta de disponibilidade',
+];
+---
+
+<NichoLayout
+  title="Site para Pousadas e Turismo | Marvin Sites"
+  description="Cada reserva direta vale mais do que depender de plataforma. Um site para pousadas e turismo que converte visitantes em reservas diretas pelo WhatsApp."
+  nicho="turismo"
+  nomeNicho="Turismo e Hospedagem"
+>
+  <NichoHero
+    nicho="turismo"
+    badge="Turismo e hospedagem"
+    headline="Cada reserva direta vale mais do que depender de plataforma."
+    subheadline="Pousadas e hospedagens que dependem só do Airbnb ou Booking pagam comissão em cada reserva. Um site próprio recupera essa margem e cria um canal direto com o hóspede."
+    argumentoCentral="Cada reserva direta vale mais do que depender só de plataforma."
+    mensagemWpp={mensagemWpp}
+    cor="bg-purple-50 text-purple-700"
+  />
+
+  <NichoChecklist itens={itens} titulo="O que sua página de turismo vai ter" />
+
+  <section class="bg-gelo py-16 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-bold text-petroleo mb-8 text-center">
+        Por que pousadas precisam de site próprio?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { titulo: 'Menos comissão', texto: 'Booking e Airbnb cobram entre 15% e 20% por reserva. Um site próprio com WhatsApp direto elimina essa comissão em cada reserva direta.' },
+          { titulo: 'Relacionamento com o hóspede', texto: 'Plataformas controlam o contato com o hóspede. Seu site cria um canal direto — você conhece quem está vindo e pode fidelizar.' },
+          { titulo: 'Confiança antes da reserva', texto: 'Quem vai gastar com viagem pesquisa muito antes de reservar. Uma página bonita e completa transmite a segurança que o viajante precisa.' },
+        ].map((card) => (
+          <div class="bg-white rounded-xl border border-nevoa p-6">
+            <h3 class="font-semibold text-petroleo mb-2">{card.titulo}</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">{card.texto}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <NichoCTA nicho="turismo" nomeNicho="pousada" mensagemWpp={mensagemWpp} />
+</NichoLayout>
