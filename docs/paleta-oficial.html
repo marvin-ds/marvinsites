@@ -1,0 +1,460 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, sans-serif; }
+
+.wrap {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.85rem;
+}
+
+.card {
+  background: #fff;
+  border: 0.5px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.swatch-bar {
+  display: flex;
+  height: 72px;
+}
+.sw {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 10px;
+}
+.sw-lbl {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.sw-hex {
+  font-size: 9px;
+  margin-top: 2px;
+  opacity: 0.7;
+}
+
+.token-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  background: #e5e7eb;
+  border-top: 0.5px solid #e5e7eb;
+}
+.token-item {
+  background: #f8fafc;
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.token-chip {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 0.5px solid rgba(0,0,0,0.08);
+}
+.token-name {
+  font-size: 11px;
+  font-weight: 500;
+  color: #0B1F33;
+  letter-spacing: 0.01em;
+}
+.token-hex {
+  font-size: 11px;
+  color: #6b7280;
+  font-family: monospace;
+}
+.token-role {
+  font-size: 10px;
+  color: #9ca3af;
+  line-height: 1.4;
+}
+
+.ratio-bar-wrap {
+  padding: 1.25rem 1.5rem;
+  border-top: 0.5px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ratio-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ratio-label {
+  font-size: 12px;
+  color: #6b7280;
+  min-width: 28px;
+  text-align: right;
+}
+.ratio-track {
+  flex: 1;
+  height: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+}
+.ratio-seg {
+  height: 100%;
+}
+.ratio-desc {
+  font-size: 11px;
+  color: #9ca3af;
+  min-width: 120px;
+}
+
+.preview-strip {
+  border-top: 0.5px solid #e5e7eb;
+  background: #F8FAFC;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.preview-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-mark {
+  width: 36px;
+  height: 36px;
+  background: #0B1F33;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-mark-inner {
+  width: 16px;
+  height: 16px;
+  background: #FF6B2C;
+  border-radius: 3px;
+}
+.logo-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #0B1F33;
+  letter-spacing: -0.02em;
+}
+.logo-text span {
+  color: #2563EB;
+}
+
+.preview-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.btn {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 9px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: default;
+  letter-spacing: 0.01em;
+}
+.btn-cta {
+  background: #FF6B2C;
+  color: #fff;
+}
+.btn-primary {
+  background: #0B1F33;
+  color: #fff;
+}
+.btn-ghost {
+  background: transparent;
+  color: #0B1F33;
+  border: 0.5px solid #0B1F33;
+}
+.btn-wa {
+  background: #16A34A;
+  color: #fff;
+}
+
+.preview-card {
+  background: #fff;
+  border: 0.5px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 360px;
+}
+.pcard-tag {
+  display: inline-flex;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #EFF6FF;
+  color: #1D4ED8;
+  width: fit-content;
+}
+.pcard-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #0B1F33;
+}
+.pcard-body {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+.pcard-cta {
+  font-size: 13px;
+  font-weight: 500;
+  color: #FF6B2C;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.preview-tag-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.tag {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+.tag-dark { background: #0B1F33; color: #F8FAFC; }
+.tag-blue { background: #EFF6FF; color: #1D4ED8; }
+.tag-orange { background: #FFF1EB; color: #C2410C; }
+.tag-green { background: #F0FDF4; color: #15803D; }
+.tag-gray { background: #F3F4F6; color: #374151; }
+
+.divider { border: none; border-top: 0.5px solid #e5e7eb; }
+
+.legend-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1rem 1.5rem;
+  border-top: 0.5px solid #e5e7eb;
+  background: #fff;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #6b7280;
+}
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+</style>
+
+<div class="wrap">
+
+  <div>
+    <p class="section-label">Paleta oficial — Marvin Sites</p>
+    <div class="card">
+
+      <div class="swatch-bar">
+        <div class="sw" style="background:#0B1F33;">
+          <span class="sw-lbl" style="color:#7EA8CC;">Petróleo</span>
+          <span class="sw-hex" style="color:#5A8BAA;">#0B1F33</span>
+        </div>
+        <div class="sw" style="background:#2563EB;">
+          <span class="sw-lbl" style="color:#BFD4FB;">Confiança</span>
+          <span class="sw-hex" style="color:#93B5F8;">#2563EB</span>
+        </div>
+        <div class="sw" style="background:#FF6B2C;">
+          <span class="sw-lbl" style="color:#FFD5C0;">Conversão</span>
+          <span class="sw-hex" style="color:#FFC4A8;">#FF6B2C</span>
+        </div>
+        <div class="sw" style="background:#16A34A;">
+          <span class="sw-lbl" style="color:#A7F3C3;">WhatsApp</span>
+          <span class="sw-hex" style="color:#7BE8A8;">#16A34A</span>
+        </div>
+        <div class="sw" style="background:#F8FAFC; border-top: 0.5px solid #e5e7eb;">
+          <span class="sw-lbl" style="color:#6b7280;">Fundo</span>
+          <span class="sw-hex" style="color:#9ca3af;">#F8FAFC</span>
+        </div>
+        <div class="sw" style="background:#E5E7EB; border-top: 0.5px solid #d1d5db;">
+          <span class="sw-lbl" style="color:#6b7280;">Névoa</span>
+          <span class="sw-hex" style="color:#9ca3af;">#E5E7EB</span>
+        </div>
+        <div class="sw" style="background:#111827;">
+          <span class="sw-lbl" style="color:#9ca3af;">Grafite</span>
+          <span class="sw-hex" style="color:#6b7280;">#111827</span>
+        </div>
+      </div>
+
+      <div class="token-grid">
+        <div class="token-item">
+          <div class="token-chip" style="background:#0B1F33;"></div>
+          <div class="token-name">Azul petróleo</div>
+          <div class="token-hex">#0B1F33</div>
+          <div class="token-role">Principal · títulos · faixas · autoridade</div>
+        </div>
+        <div class="token-item">
+          <div class="token-chip" style="background:#2563EB;"></div>
+          <div class="token-name">Azul confiança</div>
+          <div class="token-hex">#2563EB</div>
+          <div class="token-role">Links · destaques · badges · digital</div>
+        </div>
+        <div class="token-item">
+          <div class="token-chip" style="background:#FF6B2C;"></div>
+          <div class="token-name">Laranja conversão</div>
+          <div class="token-hex">#FF6B2C</div>
+          <div class="token-role">CTA principal · diagnóstico · urgência</div>
+        </div>
+        <div class="token-item">
+          <div class="token-chip" style="background:#16A34A;"></div>
+          <div class="token-name">Verde resultado</div>
+          <div class="token-hex">#16A34A</div>
+          <div class="token-role">Botão WhatsApp · confirmação · sucesso</div>
+        </div>
+        <div class="token-item">
+          <div class="token-chip" style="background:#F8FAFC; border:0.5px solid #e5e7eb;"></div>
+          <div class="token-name">Branco gelo</div>
+          <div class="token-hex">#F8FAFC</div>
+          <div class="token-role">Fundo padrão · áreas abertas · clareza</div>
+        </div>
+        <div class="token-item">
+          <div class="token-chip" style="background:#E5E7EB;"></div>
+          <div class="token-name">Cinza névoa</div>
+          <div class="token-hex">#E5E7EB</div>
+          <div class="token-role">Fundo alternativo · separadores · cards</div>
+        </div>
+        <div class="token-item">
+          <div class="token-chip" style="background:#111827;"></div>
+          <div class="token-name">Grafite escuro</div>
+          <div class="token-hex">#111827</div>
+          <div class="token-role">Texto corrido · corpo · legibilidade</div>
+        </div>
+      </div>
+
+      <div class="ratio-bar-wrap">
+        <p class="section-label" style="margin-bottom:0.25rem;">Proporção de uso</p>
+        <div class="ratio-row">
+          <span class="ratio-label">70%</span>
+          <div class="ratio-track">
+            <div class="ratio-seg" style="width:70%; background:#F8FAFC; border:0.5px solid #e5e7eb;"></div>
+            <div class="ratio-seg" style="width:30%; background:#E5E7EB;"></div>
+          </div>
+          <span class="ratio-desc">Fundos claros e espaço</span>
+        </div>
+        <div class="ratio-row">
+          <span class="ratio-label">20%</span>
+          <div class="ratio-track">
+            <div class="ratio-seg" style="width:60%; background:#0B1F33;"></div>
+            <div class="ratio-seg" style="width:20%; background:#2563EB;"></div>
+            <div class="ratio-seg" style="width:20%; background:#111827;"></div>
+          </div>
+          <span class="ratio-desc">Autoridade e estrutura</span>
+        </div>
+        <div class="ratio-row">
+          <span class="ratio-label">10%</span>
+          <div class="ratio-track">
+            <div class="ratio-seg" style="width:55%; background:#FF6B2C;"></div>
+            <div class="ratio-seg" style="width:45%; background:#16A34A;"></div>
+          </div>
+          <span class="ratio-desc">CTA e conversão</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div>
+    <p class="section-label">Aplicação — elementos de marca</p>
+    <div class="card">
+      <div class="preview-strip">
+
+        <div class="preview-logo">
+          <div class="logo-mark">
+            <div class="logo-mark-inner"></div>
+          </div>
+          <div class="logo-text">Marvin <span>Sites</span></div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="preview-btns">
+          <button class="btn btn-cta">Solicitar diagnóstico</button>
+          <button class="btn btn-wa">Chamar no WhatsApp</button>
+          <button class="btn btn-primary">Ver planos</button>
+          <button class="btn btn-ghost">Saber mais</button>
+        </div>
+
+        <hr class="divider">
+
+        <div class="preview-card">
+          <span class="pcard-tag">Diagnóstico gratuito</span>
+          <div class="pcard-title">Seu negócio aparece bem no Google?</div>
+          <div class="pcard-body">Muita gente pesquisa antes de ligar. Se sua presença digital não passa confiança, o cliente vai para o concorrente.</div>
+          <div class="pcard-cta">
+            <i class="ti ti-arrow-right" aria-hidden="true" style="font-size:14px;"></i>
+            Ver diagnóstico
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <div class="preview-tag-row">
+          <span class="tag tag-dark">Presença local</span>
+          <span class="tag tag-blue">Google Maps</span>
+          <span class="tag tag-orange">Setup em 7 dias</span>
+          <span class="tag tag-green">WhatsApp incluso</span>
+          <span class="tag tag-gray">SEO local</span>
+        </div>
+
+      </div>
+
+      <div class="legend-row">
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#0B1F33;"></div>
+          Autoridade
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#2563EB;"></div>
+          Digital
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#FF6B2C;"></div>
+          Ação
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#16A34A;"></div>
+          WhatsApp
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#F8FAFC; border:0.5px solid #ccc;"></div>
+          Espaço / fundo
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
