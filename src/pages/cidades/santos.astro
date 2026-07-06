@@ -6,7 +6,6 @@ import WhatsAppButton from '../../components/layout/WhatsAppButton.astro';
 import CidadeHero from '../../components/sections/CidadeHero.astro';
 import CidadeNichos from '../../components/sections/CidadeNichos.astro';
 import CidadeCTA from '../../components/sections/CidadeCTA.astro';
-import { schemaService } from '../../lib/schema';
 
 const cidade = 'Santos';
 const uf = 'SP';
@@ -22,9 +21,41 @@ const schema = {
 };
 
 const diferenciais = [
-  { titulo: 'Conhecemos o mercado local', texto: 'Santos tem um mercado competitivo e diversificado. Nossos sites são pensados para o cliente da Baixada Santista, que pesquisa no celular antes de escolher qualquer serviço.' },
-  { titulo: 'Presença no Google Maps', texto: 'Ajudamos seu negócio a aparecer quando alguém busca por "clínica em Santos", "contador Santos SP" ou qualquer serviço da sua área na cidade.' },
-  { titulo: 'Atendimento direto, sem intermediário', texto: 'Você fala direto com quem cria o site. Sem terceiros, sem demora. WhatsApp com resposta em até 24 horas úteis.' },
+  {
+    titulo: 'Mercado santista competitivo e digitalmente ativo',
+    texto: 'Santos tem mais de 430 mil habitantes, uma economia diversificada e um público que pesquisa no Google antes de tomar qualquer decisão de compra. Clínicas, contadores, serviços de reforma e estética em Santos já perdem clientes para concorrentes com presença digital melhor estruturada.',
+  },
+  {
+    titulo: 'Visibilidade em buscas locais reais',
+    texto: 'Quando alguém em Santos pesquisa "clínica de estética no Gonzaga", "contador no Boqueirão SP" ou "empresa de reforma em Santos", o Google prioriza quem tem site estruturado com informações locais claras. A Marvin Sites cria páginas otimizadas para essas buscas específicas.',
+  },
+  {
+    titulo: 'Atendimento direto, entrega em 7 dias úteis',
+    texto: 'Você fala diretamente com quem cria o site — sem agências intermediárias, sem orçamento que demora uma semana para chegar. O diagnóstico é gratuito e a entrega acontece em até 7 dias úteis após o envio dos materiais do negócio.',
+  },
+];
+
+const faq = [
+  {
+    pergunta: 'Quanto custa criar um site para um negócio em Santos SP?',
+    resposta: 'Os planos da Marvin Sites para negócios em Santos começam em R$ 897 (setup) + R$ 147/mês de manutenção para a Página Local Essencial. O plano mais completo, Site Local Profissional, tem setup de R$ 2.497 + R$ 247/mês. O diagnóstico para entender qual plano faz sentido para o seu negócio é gratuito e sem compromisso.',
+  },
+  {
+    pergunta: 'Em quanto tempo o site do meu negócio em Santos fica pronto?',
+    resposta: 'O prazo padrão é de 7 dias úteis após o recebimento completo das informações e materiais do negócio (fotos, textos, logo). Para negócios em Santos e Baixada Santista, não há acréscimo de prazo — o processo é 100% remoto e funciona da mesma forma.',
+  },
+  {
+    pergunta: 'O site vai aparecer no Google quando pesquisarem por serviços em Santos?',
+    resposta: 'Sim. Cada página é estruturada com SEO local: palavras-chave específicas da cidade (como "Santos SP"), nome dos bairros atendidos, Schema.org para o Google entender o tipo de negócio e localização, e conteúdo voltado para as buscas que seus clientes reais fazem. O resultado não é imediato — SEO leva de semanas a meses — mas a base técnica está correta desde o primeiro dia.',
+  },
+  {
+    pergunta: 'Atende clínicas e consultórios em Santos?',
+    resposta: 'Sim. Clínicas de estética, consultórios médicos, odontológicos, de fisioterapia, psicologia e outras especialidades são um dos nichos com mais demanda em Santos. A página inclui apresentação da equipe, lista de serviços, localização, horário de funcionamento e botão de agendamento via WhatsApp.',
+  },
+  {
+    pergunta: 'Consigo ter um site profissional sendo um negócio pequeno ou autônomo em Santos?',
+    resposta: 'Sim — e é exatamente para isso que a Marvin Sites foi criada. Autônomos, profissionais liberais e pequenos negócios em Santos são o público principal. Um contador, uma professora particular, um eletricista ou uma manicure com site profissional passa muito mais confiança do que concorrentes que dependem só do WhatsApp ou do Instagram.',
+  },
 ];
 ---
 
@@ -38,7 +69,7 @@ const diferenciais = [
   <main>
     <CidadeHero
       {cidade} {uf}
-      descricaoCidade="Santos é uma cidade dinâmica com milhares de pequenos negócios. Mas muitos ainda aparecem de forma fraca no Google. A Marvin Sites cria páginas profissionais para negócios santistas serem encontrados, transmitirem confiança e receberem contatos pelo WhatsApp."
+      descricaoCidade="Santos tem mais de 430 mil habitantes e um mercado local ativo — mas muitos pequenos negócios ainda aparecem de forma fraca no Google. A Marvin Sites cria páginas profissionais para que clínicas, contadores, prestadores de serviço e comércios santistas sejam encontrados, transmitam confiança e recebam mais contatos pelo WhatsApp."
       {mensagemWpp}
     />
 
@@ -63,11 +94,36 @@ const diferenciais = [
 
     <!-- Bairros atendidos -->
     <section class="bg-gelo py-12 px-4 sm:px-6">
-      <div class="max-w-5xl mx-auto text-center">
-        <h2 class="text-xl font-semibold text-petroleo mb-4">Atendemos em todos os bairros de Santos</h2>
-        <p class="text-gray-500 text-sm leading-relaxed max-w-2xl mx-auto">
-          Gonzaga, Boqueirão, Embaré, Pompéia, Aparecida, Vila Mathias, Ponta da Praia, José Menino, Encruzilhada, Marapé, Vila Nova, Jardim Rádio Clube e toda a região.
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-xl font-semibold text-petroleo mb-4 text-center">Atendemos em todos os bairros de Santos</h2>
+        <p class="text-gray-500 text-sm leading-relaxed max-w-3xl mx-auto text-center mb-6">
+          Gonzaga, Boqueirão, Embaré, Pompéia, Aparecida, Vila Mathias, Ponta da Praia, José Menino, Encruzilhada, Marapé, Vila Nova, Jardim Rádio Clube, Estuário, Santa Maria, Campo Grande, Areia Branca, Rádio Clube, Castelo, Macuco e toda a região central e de orla.
         </p>
+        <p class="text-gray-500 text-sm leading-relaxed max-w-3xl mx-auto text-center">
+          O atendimento é remoto — não é necessário reunião presencial. Você envia as informações do negócio pelo WhatsApp e a entrega acontece em até 7 dias úteis.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ local -->
+    <section class="bg-white py-16 px-4 sm:px-6">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold text-petroleo mb-8 text-center">
+          Dúvidas frequentes — negócios em Santos SP
+        </h2>
+        <div class="space-y-3">
+          {faq.map((item) => (
+            <details class="group bg-gelo rounded-xl border border-nevoa overflow-hidden">
+              <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer font-medium text-petroleo text-sm list-none">
+                {item.pergunta}
+                <svg class="w-4 h-4 text-gray-400 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </summary>
+              <p class="px-5 pb-5 text-gray-500 text-sm leading-relaxed">{item.resposta}</p>
+            </details>
+          ))}
+        </div>
       </div>
     </section>
 

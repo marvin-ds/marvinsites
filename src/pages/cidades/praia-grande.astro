@@ -21,9 +21,41 @@ const schema = {
 };
 
 const diferenciais = [
-  { titulo: 'Uma das maiores cidades da Baixada', texto: 'Praia Grande tem mais de 300 mil habitantes e um comércio local muito ativo. O pequeno empresário que aparece bem no Google tem vantagem real sobre quem não tem presença digital.' },
-  { titulo: 'Público que pesquisa no celular', texto: 'O morador de Praia Grande pesquisa no Google antes de contratar qualquer serviço local. Ter uma página clara e profissional é a diferença entre ser encontrado ou não.' },
-  { titulo: 'Mercado em crescimento', texto: 'A cidade cresce e novos negócios surgem todo mês. Quem estabelece presença digital agora tem vantagem competitiva antes que o nicho fique saturado online.' },
+  {
+    titulo: 'Uma das maiores cidades da Baixada Santista',
+    texto: 'Praia Grande tem mais de 330 mil habitantes e um dos mercados locais mais ativos da região. O pequeno empresário que aparece bem no Google tem vantagem real sobre quem depende só de indicação — especialmente em nichos como estética, clínicas, reformas e serviços para o lar.',
+  },
+  {
+    titulo: 'Público que pesquisa no celular antes de contratar',
+    texto: 'O morador de Praia Grande pesquisa no Google antes de contratar qualquer serviço local. Ter uma página clara e profissional é a diferença entre ser encontrado ou ficar invisível. Buscas como "clínica estética em Praia Grande", "contador no Boqueirão SP" ou "empresa de reforma em Praia Grande" acontecem todo dia.',
+  },
+  {
+    titulo: 'Mercado em crescimento e nichos ainda em aberto',
+    texto: 'A cidade cresce e novos negócios surgem todo mês. Quem estabelece presença digital agora tem vantagem competitiva antes que o nicho fique saturado online. Um site bem estruturado hoje é um ativo que trabalha enquanto você atende seus clientes.',
+  },
+];
+
+const faq = [
+  {
+    pergunta: 'Quanto custa criar um site para um negócio em Praia Grande SP?',
+    resposta: 'Os planos da Marvin Sites para negócios em Praia Grande começam em R$ 897 (setup) + R$ 147/mês de manutenção para a Página Local Essencial. O plano mais completo tem setup de R$ 2.497 + R$ 247/mês e inclui mais páginas e funcionalidades. O diagnóstico para entender qual plano faz sentido é gratuito e sem compromisso.',
+  },
+  {
+    pergunta: 'O site vai aparecer no Google para buscas locais em Praia Grande?',
+    resposta: 'Sim. Cada página é estruturada com SEO local específico para Praia Grande: palavras-chave da cidade, bairros atendidos (Boqueirão, Caiçara, Tupi, Ocian, Quietude, Real, Mirim, Guilhermina, Flórida e outros), e Schema.org para que o Google entenda o tipo de negócio e a localização. O posicionamento no Google leva de semanas a meses, mas a fundação técnica está correta desde o primeiro dia.',
+  },
+  {
+    pergunta: 'Em quanto tempo o site fica pronto para um negócio em Praia Grande?',
+    resposta: 'O prazo padrão é de 7 dias úteis após o recebimento completo das informações e materiais (fotos, textos, logo). O processo é 100% remoto — você envia tudo pelo WhatsApp e o site é entregue dentro do prazo, sem necessidade de deslocamento ou reunião presencial.',
+  },
+  {
+    pergunta: 'Atende clínicas, salões de beleza e autônomos em Praia Grande?',
+    resposta: 'Sim. Clínicas de estética, salões, eletricistas, contadores, professores particulares, fisioterapeutas, pequenos comércios e qualquer prestador de serviço local em Praia Grande. O site é adaptado ao tipo de negócio com o conteúdo certo para o seu público.',
+  },
+  {
+    pergunta: 'Meu negócio é pequeno e não sei se vale um site. Vale para quem está começando?',
+    resposta: 'Vale especialmente para quem está começando. Um negócio novo em Praia Grande que tem site profissional desde o início já estabelece credibilidade antes mesmo de ter muitos clientes. E um negócio mais antigo que ainda depende só de indicação está perdendo clientes para quem aparece melhor no Google — mesmo sendo menor ou mais novo no mercado.',
+  },
 ];
 ---
 
@@ -37,10 +69,11 @@ const diferenciais = [
   <main>
     <CidadeHero
       {cidade} {uf}
-      descricaoCidade="Praia Grande tem um mercado local forte e crescente. A Marvin Sites ajuda pequenos negócios da cidade a terem uma presença digital clara — para serem encontrados no Google, transmitirem confiança e receberem mais contatos pelo WhatsApp."
+      descricaoCidade="Praia Grande tem mais de 330 mil habitantes e um mercado local forte e crescente. A Marvin Sites ajuda pequenos negócios da cidade a terem presença digital clara — para serem encontrados no Google, transmitirem confiança e receberem mais contatos pelo WhatsApp, sem depender só de indicação."
       {mensagemWpp}
     />
 
+    <!-- Diferenciais locais -->
     <section class="bg-white py-16 px-4 sm:px-6">
       <div class="max-w-5xl mx-auto">
         <h2 class="text-2xl sm:text-3xl font-bold text-petroleo mb-8 text-center">
@@ -59,12 +92,38 @@ const diferenciais = [
 
     <CidadeNichos {cidade} />
 
+    <!-- Bairros atendidos -->
     <section class="bg-gelo py-12 px-4 sm:px-6">
-      <div class="max-w-5xl mx-auto text-center">
-        <h2 class="text-xl font-semibold text-petroleo mb-4">Atendemos em todos os bairros de Praia Grande</h2>
-        <p class="text-gray-500 text-sm leading-relaxed max-w-2xl mx-auto">
-          Boqueirão, Caiçara, Tupi, Ocian, Quietude, Guilhermina, Real, Mirim, Flórida, Vila Sônia, Melvi, Samambaia e toda a orla e região continental.
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-xl font-semibold text-petroleo mb-4 text-center">Atendemos em todos os bairros de Praia Grande</h2>
+        <p class="text-gray-500 text-sm leading-relaxed max-w-3xl mx-auto text-center mb-6">
+          Boqueirão, Caiçara, Tupi, Ocian, Quietude, Guilhermina, Real, Mirim, Flórida, Vila Sônia, Melvi, Samambaia, Esmeralda, Ribeirópolis, Maracanã, Aviação, Vilamar, Jardim Imperador e toda a orla e região continental.
         </p>
+        <p class="text-gray-500 text-sm leading-relaxed max-w-3xl mx-auto text-center">
+          O atendimento é 100% remoto. Você envia as informações do negócio pelo WhatsApp e o site fica pronto em até 7 dias úteis — sem necessidade de reunião presencial.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ local -->
+    <section class="bg-white py-16 px-4 sm:px-6">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold text-petroleo mb-8 text-center">
+          Dúvidas frequentes — negócios em Praia Grande SP
+        </h2>
+        <div class="space-y-3">
+          {faq.map((item) => (
+            <details class="group bg-gelo rounded-xl border border-nevoa overflow-hidden">
+              <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer font-medium text-petroleo text-sm list-none">
+                {item.pergunta}
+                <svg class="w-4 h-4 text-gray-400 flex-shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </summary>
+              <p class="px-5 pb-5 text-gray-500 text-sm leading-relaxed">{item.resposta}</p>
+            </details>
+          ))}
+        </div>
       </div>
     </section>
 
