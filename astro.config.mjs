@@ -7,4 +7,9 @@ export default defineConfig({
     tailwind(),
   ],
   output: 'static',
+  vite: {
+    build: {
+      cssCodeSplit: false,
+    },
+  },
 });
