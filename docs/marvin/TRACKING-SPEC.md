@@ -1,6 +1,16 @@
 # Marvin Sites — Especificação de Tracking
 
-**Versão:** 1.0 | **Data-base:** 27/08/2026
+**Versão:** 1.1 | **Data-base:** 27/08/2026 | **Atualizado:** 27/08/2026 (Gate 0.5)
+
+> **Adendo Gate 0.5 — Estado dos eventos:**
+>
+> | Evento | Estado |
+> |---|---|
+> | `diagnostic_view`, `diagnostic_start`, `diagnostic_submit` | LEGACY CURRENT — fluxo diagnóstico manual ativo |
+> | Eventos Raio-X | FUTURE — ver [../marvin-saas/TRACKING-SPEC.md](../marvin-saas/TRACKING-SPEC.md) |
+>
+> **CUTOVER:** `diagnostic_start`/`diagnostic_submit` só são substituídos no MS-G10 (Raio-X público).
+> Não remover eventos legacy antes do cutover.
 
 ---
 

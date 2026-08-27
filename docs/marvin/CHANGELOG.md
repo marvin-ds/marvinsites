@@ -2,10 +2,52 @@
 
 ---
 
-## [Não lançado]
+## [Gate 0.5] — 27/08/2026 — Reconciliação Arquitetural Marvin Local
+
+### Arquitetura
+- Incorporação formal da Marvin Local / Micro-SaaS ao projeto
+- Raio-X Marvin definido como futura porta principal de aquisição (substituindo CTA diagnóstico manual no MS-G10)
+- `businesses` definido como entidade estrutural central do Supabase compartilhado
+- `leads.business_id` adicionado ao modelo de dados compartilhado
+- `business_sources` adicionada ao modelo de dados compartilhado
+- Supabase compartilhado documentado para site + CRM + SaaS
+- G4 renomeado: "Lead Capture Foundation" (sem UX definitiva de diagnóstico manual)
+- Interlock G12/G13 ↔ MS-G10 documentado
+
+### Documentação nova
+- `docs/marvin-saas/` criada com 14 documentos:
+  MASTER-PLAN, CURRENT, DECISIONS, RAIO-X-PRODUCT-SPEC, RADAR-PRODUCT-SPEC,
+  SCORING-SPEC, DATA-MODEL, API-SPEC, GOOGLE-DATA-SPEC, TRACKING-SPEC,
+  BILLING-SPEC, SECURITY-SPEC, QA-SPEC, ROADMAP
+
+### Decisões adicionadas
+- D009: Gate 0.5 — Arquitetura Marvin Local incorporada
+- D010: G4 renomeado para Lead Capture Foundation
+- D011: Cutover da home somente no MS-G10
+- D-MS001 a D-MS012 (docs/marvin-saas/DECISIONS.md)
+
+### Runtime
+- Nenhum código funcional alterado
+- Nenhuma migration criada
+- Nenhuma dependência instalada
+- Site em produção: inalterado
+
+---
+
+## [Gate 0] — 27/08/2026 — Inventário e Baseline
 
 ### Documentação
 - Criados todos os docs em `docs/marvin/` a partir da Especificação Técnica v1.0
+- `G0-INVENTORY.md` — inventário técnico completo do estado atual
+- `DECISIONS.md` D008 — numeração canônica dos Gates (TECH-SPEC.md é referência)
+- `CURRENT.md` — atualizado com estado pós-Gate 0 e riscos identificados
+
+### Achados relevantes (Gate 0)
+- Stack: Astro 4.16.0, Tailwind 3.4.0, TypeScript 5.6.0, Netlify, npm
+- Analytics: apenas Umami (cookieless) — sem GTM, GA4, Ads, Meta
+- Formulário: Netlify Forms — sem banco próprio, sem atribuição
+- Atomicat: zero integração existente
+- P1: `/obrigado` provavelmente inexistente — confirmar antes do Gate 1
 
 ---
 

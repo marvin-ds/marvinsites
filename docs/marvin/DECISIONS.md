@@ -2,6 +2,36 @@
 
 **Atualizar sempre que uma decisão técnica ou estratégica relevante for tomada.**
 
+> Decisões específicas da Marvin Local / SaaS: [../marvin-saas/DECISIONS.md](../marvin-saas/DECISIONS.md)
+
+---
+
+## D009 — 27/08/2026 — Gate 0.5: Arquitetura Marvin Local incorporada
+
+**Decisão:** A Marvin Local / Micro-SaaS foi formalmente incorporada à arquitetura do projeto. O Supabase será compartilhado entre site, CRM e SaaS. `businesses` passa a ser a entidade estrutural central. O Raio-X Marvin é a futura porta principal de aquisição.
+
+**Consequência:** G1 deve nascer com `businesses` como entidade central. A UX definitiva do diagnóstico manual (G4) não deve ser construída para ser substituída logo depois; G4 deve entregar "Lead Capture Foundation" sem dependência de UX específica. G12/G13 do site ficam em interlock com MS-G10 (Raio-X público).
+
+**Referência:** docs/marvin-saas/DECISIONS.md D-MS001 a D-MS012.
+
+---
+
+## D010 — 27/08/2026 — G4 renomeado: Lead Capture Foundation
+
+**Decisão:** O Gate 4 não deve construir uma UX específica de "formulário diagnóstico manual" que será substituída pelo Raio-X. O objetivo de G4 passa a ser:
+
+"Lead Capture Foundation" — endpoint seguro, lead + business link, consent, persistência, /obrigado fallback e eventos compartilhados.
+
+**A UX definitiva do Raio-X pertence aos MS-Gates.**
+
+---
+
+## D011 — 27/08/2026 — Cutover da home somente no MS-G10
+
+**Decisão:** O CTA atual "Quero meu diagnóstico gratuito" e o fluxo de diagnóstico manual são LEGACY CURRENT e ficam em produção até o MS-G10 (Raio-X público). Não retirar prematuramente.
+
+**Status:** o fluxo atual é intencionalmente mantido enquanto o Raio-X está em desenvolvimento.
+
 ---
 
 ## D008 — 27/08/2026 — Numeração canônica dos Gates técnicos
