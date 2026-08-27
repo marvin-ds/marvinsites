@@ -2,10 +2,20 @@
 
 ---
 
-## [Não lançado]
+## [Gate 0] — 27/08/2026 — Inventário e Baseline
 
 ### Documentação
 - Criados todos os docs em `docs/marvin/` a partir da Especificação Técnica v1.0
+- `G0-INVENTORY.md` — inventário técnico completo do estado atual
+- `DECISIONS.md` D008 — numeração canônica dos Gates (TECH-SPEC.md é referência)
+- `CURRENT.md` — atualizado com estado pós-Gate 0 e riscos identificados
+
+### Achados relevantes (Gate 0)
+- Stack: Astro 4.16.0, Tailwind 3.4.0, TypeScript 5.6.0, Netlify, npm
+- Analytics: apenas Umami (cookieless) — sem GTM, GA4, Ads, Meta
+- Formulário: Netlify Forms — sem banco próprio, sem atribuição
+- Atomicat: zero integração existente
+- P1: `/obrigado` provavelmente inexistente — confirmar antes do Gate 1
 
 ---
 
