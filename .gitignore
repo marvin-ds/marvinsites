@@ -4,3 +4,8 @@ node_modules/
 dist/
 .DS_Store
 .astro/
+
+# Supabase local dev (never commit)
+supabase/.temp/
+supabase/.branches/
+supabase/functions/.env
