@@ -9,6 +9,7 @@
   action="/obrigado/"
   class="space-y-4"
   id="form-diagnostico"
+  data-async-submit
 >
   <!-- Honeypot anti-bot -->
   <input type="hidden" name="form-name" value="diagnostico" />
@@ -98,3 +99,24 @@
     Solicitar diagnóstico gratuito
   </button>
 </form>
+
+<script>
+  const form = document.getElementById('form-diagnostico') as HTMLFormElement | null;
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+      if (btn) { btn.disabled = true; btn.textContent = 'Enviando…'; }
+      try {
+        await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString(),
+        });
+      } catch (_) {
+        // rede falhou — Netlify pode não ter recebido, mas redirecionamos de qualquer forma
+      }
+      window.location.assign('/obrigado/');
+    });
+  }
+</script>
