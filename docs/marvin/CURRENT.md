@@ -7,19 +7,16 @@
 ## Gate atual
 
 **G0 — Inventário e baseline** ✅ APPROVED  
-**G0.5 — Reconciliação arquitetural Marvin Local** ✅ APPROVED
+**G0.5 — Reconciliação arquitetural Marvin Local** ✅ APPROVED  
+**HOTFIX /obrigado** ✅ PRODUCTION APPROVED
 
-## Branch atual
+## Branch de produção
 
-`chore/marvin-g05-raiox-alignment` (em andamento)
-
-## HEAD
-
-`edba283` → HEAD final deste Gate (após commit)
+`main` — HEAD `dd54bb0`
 
 ## Working tree
 
-Limpo.
+Limpa.
 
 ## O que está concluído
 
@@ -28,7 +25,11 @@ Limpo.
 - [x] Header com logo SVG (`/favicon.svg`)
 - [x] Hero, Problem, Solution, Services, Testimonials, FinalCTA, Footer
 - [x] 4 páginas de cidade (Santos, Guarujá, Praia Grande, São Vicente) com FAQs locais
-- [x] Formulário de diagnóstico com honeypot + validação (via Netlify Forms)
+- [x] 6 páginas de nicho com SEO e WhatsApp contextual
+- [x] Formulário de diagnóstico com honeypot + validação — **fluxo atual:**
+  - `fetch POST` para `/` (Netlify Forms processa)
+  - `window.location.assign('/obrigado/')` após sucesso
+- [x] Página `/obrigado/` — confirmação pós-formulário (noindex, fora do sitemap)
 - [x] Botão WhatsApp flutuante
 - [x] Páginas /termos e /privacidade
 - [x] Google Search Console verificado + sitemap enviado
@@ -38,7 +39,15 @@ Limpo.
 - [x] Favicon SVG (logo mark colorido)
 - [x] WCAG AA — múltiplas rodadas de correção de contraste
 - [x] PageSpeed: 93 Performance, 96 Accessibility, 100 Best Practices, 100 SEO
-- [x] Pelo menos 1 página de nicho (`/nichos/clinicas`)
+
+### Variáveis de ambiente (Netlify)
+- [x] `PUBLIC_WHATSAPP_NUMBER` — USER-CONFIRMED / EXTERNAL (configurada corretamente)
+
+### Supabase
+- [x] Projeto criado externamente
+- Project Ref: `dboihbvjtdlgvugjxaam`
+- Project URL: `https://dboihbvjtdlgvugjxaam.supabase.co`
+- Status: **aguardando Gate 1** — nenhuma migration executada
 
 ### Documentação (docs/marvin/)
 - [x] TECH-SPEC.md — spec técnica completa v1.0
@@ -70,52 +79,66 @@ Limpo.
 - [x] QA-SPEC.md — plano de testes SaaS
 - [x] ROADMAP.md — MS-Gates com interlock Gates do site
 
-## Bloqueios conhecidos
-
-### Confirmar antes de iniciar Gate 1:
-
-1. **Existe projeto Supabase já criado para Marvin Sites?** (Gate 1 depende disso) — nome preferencial: `marvin-platform-prod`; se já criado como outro nome, não recriar
-2. **`PUBLIC_WHATSAPP_NUMBER` está configurada no Netlify?** (P2 — fallback placeholder pode estar em produção)
-3. **Página `/obrigado` existe?** (P1 — formulário redireciona para essa URL; se não existir, submit vai para 404)
-
-### Externas (Gates posteriores):
-- GA4/GTM/Google Ads: contas não auditadas (Gate 2)
-- Atomicat: capacidades de webhook/API não validadas (Gate 7)
-
-### Arquitetural (Gate 0.5):
-- G1 deve nascer com `businesses` como entidade central (não só `leads`)
-- G4 renomeado para "Lead Capture Foundation" — não construir UX de diagnóstico manual definitiva
-- G12/G13 em interlock com MS-G10 — não executar independentemente
-- MS-G0 (contrato do produto SaaS) deve fechar score individual antes de programar scanner
-
 ## Riscos ativos
 
 | ID | Prioridade | Descrição |
 |---|---|---|
 | R01 | P1 | Leads só existem no Netlify Forms — sem banco, sem atribuição |
-| R02 | P1 | Página `/obrigado` provavelmente não existe — confirmar |
-| R03 | P1 | Sem Google Consent Mode v2 (necessário para Gate 2) |
-| R04 | P2 | `api.resend.com` na CSP sem código correspondente |
-| R05 | P2 | Fallback `5513000000000` no WhatsApp se env var ausente |
+| R02 | P1 | Sem Google Consent Mode v2 (necessário para Gate 2) |
+| R03 | P2 | `api.resend.com` na CSP sem código correspondente |
 
-## Próximas missões (em ordem)
+**Riscos encerrados:**
+- ~~R02~~ `/obrigado` inexistente → PRODUCTION APPROVED (dd54bb0)
+- ~~R05~~ `PUBLIC_WHATSAPP_NUMBER` desconhecida → USER-CONFIRMED / EXTERNAL
 
-1. **HOTFIX — `/obrigado`** — criar página mínima de confirmação (P1 ativo em produção)
-2. **Gate 1 — Supabase compartilhado** no branch `feat/marvin-g1-supabase`
-   - Schema: `businesses`, `business_sources`, `leads` com `business_id`, + tabelas comerciais
-   - Não incluir tabelas SaaS (scan_runs etc.) — essas ficam para MS-G2
-3. **MS-G0 — Contrato do produto** — fechar scoring spec antes de programar scanner
+## Gate 1 — escopo confirmado
 
-**NÃO INICIAR NENHUMA DESSAS MISSÕES SEM AUTORIZAÇÃO EXPLÍCITA.**
+**Branch:** `feat/marvin-g1-supabase` (NÃO iniciado)
 
-Aguardando:
-- Confirmação sobre projeto Supabase existente / nome do projeto
-- Confirmação sobre `/obrigado`
-- Autorização explícita para iniciar hotfix e/ou Gate 1
+G1 deve criar o **Common Core** do Supabase compartilhado (Marvin Sites + Marvin Local):
 
-## Preview
+**Incluídas:**
+- `businesses`
+- `business_sources`
+- `leads` (com `business_id` FK → businesses)
+- `lead_attribution`
+- `lead_consents`
+- `lead_status_history`
+- `diagnostics`
+- `deals`
+- `checkout_sessions`
+- `payments`
+- `subscriptions`
+- `provider_webhook_events`
+- `conversion_queue`
+- `email_subscriptions`
+- `email_events`
+- `audit_log`
 
-https://marvinsites.com.br
+**NÃO incluídas em G1** (pertencem ao MS-G2):
+- `scan_runs`
+- `scan_checks`
+- `score_snapshots`
+- `issues`
+- `recommendations`
+
+## Interlock arquitetural
+
+| Gate | Depende de |
+|---|---|
+| G1 | Common Supabase core |
+| G2 | Consent/tracking compartilhado |
+| G3 | Attribution compartilhada |
+| G4 — Lead Capture Foundation | Não construir UX de diagnóstico manual definitiva |
+| G12/G13 | Coordenação com MS-G10 (cutover da home) |
+| MS-G0 | Scoring contract — fechar antes de programar scanner |
+| MS-G2+ | Tabelas/scanner específicos Raio-X |
+
+## Próxima missão
+
+**Gate 1 — Supabase compartilhado e segurança** — aguarda autorização explícita.
+
+**NÃO INICIAR SEM AUTORIZAÇÃO.**
 
 ## Stack verificada
 
@@ -124,4 +147,5 @@ https://marvinsites.com.br
 - npm 11 / package-lock.json
 - Deploy: Netlify (branch main → auto-deploy)
 - Analytics: Umami only (cookieless)
-- Formulário: Netlify Forms (sem backend próprio)
+- Formulário: Netlify Forms (fetch + manual redirect)
+- Supabase: projeto criado, zero migrations

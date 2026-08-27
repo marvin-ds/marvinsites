@@ -2,6 +2,23 @@
 
 ---
 
+## [HOTFIX /obrigado] — 27/08/2026 — Formulário + Página de Confirmação
+
+### Problema resolvido
+- Formulário de diagnóstico redirecionava para `/obrigado` (sem barra) → 404 no Netlify
+- POST nativo para action URL causava erro de redirect no Netlify Forms
+
+### Solução
+- Criada página `/obrigado/` com `noindex`, fora do sitemap
+- Adicionado `noindex?: boolean` ao `BaseLayout.astro`
+- Formulário alterado para `fetch POST` para `/` + `window.location.assign('/obrigado/')`
+- Commits: `96f1d28` → `a158846` → `dd54bb0`
+
+### Status
+- PRODUCTION APPROVED — fluxo validado em produção (Netlify Forms recebeu submissão)
+
+---
+
 ## [Gate 0.5] — 27/08/2026 — Reconciliação Arquitetural Marvin Local
 
 ### Arquitetura
