@@ -1,16 +1,73 @@
 # Marvin Sites — Modelo de Dados Supabase
 
-**Versão:** 1.0 | **Data-base:** 27/08/2026
+**Versão:** 1.1 | **Data-base:** 27/08/2026 | **Atualizado:** 27/08/2026 (Gate 0.5)
+
+> **Adendo Gate 0.5 — Arquitetura Marvin Local:**
+> A entidade estrutural central passou a ser `businesses`, não `leads`.
+> `leads` = pessoa/contato comercial.
+> `businesses` = estabelecimento/empresa analisada.
+>
+> As entidades específicas do SaaS (scan_runs, scan_checks, score_snapshots, issues,
+> recommendations) estão em: [../marvin-saas/DATA-MODEL.md](../marvin-saas/DATA-MODEL.md)
+
+---
+
+## `businesses` (NOVO — Gate 0.5)
+
+Entidade central. Um negócio pode ter múltiplos leads, scans, diagnósticos, deals, pagamentos e futuramente Radar.
+
+```text
+id uuid pk
+created_at timestamptz
+updated_at timestamptz
+
+name text
+city text
+state text nullable
+
+website_url text nullable
+phone_normalized text nullable
+
+google_place_id text nullable
+
+status text
+environment text
+```
+
+> NÃO adicionar campos de conteúdo bruto do Google aqui.
+> Ver GOOGLE-DATA-SPEC.md para política de armazenamento de dados Places.
+
+---
+
+## `business_sources` (NOVO — Gate 0.5)
+
+Liga o negócio a fontes/endpoints externos sem copiar conteúdo desnecessário.
+
+```text
+id uuid pk
+business_id uuid fk → businesses.id
+source_type text       (website | google_place | other)
+external_id text nullable
+source_url text nullable
+created_at timestamptz
+updated_at timestamptz
+```
 
 ---
 
 ## `leads`
+
+> **Gate 0.5:** `lead` = pessoa/contato comercial, não o negócio em si.
+> Adicionar `business_id` como FK para o negócio analisado.
+> Durante compatibilidade com dados antigos, `business_name` e `city` permanecem no lead.
+> Não aplicar remoção destrutiva dessas colunas até decisão explícita no G1+.
 
 ```text
 id uuid pk
 created_at timestamptz
 updated_at timestamptz
 last_activity_at timestamptz
+business_id uuid nullable fk → businesses.id   ← NOVO (Gate 0.5)
 name text
 business_name text
 phone_raw text
