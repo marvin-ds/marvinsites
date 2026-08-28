@@ -16,17 +16,18 @@
 
 ## MS-Gate atual
 
-**MS-G0 — Contrato do produto: PENDING**
+**MS-G0 — Contrato do produto: APPROVED**
 
-Motivo: pontuação individual dos checks, thresholds, prioridades e política Google ainda precisam ser congelados antes do código.
+`score_version: raiox-v1`  
+Data: 2026-08-28
 
-MS-G0 não pode ser declarado APPROVED até que SCORING-SPEC.md esteja completo.
+Scoring contract fechado: pesos, thresholds, partial scan, no-site, labels, Top 3, fixtures, decisões D-MS013–D-MS019 registradas.
 
 ---
 
-## Branch atual (Gate 0.5)
+## Branch atual
 
-`chore/marvin-g05-raiox-alignment`
+`docs/marvin-msg0-scoring-v1` (base: main)
 
 ## O que está concluído
 
@@ -54,29 +55,20 @@ MS-G0 não pode ser declarado APPROVED até que SCORING-SPEC.md esteja completo.
 
 ## Pendências antes de MS-G1
 
-1. MS-G0 SCORING-SPEC.md precisa ser fechado (pontos individuais, thresholds, prioridades, regra de partial)
-2. GOOGLE-DATA-SPEC.md precisa ser revisado antes de integrar Places
-3. Inventário técnico (repositório, DNS, Google Cloud, Places, secrets, ambientes)
+1. GOOGLE-DATA-SPEC.md precisa ser revisado antes de integrar Places
+2. Inventário técnico (repositório, DNS, Google Cloud, Places, secrets, ambientes)
 
 ---
 
 ## Próxima missão
 
-**MS-G0 — Contrato do produto**
+**MS-G1 — Inventário técnico**
 
-Fechar:
-- nomes finais dos produtos
-- pontuação individual de cada check no SCORING-SPEC
-- thresholds por área
-- regra de partial scan
-- tratamento de ausência de site
-- política de top 3
-- mensagens ao usuário
-- limites de uso do Raio-X
-- preços beta definitivos (hoje são hypotheses)
-- escopo final do V1
-
-**Aguardar autorização explícita antes de iniciar MS-G0.**
+- Confirmar projeto Supabase (nome, URL, anon key)
+- Confirmar Google Cloud project e Places API habilitada
+- Confirmar repositório e branch de desenvolvimento
+- Confirmar ambientes (staging vs produção)
+- Revisar GOOGLE-DATA-SPEC.md
 
 ---
 

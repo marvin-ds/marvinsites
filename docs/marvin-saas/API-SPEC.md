@@ -194,3 +194,62 @@ POST /api/webhooks/google-places (se aplicável)
 | 503 | Serviço externo indisponível (Places, etc.) |
 
 Erros 503 nunca devem penalizar o score do cliente.
+
+---
+
+## Contratos de resultado do Raio-X (MS-G0 APPROVED)
+
+### Resultado complete
+
+```json
+{
+  "status": "complete",
+  "score": 74,
+  "score_version": "raiox-v1",
+  "score_label": "Presença em desenvolvimento",
+  "categories": {
+    "A": { "name": "Presença e informações locais", "max": 25, "score": 22 },
+    "B": { "name": "Site e clareza", "max": 25, "score": 25 },
+    "C": { "name": "Contato e WhatsApp", "max": 20, "score": 14 },
+    "D": { "name": "Confiança e reputação", "max": 15, "score": 8 },
+    "E": { "name": "Saúde técnica", "max": 15, "score": 5 }
+  },
+  "priorities": [
+    {
+      "rank": 1,
+      "recommendation_group": "contact_whatsapp",
+      "message_key": "no_whatsapp",
+      "finding_title": "string",
+      "recommended_action": "string",
+      "journey_impact": "chamar"
+    }
+  ],
+  "scanner_version": "string",
+  "check_version": "string",
+  "evaluated_at": "ISO8601"
+}
+```
+
+### Resultado partial
+
+```json
+{
+  "status": "partial",
+  "score": null,
+  "score_version": "raiox-v1",
+  "available_findings": ["check_code_1", "check_code_2"],
+  "retry_allowed": true,
+  "evaluated_at": "ISO8601"
+}
+```
+
+### Resultado failed
+
+```json
+{
+  "status": "failed",
+  "score": null,
+  "retry_allowed": true,
+  "evaluated_at": "ISO8601"
+}
+```

@@ -231,4 +231,51 @@ Ver [DATA-MODEL.md](DATA-MODEL.md) — entidades: `businesses`, `business_source
 
 ---
 
+---
+
+## Score da Presença Digital — Contrato V1 (MS-G0 APPROVED)
+
+**score_version:** `raiox-v1`
+
+### Escala e labels
+
+| Faixa | Label |
+|---|---|
+| 0–39 | Presença com lacunas importantes |
+| 40–59 | Presença básica |
+| 60–74 | Presença em desenvolvimento |
+| 75–89 | Presença bem estruturada |
+| 90–100 | Presença muito bem estruturada |
+
+### Estados do scan
+
+| Status | Score | Significado |
+|---|---|---|
+| `complete` | inteiro 0–100 | Todos os checks executados |
+| `partial` | `null` | Falha de infraestrutura (retry permitido) |
+| `failed` | `null` | Scan inutilizável (retry permitido) |
+
+### Comportamento sem site
+
+Quando nenhum site é identificado: todos os checks dependentes de site recebem **0 pontos** — não é erro do scanner, é dado real do negócio. O score pode ser baixo mesmo com Google bem preenchido.
+
+### Top 3 prioridades
+
+- Determinístico — sem IA
+- Fórmula: `priority_score = points_lost × severity_multiplier`
+- Máximo 1 recomendação por grupo temático
+- Checks `unavailable` não entram no ranking
+
+### Limites da ferramenta
+
+O Raio-X **não promete**:
+- Posição no Google
+- Mais clientes ou vendas
+- Comparação com concorrentes
+- Benchmark de mercado
+
+O Raio-X **mede**: quão bem o negócio está visível, compreensível, confiável e acessível online — com base em dados verificáveis no momento do scan.
+
+---
+
 *Referência: [SCORING-SPEC.md](SCORING-SPEC.md) | [GOOGLE-DATA-SPEC.md](GOOGLE-DATA-SPEC.md) | [API-SPEC.md](API-SPEC.md)*

@@ -57,13 +57,18 @@ Cada execução do scanner para um negócio.
 | business_id | uuid | FK → businesses.id |
 | created_at | timestamptz | |
 | completed_at | timestamptz | nullable |
-| status | text | pending / running / completed / partial / failed |
-| score | integer | nullable — pontuação final 0–100 |
-| score_version | text | ex: "1.0" |
-| scanner_version | text | |
-| check_version | text | |
+| status | text | `pending` / `running` / `complete` / `partial` / `failed` |
+| score | integer | nullable — null se partial ou failed; 0–100 se complete |
+| score_version | text | ex: `"raiox-v1"` — muda quando pesos/thresholds mudam |
+| scanner_version | text | versão do motor do scanner |
+| check_version | text | versão da lógica dos checks |
+| category_scores | jsonb | `{A: int, B: int, C: int, D: int, E: int}` nullable |
+| checks | jsonb | array de check results — ver SCORING-SPEC evidence contract |
+| priorities | jsonb | array top 3 — ver SCORING-SPEC recommendation contract |
 | source | text | web / api / internal |
 | trigger | text | user_request / scheduled / manual |
+
+**Invariante:** se `status = "partial"` ou `"failed"`, `score = null` e `category_scores = null`. Se `status = "complete"`, `score` é inteiro entre 0 e 100.
 
 **RLS:** usuário só vê scans de negócios que tem acesso.
 

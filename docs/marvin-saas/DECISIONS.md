@@ -142,6 +142,75 @@ Política oficial deverá ser revisada imediatamente antes do MS-G4.
 
 ---
 
+## D-MS013 — 28/08/2026 — Score V1 weights definitivos (raiox-v1)
+
+**Decisão:** Os pesos finais do Score da Presença Digital V1 são:
+
+| Categoria | Pontos |
+|---|---|
+| A — Presença e informações locais | 25 |
+| B — Site e clareza | 25 |
+| C — Contato e WhatsApp | 20 |
+| D — Confiança e reputação | 15 |
+| E — Saúde técnica | 15 |
+| **Total** | **100** |
+
+`score_version = "raiox-v1"`. Mudanças nos pesos ou thresholds exigem novo score_version.
+
+**Status:** APPROVED — MS-G0
+
+---
+
+## D-MS014 — 28/08/2026 — No-site behavior
+
+**Decisão:** Se `website_identified = fail`, todos os checks dependentes de site recebem **0 pontos** (não `unavailable`). Isso representa ausência real do negócio, não erro do scanner. O zero é intencional e reflete a oportunidade de melhoria. O grupo `website_presence` sobe como prioridade consolidada no Top 3.
+
+**Status:** APPROVED — MS-G0
+
+---
+
+## D-MS015 — 28/08/2026 — Unavailable/partial behavior
+
+**Decisão:** Falha de infraestrutura Marvin ou API externa → check = `unavailable`. Scan com qualquer `unavailable` → status = `partial`, score = `null`. Scan `partial` não normaliza nem redistribui pontos. Retry é permitido. Falha real do site (4xx, 5xx, cert inválido, loop) → check = `fail` (0 pts) — não é erro do scanner.
+
+**Status:** APPROVED — MS-G0
+
+---
+
+## D-MS016 — 28/08/2026 — Review heuristics V1
+
+**Decisão:** Thresholds de avaliações do Google para `review_count_signal`: ≥20=5pts; 10–19=4pts; 5–9=3pts; 1–4=1pt; 0=0pts. Para `google_rating_quality`: ≥4.5=4pts; 4.0–4.4=2pts; <4.0=0pts.
+
+**Nota obrigatória:** Estes thresholds são heurística V1 da Marvin — não são benchmark competitivo, não são média do setor e não são promessa de performance. Revisão possível na V2 com dados reais de scans.
+
+**Status:** APPROVED — MS-G0
+
+---
+
+## D-MS017 — 28/08/2026 — Top 3 formula e tie-break
+
+**Decisão:** `priority_score = points_lost × severity_multiplier` onde critical=1.50, high=1.25, medium=1.00, low=0.75. Ordenação: priority_score DESC → severity DESC → journey (chamar>encontrar>confiar>entender) → max_points DESC → check_code ASC. Checks `pass` ou `unavailable` são excluídos. Máximo 1 recomendação por `recommendation_group`.
+
+**Status:** APPROVED — MS-G0
+
+---
+
+## D-MS018 — 28/08/2026 — Recommendation deduplication
+
+**Decisão:** O Top 3 exibe no máximo 1 recomendação por `recommendation_group`. Quando múltiplos checks do mesmo grupo falham, o de maior `priority_score` representa o grupo. Quando `website_identified=fail`, checks de clareza (title, h1, meta) não aparecem separadamente — são consolidados em `website_presence`.
+
+**Status:** APPROVED — MS-G0
+
+---
+
+## D-MS019 — 28/08/2026 — Score versioning
+
+**Decisão:** Três versões independentes: `score_version` (fórmula e pesos), `check_version` (lógica de cada check), `scanner_version` (motor do scanner). Mudança em qualquer peso ou threshold → novo `score_version`. Determinismo garantido: mesmos dados + mesma `score_version` + mesma `check_version` = mesmo resultado.
+
+**Status:** APPROVED — MS-G0
+
+---
+
 ## Decisões pendentes / em aberto
 
 | ID | Assunto | Status |
@@ -149,6 +218,3 @@ Política oficial deverá ser revisada imediatamente antes do MS-G4.
 | — | Preço exato do Radar (R$39 ou R$49?) | hypothesis — aguardar dados |
 | — | Sequência UX do Raio-X (captura antes ou depois do resultado?) | a testar no V1 |
 | — | Nome do projeto Supabase | marvin-platform-prod ou marvin-sites-prod (não recrie se já existe) |
-| MS-G0 | Pontos individuais de cada check | PENDING — fechar antes de programar |
-| MS-G0 | Regra de partial scan | PENDING |
-| MS-G0 | Thresholds de avaliação Google | PENDING |

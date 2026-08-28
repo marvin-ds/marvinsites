@@ -89,6 +89,25 @@ Critério de aceite: nenhum resultado que "não conseguimos defender" em públic
 - [ ] Mesmos checks → mesma nota (determinístico)
 - [ ] score_version registrado
 - [ ] Top 3 prioridades corretos
+- [ ] Score total: soma das categorias = 100 máximo
+- [ ] Category scores: A=25, B=25, C=20, D=15, E=15
+- [ ] Degraded points: google_rating_quality e review_count_signal calculados corretamente por threshold
+- [ ] Scan complete: score inteiro calculado e persistido
+- [ ] Scan partial: score = null, retry_allowed = true
+- [ ] Scan failed: score = null, retry_allowed = true
+- [ ] Business not found (API funcionou): business_found_google=fail(0), scan continua
+- [ ] Business not found (API falhou): business_found_google=unavailable, scan=partial
+- [ ] No-website: website_identified=fail → todos dependentes = 0 (não unavailable)
+- [ ] Unavailable external API: check=unavailable, scan=partial, score=null
+- [ ] Recommendation grouping: máximo 1 por recommendation_group no Top 3
+- [ ] Priority formula: priority_score = points_lost × severity_multiplier
+- [ ] Deterministic sort: priority DESC → severity DESC → journey → max_points DESC → check_code ASC
+- [ ] Tie breaker: check_code ASC como desempate final
+- [ ] Score labels: 0–39 / 40–59 / 60–74 / 75–89 / 90–100 corretos
+- [ ] Versioning: score_version="raiox-v1", check_version e scanner_version presentes em todos os resultados
+- [ ] Fixture A (score=100): todos pass, sem prioridades
+- [ ] Fixture C (no-site, score=33): website_presence top priority consolidado
+- [ ] Fixture G/H (partial): score=null confirmado
 
 ### MS-G6 — Validação humana
 - [ ] 20+ negócios testados
