@@ -68,6 +68,9 @@ const gtmId = import.meta.env.PUBLIC_GTM_ID ?? '';
     <!-- Schema.org -->
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
 
+    <!-- GTM ID exposed for inline script -->
+    <meta name="gtm-id" content={gtmId} />
+
     <!-- Consent Mode v2 — init inline BEFORE any other script -->
     <script is:inline>
       (function() {
@@ -103,7 +106,7 @@ const gtmId = import.meta.env.PUBLIC_GTM_ID ?? '';
                 ad_personalization: stored.ad_personalization,
               });
               // Load GTM if eligible and ID present
-              var gtmId = {JSON.stringify(gtmId)};
+              var gtmId = (document.querySelector('meta[name="gtm-id"]') || {}).content || '';
               var eligible = stored.analytics_storage === 'granted' || stored.ad_storage === 'granted';
               if (gtmId && /^GTM-[A-Z0-9]+$/.test(gtmId) && eligible) {
                 var s = document.createElement('script');
