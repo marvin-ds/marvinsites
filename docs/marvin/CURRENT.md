@@ -79,6 +79,20 @@ Limpa.
 - [x] QA-SPEC.md — plano de testes SaaS
 - [x] ROADMAP.md — MS-Gates com interlock Gates do site
 
+## Infraestrutura canônica
+
+| Componente | Plataforma | Domínio | Status |
+|---|---|---|---|
+| Site institucional | Netlify | marvinsites.com.br | ✅ LIVE |
+| App / SaaS | Vercel | app.marvinsites.com.br | FUTURO |
+| Backend / DB | Supabase | dboihbvjtdlgvugjxaam | Projeto criado, G1 pending |
+| Repositório | GitHub | marvin-ds/marvinsites | monorepo |
+
+**Política de deploy:** branch → Preview → Gate APPROVED → 1 merge → 1 deploy de produção.  
+Exceções P0/P1 apenas para falhas críticas em produção.
+
+**Netlify build-ignore:** `scripts/netlify-ignore-build.mjs` — skips build quando apenas `docs/`, `supabase/` ou `apps/` mudam.
+
 ## Riscos ativos
 
 | ID | Prioridade | Descrição |

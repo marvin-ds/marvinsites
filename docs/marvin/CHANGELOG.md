@@ -2,6 +2,30 @@
 
 ---
 
+## [Architectural Alignment] — 28/08/2026 — Hosting, Monorepo e Política de Deploy
+
+### Decisões registradas (D012–D020)
+- Monorepo GitHub: site (Netlify) + app futuro (Vercel) + Supabase no mesmo repo
+- Netlify = site institucional; Vercel = `app.marvinsites.com.br` (futuro)
+- Supabase compartilhado: um único projeto para site + SaaS
+- `human_diagnostics` em vez de `diagnostics` (D013)
+- Supabase CLI como devDependency versionada (D012)
+- Deploy policy: Preview-first, produção somente no Gate aprovado (D018)
+
+### Implementação
+- `scripts/netlify-ignore-build.mjs` — skip builds para docs/supabase/apps
+- `netlify.toml`: `ignore = "node scripts/netlify-ignore-build.mjs"`
+- `docs/marvin/DEPLOYMENT-SPEC.md` criado
+- `docs/marvin/DECISIONS.md` D012–D020 adicionados
+- `docs/marvin/CURRENT.md` seção de infraestrutura adicionada
+
+### Runtime
+- Nenhum código de site alterado
+- Build Astro: inalterado
+- Produção: inalterada
+
+---
+
 ## [HOTFIX /obrigado] — 27/08/2026 — Formulário + Página de Confirmação
 
 ### Problema resolvido

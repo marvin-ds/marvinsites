@@ -6,6 +6,70 @@
 
 ---
 
+## D020 — 28/08/2026 — Netlify build-ignore para mudanças sem impacto no site
+
+**Decisão:** Script `scripts/netlify-ignore-build.mjs` cancela builds do Netlify quando TODOS os arquivos alterados estão em `docs/`, `supabase/` ou `apps/`. Qualquer arquivo fora dessas pastas gera build normalmente.
+
+**Fail-safe:** incerteza = BUILD. O script nunca cancela em caso de erro ou sem commit range.
+
+---
+
+## D019 — 28/08/2026 — Sem repositório aninhado nem workspaces prematuros
+
+**Decisão:** Monorepo com um único `package.json` na raiz. npm workspaces e `apps/marvin-app/` serão criados somente quando houver código real. Sem submodules. Sem pastas vazias para representar arquitetura futura.
+
+---
+
+## D018 — 28/08/2026 — Preview-first: desenvolvimento em branch, produção apenas no Gate aprovado
+
+**Decisão:** Deploy de produção somente após Gate aprovado pelo operador e merge consolidado em `main`. Exceções: P0 (produção indisponível) e P1 urgente (fluxo comercial quebrado).
+
+**Motivação:** Reduzir deploys desnecessários, manter produção estável e rastreável.
+
+---
+
+## D017 — 28/08/2026 — Supabase compartilhado (site + SaaS)
+
+**Decisão:** Um único projeto Supabase (`dboihbvjtdlgvugjxaam`) serve tanto o site Netlify quanto o app Vercel futuro. Sem instâncias separadas por produto.
+
+**Consequência:** Reforça D001. Dado que o Common Core já compartilha `businesses`, `leads` e atribuição, criar uma segunda instância geraria divergência e duplicação de PII.
+
+---
+
+## D016 — 28/08/2026 — Vercel para aplicações Marvin Local
+
+**Decisão:** O app SaaS (`app.marvinsites.com.br`) será hospedado no Vercel com Root Directory `apps/marvin-app`. Configurar somente quando o projeto existir. Plano comercial a validar antes do lançamento.
+
+---
+
+## D015 — 28/08/2026 — Netlify para site institucional e aquisição
+
+**Decisão:** Netlify é responsável por `marvinsites.com.br` — SEO, landing pages, conteúdo público, CTAs e aquisição. Não deve se transformar no host principal do SaaS.
+
+---
+
+## D014 — 28/08/2026 — Monorepo GitHub — um único repositório
+
+**Decisão:** Um único repositório Git para site (Netlify), app futuro (Vercel) e schema Supabase. Estrutura: `src/` (site), `apps/` (SaaS futuro), `supabase/` (banco), `docs/`.
+
+**Motivação:** Simplifica histórico, migrations versionadas lado a lado com código, e evita sincronização entre repos.
+
+---
+
+## D013 — 28/08/2026 — `human_diagnostics` em vez de `diagnostics`
+
+**Decisão:** A tabela de análise manual da Marvin se chama `human_diagnostics`, não `diagnostics`. O scanner automático do Raio-X usará tabelas separadas (`scan_runs`, `scan_checks`) no MS-G2.
+
+**Motivação:** Evitar ambiguidade futura entre diagnóstico humano e scan automático.
+
+---
+
+## D012 — 28/08/2026 — Supabase CLI como devDependency versionada
+
+**Decisão:** Supabase CLI instalado via `npm install --save-dev supabase` (v2.116.0). Schema nasce integralmente de migrations versionadas no repositório. Nenhuma edição manual pelo dashboard.
+
+---
+
 ## D009 — 27/08/2026 — Gate 0.5: Arquitetura Marvin Local incorporada
 
 **Decisão:** A Marvin Local / Micro-SaaS foi formalmente incorporada à arquitetura do projeto. O Supabase será compartilhado entre site, CRM e SaaS. `businesses` passa a ser a entidade estrutural central. O Raio-X Marvin é a futura porta principal de aquisição.
