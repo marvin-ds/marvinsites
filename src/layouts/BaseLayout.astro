@@ -1,7 +1,8 @@
 ---
 import '../styles/global.css';
 import { schemaLocalBusiness } from '../lib/schema';
-import CookieBanner from '../components/ui/CookieBanner.astro';
+import ConsentBanner from '../components/consent/ConsentBanner.astro';
+import ConsentPreferences from '../components/consent/ConsentPreferences.astro';
 
 interface Props {
   title: string;
@@ -65,9 +66,60 @@ const siteUrl = 'https://marvinsites.com.br';
 
     <!-- Schema.org -->
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+
+    <!-- Consent Mode v2 — init inline BEFORE any other script -->
+    <script is:inline>
+      (function() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        // Default: all denied
+        gtag('consent', 'default', {
+          analytics_storage: 'denied',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+        });
+        // Try to restore stored consent
+        try {
+          var CONSENT_KEY = 'marvin_consent_v2';
+          var CONSENT_VERSION = 'g2-v1';
+          var raw = localStorage.getItem(CONSENT_KEY);
+          if (raw) {
+            var stored = JSON.parse(raw);
+            if (stored && stored.version === CONSENT_VERSION) {
+              gtag('consent', 'update', {
+                analytics_storage: stored.analytics_storage,
+                ad_storage: stored.ad_storage,
+                ad_user_data: stored.ad_user_data,
+                ad_personalization: stored.ad_personalization,
+              });
+              window.dataLayer.push({
+                event: 'consent_initialized',
+                consent_version: stored.version,
+                analytics_storage: stored.analytics_storage,
+                ad_storage: stored.ad_storage,
+                ad_user_data: stored.ad_user_data,
+                ad_personalization: stored.ad_personalization,
+              });
+              // Load GTM if eligible and ID present
+              var gtmId = typeof __GTM_ID__ !== 'undefined' ? __GTM_ID__ : '';
+              var eligible = stored.analytics_storage === 'granted' || stored.ad_storage === 'granted';
+              if (gtmId && /^GTM-[A-Z0-9]+$/.test(gtmId) && eligible) {
+                var s = document.createElement('script');
+                s.setAttribute('data-gtm-loaded', '1');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtm.js?id=' + gtmId;
+                document.head.appendChild(s);
+              }
+            }
+          }
+        } catch(e) {}
+      })();
+    </script>
   </head>
   <body>
     <slot />
-    <CookieBanner />
+    <ConsentBanner />
+    <ConsentPreferences />
   </body>
 </html>

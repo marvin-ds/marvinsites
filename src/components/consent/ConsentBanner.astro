@@ -1,0 +1,144 @@
+---
+---
+
+<div
+  id="consent-banner"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Preferências de privacidade e cookies"
+  class="fixed bottom-0 left-0 right-0 z-[200] bg-[#0B1F33] text-white px-4 py-5 sm:px-6 shadow-2xl hidden"
+>
+  <div class="max-w-6xl mx-auto flex flex-col gap-4">
+    <p class="text-sm text-white/80 leading-relaxed">
+      Usamos tecnologias necessárias para o funcionamento do site e, com sua autorização, ferramentas de medição e publicidade.
+      Você pode aceitar, recusar ou escolher suas preferências.
+      <a href="/privacidade" class="text-[#FF6B2C] hover:underline ml-1">Saiba mais</a>.
+    </p>
+    <div class="flex flex-wrap gap-3">
+      <button
+        id="consent-accept-all"
+        class="bg-[#FF6B2C] text-white text-sm font-semibold px-5 py-3 rounded-lg hover:bg-orange-600 transition-colors min-h-[44px]"
+      >
+        Aceitar todos
+      </button>
+      <button
+        id="consent-reject-all"
+        class="bg-white/10 text-white text-sm font-medium px-5 py-3 rounded-lg hover:bg-white/20 transition-colors min-h-[44px] border border-white/20"
+      >
+        Recusar não essenciais
+      </button>
+      <button
+        id="consent-open-prefs"
+        class="text-white/70 text-sm px-4 py-3 rounded-lg hover:text-white hover:bg-white/10 transition-colors min-h-[44px]"
+      >
+        Preferências
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  import {
+    CONSENT_STORAGE_KEY,
+    CONSENT_VERSION,
+    readStoredConsent,
+    hasLegacyConsentOnly,
+    buildAcceptAll,
+    buildRejectAll,
+    saveConsent,
+    isGtmEligible,
+  } from '../../lib/consent';
+  import { isValidGtmId, loadGtm } from '../../lib/gtm';
+
+  function pushDL(obj: Record<string, unknown>) {
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    (window as any).dataLayer.push(obj);
+  }
+
+  function applyConsentAndMaybeLoadGtm(state: ReturnType<typeof buildAcceptAll>) {
+    pushDL(['consent', 'update', {
+      analytics_storage: state.analytics_storage,
+      ad_storage: state.ad_storage,
+      ad_user_data: state.ad_user_data,
+      ad_personalization: state.ad_personalization,
+    }]);
+    pushDL({
+      event: 'consent_updated',
+      consent_version: state.version,
+      analytics_storage: state.analytics_storage,
+      ad_storage: state.ad_storage,
+      ad_user_data: state.ad_user_data,
+      ad_personalization: state.ad_personalization,
+    });
+
+    // Load Umami if analytics granted
+    if (state.analytics_storage === 'granted') {
+      loadUmami();
+    }
+
+    // Load GTM if eligible
+    const gtmId = (import.meta as any).env?.PUBLIC_GTM_ID;
+    if (isValidGtmId(gtmId) && isGtmEligible(state)) {
+      loadGtm(gtmId);
+    }
+  }
+
+  function loadUmami() {
+    const umamiSrc = 'https://analytics.umami.is/script.js';
+    if (document.querySelector(`script[src="${umamiSrc}"]`)) return;
+    const script = document.createElement('script');
+    script.defer = true;
+    script.setAttribute('data-website-id', '');
+    script.src = umamiSrc;
+    document.head.appendChild(script);
+  }
+
+  function hideBanner() {
+    document.getElementById('consent-banner')?.classList.add('hidden');
+  }
+
+  function showBanner() {
+    document.getElementById('consent-banner')?.classList.remove('hidden');
+    const first = document.getElementById('consent-accept-all');
+    first?.focus();
+  }
+
+  // Show banner if no valid v2 consent or legacy-only
+  const stored = readStoredConsent();
+  if (!stored || hasLegacyConsentOnly()) {
+    showBanner();
+  }
+
+  // Accept all
+  document.getElementById('consent-accept-all')?.addEventListener('click', () => {
+    const state = buildAcceptAll();
+    saveConsent(state);
+    hideBanner();
+    applyConsentAndMaybeLoadGtm(state);
+  });
+
+  // Reject all
+  document.getElementById('consent-reject-all')?.addEventListener('click', () => {
+    const state = buildRejectAll();
+    saveConsent(state);
+    hideBanner();
+    pushDL(['consent', 'update', {
+      analytics_storage: state.analytics_storage,
+      ad_storage: state.ad_storage,
+      ad_user_data: state.ad_user_data,
+      ad_personalization: state.ad_personalization,
+    }]);
+    pushDL({ event: 'consent_updated', consent_version: state.version, ...state });
+  });
+
+  // Open preferences
+  document.getElementById('consent-open-prefs')?.addEventListener('click', () => {
+    hideBanner();
+    document.dispatchEvent(new CustomEvent('marvin:open-consent-prefs'));
+  });
+
+  // Allow footer button to re-open banner (or preferences)
+  document.addEventListener('marvin:reopen-consent', () => {
+    document.dispatchEvent(new CustomEvent('marvin:open-consent-prefs'));
+  });
+</script>

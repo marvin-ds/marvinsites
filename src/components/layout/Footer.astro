@@ -2,6 +2,14 @@
 const ano = new Date().getFullYear();
 ---
 
+<script>
+  document.getElementById('footer-consent-prefs')?.addEventListener('click', (e) => {
+    document.dispatchEvent(new CustomEvent('marvin:open-consent-prefs', {
+      detail: { opener: e.currentTarget as HTMLElement }
+    }));
+  });
+</script>
+
 <footer class="bg-petroleo text-white/70 text-sm">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
 
@@ -42,6 +50,14 @@ const ano = new Date().getFullYear();
       <ul class="space-y-2">
         <li><a href="/privacidade" class="hover:text-white transition-colors">Política de Privacidade</a></li>
         <li><a href="/termos"      class="hover:text-white transition-colors">Termos de Uso</a></li>
+        <li>
+          <button
+            id="footer-consent-prefs"
+            class="hover:text-white transition-colors text-left text-white/70 text-sm"
+          >
+            Preferências de privacidade
+          </button>
+        </li>
       </ul>
       <p class="text-white/70 text-xs mt-6">
         contato@marvinsites.com.br

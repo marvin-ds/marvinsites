@@ -159,3 +159,35 @@
 - Accessibility: 96
 - Best Practices: 100
 - SEO: 100
+
+---
+
+## [Gate 2A] — 28/08/2026 — Consent Foundation (Consent Mode v2)
+
+### Consent Mode v2
+- Substituído `CookieBanner.astro` (legacy, key `marvin_cookie_consent`) por sistema completo v2
+- Storage key: `marvin_consent_v2`, version: `g2-v1`
+- Default denied para todos os 4 estados (analytics_storage, ad_storage, ad_user_data, ad_personalization)
+- Legacy consent detectado mas NÃO promovido — usuário vê o banner novamente
+
+### Módulos criados
+- `src/lib/consent.ts` — lógica pura: read/save/build/validate/dependencies
+- `src/lib/gtm.ts` — GTM loader idempotente com validação de ID
+- `src/lib/datalayer.ts` — push ao dataLayer sem PII
+- `src/components/consent/ConsentBanner.astro` — banner com Accept/Reject/Preferences
+- `src/components/consent/ConsentPreferences.astro` — modal com toggles acessíveis
+
+### Integração
+- `BaseLayout.astro`: script inline de init antes de qualquer outro script
+- `Footer.astro`: botão "Preferências de privacidade" que reabre modal
+- Umami: gateado por `analytics_storage === 'granted'`
+- GTM: não carrega sem consentimento elegível e sem PUBLIC_GTM_ID válido
+
+### Testes
+- 17 testes unitários em `src/lib/__tests__/consent.test.mjs` — todos passando
+- Build: 14 páginas sem regressão
+
+### Infra
+- `.env.example` criado com `PUBLIC_GTM_ID=` vazio
+- CSP inalterada (Google domains serão adicionados no G2B)
+- Produção não alterada

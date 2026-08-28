@@ -159,7 +159,7 @@ G1 deve criar o **Common Core** do Supabase compartilhado (Marvin Sites + Marvin
 ## Próxima missão
 
 **MS-G0 — Scoring contract** — fechar spec do score antes de programar scanner (aguarda autorização).  
-**Gate 2 — Consent + GTM + GA4** — aguarda autorização explícita.
+**Gate 2A — APPROVED** — consent foundation implementada. Próximo: Gate 2B (IDs reais, GTM Preview, CSP).
 
 **NÃO INICIAR SEM AUTORIZAÇÃO.**
 

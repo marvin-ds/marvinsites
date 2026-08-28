@@ -163,3 +163,43 @@
 **Decisão:** PIX pago fora da plataforma é confirmado manualmente no CRM Lite, que dispara purchase + conversion_queue usando a atribuição já registrada no Supabase.
 
 **Motivação:** Não perder sinal de conversão por limitação de método de pagamento.
+
+---
+
+## D021 — 28/08/2026 — Consent Mode Basic (não Advanced)
+
+**Decisão:** Implementar Google Consent Mode v2 no modo **basic** — GTM/GA4 não carregam antes do consentimento. Em Advanced Mode GTM carregaria antes com dados anonimizados; rejeitamos por complexidade e risco de conformidade LGPD.
+
+**Motivação:** LGPD exige opt-in explícito. Basic Mode é mais conservador e suficiente para o estágio atual.
+
+---
+
+## D022 — 28/08/2026 — GTM via variável de ambiente PUBLIC_GTM_ID
+
+**Decisão:** ID do GTM configurado apenas como variável de ambiente `PUBLIC_GTM_ID` no Netlify. Código nunca contém ID real hardcoded. Em ambiente local/preview sem a variável, GTM simplesmente não carrega.
+
+**Motivação:** Evitar exposição de IDs em commits; separação entre dev e produção.
+
+---
+
+## D023 — 28/08/2026 — GA4 via GTM (não direto no código)
+
+**Decisão:** GA4 será configurado dentro do GTM como Google Tag, não via script direto no site. O site só conhece o GTM-ID; o GA4 Measurement ID fica no GTM.
+
+**Motivação:** Governança centralizada de tags; facilita trocas de conta sem deploy.
+
+---
+
+## D024 — 28/08/2026 — Umami gateado por analytics_storage
+
+**Decisão:** Script do Umami só é injetado dinamicamente quando `analytics_storage === 'granted'`. Antes do consentimento, nenhuma requisição para analytics.umami.is.
+
+**Motivação:** Conformidade LGPD; usuário deve consentir antes de qualquer coleta.
+
+---
+
+## D025 — 28/08/2026 — GTM noscript iframe omitido em Basic Mode
+
+**Decisão:** O `<noscript><iframe src="gtm.js">` não é incluído no HTML. Em Basic Consent Mode não é necessário para conformidade. Usuários sem JS são minoria sem impacto no funil.
+
+**Motivação:** Menor complexidade; sem benefício real para o perfil de usuário deste site.
