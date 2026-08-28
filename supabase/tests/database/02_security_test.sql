@@ -5,83 +5,67 @@
 
 begin;
 
-select plan(64);
+select plan(36);
 
 -- ---------------------------------------------------------------------------
 -- RLS is enabled on all tables
 -- ---------------------------------------------------------------------------
 
-select tablename from pg_tables
-  where schemaname = 'public'
-    and tablename in (
-      'businesses','business_sources','leads','lead_attribution',
-      'lead_consents','lead_status_history','human_diagnostics',
-      'deals','checkout_sessions','payments','subscriptions',
-      'provider_webhook_events','conversion_queue',
-      'email_subscriptions','email_events','audit_log'
-    );
-
 select is(
-  (select rowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
+  (select c.relrowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
    where n.nspname = 'public' and c.relname = 'businesses'),
   true, 'RLS ON: businesses'
 );
 select is(
-  (select rowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
+  (select c.relrowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
    where n.nspname = 'public' and c.relname = 'leads'),
   true, 'RLS ON: leads'
 );
 select is(
-  (select rowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
+  (select c.relrowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
    where n.nspname = 'public' and c.relname = 'lead_attribution'),
   true, 'RLS ON: lead_attribution'
 );
 select is(
-  (select rowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
+  (select c.relrowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
    where n.nspname = 'public' and c.relname = 'lead_consents'),
   true, 'RLS ON: lead_consents'
 );
 select is(
-  (select rowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
+  (select c.relrowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
    where n.nspname = 'public' and c.relname = 'human_diagnostics'),
   true, 'RLS ON: human_diagnostics'
 );
 select is(
-  (select rowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
+  (select c.relrowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
    where n.nspname = 'public' and c.relname = 'deals'),
   true, 'RLS ON: deals'
 );
 select is(
-  (select rowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
+  (select c.relrowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
    where n.nspname = 'public' and c.relname = 'payments'),
   true, 'RLS ON: payments'
 );
 select is(
-  (select rowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
+  (select c.relrowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
    where n.nspname = 'public' and c.relname = 'audit_log'),
   true, 'RLS ON: audit_log'
 );
 select is(
-  (select rowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
+  (select c.relrowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
    where n.nspname = 'public' and c.relname = 'conversion_queue'),
   true, 'RLS ON: conversion_queue'
 );
 select is(
-  (select rowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
+  (select c.relrowsecurity from pg_class c join pg_namespace n on n.oid = c.relnamespace
    where n.nspname = 'public' and c.relname = 'provider_webhook_events'),
   true, 'RLS ON: provider_webhook_events'
 );
 
 -- ---------------------------------------------------------------------------
--- anon has no SELECT on commercial tables
+-- anon has no SELECT/INSERT on commercial tables
 -- ---------------------------------------------------------------------------
 
-select cant_select(
-  'anon', 'public', 'businesses', 'test where false',
-  'anon cannot SELECT businesses'
-) where false;
-
--- Direct privilege check via has_table_privilege
 select is(
   has_table_privilege('anon', 'public.businesses', 'SELECT'),
   false, 'anon: no SELECT on businesses'
@@ -132,7 +116,7 @@ select is(
 );
 
 -- ---------------------------------------------------------------------------
--- authenticated has no SELECT on commercial tables
+-- authenticated has no SELECT/INSERT on commercial tables
 -- ---------------------------------------------------------------------------
 
 select is(

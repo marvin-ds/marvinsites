@@ -4,7 +4,7 @@
 
 begin;
 
-select plan(80);
+select plan(58);
 
 -- ---------------------------------------------------------------------------
 -- Tables exist
@@ -123,10 +123,10 @@ select has_column('public', 'email_subscriptions','opt_out_at',    'email_subscr
 -- Triggers exist
 -- ---------------------------------------------------------------------------
 
-select trigger_is('public', 'businesses',      'trg_businesses_updated_at',          'businesses updated_at trigger');
-select trigger_is('public', 'leads',           'trg_leads_updated_at',               'leads updated_at trigger');
-select trigger_is('public', 'lead_attribution','trg_lead_attribution_protect_first_touch', 'first-touch protection trigger');
-select trigger_is('public', 'leads',           'trg_leads_status_history',           'leads status history trigger');
+select has_trigger('public', 'businesses',      'trg_businesses_updated_at',          'businesses updated_at trigger');
+select has_trigger('public', 'leads',           'trg_leads_updated_at',               'leads updated_at trigger');
+select has_trigger('public', 'lead_attribution','trg_lead_attribution_protect_first_touch', 'first-touch protection trigger');
+select has_trigger('public', 'leads',           'trg_leads_status_history',           'leads status history trigger');
 
 select * from finish();
 rollback;

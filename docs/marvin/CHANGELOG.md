@@ -2,6 +2,42 @@
 
 ---
 
+## [Gate 1] — 28/08/2026 — Supabase Common Core e Segurança
+
+### Schema
+- 16 tabelas do Common Core criadas via 4 migrations versionadas
+- Entidades: businesses, business_sources, leads, lead_attribution, lead_consents, lead_status_history, human_diagnostics, deals, checkout_sessions, payments, subscriptions, provider_webhook_events, conversion_queue, email_subscriptions, email_events, audit_log
+- 40+ índices de performance (FKs, status, session_id, event_id, last_activity_at)
+- Constraints: google_place_id unique partial (NULLS NOT DISTINCT), consent identity check, payment amount ≥ 0, lead status enum (12 valores), business status enum
+
+### Triggers
+- `trg_businesses_updated_at` / `trg_leads_updated_at` / `trg_lead_consents_updated_at` — função `set_updated_at()`
+- `trg_lead_attribution_protect_first_touch` — imutabilidade dos campos `first_*` após first_touch_at definido
+- `trg_leads_status_history` — registro automático de mudanças de status no insert e update
+
+### Segurança
+- RLS habilitado em todas as 16 tabelas (deny-by-default)
+- `REVOKE ALL` de `anon` e `authenticated` em todas as tabelas
+- Nenhuma policy permissiva — acesso futuro via service role em Gates seguintes
+- Sem tabelas de scan (`scan_runs`, `scan_checks` etc.) — escopo MS-G2
+
+### Testes (pgTAP)
+- `01_schema_test.sql` — 58 testes: tabelas, PKs, FKs, colunas, triggers
+- `02_security_test.sql` — 36 testes: RLS ON, privilégios anon/authenticated, ausência de tabelas MS-G2
+- `03_business_test.sql` — 22 testes: UUID, status constraints, FK, status history, first-touch, consentimento, pagamento, idempotência webhook, token_hash
+- **116 testes passando, 0 falhas**
+
+### Infraestrutura
+- Supabase CLI 2.116.0 como devDependency
+- `npm run db:start/stop/reset/test` configurados
+- Migrations aplicadas em local (Docker) e remoto (`dboihbvjtdlgvugjxaam`)
+
+### Runtime
+- Nenhum código do site alterado
+- Produção: inalterada
+
+---
+
 ## [Architectural Alignment] — 28/08/2026 — Hosting, Monorepo e Política de Deploy
 
 ### Decisões registradas (D012–D020)

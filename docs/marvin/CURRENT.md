@@ -8,11 +8,13 @@
 
 **G0 — Inventário e baseline** ✅ APPROVED  
 **G0.5 — Reconciliação arquitetural Marvin Local** ✅ APPROVED  
-**HOTFIX /obrigado** ✅ PRODUCTION APPROVED
+**HOTFIX /obrigado** ✅ PRODUCTION APPROVED  
+**Architectural Alignment (D012–D020)** ✅ APPROVED  
+**G1 — Supabase compartilhado e segurança** ✅ APPROVED
 
 ## Branch de produção
 
-`main` — HEAD `dd54bb0`
+`main` — HEAD `dd54bb0` (G1 pending merge)
 
 ## Working tree
 
@@ -43,11 +45,17 @@ Limpa.
 ### Variáveis de ambiente (Netlify)
 - [x] `PUBLIC_WHATSAPP_NUMBER` — USER-CONFIRMED / EXTERNAL (configurada corretamente)
 
-### Supabase
+### Supabase — Gate 1 ✅ APROVADO
 - [x] Projeto criado externamente
 - Project Ref: `dboihbvjtdlgvugjxaam`
 - Project URL: `https://dboihbvjtdlgvugjxaam.supabase.co`
-- Status: **aguardando Gate 1** — nenhuma migration executada
+- [x] 4 migrations aplicadas (local + remoto)
+- [x] 16 tabelas do Common Core criadas
+- [x] 40+ índices de performance
+- [x] Triggers: updated_at, protect_first_touch, record_lead_status_change
+- [x] RLS habilitado em todas as 16 tabelas — deny-by-default
+- [x] anon e authenticated sem acesso direto
+- [x] 116 testes pgTAP passando (01_schema, 02_security, 03_business)
 
 ### Documentação (docs/marvin/)
 - [x] TECH-SPEC.md — spec técnica completa v1.0
@@ -107,7 +115,7 @@ Exceções P0/P1 apenas para falhas críticas em produção.
 
 ## Gate 1 — escopo confirmado
 
-**Branch:** `feat/marvin-g1-supabase` (NÃO iniciado)
+**Branch:** `feat/marvin-g1-supabase` ✅ APROVADO — pending merge em main
 
 G1 deve criar o **Common Core** do Supabase compartilhado (Marvin Sites + Marvin Local):
 
@@ -150,7 +158,8 @@ G1 deve criar o **Common Core** do Supabase compartilhado (Marvin Sites + Marvin
 
 ## Próxima missão
 
-**Gate 1 — Supabase compartilhado e segurança** — aguarda autorização explícita.
+**MS-G0 — Scoring contract** — fechar spec do score antes de programar scanner (aguarda autorização).  
+**Gate 2 — Consent + GTM + GA4** — aguarda autorização explícita.
 
 **NÃO INICIAR SEM AUTORIZAÇÃO.**
 
