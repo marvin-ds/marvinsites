@@ -23,6 +23,7 @@ const {
 } = Astro.props;
 
 const siteUrl = 'https://marvinsites.com.br';
+const gtmId = import.meta.env.PUBLIC_GTM_ID ?? '';
 ---
 
 <!doctype html>
@@ -102,7 +103,7 @@ const siteUrl = 'https://marvinsites.com.br';
                 ad_personalization: stored.ad_personalization,
               });
               // Load GTM if eligible and ID present
-              var gtmId = typeof __GTM_ID__ !== 'undefined' ? __GTM_ID__ : '';
+              var gtmId = {JSON.stringify(gtmId)};
               var eligible = stored.analytics_storage === 'granted' || stored.ad_storage === 'granted';
               if (gtmId && /^GTM-[A-Z0-9]+$/.test(gtmId) && eligible) {
                 var s = document.createElement('script');
