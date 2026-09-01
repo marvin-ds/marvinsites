@@ -221,3 +221,22 @@ como session ID e não enviar click IDs completos ao dataLayer.
 
 **Escopo:** G3 não cria migration, não insere no Supabase, não altera GTM/GA4 e
 não implementa WhatsApp attribution definitiva.
+
+---
+
+## D027 — 01/09/2026 — Lead Capture Foundation `g4-v1`
+
+**Decisão:** O formulário de diagnóstico passa a enviar para uma Netlify Function
+server-side (`/.netlify/functions/lead-capture`) que chama Supabase com
+credencial privilegiada somente no servidor.
+
+**Banco:** G4 adiciona `leads.submission_id` e a RPC
+`public.capture_lead_v1(payload jsonb)` para persistir `businesses`, `leads`,
+`lead_attribution`, `lead_consents` e auditoria em uma operação transacional.
+
+**Idempotência:** retry é controlado por `submission_id` aleatório gerado no
+browser e validado/enforçado no banco. Não deduplicar por e-mail ou telefone.
+
+**Privacidade:** marketing não é inferido de Consent Mode, UTMs ou click IDs.
+`SUPABASE_SERVICE_ROLE_KEY` nunca entra no browser. Netlify Forms deixa de ser a
+fonte canônica do lead.

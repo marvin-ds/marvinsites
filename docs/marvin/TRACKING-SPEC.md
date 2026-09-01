@@ -194,6 +194,17 @@ Regras V1:
 
 Ver: [G3-ATTRIBUTION.md](./G3-ATTRIBUTION.md).
 
+### Gate 4 — persistência do lead
+
+G4 usa o snapshot `g3-v1` para gravar a origem do lead no Supabase por meio de
+endpoint server-side. O evento browser `diagnostic_submit` só deve ser
+considerado após sucesso do endpoint; G4 não adiciona envio automático ao GTM ou
+GA4.
+
+O `dataLayer` continua sem PII e sem click IDs completos. E-mail, telefone e
+nome trafegam apenas no POST seguro para o backend e na operação server-side com
+Supabase.
+
 ---
 
 ## WhatsApp — atribuição determinística

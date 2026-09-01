@@ -86,6 +86,7 @@ landing_version text
 offer_version text
 tracking_version text
 environment text
+submission_id text nullable unique when present   ← G4 retry/idempotency
 ```
 
 Status possíveis:
@@ -142,6 +143,9 @@ session_id text nullable
 ```
 
 First-touch é imutável. Last-touch pode ser atualizado.
+
+Gate 4 grava o snapshot `g3-v1` via RPC server-side. Campanhas ausentes em
+tráfego direto usam `(not set)` para satisfazer os campos obrigatórios atuais.
 
 ---
 

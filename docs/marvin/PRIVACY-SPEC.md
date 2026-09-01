@@ -42,6 +42,10 @@ Consentimento obrigatório apenas para processar o diagnóstico e responder ao p
 
 Marketing por e-mail deve ter opt-in separado.
 
+Gate 4: o formulário envia dados pessoais para uma Netlify Function server-side,
+que grava no Supabase. A chave `service_role` do Supabase fica somente no
+ambiente server-side. Netlify Forms não é a fonte canônica do lead.
+
 ---
 
 ## Segurança Supabase

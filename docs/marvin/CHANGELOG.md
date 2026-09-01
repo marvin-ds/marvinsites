@@ -27,6 +27,33 @@
 
 ---
 
+## [Gate 4] — 01/09/2026 — Lead Capture Foundation
+
+### Backend
+- Criado endpoint server-side `/.netlify/functions/lead-capture`
+- Criada validação server-side com whitelist, limite de payload, sanitização e respostas genéricas
+- Criada migration `20260901000005_g4_lead_capture_rpc.sql`
+- Adicionado `leads.submission_id` para retry/idempotência
+- Criada RPC `public.capture_lead_v1(payload jsonb)` para operação transacional
+
+### Formulário
+- Formulário passa a enviar JSON ao endpoint e só redireciona após sucesso
+- Adicionado campo obrigatório `Nome do negócio` para respeitar `businesses` como entidade central
+- Netlify Forms deixa de ser a fonte canônica prevista para o lead
+
+### Privacidade
+- Marketing consent permanece false sem opt-in explícito
+- Consent Mode snapshot é persistido separadamente
+- Sem PII em analytics/dataLayer/respostas públicas
+
+### Infraestrutura
+- Sem Vercel
+- Sem GTM/GA4
+- Sem produção
+- Validação local Supabase pendente porque Docker Desktop Linux engine não está disponível neste ambiente
+
+---
+
 ## [Gate 1] — 28/08/2026 — Supabase Common Core e Segurança
 
 ### Schema

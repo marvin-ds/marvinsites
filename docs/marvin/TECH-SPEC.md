@@ -270,6 +270,29 @@ O snapshot local deve ser compatível com `lead_attribution`:
 
 G3 não cria migration e não altera GTM, GA4, Supabase remoto, Vercel ou DNS.
 
+## 5.2 Lead Capture Foundation — Gate 4
+
+`capture_version = g4-v1`
+
+G4 troca a persistência principal do formulário de Netlify Forms para Supabase,
+mantendo Netlify como runtime do site e do endpoint server-side.
+
+Fluxo:
+
+```text
+formulário
+→ /.netlify/functions/lead-capture
+→ public.capture_lead_v1(payload jsonb)
+→ businesses + leads + lead_attribution + lead_consents
+```
+
+A operação usa `SUPABASE_URL` e `SUPABASE_SERVICE_ROLE_KEY` somente no servidor.
+O browser nunca recebe credencial privilegiada e continua sem insert direto nas
+tabelas Common Core.
+
+G4 adiciona idempotência por `submission_id`, sem dedupe por e-mail/telefone, e
+não altera GTM, GA4, Vercel, DNS, Google Ads, WhatsApp attribution ou CRM Lite.
+
 ---
 
 # 6. Modelo de dados Supabase

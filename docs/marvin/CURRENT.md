@@ -12,15 +12,16 @@
 **Architectural Alignment (D012–D020)** ✅ APPROVED  
 **G1 — Supabase compartilhado e segurança** ✅ APPROVED
 **G2 — Consent Mode + GTM + GA4** ✅ PRODUCTION APPROVED
-**G3 — Attribution** IMPLEMENTED — PENDING APPROVAL
+**G3 — Attribution** ✅ PRODUCTION APPROVED
+**G4 — Lead Capture Foundation** IN_PROGRESS
 
 ## Branch de produção
 
-`main` — HEAD `69b370ea`
+`main` — HEAD `9e99a715`
 
 ## Branch de trabalho atual
 
-`feat/marvin-g3-attribution`
+`feat/marvin-g4-lead-capture`
 
 ## Working tree
 
@@ -34,9 +35,10 @@ Limpa.
 - [x] Hero, Problem, Solution, Services, Testimonials, FinalCTA, Footer
 - [x] 4 páginas de cidade (Santos, Guarujá, Praia Grande, São Vicente) com FAQs locais
 - [x] 6 páginas de nicho com SEO e WhatsApp contextual
-- [x] Formulário de diagnóstico com honeypot + validação — **fluxo atual:**
-  - `fetch POST` para `/` (Netlify Forms processa)
-  - `window.location.assign('/obrigado/')` após sucesso
+- [x] Formulário de diagnóstico com honeypot + validação — **fluxo G4 em branch:**
+  - `fetch POST` JSON para `/.netlify/functions/lead-capture`
+  - Supabase via endpoint server-side
+  - `window.location.assign('/obrigado/')` apenas após sucesso
 - [x] Página `/obrigado/` — confirmação pós-formulário (noindex, fora do sitemap)
 - [x] Botão WhatsApp flutuante
 - [x] Páginas /termos e /privacidade
@@ -113,6 +115,7 @@ Exceções P0/P1 apenas para falhas críticas em produção.
 |---|---|---|
 | R01 | P1 | Leads só existem no Netlify Forms — sem banco, sem atribuição |
 | R03 | P2 | `api.resend.com` na CSP sem código correspondente |
+| R04 | P1 | G4 precisa de Docker local para pgTAP e env server-side Netlify antes de preview funcional |
 
 **Riscos encerrados:**
 - ~~R02~~ `/obrigado` inexistente → PRODUCTION APPROVED (dd54bb0)
@@ -164,21 +167,15 @@ G1 deve criar o **Common Core** do Supabase compartilhado (Marvin Sites + Marvin
 
 ## Próxima missão
 
-**G3 — Attribution** — NEXT / NOT STARTED. Aguardando autorização explícita.
+**G4 — Lead Capture Foundation** — IN_PROGRESS com Codex como ACTIVE_TOOL.
 **MS-G1** — NOT STARTED.
 
 **NÃO INICIAR SEM AUTORIZAÇÃO.**
 
-G3 autorizado em 01/09/2026 com Codex como ACTIVE_TOOL. Escopo: fundação
-first-party de atribuição `g3-v1`, sem Supabase runtime, sem migration, sem
-GTM/GA4 novos e sem deploy de produção.
-
-Estado G3:
-- Branch: `feat/marvin-g3-attribution`
-- HEAD: ver `git rev-parse HEAD` no branch de trabalho
-- Preview: `https://g3-attribution--transcendent-fairy-69ba57.netlify.app`
-- Tests: `test:attribution` 26/26, `test:consent` 17/17, `npm run lint` PASS, `npm run build` PASS
-- Production: unchanged
+G4 autorizado em 01/09/2026 com Codex como ACTIVE_TOOL. Escopo: endpoint
+server-side Netlify, RPC Supabase transacional, idempotência por `submission_id`,
+persistência de business/lead/attribution/consent e documentação. Sem Vercel,
+sem GTM/GA4 novos e sem deploy de produção.
 
 ## Stack verificada
 
@@ -187,5 +184,5 @@ Estado G3:
 - npm 11 / package-lock.json
 - Deploy: Netlify (branch main → auto-deploy)
 - Analytics: Umami (cookieless) + GTM-PHJLZWF4 v2 / GA4 G-TT3QQJR64N (Consent Mode Basic, default denied)
-- Formulário: Netlify Forms (fetch + manual redirect)
+- Formulário: G4 branch usa Netlify Function + Supabase; produção ainda é main até aprovação
 - Supabase: G1 APPROVED — 4 migrations, 16 tabelas, 116 pgTAP, RLS deny-by-default

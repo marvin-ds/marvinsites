@@ -12,7 +12,8 @@
     "db:reset": "supabase db reset",
     "db:test": "supabase test db",
     "test:consent": "node --test src/lib/__tests__/consent.test.mjs",
-    "test:attribution": "node --test src/lib/__tests__/attribution.test.mjs"
+    "test:attribution": "node --test src/lib/__tests__/attribution.test.mjs",
+    "test:lead-capture": "node --test netlify/functions/__tests__/*.test.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
