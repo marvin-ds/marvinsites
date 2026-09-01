@@ -120,6 +120,11 @@ const gtmId = import.meta.env.PUBLIC_GTM_ID ?? '';
         } catch(e) {}
       })();
     </script>
+    <script>
+      import { initAttribution } from '../lib/attribution';
+
+      initAttribution();
+    </script>
   </head>
   <body>
     <slot />

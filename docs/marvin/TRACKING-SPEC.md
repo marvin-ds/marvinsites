@@ -1,6 +1,6 @@
 # Marvin Sites — Especificação de Tracking
 
-**Versão:** 1.1 | **Data-base:** 27/08/2026 | **Atualizado:** 27/08/2026 (Gate 0.5)
+**Versão:** 1.2 | **Data-base:** 27/08/2026 | **Atualizado:** 01/09/2026 (Gate 3)
 
 > **Adendo Gate 0.5 — Estado dos eventos:**
 >
@@ -152,6 +152,47 @@ Quando permitido pelo consentimento:
 - persistir atribuição first-party por até 90 dias;
 - first-touch imutável;
 - last-touch atualizado.
+
+### Gate 3 — contrato `g3-v1`
+
+G3 implementa atribuição first-party local, separada do Consent Mode do Google.
+O objetivo é preservar contexto operacional para o lead futuro, sem enviar novos
+eventos ao GA4 e sem criar tags no GTM.
+
+Chaves:
+
+```text
+marvin_attribution_v1
+marvin_session_v1
+```
+
+Parâmetros suportados:
+
+```text
+utm_source
+utm_medium
+utm_campaign
+utm_id
+utm_content
+utm_term
+gclid
+gbraid
+wbraid
+fbclid
+```
+
+Regras V1:
+
+- first-touch é imutável dentro de `g3-v1`;
+- last-touch só muda quando há novo sinal útil;
+- visita direta sem parâmetros não apaga last-touch útil;
+- landing page guarda apenas pathname + query whitelistada;
+- referrer remove query string e ignora referrer do mesmo domínio;
+- `gclid`, `gbraid`, `wbraid` e `fbclid` ficam separados;
+- dataLayer recebe contexto mínimo e flags de presença de click IDs, não valores completos;
+- formulário Netlify recebe hidden fields de atribuição sem mudar o fluxo atual.
+
+Ver: [G3-ATTRIBUTION.md](./G3-ATTRIBUTION.md).
 
 ---
 

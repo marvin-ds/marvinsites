@@ -1,10 +1,18 @@
-import type { Handler } from '@netlify/functions';
+interface NetlifyEvent {
+  httpMethod: string;
+  body: string | null;
+}
+
+interface NetlifyResponse {
+  statusCode: number;
+  body: string;
+}
 
 function sanitize(str: string | undefined): string {
   return (str ?? '').replace(/[<>"'`]/g, '').trim().slice(0, 500);
 }
 
-export const handler: Handler = async (event) => {
+export const handler = async (event: NetlifyEvent): Promise<NetlifyResponse> => {
   if (event.httpMethod !== 'POST') {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }

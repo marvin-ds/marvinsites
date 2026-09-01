@@ -11,7 +11,8 @@
     "db:stop": "supabase stop",
     "db:reset": "supabase db reset",
     "db:test": "supabase test db",
-    "test:consent": "node --test src/lib/__tests__/consent.test.mjs"
+    "test:consent": "node --test src/lib/__tests__/consent.test.mjs",
+    "test:attribution": "node --test src/lib/__tests__/attribution.test.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

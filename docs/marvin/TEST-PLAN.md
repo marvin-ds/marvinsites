@@ -8,6 +8,7 @@
 
 ### Unitários
 - UTM parser;
+- attribution `g3-v1`: first-touch, last-touch, click IDs, storage, session ID, sanitização;
 - phone normalization;
 - email normalization;
 - status transitions;
@@ -25,6 +26,8 @@
 ### E2E
 - consent reject;
 - consent accept;
+- attribution capture with UTMs/click IDs;
+- attribution hidden fields on diagnostic submit;
 - diagnostic submit;
 - WhatsApp click;
 - checkout redirect;
@@ -81,3 +84,19 @@ Próximo Gate:
 ```
 
 Build passando não é suficiente.
+
+## Gate 3 — Attribution QA
+
+Casos mínimos:
+
+1. `?utm_source=google&utm_medium=cpc&utm_campaign=test-g3&utm_term=site`
+   cria first-touch e last-touch.
+2. Recarregar sem parâmetros preserva first-touch e last-touch útil.
+3. Nova URL atribuída com Instagram mantém first-touch e atualiza last-touch.
+4. `gclid`, `gbraid`, `wbraid` e `fbclid` são capturados separadamente.
+5. URL direta inicial gera `direct / none`.
+6. URL direta posterior não apaga contexto útil.
+7. Referrer externo vira `referral`; referrer de busca conhecido vira `organic`.
+8. Query string não whitelistada não entra em `landing_page`.
+9. Storage inválido ou indisponível não quebra página, consentimento, formulário ou WhatsApp.
+10. Formulário Netlify mantém `fetch POST /` e `/obrigado/`.

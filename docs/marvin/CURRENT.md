@@ -12,10 +12,15 @@
 **Architectural Alignment (D012–D020)** ✅ APPROVED  
 **G1 — Supabase compartilhado e segurança** ✅ APPROVED
 **G2 — Consent Mode + GTM + GA4** ✅ PRODUCTION APPROVED
+**G3 — Attribution** IMPLEMENTED — PENDING APPROVAL
 
 ## Branch de produção
 
-`main` — HEAD `13665ada`
+`main` — HEAD `69b370ea`
+
+## Branch de trabalho atual
+
+`feat/marvin-g3-attribution`
 
 ## Working tree
 
@@ -163,6 +168,17 @@ G1 deve criar o **Common Core** do Supabase compartilhado (Marvin Sites + Marvin
 **MS-G1** — NOT STARTED.
 
 **NÃO INICIAR SEM AUTORIZAÇÃO.**
+
+G3 autorizado em 01/09/2026 com Codex como ACTIVE_TOOL. Escopo: fundação
+first-party de atribuição `g3-v1`, sem Supabase runtime, sem migration, sem
+GTM/GA4 novos e sem deploy de produção.
+
+Estado G3:
+- Branch: `feat/marvin-g3-attribution`
+- HEAD: ver `git rev-parse HEAD` no branch de trabalho
+- Preview: `https://g3-attribution--transcendent-fairy-69ba57.netlify.app`
+- Tests: `test:attribution` 26/26, `test:consent` 17/17, `npm run lint` PASS, `npm run build` PASS
+- Production: unchanged
 
 ## Stack verificada
 

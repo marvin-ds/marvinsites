@@ -2,6 +2,31 @@
 
 ---
 
+## [Gate 3] — 01/09/2026 — Attribution Foundation
+
+### Tracking
+- Implementada fundação de atribuição first-party `g3-v1`
+- Captura UTMs, `gclid`, `gbraid`, `wbraid`, `fbclid`, landing page e referrer
+- First-touch imutável e last-touch atualizável apenas por novo contexto útil
+- Sessão first-party em `sessionStorage` e atribuição persistente em `localStorage` por 90 dias
+- DataLayer recebe eventos `attribution_initialized` / `attribution_updated` sem PII e sem click IDs completos
+
+### Formulário
+- Formulário Netlify atual preservado: `fetch POST /` → `/obrigado/`
+- Hidden fields de atribuição adicionados para leads atuais já carregarem contexto de origem
+
+### Testes
+- Suite unitária `test:attribution` criada com cobertura de parse, sanitização, storage, sessão, first/last-touch e snapshot
+
+### Infraestrutura
+- Nenhuma migration
+- Nenhuma integração runtime com Supabase
+- Nenhuma alteração em GTM/GA4/Vercel/DNS
+- Preview Netlify: `https://g3-attribution--transcendent-fairy-69ba57.netlify.app`
+- Produção não alterada
+
+---
+
 ## [Gate 1] — 28/08/2026 — Supabase Common Core e Segurança
 
 ### Schema

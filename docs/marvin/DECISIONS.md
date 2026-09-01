@@ -203,3 +203,21 @@
 **Decisão:** O `<noscript><iframe src="gtm.js">` não é incluído no HTML. Em Basic Consent Mode não é necessário para conformidade. Usuários sem JS são minoria sem impacto no funil.
 
 **Motivação:** Menor complexidade; sem benefício real para o perfil de usuário deste site.
+
+---
+
+## D026 — 01/09/2026 — Attribution Foundation `g3-v1`
+
+**Decisão:** Implementar atribuição first-party local com versão explícita
+`g3-v1`, usando `marvin_attribution_v1` em localStorage e `marvin_session_v1`
+em sessionStorage.
+
+**Regras:** first-touch é imutável, last-touch só atualiza com novo contexto
+útil, visita direta posterior não apaga last-touch útil, e a landing page guarda
+somente parâmetros whitelistados.
+
+**Privacidade:** Não armazenar PII, não usar fingerprint, não usar GA client ID
+como session ID e não enviar click IDs completos ao dataLayer.
+
+**Escopo:** G3 não cria migration, não insere no Supabase, não altera GTM/GA4 e
+não implementa WhatsApp attribution definitiva.

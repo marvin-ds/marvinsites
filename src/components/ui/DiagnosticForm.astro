@@ -13,6 +13,20 @@
 >
   <!-- Honeypot anti-bot -->
   <input type="hidden" name="form-name" value="diagnostico" />
+  <input type="hidden" name="attribution_version" data-attribution-field="attribution_version" />
+  <input type="hidden" name="session_id" data-attribution-field="session_id" />
+  <input type="hidden" name="utm_source" data-attribution-field="utm_source" />
+  <input type="hidden" name="utm_medium" data-attribution-field="utm_medium" />
+  <input type="hidden" name="utm_campaign" data-attribution-field="utm_campaign" />
+  <input type="hidden" name="utm_id" data-attribution-field="utm_id" />
+  <input type="hidden" name="utm_content" data-attribution-field="utm_content" />
+  <input type="hidden" name="utm_term" data-attribution-field="utm_term" />
+  <input type="hidden" name="gclid" data-attribution-field="gclid" />
+  <input type="hidden" name="gbraid" data-attribution-field="gbraid" />
+  <input type="hidden" name="wbraid" data-attribution-field="wbraid" />
+  <input type="hidden" name="fbclid" data-attribution-field="fbclid" />
+  <input type="hidden" name="landing_page" data-attribution-field="landing_page" />
+  <input type="hidden" name="referrer" data-attribution-field="referrer" />
   <p class="hidden" aria-hidden="true"><label>Não preencha: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -101,10 +115,29 @@
 </form>
 
 <script>
+  import { attributionFormFields } from '../../lib/attribution';
+  import type { AttributionSnapshot } from '../../lib/attribution';
+
   const form = document.getElementById('form-diagnostico') as HTMLFormElement | null;
+
+  function fillAttributionFields(snapshot?: AttributionSnapshot | null) {
+    if (!form || !snapshot) return;
+    const fields = attributionFormFields(snapshot);
+    for (const [name, value] of Object.entries(fields)) {
+      const input = form.querySelector<HTMLInputElement>(`[data-attribution-field="${name}"]`);
+      if (input) input.value = value;
+    }
+  }
+
   if (form) {
+    fillAttributionFields((window as any).marvinAttribution);
+    document.addEventListener('marvin:attribution-ready', (event) => {
+      fillAttributionFields((event as CustomEvent<AttributionSnapshot>).detail);
+    });
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      fillAttributionFields((window as any).marvinAttribution);
       const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
       if (btn) { btn.disabled = true; btn.textContent = 'Enviando…'; }
       try {

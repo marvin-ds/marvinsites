@@ -252,6 +252,26 @@ Sem PII.
 
 ---
 
+## 5.1 Attribution Foundation — Gate 3
+
+`attribution_version = g3-v1`
+
+G3 captura e preserva contexto first-party de origem antes da persistência de
+leads no Supabase. A implementação fica no browser, sem PII, sem fingerprinting,
+sem GA client ID e sem envio manual ao GA4.
+
+O snapshot local deve ser compatível com `lead_attribution`:
+
+- first-touch imutável;
+- last-touch atualizável apenas por novo contexto útil;
+- sessão first-party em `sessionStorage`;
+- atribuição persistente em `localStorage` por 90 dias;
+- UTMs e click IDs preservados em campos separados.
+
+G3 não cria migration e não altera GTM, GA4, Supabase remoto, Vercel ou DNS.
+
+---
+
 # 6. Modelo de dados Supabase
 
 Ver `DATA-MODEL.md` para schema completo de tabelas.
