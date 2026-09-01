@@ -1,6 +1,6 @@
 # G4 — Lead Capture Foundation
 
-Status: LOCAL DATABASE VALIDATION PASS — pending remote migration, preview, and approval
+Status: PREVIEW AUTH FIX — pending preview validation and approval
 Capture version: `g4-v1`
 Date: 2026-09-01
 
@@ -50,6 +50,21 @@ SUPABASE_SERVICE_ROLE_KEY
 
 `SUPABASE_SERVICE_ROLE_KEY` is used only inside the Netlify Function. It must not
 be committed, printed, logged, or sent to browser code.
+
+For G4, the variable name remains `SUPABASE_SERVICE_ROLE_KEY` because that is the
+configured Netlify name. Internally it means a privileged server-side Supabase
+key and can be either:
+
+- modern Supabase Secret Key (`sb_secret_...`): sent as `apikey` only;
+- legacy `service_role` JWT: sent as `apikey` plus `Authorization: Bearer`.
+
+This naming is operational debt. A future cleanup may rename the variable to a
+neutral name such as `SUPABASE_SECRET_KEY`, but G4 does not require that change.
+
+Server diagnostics are sanitized. They may log error category, HTTP status,
+PostgREST error code, key mode, and submission correlation ID, but never key
+values, auth headers, email, phone, names, business names, full payloads, or
+click IDs.
 
 ## Validation
 
@@ -146,7 +161,8 @@ retry with the same `submission_id`.
 - anon/authenticated direct table access remains denied.
 - No PII sent to GA4, GTM, Umami, URL query strings, or `dataLayer`.
 - Endpoint responses are generic and non-sensitive.
-- Server code does not intentionally log full payloads, email, or phone.
+- Server code does not intentionally log full payloads, email, phone, key
+  material, auth headers, business names, or click IDs.
 
 ## Testing
 
@@ -174,8 +190,8 @@ reserved the `54315–54414` TCP range. Project local ports were moved to
 
 Before production:
 
-1. Apply the G4 migration to remote Supabase only after explicit authorization.
-2. Configure `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` in Netlify only after
-   explicit authorization.
-3. Validate preview function behavior with a safe backend target.
+1. Remote Supabase migration must remain aligned through `000005`.
+2. `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` must be available to Netlify
+   Functions in the required contexts.
+3. Validate preview function behavior with the controlled test submission.
 4. Request approval before merge to `main` and production deploy.
