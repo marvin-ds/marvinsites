@@ -1,6 +1,6 @@
 # G4 — Lead Capture Foundation
 
-Status: IMPLEMENTED — pending local Supabase validation, preview, and approval
+Status: LOCAL DATABASE VALIDATION PASS — pending remote migration, preview, and approval
 Capture version: `g4-v1`
 Date: 2026-09-01
 
@@ -159,21 +159,23 @@ Implemented:
 - `npm run build`
 - pgTAP file `supabase/tests/database/04_g4_lead_capture_test.sql`
 
-Pending in this environment:
+Completed in local environment:
 
-- `npm run db:reset`
-- `npm run db:test`
+- `npm run db:reset`: PASS
+- `npm run db:test`: PASS, 4 files / 142 tests
 
-Blocker observed: local Supabase cannot run until Docker Desktop Linux engine is
-available.
+Port note:
+
+The default Supabase local ports `54320–54329` were unavailable because Windows
+reserved the `54315–54414` TCP range. Project local ports were moved to
+`55420–55429` in `supabase/config.toml`.
 
 ## Production Rollout Boundary
 
 Before production:
 
-1. Run local Supabase reset and pgTAP.
-2. Apply the G4 migration to remote Supabase only after explicit authorization.
-3. Configure `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` in Netlify only after
+1. Apply the G4 migration to remote Supabase only after explicit authorization.
+2. Configure `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` in Netlify only after
    explicit authorization.
-4. Validate preview function behavior with a safe backend target.
-5. Request approval before merge to `main` and production deploy.
+3. Validate preview function behavior with a safe backend target.
+4. Request approval before merge to `main` and production deploy.

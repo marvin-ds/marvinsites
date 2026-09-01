@@ -50,7 +50,10 @@
 - Sem Vercel
 - Sem GTM/GA4
 - Sem produção
-- Validação local Supabase pendente porque Docker Desktop Linux engine não está disponível neste ambiente
+- Docker Desktop/Linux engine confirmado
+- Portas Supabase locais movidas para `55420–55429` porque `54315–54414` está reservado no Windows
+- `npm run db:reset` aplicou G1 + G4 localmente
+- `npm run db:test` passou com 4 arquivos / 142 testes pgTAP
 
 ---
 

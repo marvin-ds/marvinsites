@@ -115,7 +115,7 @@ Exceções P0/P1 apenas para falhas críticas em produção.
 |---|---|---|
 | R01 | P1 | Leads só existem no Netlify Forms — sem banco, sem atribuição |
 | R03 | P2 | `api.resend.com` na CSP sem código correspondente |
-| R04 | P1 | G4 precisa de Docker local para pgTAP e env server-side Netlify antes de preview funcional |
+| R04 | P1 | G4 ainda precisa de migration remota Supabase e env server-side Netlify antes de preview funcional |
 
 **Riscos encerrados:**
 - ~~R02~~ `/obrigado` inexistente → PRODUCTION APPROVED (dd54bb0)
@@ -176,6 +176,11 @@ G4 autorizado em 01/09/2026 com Codex como ACTIVE_TOOL. Escopo: endpoint
 server-side Netlify, RPC Supabase transacional, idempotência por `submission_id`,
 persistência de business/lead/attribution/consent e documentação. Sem Vercel,
 sem GTM/GA4 novos e sem deploy de produção.
+
+Validação local G4:
+- `npm run db:reset`: PASS — G1 + G4 aplicadas localmente
+- `npm run db:test`: PASS — 4 arquivos / 142 pgTAP
+- Portas Supabase locais movidas de `54320–54329` para `55420–55429` porque a faixa `54315–54414` está reservada no Windows
 
 ## Stack verificada
 
