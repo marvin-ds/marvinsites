@@ -9,3 +9,7 @@ dist/
 supabase/.temp/
 supabase/.branches/
 supabase/functions/.env
+
+# Local tool state (never commit)
+.claude/
+.netlify/

@@ -11,10 +11,11 @@
 **HOTFIX /obrigado** ✅ PRODUCTION APPROVED  
 **Architectural Alignment (D012–D020)** ✅ APPROVED  
 **G1 — Supabase compartilhado e segurança** ✅ APPROVED
+**G2 — Consent Mode + GTM + GA4** ✅ PRODUCTION APPROVED
 
 ## Branch de produção
 
-`main` — HEAD `dd54bb0` (G1 pending merge)
+`main` — HEAD `13665ada`
 
 ## Working tree
 
@@ -93,7 +94,7 @@ Limpa.
 |---|---|---|---|
 | Site institucional | Netlify | marvinsites.com.br | ✅ LIVE |
 | App / SaaS | Vercel | app.marvinsites.com.br | FUTURO |
-| Backend / DB | Supabase | dboihbvjtdlgvugjxaam | Projeto criado, G1 pending |
+| Backend / DB | Supabase | dboihbvjtdlgvugjxaam | ✅ G1 APPROVED — 4 migrations / 16 tables |
 | Repositório | GitHub | marvin-ds/marvinsites | monorepo |
 
 **Política de deploy:** branch → Preview → Gate APPROVED → 1 merge → 1 deploy de produção.  
@@ -106,11 +107,11 @@ Exceções P0/P1 apenas para falhas críticas em produção.
 | ID | Prioridade | Descrição |
 |---|---|---|
 | R01 | P1 | Leads só existem no Netlify Forms — sem banco, sem atribuição |
-| R02 | P1 | Sem Google Consent Mode v2 (necessário para Gate 2) |
 | R03 | P2 | `api.resend.com` na CSP sem código correspondente |
 
 **Riscos encerrados:**
 - ~~R02~~ `/obrigado` inexistente → PRODUCTION APPROVED (dd54bb0)
+- ~~R02~~ Sem Consent Mode v2 → G2 PRODUCTION APPROVED (13665ada) — GTM-PHJLZWF4 v2 + Consent Mode Basic
 - ~~R05~~ `PUBLIC_WHATSAPP_NUMBER` desconhecida → USER-CONFIRMED / EXTERNAL
 
 ## Gate 1 — escopo confirmado
@@ -158,8 +159,8 @@ G1 deve criar o **Common Core** do Supabase compartilhado (Marvin Sites + Marvin
 
 ## Próxima missão
 
-**MS-G0 — Scoring contract** — fechar spec do score antes de programar scanner (aguarda autorização).  
-**Gate 2A — APPROVED** — consent foundation implementada. Próximo: Gate 2B (IDs reais, GTM Preview, CSP).
+**G3 — Attribution** — NEXT / NOT STARTED. Aguardando autorização explícita.
+**MS-G1** — NOT STARTED.
 
 **NÃO INICIAR SEM AUTORIZAÇÃO.**
 
@@ -169,6 +170,6 @@ G1 deve criar o **Common Core** do Supabase compartilhado (Marvin Sites + Marvin
 - Node v24 local / Node 20 no Netlify build
 - npm 11 / package-lock.json
 - Deploy: Netlify (branch main → auto-deploy)
-- Analytics: Umami only (cookieless)
+- Analytics: Umami (cookieless) + GTM-PHJLZWF4 v2 / GA4 G-TT3QQJR64N (Consent Mode Basic, default denied)
 - Formulário: Netlify Forms (fetch + manual redirect)
-- Supabase: projeto criado, zero migrations
+- Supabase: G1 APPROVED — 4 migrations, 16 tabelas, 116 pgTAP, RLS deny-by-default
