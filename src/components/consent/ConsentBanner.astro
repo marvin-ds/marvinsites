@@ -107,6 +107,9 @@
   const stored = readStoredConsent();
   if (!stored || hasLegacyConsentOnly()) {
     showBanner();
+  } else {
+    hideBanner();
+    applyConsentAndMaybeLoadGtm(stored);
   }
 
   // Accept all
