@@ -60,12 +60,19 @@
 4. Configurar dentro do GTM (não diretamente no código)
 
 ### CSP (netlify.toml)
-Adicionar no G2B:
+
+Estado atual após validação pré-merge do G4:
+
 ```
-script-src: 'self' 'unsafe-inline' https://www.googletagmanager.com https://analytics.umami.is
-connect-src: 'self' https://www.google-analytics.com https://analytics.google.com https://analytics.umami.is https://api.resend.com
-img-src: 'self' data: https: https://www.googletagmanager.com https://www.google-analytics.com
+script-src: 'self' 'unsafe-inline' https://analytics.umami.is https://*.googletagmanager.com https://tagmanager.google.com
+style-src: 'self' 'unsafe-inline' https://fonts.googleapis.com https://www.googletagmanager.com https://tagmanager.google.com
+font-src: 'self' https://fonts.gstatic.com data:
+img-src: 'self' data: https:
+connect-src: 'self' https://analytics.umami.is https://api.resend.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com
 ```
+
+`unsafe-eval` permanece proibido. O allowlist de Google cobre GA4/GTM e Tag
+Assistant sem liberar `*.google.com` de forma genérica.
 
 ---
 
