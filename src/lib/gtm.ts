@@ -13,6 +13,12 @@ export function loadGtm(gtmId: string): void {
   if (typeof window === 'undefined') return
   if (isGtmLoaded()) return
 
+  window.dataLayer = window.dataLayer || []
+  window.dataLayer.push({
+    'gtm.start': new Date().getTime(),
+    event: 'gtm.js',
+  })
+
   const script = document.createElement('script')
   script.setAttribute('data-gtm-loaded', '1')
   script.async = true

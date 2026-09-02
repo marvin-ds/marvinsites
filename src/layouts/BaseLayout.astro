@@ -109,6 +109,10 @@ const gtmId = import.meta.env.PUBLIC_GTM_ID ?? '';
               var gtmId = (document.querySelector('meta[name="gtm-id"]') || {}).content || '';
               var eligible = stored.analytics_storage === 'granted' || stored.ad_storage === 'granted';
               if (gtmId && /^GTM-[A-Z0-9]+$/.test(gtmId) && eligible) {
+                window.dataLayer.push({
+                  'gtm.start': new Date().getTime(),
+                  event: 'gtm.js',
+                });
                 var s = document.createElement('script');
                 s.setAttribute('data-gtm-loaded', '1');
                 s.async = true;
