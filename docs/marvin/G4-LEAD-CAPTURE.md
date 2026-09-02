@@ -1,6 +1,6 @@
 # G4 — Lead Capture Foundation
 
-Status: PREVIEW AUTH FIX — pending preview validation and approval
+Status: ENVIRONMENT SEMANTICS FIX — pending preview revalidation
 Capture version: `g4-v1`
 Date: 2026-09-01
 
@@ -65,6 +65,33 @@ Server diagnostics are sanitized. They may log error category, HTTP status,
 PostgREST error code, key mode, and submission correlation ID, but never key
 values, auth headers, email, phone, names, business names, full payloads, or
 click IDs.
+
+## Environment Semantics
+
+`environment` represents the trusted deploy/runtime environment, not a value
+chosen by the browser.
+
+The Netlify Function derives the canonical value server-side:
+
+- production deploy or canonical production host `marvinsites.com.br`:
+  `production`;
+- Deploy Preview, branch deploy, dev, unknown, or other non-production host:
+  `staging`.
+
+The browser is not authoritative for `environment`; any client-supplied value is
+ignored/overridden before calling the Supabase RPC. This prevents preview/test
+leads from being classified as production leads.
+
+Known pre-fix test artifact:
+
+```text
+submission_id = g4previewcodex20260901a
+environment = production
+```
+
+That record was created before the server-side environment fix and must not be
+reused for environment validation because RPC idempotency can return the old
+record.
 
 ## Validation
 

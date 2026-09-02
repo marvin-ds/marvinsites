@@ -2,9 +2,11 @@ import { afterEach, test } from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
+  applyServerEnvironment,
   buildSupabaseServerHeaders,
   handler,
   logDiagnostic,
+  resolveLeadEnvironment,
   sanitizeDiagnostic,
 } from '../lead-capture.mjs';
 
@@ -17,7 +19,7 @@ const modernSecretKey = 'sb_secret_test_key_for_server_only';
 function validEvent(overrides = {}) {
   return {
     httpMethod: 'POST',
-    headers: { 'content-type': 'application/json' },
+    headers: { 'content-type': 'application/json', host: 'deploy-preview-1--marvinsites.netlify.app' },
     body: JSON.stringify({
       submission_id: 'g4_submission_endpoint_001',
       negocio: 'Clínica Boa Vista',
@@ -66,6 +68,7 @@ test('GET is rejected', async () => {
 test('valid POST calls Supabase RPC and returns minimal 201', async () => {
   process.env.SUPABASE_URL = 'https://example.supabase.co';
   process.env.SUPABASE_SERVICE_ROLE_KEY = legacyServiceRoleJwt;
+  process.env.CONTEXT = 'deploy-preview';
 
   let request;
   globalThis.fetch = async (url, options) => {
@@ -80,7 +83,10 @@ test('valid POST calls Supabase RPC and returns minimal 201', async () => {
   assert.deepEqual(body, { ok: true });
   assert.equal(request.url, 'https://example.supabase.co/rest/v1/rpc/capture_lead_v1');
   assert.equal(request.options.headers.Authorization, `Bearer ${legacyServiceRoleJwt}`);
-  assert.equal(JSON.parse(request.options.body).payload.lead.email_raw, undefined);
+  const rpcPayload = JSON.parse(request.options.body).payload;
+  assert.equal(rpcPayload.lead.email_raw, undefined);
+  assert.equal(rpcPayload.lead.environment, 'staging');
+  assert.equal(rpcPayload.business.environment, 'staging');
 });
 
 test('modern Supabase secret key uses apikey without JWT bearer', () => {
@@ -107,6 +113,66 @@ test('missing key fails before Supabase request', () => {
 
 test('malformed key fails before Supabase request', () => {
   assert.throws(() => buildSupabaseServerHeaders('not-a-valid-server-key'), /INVALID_KEY_FORMAT/);
+});
+
+test('production context resolves to production', () => {
+  assert.equal(resolveLeadEnvironment({ headers: { host: 'deploy-preview-1--marvinsites.netlify.app' } }, 'production'), 'production');
+});
+
+test('deploy-preview context resolves to staging', () => {
+  assert.equal(resolveLeadEnvironment({ headers: { host: 'marvinsites.com.br' } }, 'deploy-preview'), 'staging');
+});
+
+test('branch-deploy context resolves to staging', () => {
+  assert.equal(resolveLeadEnvironment({ headers: { host: 'feat--marvinsites.netlify.app' } }, 'branch-deploy'), 'staging');
+});
+
+test('unknown non-production context resolves to staging', () => {
+  assert.equal(resolveLeadEnvironment({ headers: { host: 'preview--marvinsites.netlify.app' } }, 'something-else'), 'staging');
+});
+
+test('canonical production host resolves to production when context is missing', () => {
+  assert.equal(resolveLeadEnvironment({ headers: { host: 'marvinsites.com.br' } }, ''), 'production');
+});
+
+test('preview Netlify host resolves to staging when context is missing', () => {
+  assert.equal(resolveLeadEnvironment({ headers: { host: 'deploy-preview-1--marvinsites.netlify.app' } }, ''), 'staging');
+});
+
+test('client-supplied environment cannot override server result', async () => {
+  process.env.SUPABASE_URL = 'https://example.supabase.co';
+  process.env.SUPABASE_SERVICE_ROLE_KEY = modernSecretKey;
+  process.env.CONTEXT = 'deploy-preview';
+
+  let request;
+  globalThis.fetch = async (url, options) => {
+    request = { url, options };
+    return { ok: true, json: async () => ({ ok: true }) };
+  };
+
+  const response = await handler(validEvent({ environment: 'production' }));
+  const rpcPayload = JSON.parse(request.options.body).payload;
+
+  assert.equal(response.statusCode, 201);
+  assert.equal(rpcPayload.lead.environment, 'staging');
+  assert.equal(rpcPayload.business.environment, 'staging');
+});
+
+test('malformed or missing context does not default to production', () => {
+  assert.equal(resolveLeadEnvironment({ headers: { host: '' } }, null), 'staging');
+  assert.equal(resolveLeadEnvironment({ headers: {} }, undefined), 'staging');
+});
+
+test('server environment helper overrides payload business and lead values', () => {
+  const payload = {
+    business: { environment: 'production' },
+    lead: { environment: 'production' },
+  };
+
+  applyServerEnvironment(payload, 'staging');
+
+  assert.equal(payload.business.environment, 'staging');
+  assert.equal(payload.lead.environment, 'staging');
 });
 
 test('malformed JSON returns safe 400', async () => {

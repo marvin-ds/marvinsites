@@ -7,6 +7,7 @@ import {
 
 const RPC_NAME = 'capture_lead_v1';
 const MODERN_SECRET_PREFIX = 'sb_secret_';
+const PRODUCTION_HOST = 'marvinsites.com.br';
 
 function env(name) {
   return process.env[name] || '';
@@ -60,6 +61,25 @@ export function sanitizeDiagnostic(details = {}) {
 
 export function logDiagnostic(details) {
   console.error('[lead-capture]', JSON.stringify(sanitizeDiagnostic(details)));
+}
+
+export function resolveLeadEnvironment(event = {}, deployContext = env('CONTEXT')) {
+  const context = typeof deployContext === 'string' ? deployContext.trim().toLowerCase() : '';
+  if (context === 'production') return 'production';
+  if (context === 'deploy-preview' || context === 'branch-deploy' || context === 'dev') return 'staging';
+
+  const headers = event.headers || {};
+  const rawHost = headers.host || headers.Host || headers['x-forwarded-host'] || headers['X-Forwarded-Host'] || '';
+  const host = String(rawHost).split(',')[0].trim().toLowerCase().split(':')[0];
+
+  if (host === PRODUCTION_HOST) return 'production';
+  return 'staging';
+}
+
+export function applyServerEnvironment(payload, environment) {
+  if (payload?.business) payload.business.environment = environment;
+  if (payload?.lead) payload.lead.environment = environment;
+  return payload;
 }
 
 async function callSupabase(payload) {
@@ -130,6 +150,7 @@ export async function handler(event) {
     const payload = validateLeadCapture(input);
     if (payload.bot) return jsonResponse(201, { ok: true });
 
+    applyServerEnvironment(payload, resolveLeadEnvironment(event));
     await callSupabase(payload);
     return jsonResponse(201, { ok: true });
   } catch (error) {
