@@ -13,7 +13,8 @@
     "db:test": "supabase test db",
     "test:consent": "node --test src/lib/__tests__/consent.test.mjs",
     "test:attribution": "node --test src/lib/__tests__/attribution.test.mjs",
-    "test:lead-capture": "node --test netlify/functions/__tests__/*.test.mjs"
+    "test:lead-capture": "node --test netlify/functions/__tests__/*.test.mjs",
+    "test:whatsapp": "node --experimental-strip-types --test src/lib/__tests__/whatsapp-tracker.test.mjs netlify/functions/__tests__/whatsapp-click.test.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

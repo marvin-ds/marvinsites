@@ -54,6 +54,7 @@ const cidadeSlug = cidade.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
           href={gerarLinkWhatsApp({ numero: WHATSAPP_NUMERO, mensagem: `Olá! Tenho um negócio em ${cidade} e gostaria de saber mais sobre a Marvin Sites.`, origem: `cidade-${cidadeSlug}-outro` })}
           target="_blank"
           rel="noopener noreferrer"
+          data-wpp-placement="footer"
           class="text-confianca hover:underline ml-1"
         >
           Fale com a gente pelo WhatsApp.

@@ -8,6 +8,7 @@ interface Props {
   class?: string;
   type?: 'button' | 'submit';
   ariaLabel?: string;
+  wppPlacement?: string;
 }
 
 const {
@@ -19,6 +20,7 @@ const {
   class: className = '',
   type = 'button',
   ariaLabel,
+  wppPlacement,
 } = Astro.props;
 
 const variants = {
@@ -39,7 +41,7 @@ const classes = `${base} ${variants[variant]} ${sizes[size]} ${className}`;
 ---
 
 {href ? (
-  <a href={href} class={classes} target={target} rel={rel} aria-label={ariaLabel}>
+  <a href={href} class={classes} target={target} rel={rel} aria-label={ariaLabel} data-wpp-placement={wppPlacement}>
     <slot />
   </a>
 ) : (
