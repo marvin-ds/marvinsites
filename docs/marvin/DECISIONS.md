@@ -240,3 +240,22 @@ browser e validado/enforçado no banco. Não deduplicar por e-mail ou telefone.
 **Privacidade:** marketing não é inferido de Consent Mode, UTMs ou click IDs.
 `SUPABASE_SERVICE_ROLE_KEY` nunca entra no browser. Netlify Forms deixa de ser a
 fonte canônica do lead.
+
+---
+
+## D028 — 03/09/2026 — Escada canônica de preços COM-G1
+
+**Decisão:** Preços canônicos para a home a partir de COM-G1:
+
+| Estágio | Setup | Mensalidade |
+|---|---|---|
+| 1 (validação) | R$ 399 | R$ 97/mês |
+| 2 | R$ 599 | R$ 197/mês |
+| 3 | R$ 1.497 | R$ 297/mês |
+| 4 | R$ 2.997 | R$ 497/mês |
+
+**Regra de exibição na home:** apenas Estágios 1 e 2 são mostrados como planos. Estágios 3 e 4 existem para evolução comercial; para esses perfis, redirecionar ao WhatsApp.
+
+**Supersede:** valores stale R$897+R$147, R$2.497+R$247, R$4.997+R$497 (Services.astro pré-COM-G1). Não referenciar esses valores em código ou documentação futura.
+
+**Hipóteses anteriores (D005):** descartadas como opção imediata. A escada de 4 estágios substitui.
