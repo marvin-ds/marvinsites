@@ -26,3 +26,8 @@ alter table public.whatsapp_clicks enable row level security;
 
 comment on table public.whatsapp_clicks is
   'G5: non-PII WhatsApp CTA click records for attribution. Inserted by the whatsapp-click server function only.';
+
+-- PostgREST requires explicit table-level grants even for service_role.
+-- service_role needs INSERT to write click records via the REST API.
+grant insert on public.whatsapp_clicks to service_role;
+grant select on public.whatsapp_clicks to service_role;
