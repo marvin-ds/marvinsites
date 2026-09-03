@@ -1,52 +1,40 @@
 ---
-const casos = [
+const cenarios = [
   {
-    nome: 'C.M.',
-    negocio: 'Proprietária de clínica estética',
-    cidade: 'Santos/SP',
-    texto: 'Eu achava que o Instagram era suficiente. Mas quando vi como ficou a página, entendi o que estava faltando. Agora quando alguém pesquisa o nome da clínica, encontra tudo organizado. Faz diferença.',
-    antes: 'Clínica com 4 anos, 60+ avaliações no Google e boa reputação local. Sem site, só Instagram com link direto para WhatsApp — sem explicar serviços, localização ou equipe.',
-    depois: 'Página completa com serviços, fotos do ambiente, depoimentos, mapa e botão de WhatsApp. Primeiro contato via site chegou na semana do lançamento.',
+    segmento: 'Clínica estética',
+    regiao: 'Baixada Santista',
+    antes: 'Clínica com boa reputação local e avaliações no Google, mas sem site. Apenas Instagram com link direto para WhatsApp — sem explicar serviços, localização ou equipe. Quem pesquisava antes de ligar não encontrava informação suficiente.',
+    abordagem: 'Página com serviços descritos individualmente, fotos do ambiente, localização com mapa, horário e botão de WhatsApp em destaque. Perfil da Empresa revisado e vinculado à página.',
   },
   {
-    nome: 'R.A.',
-    negocio: 'Contador autônomo',
-    cidade: 'Guarujá/SP',
-    texto: 'Meus clientes sempre vieram por indicação, e eu nunca dei muita importância para o site. Quando um conhecido meu fez com a Marvin Sites, resolvi experimentar. Hoje até clientes antigos comentam que ficou muito mais profissional.',
-    antes: '11 anos de experiência, carteira sólida de clientes MEI e microempresa. Aparecia no Google Maps sem foto, sem descrição e sem site. A presença transmitia improviso.',
-    depois: 'Site com serviços explicados em linguagem simples (MEI, IR, abertura de empresa), Google Perfil vinculado. Presença compatível com mais de uma década de experiência.',
+    segmento: 'Contador autônomo',
+    regiao: 'Litoral SP',
+    antes: 'Mais de uma década de experiência e carteira sólida, mas presença no Google limitada ao endereço físico — sem foto, sem descrição dos serviços, sem site. A aparência online não refletia o histórico do profissional.',
+    abordagem: 'Site com serviços explicados em linguagem simples para MEI e microempresa (abertura, IR, legalização), Perfil da Empresa atualizado e integrado. Presença compatível com a experiência real do profissional.',
   },
   {
-    nome: 'E.S.',
-    negocio: 'Proprietário, empresa de pintura',
-    cidade: 'São Vicente/SP',
-    texto: 'Eu tinha um monte de foto de serviço no celular e não sabia o que fazer com elas. Agora tudo está organizado numa página bonita. O cliente já chega no WhatsApp sabendo o que eu faço.',
-    antes: '7 anos de mercado em pintura residencial e comercial. Página de Facebook desatualizada desde 2021. Empresa simplesmente não aparecia no Google — concorrentes menores apareciam antes.',
-    depois: 'Página com portfólio visual organizado por tipo de serviço, área de atendimento e formulário de orçamento. Google Perfil atualizado com as mesmas fotos.',
+    segmento: 'Empresa de pintura',
+    regiao: 'Baixada Santista',
+    antes: 'Sete anos de mercado em pintura residencial e comercial. Página de Facebook desatualizada, empresa praticamente invisível no Google. Trabalhos realizados ficavam apenas no celular do proprietário, sem nenhuma vitrine organizada.',
+    abordagem: 'Página com portfólio visual organizado por tipo de serviço, área de atendimento, formulário de orçamento e Google Perfil atualizado com as mesmas fotos — criando uma vitrine coerente entre Google e site.',
   },
   {
-    nome: 'L.F.',
-    negocio: 'Psicóloga',
-    cidade: 'Santos/SP',
-    texto: 'Minha área exige muito cuidado com a imagem. O site ficou exatamente como eu queria: profissional, acolhedor e claro. Pacientes novos já chegam no WhatsApp muito mais informados.',
-    antes: 'Consultório próprio, atendimento presencial e online. Perfil no Instagram misturava conteúdo pessoal e profissional. No Google, só o endereço físico — sem abordagem, especialidades ou contato.',
-    depois: 'Apresentação profissional com especialidades, abordagem explicada em linguagem simples, atendimento presencial e online, localização e WhatsApp direto.',
+    segmento: 'Psicóloga / Consultório',
+    regiao: 'Grande Santos',
+    antes: 'Consultório próprio com atendimento presencial e online. Instagram misturava conteúdo pessoal e profissional. No Google, só endereço físico — sem especialidades, abordagem ou forma de contato além do telefone.',
+    abordagem: 'Apresentação profissional com especialidades e abordagem explicadas em linguagem acessível, atendimento presencial e online diferenciados, localização e botão de WhatsApp direto.',
   },
   {
-    nome: 'M. e J.R.',
-    negocio: 'Proprietários de pousada',
-    cidade: 'Ilhabela/SP',
-    texto: 'A gente sempre dependeu muito do Booking. Agora temos nossa própria página e os hóspedes chegam direto no WhatsApp. Além de economizar na comissão, a conversa fica muito mais próxima.',
-    antes: 'Pousada com 12 anos, excelentes avaliações no Booking e Google — mas sem site próprio. Toda reserva passava por plataformas com comissão. Hóspedes que tentavam reservar direto não encontravam caminho.',
-    depois: 'Galeria de fotos, descrição de quartos, comodidades, localização e WhatsApp para reserva direta. Canal próprio que reduziu dependência de plataformas.',
+    segmento: 'Pousada',
+    regiao: 'Litoral Norte SP',
+    antes: 'Pousada com boas avaliações no Booking e no Google, mas sem site próprio. Toda reserva passava por plataformas com comissão. Hóspedes que tentavam reservar diretamente não encontravam um caminho claro.',
+    abordagem: 'Galeria de fotos, descrição dos quartos, comodidades, localização e WhatsApp para reserva direta — criando um canal próprio para hóspedes que preferem reservar sem intermediário.',
   },
   {
-    nome: 'P.C.',
-    negocio: 'Professora de inglês',
-    cidade: 'Praia Grande/SP',
-    texto: 'Antes eu precisava explicar tudo no WhatsApp para cada pessoa interessada. Agora mando o link da página e a pessoa já chega entendendo como funciona, para quem é e o que inclui. Ficou muito mais fácil fechar.',
-    antes: '8 anos de experiência, divulgação só em grupos de WhatsApp e Facebook de bairro. Sem site, sem presença no Google, sem material que explicasse metodologia ou como agendar.',
-    depois: 'Página com metodologia, público atendido (crianças, adultos, exames), aulas presenciais e online, depoimentos de alunos e botão para aula experimental.',
+    segmento: 'Professora de inglês',
+    regiao: 'Baixada Santista',
+    antes: 'Oito anos de experiência com divulgação limitada a grupos de WhatsApp e Facebook de bairro. Sem site, sem presença no Google, sem material que explicasse metodologia, público atendido ou como agendar.',
+    abordagem: 'Página com metodologia, públicos (crianças, adultos, preparatório para exames), modalidades presencial e online, e botão para aula experimental — reduzindo a necessidade de explicar tudo novamente a cada interessado.',
   },
 ];
 ---
@@ -54,33 +42,38 @@ const casos = [
 <section class="bg-white py-20 px-4 sm:px-6">
   <div class="max-w-6xl mx-auto">
 
-    <div class="text-center mb-4">
-      <span class="text-xs font-medium text-orange-700 uppercase tracking-widest">Casos antes e depois</span>
+    <div class="text-center mb-12">
+      <span class="text-xs font-medium text-orange-700 uppercase tracking-widest">Cenários demonstrativos</span>
       <h2 class="text-3xl sm:text-4xl font-bold text-petroleo mt-3 leading-tight">
-        Situações reais. Resultados concretos.
+        Veja como uma presença mais organizada muda a forma como o negócio é apresentado
       </h2>
-      <p class="text-gray-500 mt-4 max-w-xl mx-auto text-sm leading-relaxed">
-        Cada negócio tem uma história parecida antes de ter uma presença digital que funciona.
+      <p class="text-gray-500 mt-4 max-w-2xl mx-auto text-sm leading-relaxed">
+        Os exemplos abaixo representam situações comuns de pequenos negócios locais e mostram como a Marvin estruturaria cada presença digital.
       </p>
     </div>
 
-    <p class="text-center text-xs text-gray-500 mb-12">
-      Casos representativos baseados em perfis reais de mercado. Nomes abreviados a pedido.
-    </p>
-
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {casos.map((caso) => (
+      {cenarios.map((c) => (
         <div class="bg-gelo rounded-2xl border border-nevoa overflow-hidden flex flex-col">
 
-          <!-- Antes / Depois -->
-          <div class="p-5 border-b border-nevoa space-y-3">
+          <!-- Cabeçalho do cenário -->
+          <div class="px-5 pt-5 pb-3">
+            <p class="text-xs font-semibold text-petroleo uppercase tracking-widest">{c.segmento}</p>
+            <p class="text-xs text-gray-400 mt-0.5">{c.regiao}</p>
+          </div>
+
+          <!-- Antes / Abordagem Marvin -->
+          <div class="px-5 pb-5 space-y-3 flex-1">
             <div class="flex items-start gap-2">
               <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-red-100 flex items-center justify-center">
                 <svg class="w-2.5 h-2.5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
                 </svg>
               </span>
-              <p class="text-xs text-gray-500 leading-relaxed">{caso.antes}</p>
+              <div>
+                <p class="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">Situação comum</p>
+                <p class="text-xs text-gray-500 leading-relaxed">{c.antes}</p>
+              </div>
             </div>
             <div class="flex items-start gap-2">
               <span class="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center">
@@ -88,16 +81,10 @@ const casos = [
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                 </svg>
               </span>
-              <p class="text-xs text-gray-500 leading-relaxed">{caso.depois}</p>
-            </div>
-          </div>
-
-          <!-- Depoimento -->
-          <div class="p-5 flex flex-col flex-1 justify-between">
-            <p class="text-grafite text-sm leading-relaxed mb-4">"{caso.texto}"</p>
-            <div>
-              <p class="font-semibold text-petroleo text-sm">{caso.nome}</p>
-              <p class="text-gray-500 text-xs">{caso.negocio} · {caso.cidade}</p>
+              <div>
+                <p class="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">O que a Marvin organizaria</p>
+                <p class="text-xs text-gray-500 leading-relaxed">{c.abordagem}</p>
+              </div>
             </div>
           </div>
 
@@ -105,13 +92,13 @@ const casos = [
       ))}
     </div>
 
-    <!-- CTA fase de lançamento -->
+    <!-- CTA -->
     <div class="mt-12 bg-petroleo rounded-2xl p-8 text-center">
       <p class="text-white text-lg font-medium mb-2">
-        Ainda recebemos clientes em condições de lançamento.
+        Reconheceu alguma dessas situações no seu negócio?
       </p>
       <p class="text-white/70 text-sm">
-        Diagnóstico gratuito, sem compromisso.
+        Peça um diagnóstico gratuito e veja o que a Marvin identificaria na sua presença digital.
         <a href="#contato" class="text-orange-400 underline ml-1 hover:text-orange-300">Quero conhecer.</a>
       </p>
     </div>
