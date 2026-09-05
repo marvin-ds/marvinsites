@@ -9,7 +9,7 @@ const mensagemWpp = 'Olá! Sou professor/tenho um curso e gostaria de saber como
 const itens = [
   'Apresentação do professor e da metodologia',
   'Cursos e aulas descritos com clareza',
-  'Público-alvo e resultados esperados',
+  'Público-alvo e objetivos do curso',
   'Depoimentos de alunos',
   'Preços e formas de pagamento visíveis',
   'Botão de inscrição ou contato pelo WhatsApp',
@@ -22,15 +22,15 @@ const itens = [
 
 <NichoLayout
   title="Site para Professores e Cursos | Marvin Sites"
-  description="Quem entende rápido o curso tem mais chance de pedir informações. Um site para professores e cursos que apresenta a metodologia e converte visitantes em alunos."
+  description="Quem entende rápido o curso decide com mais clareza. Um site para professores e cursos apresenta metodologia, horários, valores e WhatsApp."
   nicho="professores"
   nomeNicho="Professores e Cursos"
 >
   <NichoHero
     nicho="professores"
     badge="Educação e cursos"
-    headline="Quem entende rápido o que você ensina tem muito mais chance de se inscrever."
-    subheadline="Professores e cursos que explicam bem a metodologia, os resultados e o perfil do aluno ideal convertem muito mais do que os que dependem só de indicação boca a boca."
+    headline="Quem entende rápido o que você ensina decide com mais clareza."
+    subheadline="Professores e cursos precisam explicar metodologia, público ideal, horários, valores e formato de atendimento. Uma página própria organiza essas informações antes da conversa."
     argumentoCentral="Quem entende rápido o curso tem mais chance de pedir informações."
     mensagemWpp={mensagemWpp}
     cor="bg-yellow-50 text-yellow-700"
@@ -45,9 +45,9 @@ const itens = [
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[
-          { titulo: 'Credibilidade instantânea', texto: 'Um professor com site organizado parece mais sério e preparado do que um que só tem Instagram. O pai que está procurando reforço escolar prefere quem tem uma página profissional.' },
-          { titulo: 'Menos explicação, mais inscrição', texto: 'Em vez de repetir a mesma explicação pelo WhatsApp toda vez, a página já explica tudo: metodologia, preço, horário. O aluno chega decidido.' },
-          { titulo: 'Captação contínua', texto: 'O site trabalha por você nas madrugadas e fins de semana. Alguém pode se interessar às 23h e mandar mensagem — você vê de manhã.' },
+          { titulo: 'Credibilidade antes do contato', texto: 'Uma página organizada ajuda pais, alunos e empresas a entenderem formação, metodologia, público atendido e próximos passos antes de chamar.' },
+          { titulo: 'Menos repetição no WhatsApp', texto: 'Em vez de repetir a mesma explicação toda vez, a página reúne metodologia, preço, horário e dúvidas frequentes para contextualizar a conversa.' },
+          { titulo: 'Informação sempre disponível', texto: 'A página fica disponível para quem pesquisa fora do horário comercial e facilita que a pessoa encontre as informações principais antes de mandar mensagem.' },
         ].map((card) => (
           <div class="bg-white rounded-xl border border-nevoa p-6">
             <h3 class="font-semibold text-petroleo mb-2">{card.titulo}</h3>

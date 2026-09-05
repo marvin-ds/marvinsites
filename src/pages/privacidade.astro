@@ -11,7 +11,7 @@ import Footer from '../components/layout/Footer.astro';
   <Header />
   <main class="max-w-3xl mx-auto px-4 sm:px-6 py-16">
     <h1 class="text-3xl font-bold text-petroleo mb-2">Política de Privacidade</h1>
-    <p class="text-gray-400 text-sm mb-10">Última atualização: julho de 2026</p>
+    <p class="text-gray-400 text-sm mb-10">Última atualização: setembro de 2026</p>
 
     <div class="prose prose-slate max-w-none space-y-8 text-grafite">
 
@@ -24,46 +24,59 @@ import Footer from '../components/layout/Footer.astro';
 
       <section>
         <h2 class="text-xl font-semibold text-petroleo mb-3">2. Dados que coletamos</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full text-sm border-collapse">
-            <thead>
-              <tr class="bg-gelo">
-                <th class="text-left p-3 border border-nevoa font-medium text-petroleo">Dado</th>
-                <th class="text-left p-3 border border-nevoa font-medium text-petroleo">Finalidade</th>
-                <th class="text-left p-3 border border-nevoa font-medium text-petroleo">Base legal</th>
-              </tr>
-            </thead>
-            <tbody class="text-gray-500">
-              <tr><td class="p-3 border border-nevoa">Nome</td><td class="p-3 border border-nevoa">Identificação do lead</td><td class="p-3 border border-nevoa">Consentimento</td></tr>
-              <tr><td class="p-3 border border-nevoa">WhatsApp</td><td class="p-3 border border-nevoa">Contato comercial</td><td class="p-3 border border-nevoa">Consentimento explícito</td></tr>
-              <tr><td class="p-3 border border-nevoa">Cidade</td><td class="p-3 border border-nevoa">Segmentação regional</td><td class="p-3 border border-nevoa">Legítimo interesse</td></tr>
-              <tr><td class="p-3 border border-nevoa">Segmento</td><td class="p-3 border border-nevoa">Qualificação do lead</td><td class="p-3 border border-nevoa">Legítimo interesse</td></tr>
-              <tr><td class="p-3 border border-nevoa">IP / pageviews</td><td class="p-3 border border-nevoa">Análise de tráfego</td><td class="p-3 border border-nevoa">Legítimo interesse (Umami, sem cookies)</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section>
-        <h2 class="text-xl font-semibold text-petroleo mb-3">3. Com quem compartilhamos</h2>
-        <ul class="list-disc list-inside text-gray-500 space-y-2 text-sm leading-relaxed">
-          <li><strong>Netlify</strong> — hospedagem e execução segura do endpoint de formulário</li>
-          <li><strong>Supabase</strong> — armazenamento seguro dos leads e consentimentos</li>
-          <li><strong>Resend</strong> — envio de notificações por email</li>
-          <li><strong>Umami</strong> — analytics sem cookies</li>
-          <li>Não vendemos nem compartilhamos dados com terceiros para fins de marketing.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="text-xl font-semibold text-petroleo mb-3">4. Por quanto tempo armazenamos</h2>
+        <p class="text-gray-500 leading-relaxed text-sm mb-3">
+          Coletamos dados fornecidos voluntariamente no formulário, como nome, negócio, cidade, segmento, WhatsApp e informações sobre a presença digital indicada por você.
+        </p>
         <p class="text-gray-500 leading-relaxed text-sm">
-          Leads que não respondem em 6 meses são excluídos da base. Clientes ativos têm dados mantidos pelo tempo da relação comercial + 5 anos para fins fiscais.
+          Também podemos tratar dados técnicos e de navegação, como página acessada, origem da visita, parâmetros UTM, identificadores de clique publicitário quando existirem, preferências de consentimento, eventos de formulário e eventos de clique no WhatsApp. Esses dados ajudam a entender a origem do contato, manter o site funcionando e melhorar a experiência.
         </p>
       </section>
 
       <section>
-        <h2 class="text-xl font-semibold text-petroleo mb-3">5. Seus direitos (LGPD)</h2>
+        <h2 class="text-xl font-semibold text-petroleo mb-3">3. Cookies, consentimento e tecnologias semelhantes</h2>
+        <p class="text-gray-500 leading-relaxed text-sm mb-3">
+          O site utiliza tecnologias essenciais para funcionamento e, somente conforme sua escolha, ferramentas de medição e publicidade. Por padrão, o Consent Mode inicia com medição e publicidade negadas. Quando você aceita ou ajusta preferências, registramos essa escolha em armazenamento local do navegador.
+        </p>
+        <p class="text-gray-500 leading-relaxed text-sm">
+          As categorias exibidas no banner incluem medição e estatísticas, medição de publicidade e publicidade personalizada. Você pode aceitar, recusar ou alterar suas preferências.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-petroleo mb-3">4. Analytics, anúncios e atribuição</h2>
+        <p class="text-gray-500 leading-relaxed text-sm mb-3">
+          Usamos Google Tag Manager e Google Analytics 4 para medição quando há consentimento aplicável. O site também mantém uma atribuição first-party para registrar origem, campanha, sessão, UTMs e identificadores como gclid, gbraid, wbraid ou fbclid quando eles aparecem na URL.
+        </p>
+        <p class="text-gray-500 leading-relaxed text-sm mb-3">
+          Esses identificadores são usados para entender de onde veio uma oportunidade e conectar visita, formulário, lead e contato comercial. Não enviamos dados pessoais sensíveis pelo navegador para essas ferramentas.
+        </p>
+        <p class="text-gray-500 leading-relaxed text-sm">
+          Google Ads poderá ser utilizado quando campanhas forem ativadas. Nesses casos, a medição publicitária seguirá as escolhas de consentimento registradas no banner.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-petroleo mb-3">5. Com quem compartilhamos</h2>
+        <ul class="list-disc list-inside text-gray-500 space-y-2 text-sm leading-relaxed">
+          <li><strong>Netlify</strong> — hospedagem e execução segura do endpoint de formulário</li>
+          <li><strong>Supabase</strong> — armazenamento seguro dos leads e consentimentos</li>
+          <li><strong>Resend</strong> — envio de notificações por email</li>
+          <li><strong>Umami</strong> — medição estatística quando carregada conforme consentimento</li>
+          <li><strong>Google Tag Manager e Google Analytics</strong> — medição e organização de tags conforme consentimento</li>
+          <li><strong>Google Ads</strong> — medição de publicidade quando campanhas estiverem ativas e conforme consentimento aplicável</li>
+          <li>Não vendemos dados pessoais.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-petroleo mb-3">6. Por quanto tempo armazenamos</h2>
+        <p class="text-gray-500 leading-relaxed text-sm">
+          Mantemos os dados pelo tempo necessário para atender à finalidade informada, conduzir a relação comercial, cumprir obrigações legais ou preservar registros operacionais legítimos. Quando os dados não forem mais necessários, eles poderão ser excluídos ou anonimizados conforme critérios proporcionais e viáveis.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-petroleo mb-3">7. Seus direitos (LGPD)</h2>
         <p class="text-gray-500 leading-relaxed text-sm mb-3">Você tem direito a:</p>
         <ul class="list-disc list-inside text-gray-500 space-y-1 text-sm">
           <li>Confirmar a existência de tratamento dos seus dados</li>
@@ -73,7 +86,7 @@ import Footer from '../components/layout/Footer.astro';
           <li>Revogar o consentimento a qualquer momento</li>
         </ul>
         <p class="text-gray-500 text-sm mt-3">
-          Para exercer seus direitos: <a href="mailto:privacidade@marvinsites.com.br" class="text-confianca hover:underline">privacidade@marvinsites.com.br</a>. Respondemos em até 15 dias.
+          Para exercer seus direitos ou alterar consentimentos: <a href="mailto:privacidade@marvinsites.com.br" class="text-confianca hover:underline">privacidade@marvinsites.com.br</a>. Também é possível reabrir as preferências de privacidade pelo link no rodapé do site.
         </p>
       </section>
 

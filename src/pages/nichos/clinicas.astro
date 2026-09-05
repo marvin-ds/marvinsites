@@ -15,7 +15,7 @@ const itens = [
   'Localização com mapa integrado',
   'Horários de atendimento sempre visíveis',
   'Formulário de contato e pré-agendamento',
-  'SEO local para aparecer em buscas da sua cidade',
+  'SEO local inicial para ajudar o Google a entender cidade e serviços',
   'Certificações e diferenciais da clínica em destaque',
 ];
 ---
@@ -30,7 +30,7 @@ const itens = [
     nicho="clinicas"
     badge="Saúde e bem-estar"
     headline="Seu paciente pesquisa antes de agendar. O que ele encontra sobre sua clínica?"
-    subheadline="Clínicas e consultórios dependem de confiança antes da primeira consulta. Uma presença digital clara e profissional faz toda a diferença na decisão do paciente."
+    subheadline="Clínicas e consultórios dependem de confiança antes da primeira consulta. Uma presença digital clara ajuda o paciente a entender serviços, localização e caminhos de contato."
     argumentoCentral="Seu cliente precisa confiar antes de agendar."
     mensagemWpp={mensagemWpp}
     cor="bg-blue-50 text-confianca"
@@ -46,8 +46,8 @@ const itens = [
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[
           { titulo: 'Confiança antes da consulta', texto: 'O paciente não te conhece. Ele vai pesquisar no Google antes de ligar. Uma página profissional é a primeira impressão que você tem controle.' },
-          { titulo: 'Mais que Instagram', texto: 'O Instagram mostra movimento, mas não organiza serviços, não tem localização clara, não tem botão de agendamento fácil. A página resolve tudo isso.' },
-          { titulo: 'Agendamento simplificado', texto: 'Botão de WhatsApp com mensagem pré-preenchida por procedimento. O paciente chega já dizendo o que quer — menos fricção, mais agendamentos.' },
+          { titulo: 'Mais que Instagram', texto: 'O Instagram mostra movimento, mas nem sempre organiza serviços, localização, horários e contato em um lugar estável. A página complementa esse papel.' },
+          { titulo: 'Contato contextualizado', texto: 'Botão de WhatsApp com mensagem pré-preenchida por procedimento ajuda o paciente a iniciar a conversa com mais contexto.' },
         ].map((card) => (
           <div class="bg-white rounded-xl border border-nevoa p-6">
             <h3 class="font-semibold text-petroleo mb-2">{card.titulo}</h3>

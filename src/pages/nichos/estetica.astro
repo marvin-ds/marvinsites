@@ -7,14 +7,14 @@ import NichoCTA from '../../components/sections/NichoCTA.astro';
 const mensagemWpp = 'Olá! Trabalho com estética/beleza e gostaria de saber como a Marvin Sites pode melhorar minha presença digital.';
 
 const itens = [
-  'Apresentação dos serviços com fotos reais de resultados',
-  'Antes e depois dos principais procedimentos',
+  'Apresentação dos serviços com fotos reais quando disponíveis',
+  'Antes e depois apenas quando permitido e autorizado',
   'Profissional e formações em destaque',
   'Listagem de tratamentos com descrição e público-alvo',
   'Agendamento direto pelo WhatsApp por serviço',
-  'Depoimentos de clientes com resultados',
+  'Depoimentos autorizados quando disponíveis',
   'Localização e horários de atendimento',
-  'Galeria de resultados fotogênicos',
+  'Galeria de fotos autorizadas do trabalho',
   'SEO local para "esteticista em [cidade]"',
   'Link para Instagram integrado',
 ];
@@ -22,15 +22,15 @@ const itens = [
 
 <NichoLayout
   title="Site para Esteticistas e Salões de Beleza | Marvin Sites"
-  description="Estética e beleza são fotogênicos — mostre seus resultados. Uma página profissional para esteticistas e salões que converte visitantes em agendamentos pelo WhatsApp."
+  description="Estética e beleza dependem de confiança visual. Uma página profissional para esteticistas e salões organiza serviços, fotos, localização e WhatsApp."
   nicho="estetica"
   nomeNicho="Estética e Beleza"
 >
   <NichoHero
     nicho="estetica"
     badge="Estética e beleza"
-    headline="Resultado fala mais alto que qualquer texto. Sua página precisa mostrar isso."
-    subheadline="No setor de beleza, a decisão começa nos olhos. Quem encontra fotos reais, resultados claros e agendamento fácil chama muito antes de quem não tem nada disso."
+    headline="Fotos, serviços e confiança precisam estar fáceis de encontrar."
+    subheadline="No setor de beleza, a decisão começa pela impressão visual e pela clareza. Uma página própria organiza serviços, fotos autorizadas, localização e WhatsApp sem substituir o Instagram."
     argumentoCentral="Seu cliente precisa ver para confiar antes de agendar."
     mensagemWpp={mensagemWpp}
     cor="bg-pink-50 text-pink-700"
@@ -45,9 +45,9 @@ const itens = [
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[
-          { titulo: 'Instagram não é suficiente', texto: 'Instagram mostra o feed, mas não organiza serviços, preços, localização e agendamento num único lugar. A página faz tudo isso e ainda aparece no Google.' },
-          { titulo: 'Antes/depois converte', texto: 'O antes e depois é o argumento mais poderoso do setor. Com uma página estruturada, esse conteúdo trabalha por você 24 horas por dia.' },
-          { titulo: 'Você decide sozinha', texto: 'Sem depender de equipe técnica. Qualquer atualização de serviço, preço ou foto — é só nos avisar e a gente cuida na manutenção mensal.' },
+          { titulo: 'Instagram como complemento', texto: 'Instagram mostra movimento, mas nem sempre organiza serviços, preços, localização e contato num único lugar. A página cria esse ponto estável de consulta.' },
+          { titulo: 'Prova visual com cuidado', texto: 'Fotos, portfólio e antes/depois podem ajudar quando forem permitidos, verdadeiros e autorizados. A página dá contexto para esse material sem prometer agendamentos.' },
+          { titulo: 'Cuidado dentro do plano', texto: 'Atualizações de serviço, preço ou foto entram conforme os limites do plano contratado. Mudanças maiores são combinadas antes.' },
         ].map((card) => (
           <div class="bg-white rounded-xl border border-nevoa p-6">
             <h3 class="font-semibold text-petroleo mb-2">{card.titulo}</h3>

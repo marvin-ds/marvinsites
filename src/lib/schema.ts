@@ -3,7 +3,7 @@ export function schemaLocalBusiness() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Marvin Sites',
-    description: 'Sites e presença digital para pequenos negócios locais serem encontrados, transmitirem confiança e receberem contatos pelo WhatsApp.',
+    description: 'Presenca digital local para pequenos negocios serem encontrados com mais clareza, transmitirem confianca e facilitarem o contato pelo WhatsApp.',
     url: 'https://marvinsites.com.br',
     telephone: '+55-13-00000-0000',
     email: 'contato@marvinsites.com.br',
@@ -14,7 +14,7 @@ export function schemaLocalBusiness() {
       addressCountry: 'BR',
     },
     areaServed: 'Brasil',
-    priceRange: 'R$697 - R$12.000',
+    priceRange: 'R$399+',
     sameAs: [],
   };
 }
