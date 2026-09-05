@@ -34,6 +34,7 @@ This index points to the current canonical documentation for Marvin Sites.
 | Product changelog | [CHANGELOG.md](CHANGELOG.md) |
 | SaaS / Marvin Local docs | [../marvin-saas/](../marvin-saas/) |
 | Operational governance | `C:\Projetos\marvin-ops` |
+| Assistants / agents / Open Source policy | `C:\Projetos\marvin-ops\docs\INSTRUCOES-ESTRATEGICAS-ASSISTENTE-E-POLITICA-OPEN-SOURCE-V1.0.md` |
 
 ## Superseded / Historical Documents
 
