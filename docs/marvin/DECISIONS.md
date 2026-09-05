@@ -259,3 +259,85 @@ fonte canônica do lead.
 **Supersede:** valores stale R$897+R$147, R$2.497+R$247, R$4.997+R$497 (Services.astro pré-COM-G1). Não referenciar esses valores em código ou documentação futura.
 
 **Hipóteses anteriores (D005):** descartadas como opção imediata. A escada de 4 estágios substitui.
+
+---
+
+## D029 — 05/09/2026 — Netlify como hosting padrão para sites de clientes
+
+**Decisão:** Sites de clientes Marvin usam o padrão Astro/TypeScript + componentes Marvin + GitHub + Netlify.
+
+**Regra operacional:** 1 cliente = 1 repositório privado + 1 Netlify Project + 1 domínio.
+
+**Supersede:** Atomicat não é infraestrutura-padrão de hosting. Pode ser avaliada apenas como ferramenta especializada mediante nova decisão explícita.
+
+---
+
+## D030 — 05/09/2026 — Domínio pertence ao cliente
+
+**Decisão:** O domínio do site de cliente pertence ao cliente, não à Marvin.
+
+**Consequência:** Provisioning, DNS e offboarding devem preservar autonomia e portabilidade do cliente.
+
+---
+
+## D031 — 05/09/2026 — Payment provider permanece OPEN
+
+**Decisão:** Nenhum provedor de pagamento está definido como canônico.
+
+**Status:** OPEN.
+
+**Opções históricas/referenciais:** Atomicat, AtomicPay, Asaas, Stripe, Mercado Pago ou qualquer outro provedor só podem virar padrão por nova decisão formal.
+
+---
+
+## D032 — 05/09/2026 — Fair Use obrigatório
+
+**Decisão:** Toda oferta recorrente deve possuir limites e Fair Use explícitos.
+
+**Fonte competente:** `docs/marvin/canonical/CLIENT-PLAN-LIMITS-AND-FAIR-USE-V1.0.md`.
+
+**Regra:** Não existe hospedagem ilimitada, alterações ilimitadas, suporte ilimitado nem cobrança automática silenciosa de excedente.
+
+---
+
+## D033 — 05/09/2026 — Infraestrutura compartilhada permitida com regra de isolamento
+
+**Decisão:** Infraestrutura compartilhada é permitida nos planos Marvin quando coerente com limites e Fair Use.
+
+**Regra:** Clientes de alto consumo podem exigir upgrade, isolamento ou infraestrutura dedicada.
+
+---
+
+## D034 — 05/09/2026 — Marvin Starter aprovado como especificação
+
+**Decisão:** Marvin Starter possui especificação aprovada.
+
+**Status:** SPEC APPROVED / IMPLEMENTATION NOT STARTED.
+
+**Fonte competente:** `docs/marvin/canonical/MARVIN-STARTER-SPEC-V1.0.md`.
+
+---
+
+## D035 — 05/09/2026 — Tracking ladder preservado
+
+**Decisão:** A evolução de tracking segue a sequência G2 Consent Mode, G3 Attribution, G4 Lead Capture e G5 WhatsApp Attribution.
+
+**Status:** G2, G3, G4 e G5 estão production approved. Próximos avanços exigem novo Gate/autorização.
+
+---
+
+## D036 — 05/09/2026 — Managed-Site Mode
+
+**Decisão:** Sites de clientes são operados como presença digital gerenciada pela Marvin, com limites, propriedade do domínio pelo cliente e possibilidade de offboarding.
+
+**Fontes competentes:** Arquitetura Netlify Addendum V1.1, Client Provisioning Runbook, DNS Runbook, Delivery Briefing e Offboarding Runbook.
+
+---
+
+## D037 — 05/09/2026 — Documentação V2 por prevalência temática
+
+**Decisão:** Conflitos documentais são resolvidos por tema e fonte competente, não por antiguidade ou por arquivo mais recente fora de escopo.
+
+**Fonte operacional:** `marvin-ops/docs/DOCUMENTATION-PRECEDENCE-MATRIX-V1.0.md`.
+
+**Regra:** `CURRENT.md` reflete estado presente, mas não redefine silenciosamente estratégia, preços ou arquitetura.

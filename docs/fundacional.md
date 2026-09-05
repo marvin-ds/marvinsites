@@ -1,5 +1,9 @@
 # **Documento Fundacional — Marvin Sites**
 
+> **STATUS:** HISTORICAL / SUPERSEDED FOR CANONICAL STRATEGY.
+> For current brand, thesis and principles, use `docs/marvin/canonical/DOCUMENTO-FUNDACIONAL-MARVIN-SITES-V2.0.md`.
+> Preserve this file as historical context only.
+
 ## **1\. Visão geral do projeto**
 
 A **Marvin Sites** é uma marca criada para atender pequenos negócios, profissionais liberais, MEIs, prestadores de serviços e empresas locais que precisam organizar sua presença digital de forma simples, profissional e comercialmente útil.
@@ -56,13 +60,13 @@ A Marvin Sites vende clareza, confiança e estrutura.
 
 O cliente precisa sentir que a Marvin Sites entende seu problema prático:
 
-* ele não quer aprender tecnologia;  
-* ele não quer lidar com hospedagem;  
-* ele não quer perder tempo configurando site;  
-* ele não quer depender de plataforma complicada;  
-* ele não quer parecer amador;  
-* ele não quer perder clientes que pesquisam antes de chamar;  
-* ele não quer que o Instagram seja sua única vitrine;  
+* ele não quer aprender tecnologia;
+* ele não quer lidar com hospedagem;
+* ele não quer perder tempo configurando site;
+* ele não quer depender de plataforma complicada;
+* ele não quer parecer amador;
+* ele não quer perder clientes que pesquisam antes de chamar;
+* ele não quer que o Instagram seja sua única vitrine;
 * ele quer algo simples, bonito, funcional e que ajude o cliente a chegar até ele.
 
 A Marvin Sites deve ser a ponte entre o pequeno negócio e uma presença digital mais profissional, sem complicar o processo.
@@ -77,13 +81,13 @@ Essa missão precisa orientar todas as decisões do projeto.
 
 A Marvin Sites não deve criar sites apenas porque o cliente pediu um site. Deve criar uma estrutura pensada para resolver perguntas essenciais:
 
-* o cliente entende rapidamente o que essa empresa faz?  
-* o cliente consegue confiar?  
-* o cliente sabe onde a empresa atende?  
-* o cliente consegue chamar no WhatsApp com facilidade?  
-* o cliente encontra as informações principais sem se perder?  
-* a página funciona bem no celular?  
-* a presença digital parece profissional?  
+* o cliente entende rapidamente o que essa empresa faz?
+* o cliente consegue confiar?
+* o cliente sabe onde a empresa atende?
+* o cliente consegue chamar no WhatsApp com facilidade?
+* o cliente encontra as informações principais sem se perder?
+* a página funciona bem no celular?
+* a presença digital parece profissional?
 * a empresa está melhor representada do que antes?
 
 Se a resposta for sim, a Marvin Sites cumpriu sua missão.
@@ -154,13 +158,13 @@ Alguns negócios não têm site. Outros têm site antigo. Outros têm uma págin
 
 Na prática, isso gera uma série de perdas invisíveis:
 
-* o cliente pesquisa e não encontra informações suficientes;  
-* o cliente compara com concorrentes mais profissionais;  
-* o cliente entra no Instagram e se perde;  
-* o cliente não entende todos os serviços oferecidos;  
-* o cliente não sabe se a empresa atende sua região;  
-* o cliente não encontra um botão simples de contato;  
-* o cliente desconfia porque a presença parece improvisada;  
+* o cliente pesquisa e não encontra informações suficientes;
+* o cliente compara com concorrentes mais profissionais;
+* o cliente entra no Instagram e se perde;
+* o cliente não entende todos os serviços oferecidos;
+* o cliente não sabe se a empresa atende sua região;
+* o cliente não encontra um botão simples de contato;
+* o cliente desconfia porque a presença parece improvisada;
 * o cliente abandona antes de chamar no WhatsApp.
 
 Essas perdas raramente aparecem como “perdi uma venda por não ter site”. O empresário muitas vezes nem percebe. Ele apenas sente que depende demais de indicação, que o movimento oscila, que o Instagram não converte tanto ou que os concorrentes parecem mais estruturados.
@@ -177,12 +181,12 @@ Essa tese muda a forma de vender.
 
 Em vez de vender “um site moderno com páginas responsivas”, a Marvin Sites deve vender:
 
-* uma presença mais confiável;  
-* uma página que organiza o negócio;  
-* uma ponte entre Google e WhatsApp;  
-* uma estrutura que explica os serviços;  
-* uma vitrine própria que não depende apenas de rede social;  
-* uma forma de melhorar a primeira impressão digital;  
+* uma presença mais confiável;
+* uma página que organiza o negócio;
+* uma ponte entre Google e WhatsApp;
+* uma estrutura que explica os serviços;
+* uma vitrine própria que não depende apenas de rede social;
+* uma forma de melhorar a primeira impressão digital;
 * um ponto central para onde anúncios, indicações e buscas podem levar.
 
 Essa tese também muda a forma de entregar.
@@ -197,30 +201,30 @@ São pessoas que prestam serviços, atendem clientes, possuem algum nível de re
 
 O público inclui:
 
-* MEIs;  
-* microempresas;  
-* prestadores de serviços;  
-* profissionais liberais;  
-* autônomos organizados;  
-* clínicas pequenas;  
-* consultórios;  
-* terapeutas;  
-* profissionais da estética;  
-* contadores;  
-* consultores;  
-* empresas de reforma;  
-* pequenos negócios B2B;  
-* imobiliárias pequenas;  
-* corretores;  
-* professores;  
-* cursos livres;  
-* restaurantes locais;  
-* negócios de delivery;  
-* pousadas;  
-* serviços de turismo;  
-* oficinas;  
-* serviços automotivos;  
-* manutenção residencial;  
+* MEIs;
+* microempresas;
+* prestadores de serviços;
+* profissionais liberais;
+* autônomos organizados;
+* clínicas pequenas;
+* consultórios;
+* terapeutas;
+* profissionais da estética;
+* contadores;
+* consultores;
+* empresas de reforma;
+* pequenos negócios B2B;
+* imobiliárias pequenas;
+* corretores;
+* professores;
+* cursos livres;
+* restaurantes locais;
+* negócios de delivery;
+* pousadas;
+* serviços de turismo;
+* oficinas;
+* serviços automotivos;
+* manutenção residencial;
 * serviços técnicos especializados.
 
 O ponto em comum não é o segmento. O ponto em comum é a necessidade de ser encontrado, transmitir confiança e facilitar o contato.
@@ -231,16 +235,16 @@ O cliente ideal da Marvin Sites não é qualquer pessoa que precisa de um site.
 
 O cliente ideal tem algumas características:
 
-* já tem um negócio real em funcionamento;  
-* já atende clientes;  
-* tem um serviço claro;  
-* possui telefone ou WhatsApp ativo;  
-* tem alguma presença no Google, Instagram ou indicação;  
-* vende algo com ticket suficiente para justificar o investimento;  
-* entende minimamente que aparência e confiança importam;  
-* tem concorrentes visíveis;  
-* depende de contato direto para vender;  
-* pode pagar um valor inicial e uma mensalidade;  
+* já tem um negócio real em funcionamento;
+* já atende clientes;
+* tem um serviço claro;
+* possui telefone ou WhatsApp ativo;
+* tem alguma presença no Google, Instagram ou indicação;
+* vende algo com ticket suficiente para justificar o investimento;
+* entende minimamente que aparência e confiança importam;
+* tem concorrentes visíveis;
+* depende de contato direto para vender;
+* pode pagar um valor inicial e uma mensalidade;
 * quer uma solução prática, sem precisar aprender tecnologia.
 
 Esse cliente pode ainda não saber explicar que precisa de uma presença digital melhor. Mas, ao ver um diagnóstico simples, ele entende.
@@ -253,15 +257,15 @@ A Marvin Sites também precisa saber quem evitar, especialmente no início.
 
 Não são clientes ideais:
 
-* negócios sem operação real;  
-* pessoas que querem “testar uma ideia” sem orçamento;  
-* clientes que só querem o menor preço possível;  
-* empresas que não têm clareza sobre o que vendem;  
-* clientes que não enviam material, fotos ou informações;  
-* pessoas que querem personalização infinita pagando pouco;  
-* negócios que não querem pagar manutenção;  
-* clientes que esperam resultado garantido sem investir em atendimento, reputação ou divulgação;  
-* clientes que querem algo extremamente complexo fora da proposta;  
+* negócios sem operação real;
+* pessoas que querem “testar uma ideia” sem orçamento;
+* clientes que só querem o menor preço possível;
+* empresas que não têm clareza sobre o que vendem;
+* clientes que não enviam material, fotos ou informações;
+* pessoas que querem personalização infinita pagando pouco;
+* negócios que não querem pagar manutenção;
+* clientes que esperam resultado garantido sem investir em atendimento, reputação ou divulgação;
+* clientes que querem algo extremamente complexo fora da proposta;
 * empresas que precisam de sistemas avançados, portais ou funcionalidades sob medida.
 
 Evitar clientes ruins é parte da estratégia. Um cliente inadequado consome tempo, reduz margem e prejudica a operação.
@@ -376,15 +380,15 @@ A Marvin Sites vende sites, páginas e manutenção. Mas essa é a camada visív
 
 Na camada estratégica, a Marvin Sites vende:
 
-* clareza;  
-* confiança;  
-* presença local;  
-* organização;  
-* profissionalismo;  
-* facilidade de contato;  
-* menor dependência de redes sociais;  
-* uma base própria para divulgação;  
-* uma ponte entre Google e WhatsApp;  
+* clareza;
+* confiança;
+* presença local;
+* organização;
+* profissionalismo;
+* facilidade de contato;
+* menor dependência de redes sociais;
+* uma base própria para divulgação;
+* uma ponte entre Google e WhatsApp;
 * uma primeira impressão mais forte.
 
 O cliente deve sentir que está comprando uma melhoria na forma como o negócio aparece para o mundo, não apenas uma página na internet.
@@ -411,30 +415,30 @@ Produto de entrada.
 
 Indicado para:
 
-* MEIs;  
-* autônomos;  
-* prestadores locais;  
-* profissionais solo;  
-* pequenos negócios que não têm site;  
+* MEIs;
+* autônomos;
+* prestadores locais;
+* profissionais solo;
+* pequenos negócios que não têm site;
 * clientes que precisam de presença rápida.
 
 Entrega possível:
 
-* página única;  
-* apresentação do negócio;  
-* serviços principais;  
-* fotos;  
-* diferenciais;  
-* depoimentos ou avaliações;  
-* localização;  
-* horário;  
-* botão de WhatsApp;  
-* formulário simples;  
-* mapa;  
-* SEO básico;  
-* domínio configurado;  
-* hospedagem;  
-* SSL;  
+* página única;
+* apresentação do negócio;
+* serviços principais;
+* fotos;
+* diferenciais;
+* depoimentos ou avaliações;
+* localização;
+* horário;
+* botão de WhatsApp;
+* formulário simples;
+* mapa;
+* SEO básico;
+* domínio configurado;
+* hospedagem;
+* SSL;
 * manutenção mensal.
 
 Promessa comercial:
@@ -443,7 +447,7 @@ Promessa comercial:
 
 Faixa sugerida:
 
-* Setup: R$ 697 a R$ 1.497.  
+* Setup: R$ 697 a R$ 1.497.
 * Mensalidade: R$ 97 a R$ 247\.
 
 ### **17.2. Site Local Profissional**
@@ -452,30 +456,30 @@ Produto principal.
 
 Indicado para:
 
-* clínicas;  
-* escritórios;  
-* contadores;  
-* consultorias;  
-* empresas de reforma;  
-* turismo;  
-* B2B local;  
+* clínicas;
+* escritórios;
+* contadores;
+* consultorias;
+* empresas de reforma;
+* turismo;
+* B2B local;
 * negócios que precisam de autoridade.
 
 Entrega possível:
 
-* site com 4 a 7 páginas;  
-* página inicial;  
-* sobre;  
-* serviços;  
-* páginas individuais de serviços;  
-* depoimentos;  
-* localização;  
-* formulário;  
-* WhatsApp;  
-* copy comercial;  
-* SEO local inicial;  
-* versão mobile otimizada;  
-* hospedagem;  
+* site com 4 a 7 páginas;
+* página inicial;
+* sobre;
+* serviços;
+* páginas individuais de serviços;
+* depoimentos;
+* localização;
+* formulário;
+* WhatsApp;
+* copy comercial;
+* SEO local inicial;
+* versão mobile otimizada;
+* hospedagem;
 * manutenção mensal.
 
 Promessa comercial:
@@ -484,7 +488,7 @@ Promessa comercial:
 
 Faixa sugerida:
 
-* Setup: R$ 1.997 a R$ 4.997.  
+* Setup: R$ 1.997 a R$ 4.997.
 * Mensalidade: R$ 197 a R$ 497\.
 
 ### **17.3. Crescimento Local**
@@ -495,17 +499,17 @@ Indicado para clientes com maior valor por venda ou maior potencial de crescimen
 
 Entrega possível:
 
-* site completo;  
-* páginas por serviço;  
-* páginas por cidade ou região;  
-* SEO local;  
-* otimização do Google Perfil da Empresa;  
-* relatórios;  
-* melhorias mensais;  
-* criação de novas páginas;  
-* landing pages;  
-* suporte prioritário;  
-* ajustes de conversão;  
+* site completo;
+* páginas por serviço;
+* páginas por cidade ou região;
+* SEO local;
+* otimização do Google Perfil da Empresa;
+* relatórios;
+* melhorias mensais;
+* criação de novas páginas;
+* landing pages;
+* suporte prioritário;
+* ajustes de conversão;
 * integração com campanhas.
 
 Promessa comercial:
@@ -514,7 +518,7 @@ Promessa comercial:
 
 Faixa sugerida:
 
-* Setup: R$ 4.997 a R$ 12.000.  
+* Setup: R$ 4.997 a R$ 12.000.
 * Mensalidade: R$ 497 a R$ 1.500+.
 
 ## **18\. Recorrência e pós-venda**
@@ -529,35 +533,35 @@ A mensalidade não deve ser apresentada apenas como hospedagem. Hospedagem, isol
 
 O plano mensal pode incluir:
 
-* hospedagem;  
-* SSL;  
-* backup;  
-* atualizações;  
-* segurança;  
-* monitoramento básico;  
-* correção de erros;  
-* pequenas alterações;  
-* troca de textos;  
-* troca de imagens;  
-* ajustes de horário;  
-* suporte;  
-* relatórios simples;  
+* hospedagem;
+* SSL;
+* backup;
+* atualizações;
+* segurança;
+* monitoramento básico;
+* correção de erros;
+* pequenas alterações;
+* troca de textos;
+* troca de imagens;
+* ajustes de horário;
+* suporte;
+* relatórios simples;
 * melhorias pontuais.
 
 É importante deixar claro o que está incluso e o que é cobrado à parte.
 
 Devem ser cobrados à parte:
 
-* criação de páginas maiores;  
-* landing pages extras;  
-* campanhas promocionais;  
-* SEO avançado;  
-* tráfego pago;  
-* identidade visual;  
-* copywriting extenso;  
-* fotos e vídeos;  
-* automações complexas;  
-* integrações com CRM;  
+* criação de páginas maiores;
+* landing pages extras;
+* campanhas promocionais;
+* SEO avançado;
+* tráfego pago;
+* identidade visual;
+* copywriting extenso;
+* fotos e vídeos;
+* automações complexas;
+* integrações com CRM;
 * sistemas customizados.
 
 A recorrência deve ser vendida desde o início, não como algo opcional no final.
@@ -570,24 +574,24 @@ Ele pode ser simples, visual e direto. A função do diagnóstico é mostrar par
 
 O diagnóstico pode avaliar:
 
-* a empresa aparece no Google?  
-* tem Google Perfil da Empresa?  
-* possui site?  
-* o site funciona bem no celular?  
-* o site carrega rápido?  
-* os serviços estão claros?  
-* há botão de WhatsApp?  
-* há endereço e horário?  
-* há fotos reais?  
-* há depoimentos ou avaliações?  
-* há prova de autoridade?  
-* há páginas específicas de serviços?  
-* o cliente entende em poucos segundos o que a empresa faz?  
-* a presença transmite confiança?  
-* concorrentes aparecem melhor?  
-* o Instagram está organizado?  
-* há link centralizado?  
-* há formulário?  
+* a empresa aparece no Google?
+* tem Google Perfil da Empresa?
+* possui site?
+* o site funciona bem no celular?
+* o site carrega rápido?
+* os serviços estão claros?
+* há botão de WhatsApp?
+* há endereço e horário?
+* há fotos reais?
+* há depoimentos ou avaliações?
+* há prova de autoridade?
+* há páginas específicas de serviços?
+* o cliente entende em poucos segundos o que a empresa faz?
+* a presença transmite confiança?
+* concorrentes aparecem melhor?
+* o Instagram está organizado?
+* há link centralizado?
+* há formulário?
 * há chamada clara para ação?
 
 Esse diagnóstico pode gerar uma nota, como:
@@ -614,40 +618,40 @@ A Marvin Sites deve usar prospecção ativa, principalmente no início.
 
 O fluxo recomendado é:
 
-1. Escolher um nicho.  
-2. Escolher uma cidade ou região.  
-3. Buscar empresas no Google Maps.  
-4. Identificar quem não tem site ou tem site fraco.  
-5. Avaliar sinais de potencial.  
-6. Criar um diagnóstico simples.  
-7. Enviar uma mensagem personalizada.  
-8. Conduzir para conversa.  
-9. Apresentar uma proposta objetiva.  
+1. Escolher um nicho.
+2. Escolher uma cidade ou região.
+3. Buscar empresas no Google Maps.
+4. Identificar quem não tem site ou tem site fraco.
+5. Avaliar sinais de potencial.
+6. Criar um diagnóstico simples.
+7. Enviar uma mensagem personalizada.
+8. Conduzir para conversa.
+9. Apresentar uma proposta objetiva.
 10. Fechar setup \+ manutenção.
 
 Sinais de bom lead:
 
-* empresa com boas avaliações;  
-* fotos reais;  
-* telefone ativo;  
-* atendimento local;  
-* ticket médio razoável;  
-* concorrentes com site;  
-* Instagram ativo, mas sem site;  
-* site antigo ou ruim;  
-* serviços que exigem confiança;  
+* empresa com boas avaliações;
+* fotos reais;
+* telefone ativo;
+* atendimento local;
+* ticket médio razoável;
+* concorrentes com site;
+* Instagram ativo, mas sem site;
+* site antigo ou ruim;
+* serviços que exigem confiança;
 * empresa que aparece, mas não converte bem.
 
 Sinais de lead ruim:
 
-* sem telefone;  
-* sem atividade aparente;  
-* sem avaliações;  
-* sem fotos;  
-* baixa clareza do serviço;  
-* negócio muito informal;  
-* ticket muito baixo;  
-* perfil abandonado;  
+* sem telefone;
+* sem atividade aparente;
+* sem avaliações;
+* sem fotos;
+* baixa clareza do serviço;
+* negócio muito informal;
+* ticket muito baixo;
+* perfil abandonado;
 * empresa sem sinais de operação.
 
 A Marvin Sites deve preferir menos leads e mais qualidade.
@@ -658,12 +662,12 @@ A abordagem da Marvin Sites deve ser consultiva, não invasiva.
 
 O tom ideal é:
 
-* respeitoso;  
-* direto;  
-* personalizado;  
-* simples;  
-* sem pressão;  
-* com observação real;  
+* respeitoso;
+* direto;
+* personalizado;
+* simples;
+* sem pressão;
+* com observação real;
 * com convite leve para conversa.
 
 Exemplo de primeira abordagem:
@@ -778,17 +782,17 @@ O diferencial não deve ser preço.
 
 Os diferenciais principais devem ser:
 
-* diagnóstico antes da venda;  
-* linguagem simples;  
-* foco em negócios locais;  
-* conexão entre site, Google e WhatsApp;  
-* entrega rápida;  
-* estrutura padronizada;  
-* manutenção recorrente;  
-* clareza de escopo;  
-* proximidade no atendimento;  
-* oferta acessível, mas profissional;  
-* visão comercial, não apenas estética;  
+* diagnóstico antes da venda;
+* linguagem simples;
+* foco em negócios locais;
+* conexão entre site, Google e WhatsApp;
+* entrega rápida;
+* estrutura padronizada;
+* manutenção recorrente;
+* clareza de escopo;
+* proximidade no atendimento;
+* oferta acessível, mas profissional;
+* visão comercial, não apenas estética;
 * capacidade de mostrar o problema antes de vender a solução.
 
 A Marvin Sites deve evitar parecer uma agência genérica. A especialidade é presença digital local para pequenos negócios.
@@ -803,26 +807,26 @@ São freelancers iniciantes, plataformas e empresas que vendem site por valores 
 
 Força:
 
-* preço baixo;  
-* promessa simples;  
+* preço baixo;
+* promessa simples;
 * baixa barreira de entrada.
 
 Fraqueza:
 
-* baixa diferenciação;  
-* pouco diagnóstico;  
-* pouca estratégia;  
-* suporte limitado;  
-* aparência genérica;  
+* baixa diferenciação;
+* pouco diagnóstico;
+* pouca estratégia;
+* suporte limitado;
+* aparência genérica;
 * baixo valor percebido.
 
 Como competir:
 
-* não entrar em guerra de preço;  
-* mostrar diagnóstico;  
-* vender confiança;  
-* vender manutenção;  
-* mostrar o antes e depois;  
+* não entrar em guerra de preço;
+* mostrar diagnóstico;
+* vender confiança;
+* vender manutenção;
+* mostrar o antes e depois;
 * focar em nichos com maior capacidade de pagamento.
 
 ### **25.2. Agências tradicionais**
@@ -831,24 +835,24 @@ São empresas que vendem sites mais completos, marketing digital, SEO, tráfego 
 
 Força:
 
-* autoridade;  
-* portfólio;  
-* equipe;  
+* autoridade;
+* portfólio;
+* equipe;
 * percepção profissional.
 
 Fraqueza:
 
-* preço alto;  
-* processo mais demorado;  
-* abordagem menos acessível;  
+* preço alto;
+* processo mais demorado;
+* abordagem menos acessível;
 * menor foco em pequenos negócios.
 
 Como competir:
 
-* ser mais simples;  
-* mais rápido;  
-* mais acessível;  
-* mais direto;  
+* ser mais simples;
+* mais rápido;
+* mais acessível;
+* mais direto;
 * mais próximo da realidade do pequeno empresário.
 
 ### **25.3. Profissionais de marca pessoal**
@@ -857,23 +861,23 @@ São webdesigners, social medias e desenvolvedores que vendem pelo Instagram, in
 
 Força:
 
-* proximidade;  
-* confiança pessoal;  
+* proximidade;
+* confiança pessoal;
 * atendimento direto.
 
 Fraqueza:
 
-* pouca escala;  
-* pouca padronização;  
-* recorrência fraca;  
+* pouca escala;
+* pouca padronização;
+* recorrência fraca;
 * processo comercial instável.
 
 Como competir:
 
-* unir proximidade com processo;  
-* mostrar método;  
-* ter ofertas claras;  
-* criar rotina de prospecção;  
+* unir proximidade com processo;
+* mostrar método;
+* ter ofertas claras;
+* criar rotina de prospecção;
 * transformar atendimento em operação.
 
 ## **26\. Papel da Atomicat e outras ferramentas**
@@ -888,18 +892,18 @@ O cliente não deve comprar porque “usamos Atomicat”. O cliente deve comprar
 
 A ferramenta escolhida deve ser avaliada por critérios práticos:
 
-* permite criar rápido?  
-* entrega boa aparência?  
-* funciona bem no celular?  
-* permite domínio próprio?  
-* tem hospedagem confiável?  
-* permite alterações futuras?  
-* permite SEO básico?  
-* permite integração com WhatsApp?  
-* tem estabilidade?  
-* tem suporte?  
-* tem custo compatível?  
-* reduz ou aumenta a dependência operacional?  
+* permite criar rápido?
+* entrega boa aparência?
+* funciona bem no celular?
+* permite domínio próprio?
+* tem hospedagem confiável?
+* permite alterações futuras?
+* permite SEO básico?
+* permite integração com WhatsApp?
+* tem estabilidade?
+* tem suporte?
+* tem custo compatível?
+* reduz ou aumenta a dependência operacional?
 * é adequada ao tipo de cliente?
 
 Se uma ferramenta deixar de servir, a Marvin Sites precisa ter liberdade para trocar.
@@ -910,39 +914,39 @@ A entrega deve ser padronizada para evitar retrabalho e perda de margem.
 
 Fluxo recomendado:
 
-1. Cliente fecha.  
-2. Cliente paga entrada ou setup.  
-3. Cliente recebe formulário de briefing.  
-4. Cliente envia informações principais.  
-5. Marvin Sites organiza copy e estrutura.  
-6. Site/página é criado.  
-7. Primeira versão é enviada para revisão.  
-8. Cliente solicita ajustes dentro do escopo.  
-9. Ajustes são feitos.  
-10. Domínio e hospedagem são configurados.  
-11. Site é publicado.  
-12. Cliente entra no plano mensal.  
+1. Cliente fecha.
+2. Cliente paga entrada ou setup.
+3. Cliente recebe formulário de briefing.
+4. Cliente envia informações principais.
+5. Marvin Sites organiza copy e estrutura.
+6. Site/página é criado.
+7. Primeira versão é enviada para revisão.
+8. Cliente solicita ajustes dentro do escopo.
+9. Ajustes são feitos.
+10. Domínio e hospedagem são configurados.
+11. Site é publicado.
+12. Cliente entra no plano mensal.
 13. Marvin Sites acompanha suporte e pequenas alterações.
 
 O briefing deve coletar:
 
-* nome do negócio;  
-* segmento;  
-* cidade/região;  
-* descrição da empresa;  
-* serviços oferecidos;  
-* diferenciais;  
-* público atendido;  
-* endereço;  
-* horário;  
-* WhatsApp;  
-* redes sociais;  
-* fotos;  
-* logo;  
-* depoimentos;  
-* avaliações;  
-* perguntas frequentes;  
-* formas de pagamento;  
+* nome do negócio;
+* segmento;
+* cidade/região;
+* descrição da empresa;
+* serviços oferecidos;
+* diferenciais;
+* público atendido;
+* endereço;
+* horário;
+* WhatsApp;
+* redes sociais;
+* fotos;
+* logo;
+* depoimentos;
+* avaliações;
+* perguntas frequentes;
+* formas de pagamento;
 * áreas atendidas.
 
 Quanto melhor o formulário, mais rápida será a entrega.
@@ -951,19 +955,19 @@ Quanto melhor o formulário, mais rápida será a entrega.
 
 Todo site ou página da Marvin Sites deve cumprir requisitos mínimos:
 
-* abrir bem no celular;  
-* ter carregamento aceitável;  
-* explicar rapidamente o que a empresa faz;  
-* ter botão de WhatsApp visível;  
-* mostrar serviços principais;  
-* apresentar localização ou região atendida;  
-* transmitir confiança;  
-* usar fotos reais sempre que possível;  
-* incluir depoimentos ou avaliações quando disponíveis;  
-* ter chamada clara para contato;  
-* evitar excesso de texto;  
-* evitar visual poluído;  
-* ter informações atualizadas;  
+* abrir bem no celular;
+* ter carregamento aceitável;
+* explicar rapidamente o que a empresa faz;
+* ter botão de WhatsApp visível;
+* mostrar serviços principais;
+* apresentar localização ou região atendida;
+* transmitir confiança;
+* usar fotos reais sempre que possível;
+* incluir depoimentos ou avaliações quando disponíveis;
+* ter chamada clara para contato;
+* evitar excesso de texto;
+* evitar visual poluído;
+* ter informações atualizadas;
 * estar conectado com a proposta comercial.
 
 O site não precisa ser complexo. Precisa ser claro.
@@ -974,13 +978,13 @@ A comunicação da Marvin Sites deve falar diretamente com o pequeno empresário
 
 Tom:
 
-* claro;  
-* direto;  
-* humano;  
-* consultivo;  
-* profissional;  
-* sem exagero;  
-* sem jargão técnico;  
+* claro;
+* direto;
+* humano;
+* consultivo;
+* profissional;
+* sem exagero;
+* sem jargão técnico;
 * sem prometer milagre.
 
 Frases alinhadas:
@@ -1017,45 +1021,45 @@ A produção de conteúdo deve educar o mercado e gerar demanda.
 
 Temas prioritários:
 
-* por que Instagram não substitui site;  
-* erros que fazem uma empresa parecer amadora no Google;  
-* como saber se seu negócio precisa de site;  
-* o que uma página local precisa ter;  
-* por que clientes pesquisam antes de chamar;  
-* como melhorar a confiança digital;  
-* diferença entre site bonito e site que ajuda o cliente a chamar;  
-* importância de WhatsApp bem posicionado;  
-* importância de fotos reais;  
-* importância de avaliações;  
-* antes e depois de presença digital;  
-* checklist de presença local;  
-* quanto custa um site para pequeno negócio;  
-* site simples ou site completo: qual escolher;  
-* por que indicação não basta;  
+* por que Instagram não substitui site;
+* erros que fazem uma empresa parecer amadora no Google;
+* como saber se seu negócio precisa de site;
+* o que uma página local precisa ter;
+* por que clientes pesquisam antes de chamar;
+* como melhorar a confiança digital;
+* diferença entre site bonito e site que ajuda o cliente a chamar;
+* importância de WhatsApp bem posicionado;
+* importância de fotos reais;
+* importância de avaliações;
+* antes e depois de presença digital;
+* checklist de presença local;
+* quanto custa um site para pequeno negócio;
+* site simples ou site completo: qual escolher;
+* por que indicação não basta;
 * como aparecer melhor para clientes da sua cidade.
 
 Formatos:
 
-* carrosséis educativos;  
-* Reels curtos;  
-* posts de diagnóstico;  
-* estudos de caso;  
-* bastidores de criação;  
-* comparativos;  
-* checklists;  
-* páginas comerciais por nicho;  
-* artigos de SEO;  
-* vídeos explicativos;  
-* mensagens para WhatsApp;  
+* carrosséis educativos;
+* Reels curtos;
+* posts de diagnóstico;
+* estudos de caso;
+* bastidores de criação;
+* comparativos;
+* checklists;
+* páginas comerciais por nicho;
+* artigos de SEO;
+* vídeos explicativos;
+* mensagens para WhatsApp;
 * propostas comerciais.
 
 O conteúdo deve sempre conduzir para um próximo passo:
 
-* pedir diagnóstico;  
-* chamar no WhatsApp;  
-* solicitar exemplo;  
-* responder uma pergunta;  
-* preencher formulário;  
+* pedir diagnóstico;
+* chamar no WhatsApp;
+* solicitar exemplo;
+* responder uma pergunta;
+* preencher formulário;
 * pedir orçamento.
 
 ## **31\. Provas e autoridade**
@@ -1064,16 +1068,16 @@ No início, a Marvin Sites pode não ter muitos clientes. Portanto, precisa cons
 
 Formas de criar prova:
 
-* diagnósticos anônimos;  
-* exemplos fictícios por nicho;  
-* antes e depois de páginas;  
-* demonstrações de estrutura;  
-* explicações simples;  
-* estudos de concorrentes;  
-* checklists;  
-* mini auditorias;  
-* cases iniciais com desconto estratégico;  
-* depoimentos dos primeiros clientes;  
+* diagnósticos anônimos;
+* exemplos fictícios por nicho;
+* antes e depois de páginas;
+* demonstrações de estrutura;
+* explicações simples;
+* estudos de concorrentes;
+* checklists;
+* mini auditorias;
+* cases iniciais com desconto estratégico;
+* depoimentos dos primeiros clientes;
 * bastidores da entrega.
 
 A prova visual será muito importante. Pequenos empresários entendem melhor quando veem.
@@ -1088,20 +1092,20 @@ Objetivo:
 
 Plano inicial sugerido:
 
-1. Escolher um nicho prioritário.  
-2. Escolher uma cidade ou região.  
-3. Mapear 100 empresas.  
-4. Classificar os leads.  
-5. Selecionar 30 melhores leads.  
-6. Criar diagnóstico simples.  
-7. Abordar manualmente.  
-8. Medir respostas.  
-9. Fazer conversas.  
-10. Oferecer página essencial ou site profissional.  
-11. Fechar 3 a 5 clientes.  
-12. Entregar rápido.  
-13. Coletar depoimentos.  
-14. Ajustar oferta.  
+1. Escolher um nicho prioritário.
+2. Escolher uma cidade ou região.
+3. Mapear 100 empresas.
+4. Classificar os leads.
+5. Selecionar 30 melhores leads.
+6. Criar diagnóstico simples.
+7. Abordar manualmente.
+8. Medir respostas.
+9. Fazer conversas.
+10. Oferecer página essencial ou site profissional.
+11. Fechar 3 a 5 clientes.
+12. Entregar rápido.
+13. Coletar depoimentos.
+14. Ajustar oferta.
 15. Repetir em outro nicho ou cidade.
 
 A meta inicial não deve ser escalar. A meta é aprender.
@@ -1112,44 +1116,44 @@ A Marvin Sites deve acompanhar métricas desde o início.
 
 Métricas de prospecção:
 
-* leads mapeados;  
-* leads qualificados;  
-* mensagens enviadas;  
-* respostas recebidas;  
-* reuniões/conversas iniciadas;  
-* propostas enviadas;  
-* fechamentos;  
-* taxa de conversão por nicho;  
+* leads mapeados;
+* leads qualificados;
+* mensagens enviadas;
+* respostas recebidas;
+* reuniões/conversas iniciadas;
+* propostas enviadas;
+* fechamentos;
+* taxa de conversão por nicho;
 * objeções mais comuns.
 
 Métricas financeiras:
 
-* ticket médio de setup;  
-* mensalidade média;  
-* receita recorrente mensal;  
-* custo de ferramentas;  
-* margem por projeto;  
-* tempo médio de entrega;  
-* custo de aquisição de cliente;  
-* inadimplência;  
+* ticket médio de setup;
+* mensalidade média;
+* receita recorrente mensal;
+* custo de ferramentas;
+* margem por projeto;
+* tempo médio de entrega;
+* custo de aquisição de cliente;
+* inadimplência;
 * cancelamentos.
 
 Métricas operacionais:
 
-* prazo de entrega;  
-* número de revisões;  
-* tempo gasto por projeto;  
-* quantidade de solicitações pós-entrega;  
-* problemas técnicos recorrentes;  
+* prazo de entrega;
+* número de revisões;
+* tempo gasto por projeto;
+* quantidade de solicitações pós-entrega;
+* problemas técnicos recorrentes;
 * satisfação do cliente.
 
 Métricas de crescimento:
 
-* clientes ativos;  
-* MRR;  
-* upgrades vendidos;  
-* indicações recebidas;  
-* novos nichos validados;  
+* clientes ativos;
+* MRR;
+* upgrades vendidos;
+* indicações recebidas;
+* novos nichos validados;
 * cases publicados.
 
 ## **34\. Riscos do projeto**
@@ -1162,9 +1166,9 @@ Se a marca comunicar apenas “criação de sites”, vai competir diretamente c
 
 Prevenção:
 
-* vender diagnóstico;  
-* nichar;  
-* focar em presença local;  
+* vender diagnóstico;
+* nichar;
+* focar em presença local;
 * mostrar valor além do site.
 
 ### **34.2. Escopo infinito**
@@ -1173,9 +1177,9 @@ Clientes pequenos podem pedir muitas alterações fora do combinado.
 
 Prevenção:
 
-* contrato claro;  
-* limite de revisões;  
-* pacotes bem definidos;  
+* contrato claro;
+* limite de revisões;
+* pacotes bem definidos;
 * cobrança por extras.
 
 ### **34.3. Baixa recorrência**
@@ -1184,9 +1188,9 @@ Se o plano mensal parecer apenas hospedagem, o cliente pode cancelar.
 
 Prevenção:
 
-* vender cuidado contínuo;  
-* incluir suporte;  
-* mostrar valor mensal;  
+* vender cuidado contínuo;
+* incluir suporte;
+* mostrar valor mensal;
 * enviar relatórios simples.
 
 ### **34.4. Dependência de ferramenta**
@@ -1195,8 +1199,8 @@ Usar apenas uma plataforma pode criar risco operacional.
 
 Prevenção:
 
-* manter alternativas;  
-* entender limites da ferramenta;  
+* manter alternativas;
+* entender limites da ferramenta;
 * não vender a ferramenta como marca.
 
 ### **34.5. Clientes ruins**
@@ -1205,9 +1209,9 @@ Clientes sem orçamento, sem clareza ou sem compromisso podem consumir energia.
 
 Prevenção:
 
-* qualificação;  
-* pagamento antecipado;  
-* briefing obrigatório;  
+* qualificação;
+* pagamento antecipado;
+* briefing obrigatório;
 * critérios de aceitação.
 
 ### **34.6. Prometer resultado demais**
@@ -1216,23 +1220,23 @@ Prometer clientes garantidos pode gerar frustração.
 
 Prevenção:
 
-* prometer estrutura, clareza e presença;  
+* prometer estrutura, clareza e presença;
 * explicar que resultado depende de vários fatores.
 
 ## **35\. Critérios de decisão**
 
 Sempre que surgir uma nova ideia, oferta, ferramenta ou campanha, a Marvin Sites deve avaliar:
 
-* isso ajuda o cliente pequeno a entender melhor?  
-* isso aumenta a confiança?  
-* isso facilita contato pelo WhatsApp?  
-* isso melhora presença no Google?  
-* isso é simples de vender?  
-* isso é simples de entregar?  
-* isso gera recorrência?  
-* isso diferencia da concorrência barata?  
-* isso mantém foco em negócios locais?  
-* isso pode ser padronizado?  
+* isso ajuda o cliente pequeno a entender melhor?
+* isso aumenta a confiança?
+* isso facilita contato pelo WhatsApp?
+* isso melhora presença no Google?
+* isso é simples de vender?
+* isso é simples de entregar?
+* isso gera recorrência?
+* isso diferencia da concorrência barata?
+* isso mantém foco em negócios locais?
+* isso pode ser padronizado?
 * isso aumenta margem ou complica a operação?
 
 Se a resposta for negativa para muitos desses pontos, a ideia deve ser descartada ou adiada.
@@ -1261,43 +1265,43 @@ São clínicas, oficinas, salões, consultórios, restaurantes, escritórios, pr
 
 Mas muitos desses negócios ainda aparecem de forma fraca no digital.
 
-Às vezes o serviço é bom, mas o cliente não encontra informações claras.  
-Às vezes a empresa é confiável, mas a página transmite improviso.  
-Às vezes o atendimento é excelente, mas a presença online não mostra isso.  
-Às vezes a indicação acontece, mas a pesquisa no Google não confirma a confiança.  
+Às vezes o serviço é bom, mas o cliente não encontra informações claras.
+Às vezes a empresa é confiável, mas a página transmite improviso.
+Às vezes o atendimento é excelente, mas a presença online não mostra isso.
+Às vezes a indicação acontece, mas a pesquisa no Google não confirma a confiança.
 Às vezes o negócio existe há anos, mas na internet parece que começou ontem.
 
 A Marvin Sites nasceu para ajudar a corrigir isso.
 
-Não acreditamos que todo pequeno negócio precisa de um site complicado.  
-Não acreditamos que tecnologia precisa ser difícil.  
-Não acreditamos que presença digital deve ser privilégio de grandes empresas.  
+Não acreditamos que todo pequeno negócio precisa de um site complicado.
+Não acreditamos que tecnologia precisa ser difícil.
+Não acreditamos que presença digital deve ser privilégio de grandes empresas.
 Não acreditamos em promessas vazias de clientes garantidos.
 
 Acreditamos em clareza.
 
-Acreditamos que um pequeno negócio precisa explicar bem o que faz.  
-Precisa ser encontrado.  
-Precisa transmitir confiança.  
-Precisa mostrar seus serviços.  
-Precisa facilitar o contato.  
-Precisa ter um lugar próprio, organizado e profissional.  
+Acreditamos que um pequeno negócio precisa explicar bem o que faz.
+Precisa ser encontrado.
+Precisa transmitir confiança.
+Precisa mostrar seus serviços.
+Precisa facilitar o contato.
+Precisa ter um lugar próprio, organizado e profissional.
 Precisa conectar Google, site e WhatsApp de forma simples.
 
 A Marvin Sites existe para transformar presenças digitais improvisadas em estruturas claras, profissionais e úteis.
 
-Porque quando o cliente pesquisa, ele decide.  
-Quando entende, ele confia.  
-Quando confia, ele chama.  
+Porque quando o cliente pesquisa, ele decide.
+Quando entende, ele confia.
+Quando confia, ele chama.
 E quando chama, a oportunidade começa.
 
 ## **38\. Resumo estratégico final**
 
 A Marvin Sites é uma operação de presença digital local para pequenos negócios.
 
-Ela não deve ser uma agência genérica.  
-Não deve ser apenas uma revendedora de ferramenta.  
-Não deve competir só por preço.  
+Ela não deve ser uma agência genérica.
+Não deve ser apenas uma revendedora de ferramenta.
+Não deve competir só por preço.
 Não deve prometer milagres.
 
 Ela deve vender uma solução clara:
@@ -1321,4 +1325,3 @@ A marca precisa ser clara o bastante para o pequeno empresário entender e profi
 No fim, a Marvin Sites não vende apenas sites.
 
 Ela vende a chance de um pequeno negócio parecer, no digital, tão confiável quanto ele já é na vida real.
-

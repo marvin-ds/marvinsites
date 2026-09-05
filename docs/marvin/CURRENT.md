@@ -6,22 +6,25 @@
 
 ## Gate atual
 
-**G0 — Inventário e baseline** ✅ APPROVED  
-**G0.5 — Reconciliação arquitetural Marvin Local** ✅ APPROVED  
-**HOTFIX /obrigado** ✅ PRODUCTION APPROVED  
-**Architectural Alignment (D012–D020)** ✅ APPROVED  
+**G0 — Inventário e baseline** ✅ APPROVED
+**G0.5 — Reconciliação arquitetural Marvin Local** ✅ APPROVED
+**HOTFIX /obrigado** ✅ PRODUCTION APPROVED
+**Architectural Alignment (D012–D020)** ✅ APPROVED
 **G1 — Supabase compartilhado e segurança** ✅ APPROVED
 **G2 — Consent Mode + GTM + GA4** ✅ PRODUCTION APPROVED
 **G3 — Attribution** ✅ PRODUCTION APPROVED
-**G4 — Lead Capture Foundation** IN_PROGRESS
+**G4 — Lead Capture Foundation** ✅ PRODUCTION APPROVED
+**G5 — WhatsApp Attribution** ✅ PRODUCTION APPROVED
+**COM-G1 — Commercial Home Reform** ✅ PRODUCTION APPROVED
+**DOC-SYNC V2 — Documentation Reconciliation** READY_FOR_REVIEW
 
 ## Branch de produção
 
-`main` — HEAD `9e99a715`
+`main` — HEAD `91a929d719c4f04e331d6bf615d9d21b39e91030`
 
 ## Branch de trabalho atual
 
-`feat/marvin-g4-lead-capture`
+`docs-marvin-documentation-reconciliation-v2`
 
 ## Working tree
 
@@ -66,6 +69,9 @@ Limpa.
 - [x] 116 testes pgTAP passando (01_schema, 02_security, 03_business)
 
 ### Documentação (docs/marvin/)
+- [x] `README.md` — índice canônico atualizado pós-DOC-SYNC V2
+- [x] `canonical/` — pacote estratégico/canônico V2
+- [x] `client-operations/` — runbooks de provisioning, DNS, briefing e offboarding de clientes
 - [x] TECH-SPEC.md — spec técnica completa v1.0
 - [x] DATA-MODEL.md — modelo de dados Supabase (v1.1 — businesses adicionado)
 - [x] TRACKING-SPEC.md — GTM, GA4, Ads, UTM, atribuição
@@ -100,11 +106,11 @@ Limpa.
 | Componente | Plataforma | Domínio | Status |
 |---|---|---|---|
 | Site institucional | Netlify | marvinsites.com.br | ✅ LIVE |
-| App / SaaS | Vercel | app.marvinsites.com.br | FUTURO |
+| App / SaaS | Vercel | app.marvinsites.com.br | NOT CREATED |
 | Backend / DB | Supabase | dboihbvjtdlgvugjxaam | ✅ G1 APPROVED — 4 migrations / 16 tables |
 | Repositório | GitHub | marvin-ds/marvinsites | monorepo |
 
-**Política de deploy:** branch → Preview → Gate APPROVED → 1 merge → 1 deploy de produção.  
+**Política de deploy:** branch → Preview → Gate APPROVED → 1 merge → 1 deploy de produção.
 Exceções P0/P1 apenas para falhas críticas em produção.
 
 **Netlify build-ignore:** `scripts/netlify-ignore-build.mjs` — skips build quando apenas `docs/`, `supabase/` ou `apps/` mudam.
@@ -113,14 +119,15 @@ Exceções P0/P1 apenas para falhas críticas em produção.
 
 | ID | Prioridade | Descrição |
 |---|---|---|
-| R01 | P1 | Leads só existem no Netlify Forms — sem banco, sem atribuição |
+| R01 | P1 | ~~Leads só existem no Netlify Forms — sem banco, sem atribuição~~ Encerrado por G4 |
 | R03 | P2 | `api.resend.com` na CSP sem código correspondente |
-| R04 | P1 | G4 ainda precisa de migration remota Supabase e env server-side Netlify antes de preview funcional |
+| R04 | P1 | ~~G4 ainda precisa de migration remota Supabase e env server-side Netlify antes de preview funcional~~ Encerrado por G4 |
 
 **Riscos encerrados:**
 - ~~R02~~ `/obrigado` inexistente → PRODUCTION APPROVED (dd54bb0)
 - ~~R02~~ Sem Consent Mode v2 → G2 PRODUCTION APPROVED (13665ada) — GTM-PHJLZWF4 v2 + Consent Mode Basic
 - ~~R05~~ `PUBLIC_WHATSAPP_NUMBER` desconhecida → USER-CONFIRMED / EXTERNAL
+- ~~R01/R04~~ Lead Capture Foundation → G4 PRODUCTION APPROVED
 
 ## Gate 1 — escopo confirmado
 
@@ -167,15 +174,16 @@ G1 deve criar o **Common Core** do Supabase compartilhado (Marvin Sites + Marvin
 
 ## Próxima missão
 
-**G4 — Lead Capture Foundation** — IN_PROGRESS com Codex como ACTIVE_TOOL.
-**MS-G1** — NOT STARTED.
+**G6 — CRM Lite** — NOT STARTED.
+**Raio-X** — NOT STARTED.
+**Radar** — NOT STARTED.
+**Vercel** — NOT CREATED.
 
 **NÃO INICIAR SEM AUTORIZAÇÃO.**
 
-G4 autorizado em 01/09/2026 com Codex como ACTIVE_TOOL. Escopo: endpoint
-server-side Netlify, RPC Supabase transacional, idempotência por `submission_id`,
-persistência de business/lead/attribution/consent e documentação. Sem Vercel,
-sem GTM/GA4 novos e sem deploy de produção.
+DOC-SYNC V2 autorizado em 05/09/2026 com Codex como writer documental.
+Escopo: documentação e governança apenas, em branch documental.
+Sem código, sem sistemas externos, sem merge em main e sem produção.
 
 Validação local G4:
 - `npm run db:reset`: PASS — G1 + G4 aplicadas localmente

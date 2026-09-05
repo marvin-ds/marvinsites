@@ -19,9 +19,9 @@ Este repositório contém o código do site `marvinsites.com.br`.
 | Framework | [Astro](https://astro.build) | HTML estático puro, zero JS desnecessário, Core Web Vitals altos |
 | CSS | [Tailwind CSS](https://tailwindcss.com) | Produtividade e manutenção simples |
 | Hospedagem | [Netlify](https://netlify.com) | CDN global, SSL automático, deploy por push |
-| Formulários | Netlify Forms + Functions | Sem backend próprio, sem banco de dados |
+| Formulários | Netlify Functions + Supabase | Captura server-side, idempotente e com atribuição |
 | Email | [Resend](https://resend.com) | Notificação de leads por email |
-| Analytics | [Umami](https://umami.is) | Sem cookies, compatível com LGPD |
+| Analytics | Umami + GTM/GA4 | Gateado por Consent Mode Basic |
 
 ---
 
@@ -48,9 +48,11 @@ marvin-sites/
 │   │   ├── privacidade.astro  # Política de Privacidade (LGPD)
 │   │   └── termos.astro       # Termos de Uso
 │   ├── content/               # Dados de portfólio, depoimentos e nichos
-│   └── lib/                   # Helpers: analytics, whatsapp, schema
+│   └── lib/                   # Helpers: consent, attribution, whatsapp, schema
 ├── netlify/
-│   └── functions/             # contact.ts, diagnostico.ts
+│   └── functions/             # lead-capture e endpoints server-side
+├── supabase/                  # Migrations e testes do backend compartilhado
+├── docs/                      # Documentação canônica e histórica
 ├── netlify.toml               # Build, redirects e headers de segurança
 ├── astro.config.mjs
 └── tailwind.config.mjs
@@ -101,10 +103,10 @@ PRs e branches auxiliares geram **preview deploys** automáticos com URL única 
 Configurar no painel do Netlify (nunca commitar no repositório):
 
 ```
-RESEND_API_KEY=           # Chave da API do Resend para envio de emails
-NOTIFICATION_EMAIL=       # Email que recebe os leads do formulário
-WHATSAPP_NUMBER=          # Número com DDI (ex: 5513XXXXXXXXX)
-SITE_URL=                 # https://marvinsites.com.br
+PUBLIC_GTM_ID=                 # GTM-PHJLZWF4 em produção
+PUBLIC_WHATSAPP_NUMBER=        # Número com DDI (ex: 5513XXXXXXXXX)
+SUPABASE_URL=                  # URL do projeto Supabase, server-side
+SUPABASE_SERVICE_ROLE_KEY=     # Chave server-side; nunca expor ao browser
 ```
 
 Para desenvolvimento local, criar um arquivo `.env` na raiz (já incluído no `.gitignore`).
@@ -118,6 +120,21 @@ Headers HTTP configurados no `netlify.toml`:
 - `Content-Security-Policy` — proteção contra XSS
 - `X-Frame-Options` — bloqueia embedding em iframes externos
 - `X-Content-Type-Options` — previne MIME sniffing
+
+---
+
+## Documentação canônica
+
+A documentação atual vive em [docs/marvin/README.md](docs/marvin/README.md).
+
+Resumo de prevalência:
+
+- marca/tese: Documento Fundacional V2;
+- oferta/preços: Plano Mestre Comercial V2;
+- limites/fair use: Client Plan Limits and Fair Use V1;
+- dados/tracking/roadmap: Especificação Técnica V2;
+- SaaS: `docs/marvin-saas/`;
+- governança operacional e handoffs: `C:\Projetos\marvin-ops`.
 - `Strict-Transport-Security` — força HTTPS (HSTS, 1 ano)
 - `Referrer-Policy` — controla dados de referência
 - `Permissions-Policy` — desabilita camera, mic e geolocalização

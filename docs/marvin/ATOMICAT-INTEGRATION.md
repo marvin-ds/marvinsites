@@ -1,5 +1,9 @@
 # Marvin Sites — Integração Atomicat
 
+> **STATUS:** HISTORICAL / REFERENCE ONLY.
+> Atomicat is not standard client hosting after DOC-SYNC V2.
+> Payment provider remains OPEN and requires a future formal decision.
+
 **Versão:** 1.0 | **Data-base:** 27/08/2026
 
 ---

@@ -1,8 +1,12 @@
 # Marvin Sites — Especificação Técnica, Dados, Tracking, Atribuição, SEO e Roadmap de Implementação
 
-**Versão:** 1.0  
-**Data-base:** 27/08/2026  
-**Status:** Documento técnico canônico para execução fase a fase em Claude Code  
+> **STATUS:** HISTORICAL / SUPERSEDED FOR TECHNICAL ROADMAP.
+> For current data, tracking and roadmap governance, use `docs/marvin/canonical/ESPECIFICACAO-TECNICA-ROADMAP-MARVIN-SITES-V2.0.md`.
+> G3, G4, G5 and COM-G1 are production approved; G6, Raio-X and Radar are not started.
+
+**Versão:** 1.0
+**Data-base:** 27/08/2026
+**Status:** Documento técnico canônico para execução fase a fase em Claude Code
 **Natureza:** Documento vivo. Alterações relevantes devem ser registradas no changelog e em `DECISIONS.md`.
 
 ---

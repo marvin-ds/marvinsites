@@ -2,6 +2,32 @@
 
 ---
 
+## [DOC-SYNC V2] — 05/09/2026 — Strategic Documentation Reconciliation
+
+### Documentação
+- Adicionado pacote canônico V2 em `docs/marvin/canonical/`.
+- Adicionados runbooks de operação de clientes em `docs/marvin/client-operations/`.
+- Adicionado `docs/marvin/README.md` como índice canônico.
+- Adicionado Addendum Marvin Local V1.1 em `docs/marvin-saas/`.
+- Atualizados `README.md`, `docs/marvin/CURRENT.md` e `docs/marvin/DECISIONS.md`.
+
+### Governança
+- Preservada escada canônica de preços COM-G1: R$399+97, R$599+197, R$1.497+297, R$2.997+497+.
+- Netlify documentado como hosting padrão para sites de clientes.
+- Atomicat marcado como não canônico para hosting padrão.
+- Payment provider permanece OPEN.
+- Fair Use passa a ter fonte competente única.
+- Marvin Starter: SPEC APPROVED / IMPLEMENTATION NOT STARTED.
+- G6, Raio-X, Radar e Vercel permanecem NOT STARTED / NOT CREATED.
+
+### Escopo
+- Nenhum código alterado.
+- Nenhuma migration.
+- Nenhuma alteração em Netlify, Supabase, GTM, GA4, DNS ou Vercel.
+- Nenhum deploy de produção.
+
+---
+
 ## [Gate 3] — 01/09/2026 — Attribution Foundation
 
 ### Tracking

@@ -1,4 +1,9 @@
 # Marvin Sites — Arquitetura Completa do Site
+
+> **STATUS:** HISTORICAL / SUPERSEDED FOR CLIENT HOSTING ARCHITECTURE.
+> For current client hosting architecture, use `docs/marvin/canonical/ARQUITETURA-NETLIFY-ADDENDUM-V1.1.md`.
+> Netlify is the standard client hosting direction; Atomicat is not standard hosting.
+
 ## Planejamento para build com Claude Code · Netlify via GitHub
 
 ---
@@ -356,16 +361,16 @@ Páginas que devem existir para capturar buscas específicas:
   [headers.values]
     # Impede que o site seja carregado em iframes de terceiros
     X-Frame-Options = "SAMEORIGIN"
-    
+
     # Impede que o browser "adivinhe" o tipo de conteúdo
     X-Content-Type-Options = "nosniff"
-    
+
     # Controla informações de referência enviadas
     Referrer-Policy = "strict-origin-when-cross-origin"
-    
+
     # Impede acesso a features sensíveis do browser sem necessidade
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
-    
+
     # Content Security Policy — crucial contra XSS
     Content-Security-Policy = """
       default-src 'self';
@@ -376,7 +381,7 @@ Páginas que devem existir para capturar buscas específicas:
       connect-src 'self' https://api.resend.com;
       frame-ancestors 'self';
     """
-    
+
     # HSTS — força HTTPS por 1 ano
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 ```
@@ -401,21 +406,21 @@ export const handler = async (event) => {
   }
 
   const body = JSON.parse(event.body || '{}');
-  
+
   // Sanitização de inputs
   const nome = sanitize(body.nome?.trim());
   const whatsapp = sanitize(body.whatsapp?.replace(/\D/g, ''));
   const cidade = sanitize(body.cidade?.trim());
   const segmento = sanitize(body.segmento?.trim());
-  
+
   // Validação
   if (!nome || !whatsapp || whatsapp.length < 10) {
     return { statusCode: 400, body: JSON.stringify({ erro: 'Dados inválidos' }) };
   }
-  
+
   // Envio via Resend (email) + notificação WhatsApp opcional
   await notificar({ nome, whatsapp, cidade, segmento });
-  
+
   return { statusCode: 200, body: JSON.stringify({ ok: true }) };
 };
 ```
@@ -472,8 +477,8 @@ Todo formulário deve ter:
 ```html
 <label>
   <input type="checkbox" name="consentimento" required />
-  Concordo com a 
-  <a href="/privacidade">Política de Privacidade</a> 
+  Concordo com a
+  <a href="/privacidade">Política de Privacidade</a>
   e autorizo o contato pelo WhatsApp informado.
 </label>
 ```
@@ -635,7 +640,7 @@ export function gerarLinkWhatsApp({
 }: WhatsAppParams): string {
   const mensagemEncoded = encodeURIComponent(mensagem);
   const baseUrl = `https://wa.me/${numero}?text=${mensagemEncoded}`;
-  
+
   // UTM para analytics
   const utmParams = new URLSearchParams({
     utm_source: 'site',
@@ -643,7 +648,7 @@ export function gerarLinkWhatsApp({
     utm_campaign: origem,
     utm_content: nicho || 'geral',
   });
-  
+
   return `${baseUrl}&${utmParams}`;
 }
 

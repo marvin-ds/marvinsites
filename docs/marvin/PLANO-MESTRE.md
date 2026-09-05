@@ -1,5 +1,9 @@
 # Marvin Sites — Plano Mestre da Nova Oferta, Página de Vendas, Aquisição e Operação Comercial
 
+> **STATUS:** HISTORICAL / SUPERSEDED FOR OFFER AND PRICING.
+> For current offer, pricing and acquisition strategy, use `docs/marvin/canonical/PLANO-MESTRE-COMERCIAL-MARVIN-SITES-V2.0.md`.
+> The current canonical ladder is R$399+97, R$599+197, R$1.497+297, R$2.997+497+.
+
 ## Versão 1.0 — Documento Vivo de Execução
 
 ### Status
