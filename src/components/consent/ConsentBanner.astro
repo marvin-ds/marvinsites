@@ -49,6 +49,7 @@
     isGtmEligible,
   } from '../../lib/consent';
   import { isValidGtmId, loadGtm } from '../../lib/gtm';
+  import { loadMetaPixelIfAllowed } from '../../lib/meta-pixel';
 
   function pushDL(obj: Record<string, unknown>) {
     (window as any).dataLayer = (window as any).dataLayer || [];
@@ -81,6 +82,9 @@
     if (isValidGtmId(gtmId) && isGtmEligible(state)) {
       loadGtm(gtmId);
     }
+
+    const metaPixelId = (import.meta as any).env?.PUBLIC_META_PIXEL_ID || '1247210063126992';
+    loadMetaPixelIfAllowed(metaPixelId, state);
   }
 
   function loadUmami() {

@@ -45,13 +45,13 @@ import Footer from '../components/layout/Footer.astro';
       <section>
         <h2 class="text-xl font-semibold text-petroleo mb-3">4. Analytics, anúncios e atribuição</h2>
         <p class="text-gray-500 leading-relaxed text-sm mb-3">
-          Usamos Google Tag Manager e Google Analytics 4 para medição quando há consentimento aplicável. O site também mantém uma atribuição first-party para registrar origem, campanha, sessão, UTMs e identificadores como gclid, gbraid, wbraid ou fbclid quando eles aparecem na URL.
+          Usamos Google Tag Manager, Google Analytics 4 e Meta Pixel para medição quando há consentimento aplicável. O site também mantém uma atribuição first-party para registrar origem, campanha, sessão, UTMs e identificadores como gclid, gbraid, wbraid ou fbclid quando eles aparecem na URL.
         </p>
         <p class="text-gray-500 leading-relaxed text-sm mb-3">
           Esses identificadores são usados para entender de onde veio uma oportunidade e conectar visita, formulário, lead e contato comercial. Não enviamos dados pessoais sensíveis pelo navegador para essas ferramentas.
         </p>
         <p class="text-gray-500 leading-relaxed text-sm">
-          Google Ads poderá ser utilizado quando campanhas forem ativadas. Nesses casos, a medição publicitária seguirá as escolhas de consentimento registradas no banner.
+          Google Ads e anúncios da Meta poderão ser utilizados quando campanhas forem ativadas. Nesses casos, a medição publicitária seguirá as escolhas de consentimento registradas no banner. Quando um formulário é enviado, também podemos enviar um evento de servidor para a Meta Conversions API com dados técnicos e informações de contato normalizadas ou protegidas por hash, para medir a origem da oportunidade sem expor o token no navegador.
         </p>
       </section>
 
@@ -64,6 +64,7 @@ import Footer from '../components/layout/Footer.astro';
           <li><strong>Umami</strong> — medição estatística quando carregada conforme consentimento</li>
           <li><strong>Google Tag Manager e Google Analytics</strong> — medição e organização de tags conforme consentimento</li>
           <li><strong>Google Ads</strong> — medição de publicidade quando campanhas estiverem ativas e conforme consentimento aplicável</li>
+          <li><strong>Meta Pixel e Meta Conversions API</strong> — medição de publicidade e eventos de formulário conforme consentimento aplicável</li>
           <li>Não vendemos dados pessoais.</li>
         </ul>
       </section>

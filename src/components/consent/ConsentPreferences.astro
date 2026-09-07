@@ -164,6 +164,7 @@
   } from '../../lib/consent';
   import type { ConsentState, ConsentValue } from '../../lib/consent';
   import { isValidGtmId, loadGtm } from '../../lib/gtm';
+  import { loadMetaPixelIfAllowed } from '../../lib/meta-pixel';
 
   const overlay = document.getElementById('consent-prefs-overlay')!;
   const modal = document.getElementById('consent-prefs-modal')!;
@@ -252,6 +253,8 @@
     if (isValidGtmId(gtmId) && isGtmEligible(state)) {
       loadGtm(gtmId);
     }
+    const metaPixelId = (import.meta as any).env?.PUBLIC_META_PIXEL_ID || '1247210063126992';
+    loadMetaPixelIfAllowed(metaPixelId, state);
   }
 
   // Toggle handlers

@@ -4,6 +4,7 @@ import {
   safeErrorResponse,
   validateLeadCapture,
 } from './_shared/lead-capture.mjs';
+import { sendMetaLeadSubmitted } from './_shared/meta-capi.mjs';
 
 const RPC_NAME = 'capture_lead_v1';
 const MODERN_SECRET_PREFIX = 'sb_secret_';
@@ -152,6 +153,7 @@ export async function handler(event) {
 
     applyServerEnvironment(payload, resolveLeadEnvironment(event));
     await callSupabase(payload);
+    await sendMetaLeadSubmitted({ event, payload });
     return jsonResponse(201, { ok: true });
   } catch (error) {
     return safeErrorResponse(error);

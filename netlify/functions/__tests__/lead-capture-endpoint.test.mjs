@@ -89,6 +89,39 @@ test('valid POST calls Supabase RPC and returns minimal 201', async () => {
   assert.equal(rpcPayload.business.environment, 'staging');
 });
 
+test('valid POST sends Meta CAPI LeadSubmitted after Supabase when ad consent is granted', async () => {
+  process.env.SUPABASE_URL = 'https://example.supabase.co';
+  process.env.SUPABASE_SERVICE_ROLE_KEY = legacyServiceRoleJwt;
+  process.env.META_CAPI_ACCESS_TOKEN = 'meta_token_test';
+  process.env.CONTEXT = 'production';
+
+  const requests = [];
+  globalThis.fetch = async (url, options) => {
+    requests.push({ url, options });
+    return { ok: true, json: async () => ({ ok: true }) };
+  };
+
+  const response = await handler(validEvent({
+    consent_mode: {
+      version: 'g2-v1',
+      analytics_storage: 'granted',
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'granted',
+    },
+    email: 'maria@example.com',
+  }));
+  const metaPayload = JSON.parse(requests[1].options.body);
+
+  assert.equal(response.statusCode, 201);
+  assert.equal(requests.length, 2);
+  assert.equal(requests[0].url, 'https://example.supabase.co/rest/v1/rpc/capture_lead_v1');
+  assert.equal(requests[1].url, 'https://graph.facebook.com/v26.0/1247210063126992/events?access_token=meta_token_test');
+  assert.equal(metaPayload.data[0].event_name, 'LeadSubmitted');
+  assert.equal(metaPayload.data[0].event_id, 'g4_submission_endpoint_001');
+  assert.equal(JSON.stringify(metaPayload).includes('maria@example.com'), false);
+});
+
 test('modern Supabase secret key uses apikey without JWT bearer', () => {
   const { headers, keyMode } = buildSupabaseServerHeaders(modernSecretKey);
 

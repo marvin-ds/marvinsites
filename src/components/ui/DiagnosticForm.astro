@@ -130,6 +130,7 @@
 <script>
   import { attributionFormFields } from '../../lib/attribution';
   import type { AttributionSnapshot } from '../../lib/attribution';
+  import { trackMetaLeadSubmitted } from '../../lib/meta-pixel';
 
   const form = document.getElementById('form-diagnostico') as HTMLFormElement | null;
   const submitError = form?.querySelector<HTMLElement>('[data-submit-error]');
@@ -208,6 +209,7 @@
           body: JSON.stringify(payload),
         });
         if (!response.ok) throw new Error('lead capture failed');
+        trackMetaLeadSubmitted(String(payload.submission_id || ''));
         window.location.assign('/obrigado/');
       } catch {
         submitError?.classList.remove('hidden');
