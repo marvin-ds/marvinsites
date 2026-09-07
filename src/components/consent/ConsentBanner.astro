@@ -109,7 +109,8 @@
 
   // Show banner if no valid v2 consent or legacy-only
   const stored = readStoredConsent();
-  if (!stored || hasLegacyConsentOnly()) {
+  const needsFreshConsent = !stored || hasLegacyConsentOnly();
+  if (needsFreshConsent) {
     showBanner();
   } else {
     hideBanner();
@@ -121,6 +122,10 @@
     const state = buildAcceptAll();
     saveConsent(state);
     hideBanner();
+    if (needsFreshConsent) {
+      window.location.reload();
+      return;
+    }
     applyConsentAndMaybeLoadGtm(state);
   });
 

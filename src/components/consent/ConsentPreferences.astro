@@ -233,8 +233,15 @@
   }
 
   function applyAndClose(state: ConsentState) {
+    const previous = readStoredConsent();
+    const wasEligible = previous ? isGtmEligible(previous) : false;
+    const willBeEligible = isGtmEligible(state);
     saveConsent(state);
     closeModal();
+    if (wasEligible !== willBeEligible) {
+      window.location.reload();
+      return;
+    }
     pushDL(['consent', 'update', {
       analytics_storage: state.analytics_storage,
       ad_storage: state.ad_storage,
