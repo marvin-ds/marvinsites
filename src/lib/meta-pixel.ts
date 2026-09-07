@@ -45,6 +45,8 @@ export function loadMetaPixel(pixelId: string): void {
     window._fbq = fbq
   }
 
+  window.fbq('consent', 'grant')
+
   if (window.__marvinMetaPixelInitialized !== pixelId) {
     window.fbq('init', pixelId)
     window.__marvinMetaPixelInitialized = pixelId
@@ -67,6 +69,11 @@ export function loadMetaPixel(pixelId: string): void {
 export function loadMetaPixelIfAllowed(pixelId: string, state: Pick<ConsentState, 'ad_storage'> | null | undefined): void {
   if (!isMetaConsentEligible(state)) return
   loadMetaPixel(pixelId)
+}
+
+export function applyMetaConsent(state: Pick<ConsentState, 'ad_storage'> | null | undefined): void {
+  if (typeof window === 'undefined' || !window.fbq) return
+  window.fbq('consent', isMetaConsentEligible(state) ? 'grant' : 'revoke')
 }
 
 export function trackMetaLeadSubmitted(eventId: string | undefined): void {

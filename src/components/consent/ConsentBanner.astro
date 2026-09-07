@@ -46,10 +46,9 @@
     buildAcceptAll,
     buildRejectAll,
     saveConsent,
-    isGtmEligible,
   } from '../../lib/consent';
-  import { isValidGtmId, loadGtm } from '../../lib/gtm';
-  import { loadMetaPixelIfAllowed } from '../../lib/meta-pixel';
+  import { trackGrantedGooglePageView } from '../../lib/google-events';
+  import { applyMetaConsent, loadMetaPixelIfAllowed } from '../../lib/meta-pixel';
 
   function pushDL(obj: Record<string, unknown>) {
     (window as any).dataLayer = (window as any).dataLayer || [];
@@ -57,19 +56,21 @@
   }
 
   function applyConsentAndMaybeLoadGtm(state: ReturnType<typeof buildAcceptAll>) {
-    pushDL(['consent', 'update', {
+    const consentPayload = {
       analytics_storage: state.analytics_storage,
       ad_storage: state.ad_storage,
       ad_user_data: state.ad_user_data,
       ad_personalization: state.ad_personalization,
-    }]);
+    };
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('consent', 'update', consentPayload);
+    } else {
+      pushDL(['consent', 'update', consentPayload]);
+    }
     pushDL({
       event: 'consent_updated',
       consent_version: state.version,
-      analytics_storage: state.analytics_storage,
-      ad_storage: state.ad_storage,
-      ad_user_data: state.ad_user_data,
-      ad_personalization: state.ad_personalization,
+      ...consentPayload,
     });
 
     // Load Umami if analytics granted
@@ -77,12 +78,10 @@
       loadUmami();
     }
 
-    // Load GTM if eligible
-    const gtmId = (import.meta as any).env?.PUBLIC_GTM_ID;
-    if (isValidGtmId(gtmId) && isGtmEligible(state)) {
-      loadGtm(gtmId);
-    }
+    const ga4MeasurementId = (import.meta as any).env?.PUBLIC_GA4_MEASUREMENT_ID || 'G-TT3QQJR64N';
+    trackGrantedGooglePageView(ga4MeasurementId, state);
 
+    applyMetaConsent(state);
     const metaPixelId = (import.meta as any).env?.PUBLIC_META_PIXEL_ID || '1247210063126992';
     loadMetaPixelIfAllowed(metaPixelId, state);
   }
@@ -122,10 +121,6 @@
     const state = buildAcceptAll();
     saveConsent(state);
     hideBanner();
-    if (needsFreshConsent) {
-      window.location.reload();
-      return;
-    }
     applyConsentAndMaybeLoadGtm(state);
   });
 
@@ -134,12 +129,17 @@
     const state = buildRejectAll();
     saveConsent(state);
     hideBanner();
-    pushDL(['consent', 'update', {
+    const consentPayload = {
       analytics_storage: state.analytics_storage,
       ad_storage: state.ad_storage,
       ad_user_data: state.ad_user_data,
       ad_personalization: state.ad_personalization,
-    }]);
+    };
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('consent', 'update', consentPayload);
+    } else {
+      pushDL(['consent', 'update', consentPayload]);
+    }
     pushDL({ event: 'consent_updated', consent_version: state.version, ...state });
   });
 

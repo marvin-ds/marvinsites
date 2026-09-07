@@ -71,18 +71,40 @@ const gtmId = import.meta.env.PUBLIC_GTM_ID ?? '';
     <!-- GTM ID exposed for inline script -->
     <meta name="gtm-id" content={gtmId} />
 
-    <!-- Consent Mode v2 — init inline BEFORE any other script -->
+    <!-- Consent Mode v2 — advanced mode init inline BEFORE any other script -->
     <script is:inline>
       (function() {
         window.dataLayer = window.dataLayer || [];
         function gtag() { window.dataLayer.push(arguments); }
+        window.gtag = window.gtag || gtag;
+
+        // Keep Meta/Facebook measurement revoked until ad consent is granted,
+        // including if the GTM container includes a Meta tag.
+        if (!window.fbq) {
+          var fbq = function() {
+            fbq.callMethod ? fbq.callMethod.apply(fbq, arguments) : fbq.queue.push(arguments);
+          };
+          fbq.queue = [];
+          fbq.loaded = true;
+          fbq.version = '2.0';
+          window.fbq = fbq;
+          window._fbq = fbq;
+        }
+        window.fbq('consent', 'revoke');
+
         // Default: all denied
         gtag('consent', 'default', {
           analytics_storage: 'denied',
           ad_storage: 'denied',
           ad_user_data: 'denied',
           ad_personalization: 'denied',
+          wait_for_update: 500,
         });
+        gtag('set', 'ads_data_redaction', true);
+        gtag('set', 'url_passthrough', true);
+
+        var gtmId = (document.querySelector('meta[name="gtm-id"]') || {}).content || '';
+
         // Try to restore stored consent
         try {
           var CONSENT_KEY = 'marvin_consent_v2';
@@ -105,23 +127,22 @@ const gtmId = import.meta.env.PUBLIC_GTM_ID ?? '';
                 ad_user_data: stored.ad_user_data,
                 ad_personalization: stored.ad_personalization,
               });
-              // Load GTM if eligible and ID present
-              var gtmId = (document.querySelector('meta[name="gtm-id"]') || {}).content || '';
-              var eligible = stored.analytics_storage === 'granted' || stored.ad_storage === 'granted';
-              if (gtmId && /^GTM-[A-Z0-9]+$/.test(gtmId) && eligible) {
-                window.dataLayer.push({
-                  'gtm.start': new Date().getTime(),
-                  event: 'gtm.js',
-                });
-                var s = document.createElement('script');
-                s.setAttribute('data-gtm-loaded', '1');
-                s.async = true;
-                s.src = 'https://www.googletagmanager.com/gtm.js?id=' + gtmId;
-                document.head.appendChild(s);
-              }
             }
           }
         } catch(e) {}
+
+        // Advanced Consent Mode: GTM loads immediately, while Google tags honor denied defaults.
+        if (gtmId && /^GTM-[A-Z0-9]+$/.test(gtmId)) {
+          window.dataLayer.push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js',
+          });
+          var s = document.createElement('script');
+          s.setAttribute('data-gtm-loaded', '1');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtm.js?id=' + gtmId;
+          document.head.appendChild(s);
+        }
       })();
     </script>
     <script>
