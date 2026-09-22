@@ -3,4 +3,7 @@ Allow: /
 Disallow: /obrigado
 Disallow: /.netlify/
 
+# AI crawlers policy: public marketing pages are intentionally open for discovery.
+# Review this decision before adding bot-specific blocks.
+
 Sitemap: https://marvinsites.com.br/sitemap.xml

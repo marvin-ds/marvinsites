@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { schemaHome } from '../lib/schema';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 import WhatsAppButton from '../components/layout/WhatsAppButton.astro';
@@ -16,6 +17,7 @@ import FinalCTA from '../components/sections/FinalCTA.astro';
 <BaseLayout
   title="Marvin Sites — Presença Digital para Pequenos Negócios Locais"
   description="Presença digital local com site, Google e WhatsApp organizados para seu negócio ser encontrado com mais clareza. Diagnóstico gratuito. Entrega em 7 dias úteis."
+  schema={schemaHome()}
 >
   <Header />
   <main>
