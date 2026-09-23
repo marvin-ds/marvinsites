@@ -14,7 +14,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.294.0/lucide.min.js" defer></script>
   <style>
     :root {
       --color-primary: #6B5344;
@@ -266,6 +265,61 @@
 
     .mobile-cta {
       display: none;
+    }
+
+    [data-lucide] {
+      width: 1em;
+      height: 1em;
+      display: inline-grid;
+      place-items: center;
+      font-style: normal;
+      line-height: 1;
+    }
+
+    [data-lucide]::before {
+      display: block;
+      color: currentColor;
+    }
+
+    [data-lucide="arrow-right"]::before {
+      content: "→";
+      font-size: 1rem;
+    }
+
+    [data-lucide="map-pin"]::before {
+      content: "";
+      width: 0.7em;
+      height: 0.7em;
+      border: 2px solid currentColor;
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(-45deg);
+    }
+
+    [data-lucide="clock"]::before {
+      content: "";
+      width: 0.86em;
+      height: 0.86em;
+      border: 2px solid currentColor;
+      border-radius: 50%;
+      box-shadow: inset 0.18em 0 currentColor;
+    }
+
+    [data-lucide="phone"]::before {
+      content: "☎";
+      font-size: 1rem;
+    }
+
+    [data-lucide="instagram"]::before {
+      content: "ig";
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    [data-lucide="facebook"]::before {
+      content: "f";
+      font-size: 1rem;
+      font-weight: 600;
     }
 
     .section {
@@ -796,15 +850,47 @@
     .map-panel {
       overflow: hidden;
       min-height: 380px;
+      position: relative;
     }
 
-    .map-panel iframe {
-      display: block;
+    .map-illustration {
+      position: relative;
+      min-height: 380px;
+      height: 100%;
+      background: #F7F2EE;
+    }
+
+    .map-illustration svg {
       width: 100%;
       height: 100%;
       min-height: 380px;
-      border: 0;
-      border-radius: var(--radius-card);
+      display: block;
+    }
+
+    .map-card {
+      position: absolute;
+      left: 22px;
+      bottom: 22px;
+      max-width: min(320px, calc(100% - 44px));
+      padding: 16px 18px;
+      border: 1px solid var(--color-border);
+      background: rgba(255,255,255,0.92);
+      box-shadow: 0 12px 28px rgba(107,83,68,0.12);
+    }
+
+    .map-card strong {
+      display: block;
+      color: var(--color-primary);
+      font-family: var(--font-heading);
+      font-size: var(--text-2xl);
+      line-height: 1.05;
+    }
+
+    .map-card span {
+      display: block;
+      margin-top: 4px;
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
     }
 
     .faq-list {
@@ -1201,8 +1287,16 @@
       }
 
       .map-panel,
-      .map-panel iframe {
+      .map-illustration,
+      .map-illustration svg {
         min-height: 300px;
+      }
+
+      .map-card {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        max-width: none;
       }
 
       .whatsapp-float {
@@ -1466,15 +1560,51 @@
           <a class="btn btn-primary" href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1%2C+Studio+Clara+Vidal!+Vi+o+site+de+voc%C3%AAs+e+gostaria+de+agendar+uma+avalia%C3%A7%C3%A3o.+Podem+me+ajudar%3F">Agendar pelo WhatsApp</a>
         </div>
 
-        <div class="map-panel">
-          <iframe
-            src="https://www.google.com/maps?q=Gonzaga%2C%20Santos%2C%20SP&z=14&output=embed"
-            width="100%"
-            height="380"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Localização aproximada do Studio Clara Vidal no Gonzaga, Santos"></iframe>
+        <div class="map-panel" aria-label="Mapa ilustrativo do Gonzaga, Santos">
+          <div class="map-illustration">
+            <svg viewBox="0 0 760 430" role="img" aria-labelledby="map-title map-desc" preserveAspectRatio="xMidYMid slice">
+              <title id="map-title">Mapa ilustrativo do Gonzaga em Santos</title>
+              <desc id="map-desc">Mapa estilizado com vias próximas à Avenida Ana Costa e Praia do Gonzaga.</desc>
+              <rect width="760" height="430" fill="#F7F2EE"/>
+              <path d="M0 358 C112 332 158 386 260 356 C360 326 422 388 524 350 C610 318 674 338 760 302 L760 430 L0 430 Z" fill="#D8C8BA"/>
+              <path d="M0 376 C126 350 174 402 272 372 C358 346 418 402 532 368 C622 342 682 356 760 326" fill="none" stroke="#C4956A" stroke-width="8" opacity=".42"/>
+              <g stroke="#E0D5CC" stroke-width="4" stroke-linecap="round">
+                <path d="M70 34 L210 420"/>
+                <path d="M182 0 L324 430"/>
+                <path d="M312 0 L438 430"/>
+                <path d="M468 0 L520 430"/>
+                <path d="M650 0 L584 430"/>
+                <path d="M0 88 L760 52"/>
+                <path d="M0 162 L760 128"/>
+                <path d="M0 238 L760 220"/>
+                <path d="M0 314 L760 292"/>
+              </g>
+              <g stroke="#C9A55A" stroke-width="7" stroke-linecap="round">
+                <path d="M384 0 L430 430"/>
+                <path d="M38 266 L722 242"/>
+              </g>
+              <g fill="#7A6558" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500">
+                <text x="404" y="84" transform="rotate(84 404 84)">Av. Ana Costa</text>
+                <text x="120" y="255" transform="rotate(-2 120 255)">Av. Francisco Glicério</text>
+                <text x="514" y="184">Gonzaga</text>
+                <text x="388" y="354">Praia do Gonzaga</text>
+              </g>
+              <g transform="translate(456 214)">
+                <circle r="34" fill="#6B5344"/>
+                <circle r="16" fill="#FAF8F5"/>
+                <path d="M0 43 L-13 24 H13 Z" fill="#6B5344"/>
+              </g>
+              <g transform="translate(498 196)">
+                <rect x="0" y="0" width="168" height="54" rx="2" fill="#FFFFFF" stroke="#E0D5CC"/>
+                <text x="14" y="23" fill="#6B5344" font-family="Cormorant Garamond, Georgia, serif" font-size="24" font-weight="700">Studio Clara Vidal</text>
+                <text x="14" y="40" fill="#7A6558" font-family="Inter, Arial, sans-serif" font-size="12">Gonzaga, Santos</text>
+              </g>
+            </svg>
+            <div class="map-card">
+              <strong>Gonzaga, Santos</strong>
+              <span>Mapa ilustrativo. Endereço demonstrativo para preservar negócios reais.</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1565,8 +1695,6 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      if (window.lucide) lucide.createIcons();
-
       const menuToggle = document.querySelector('[data-menu-toggle]');
       const mobileNav = document.querySelector('[data-mobile-nav]');
       if (menuToggle && mobileNav) {
