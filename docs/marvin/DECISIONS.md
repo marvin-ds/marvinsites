@@ -341,3 +341,17 @@ fonte canônica do lead.
 **Fonte operacional:** `marvin-ops/docs/DOCUMENTATION-PRECEDENCE-MATRIX-V1.0.md`.
 
 **Regra:** `CURRENT.md` reflete estado presente, mas não redefine silenciosamente estratégia, preços ou arquitetura.
+
+---
+
+## [SET/2026] Portfólio de nichos — decisão estratégica
+
+**Decisão:** Construir 22 sites demonstrativos organizados por nicho de negócio local, hospedados em `marvinsites.com.br/exemplos/[slug]/`.
+
+**Razão:** O portfólio cumpre quatro funções simultâneas: prova visual em prospecções, autoridade por nicho, SEO orgânico de médio prazo e landing pages para tráfego pago.
+
+**Documentação canônica:** `docs/marvin/PORTFOLIO_MARVIN_SITES.md`
+
+**Regra de agente:** `AGENTS.md` (seção `## Portfólio de nichos`)
+
+**Status:** Aprovado. Construção iniciada na Fase 1 (5 nichos prioritários).

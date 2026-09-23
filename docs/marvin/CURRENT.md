@@ -174,6 +174,13 @@ G1 deve criar o **Common Core** do Supabase compartilhado (Marvin Sites + Marvin
 
 ## Próxima missão
 
+## Portfólio de nichos
+
+**Status atual:** Documentação criada. Aguardando construção dos primeiros sites.  
+**Gate equivalente:** Portfolio-G0 (infraestrutura de diretórios) — pendente.  
+**Próxima missão:** Criar estrutura de diretórios em `exemplos/`, construir página de índice e os 5 primeiros sites de nicho.  
+**Documento de referência:** `docs/marvin/PORTFOLIO_MARVIN_SITES.md`
+
 **G6 — CRM Lite** — NOT STARTED.
 **Raio-X** — NOT STARTED.
 **Radar** — NOT STARTED.
