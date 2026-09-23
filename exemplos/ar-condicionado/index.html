@@ -293,6 +293,15 @@
       font-size: var(--text-lg);
     }
 
+    .hero-hook {
+      max-width: 680px;
+      margin: 18px 0 0;
+      color: var(--color-primary);
+      font-size: var(--text-xl);
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
     .season-badge {
       display: flex;
       align-items: flex-start;
@@ -612,6 +621,12 @@
       height: 310px;
       object-fit: cover;
       transition: transform 400ms ease;
+    }
+
+    .gallery-card.product-photo img {
+      object-fit: contain;
+      padding: 22px;
+      background: var(--color-white);
     }
 
     .gallery-card:hover img {
@@ -985,6 +1000,10 @@
         font-size: var(--text-base);
       }
 
+      .hero-hook {
+        font-size: var(--text-lg);
+      }
+
       .hero-actions,
       .hero-actions .btn {
         width: 100%;
@@ -1083,6 +1102,7 @@
         <div>
           <div class="context-tag"><i data-lucide="map-pin"></i> Santos e Região — Atendimento rápido</div>
           <h1 id="hero-title">Seu ar-condicionado<br>não resfria mais?</h1>
+          <p class="hero-hook">Não passe calor no pico do verão. O El Niño promete dias mais quentes — deixe seu aparelho pronto antes da próxima onda de calor.</p>
           <p class="hero-copy">Instalação, manutenção e higienização em Santos. Técnicos certificados em todas as marcas. Orçamento pelo WhatsApp — geralmente atendemos no mesmo dia.</p>
           <div class="season-badge">⚠ Verão 2025/2026 — Alta demanda. Reserve seu horário com antecedência.</div>
           <div class="hero-actions">
@@ -1094,10 +1114,10 @@
         <div class="hero-media">
           <div class="hero-visual">
             <figure class="hero-image-wrap">
-              <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=900&q=82&auto=format&fit=crop" alt="Técnico instalando ar-condicionado split em ambiente residencial" width="900" height="1100" loading="lazy">
+              <img src="assets/tecnico-instalando-split.png" alt="Técnico instalando ar-condicionado split em ambiente residencial" width="700" height="700" loading="lazy">
               <figcaption class="temp-display">
                 <strong>38°C</strong>
-                <span>Sinto o calor? A gente resolve.</span>
+                <span>Sentindo Calor? A gente resolve.</span>
               </figcaption>
             </figure>
           </div>
@@ -1146,7 +1166,7 @@
     <section class="section about" id="sobre" aria-labelledby="sobre-title">
       <div class="container about-grid">
         <div class="field-photo">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=82&auto=format&fit=crop" alt="Técnico com equipamentos verificando componentes de ar-condicionado" width="900" height="720" loading="lazy">
+          <img src="assets/tecnico-higienizando-filtro.png" alt="Técnico higienizando filtro de ar-condicionado split" width="1920" height="1080" loading="lazy">
           <div class="stat-pill">
             <strong>1.200+</strong>
             atendimentos realizados em Santos
@@ -1206,16 +1226,16 @@
         <h2 class="section-title" id="galeria-title">Nossos serviços em campo</h2>
         <div class="gallery-grid">
           <figure class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80&auto=format&fit=crop" alt="Técnico da Clima Certo instalando ar-condicionado split em Santos" width="800" height="520" loading="lazy">
+            <img src="assets/tecnico-instalando-split.png" alt="Técnico da Clima Certo instalando ar-condicionado split em Santos" width="700" height="700" loading="lazy">
+          </figure>
+          <figure class="gallery-card product-photo">
+            <img src="assets/aparelho-split-produto.png" alt="Ar-condicionado split residencial com unidade externa" width="1375" height="1375" loading="lazy">
           </figure>
           <figure class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80&auto=format&fit=crop" alt="Ar-condicionado split instalado em ambiente residencial" width="800" height="520" loading="lazy">
+            <img src="assets/tecnico-higienizando-filtro.png" alt="Manutenção preventiva e limpeza de filtro de ar-condicionado em Santos" width="1920" height="1080" loading="lazy">
           </figure>
-          <figure class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop" alt="Manutenção preventiva de ar-condicionado em Santos" width="800" height="520" loading="lazy">
-          </figure>
-          <figure class="gallery-card">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80&auto=format&fit=crop" alt="Climatização de ambiente comercial em Santos e região" width="800" height="520" loading="lazy">
+          <figure class="gallery-card product-photo">
+            <img src="assets/linha-modelos-ar-condicionado.png" alt="Linha de modelos de ar-condicionado para ambientes residenciais e comerciais" width="938" height="438" loading="lazy">
           </figure>
         </div>
       </div>
