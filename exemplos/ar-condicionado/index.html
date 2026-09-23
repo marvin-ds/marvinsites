@@ -142,6 +142,15 @@
       flex-wrap: wrap;
     }
 
+    .demo-logo {
+      width: 26px;
+      height: 26px;
+      flex: 0 0 auto;
+      border-radius: 7px;
+      object-fit: cover;
+      box-shadow: 0 0 0 1px rgba(9,31,56,0.12);
+    }
+
     .demo-notice a {
       color: var(--color-primary-dark);
       border-bottom: 2px solid currentColor;
@@ -242,6 +251,21 @@
       border-radius: var(--radius-btn);
       background: transparent;
       color: var(--color-white);
+    }
+
+    .menu-toggle::before {
+      content: "";
+      width: 21px;
+      height: 15px;
+      display: block;
+      background:
+        linear-gradient(currentColor, currentColor) 0 0 / 100% 2px no-repeat,
+        linear-gradient(currentColor, currentColor) 0 50% / 100% 2px no-repeat,
+        linear-gradient(currentColor, currentColor) 0 100% / 100% 2px no-repeat;
+    }
+
+    .menu-toggle i {
+      display: none;
     }
 
     .hero {
@@ -686,11 +710,67 @@
       min-height: 350px;
     }
 
-    .map-panel iframe {
-      display: block;
-      width: 100%;
-      height: 100%;
+    .map-fallback {
       min-height: 350px;
+      height: 100%;
+      display: grid;
+      align-content: center;
+      gap: 20px;
+      padding: 34px;
+      background:
+        linear-gradient(135deg, rgba(0,168,232,0.18), transparent 42%),
+        radial-gradient(circle at 80% 22%, rgba(37,211,102,0.14), transparent 28%),
+        var(--color-bg-section);
+    }
+
+    .map-pin-large {
+      width: 66px;
+      height: 66px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: var(--color-primary);
+      color: var(--color-accent);
+      box-shadow: 0 18px 36px rgba(9,31,56,0.2);
+    }
+
+    .map-pin-large i {
+      width: 32px;
+      height: 32px;
+    }
+
+    .map-fallback h3 {
+      margin: 0;
+      color: var(--color-primary-dark);
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      line-height: 1.12;
+    }
+
+    .map-fallback p {
+      max-width: 520px;
+      margin: 0;
+      color: var(--color-text-muted);
+      font-size: var(--text-lg);
+    }
+
+    .coverage-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .coverage-list li {
+      padding: 8px 12px;
+      border: 1px solid var(--color-border);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.74);
+      color: var(--color-primary);
+      font-size: var(--text-sm);
+      font-weight: 800;
     }
 
     .faq-list {
@@ -929,10 +1009,6 @@
         grid-template-columns: 1fr;
       }
 
-      .hero-media {
-        order: -1;
-      }
-
       .hero-visual {
         min-height: auto;
       }
@@ -963,12 +1039,27 @@
 
     @media (max-width: 680px) {
       .demo-notice {
+        position: relative;
+        inset: auto;
         font-size: 0.78rem;
       }
 
       .demo-notice .container {
+        min-height: auto;
+        flex-direction: column;
         gap: 6px 12px;
-        padding-block: 6px;
+        padding-block: 10px;
+        line-height: 1.35;
+      }
+
+      .demo-logo {
+        width: 30px;
+        height: 30px;
+      }
+
+      .site-header {
+        position: relative;
+        top: auto;
       }
 
       .brand span {
@@ -978,17 +1069,43 @@
       }
 
       .header-inner {
+        position: relative;
+        grid-template-columns: 1fr auto;
         min-height: 74px;
+        padding-block: 10px;
+      }
+
+      .brand {
+        grid-column: 1 / 2;
+        grid-row: 1;
+      }
+
+      .menu-toggle {
+        grid-column: 2 / 3;
+        grid-row: 1;
       }
 
       .header-cta {
         grid-column: 1 / -1;
+        grid-row: 2;
         width: 100%;
-        margin-bottom: 12px;
+        margin-bottom: 0;
       }
 
       .nav-links {
-        top: calc(var(--notice-height) + 122px);
+        position: absolute;
+        top: 100%;
+        transform: translateY(-8px);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .nav-links.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
       }
 
       .hero {
@@ -1038,12 +1155,34 @@
       }
 
       .field-photo img {
-        aspect-ratio: 4 / 5;
+        display: block;
+        height: 280px;
+        aspect-ratio: auto;
       }
 
       .stat-pill {
-        position: static;
-        border-radius: 0;
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        padding: 14px;
+        border-radius: var(--radius-card);
+      }
+
+      .stat-pill strong {
+        font-size: 2.1rem;
+      }
+
+      .map-fallback {
+        min-height: 310px;
+        padding: 24px;
+      }
+
+      .map-fallback h3 {
+        font-size: var(--text-2xl);
+      }
+
+      .map-fallback p {
+        font-size: var(--text-base);
       }
 
       .footer-bottom {
@@ -1068,6 +1207,7 @@
 <body>
   <div class="demo-notice">
     <div class="container">
+      <img class="demo-logo" src="assets/marvin-sites-logo.png" alt="Marvin Sites" width="1080" height="1080">
       <span>Site demonstrativo — Marvin Sites cria páginas assim para o seu negócio.</span>
       <a href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+o+exemplo+de+site+para+ar-condicionado+da+Marvin+Sites+e+quero+um+or%C3%A7amento+para+um+site+assim." aria-label="Falar com a Marvin Sites pelo WhatsApp">Quero um site assim</a>
     </div>
@@ -1263,16 +1403,21 @@
             </div>
             <a class="btn btn-primary" href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+o+exemplo+de+site+para+ar-condicionado+da+Marvin+Sites+e+quero+um+or%C3%A7amento+para+um+site+assim.">Pedir orçamento do site</a>
           </div>
-          <div class="map-panel">
-            <iframe
-              src="https://www.google.com/maps?q=-23.978,-46.334&z=13&output=embed"
-              width="100%"
-              height="350"
-              style="border:0; border-radius:8px;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Localização aproximada da Clima Certo em Santos, SP"></iframe>
+          <div class="map-panel" aria-label="Mapa demonstrativo da área de atendimento em Santos">
+            <div class="map-fallback">
+              <span class="map-pin-large" aria-hidden="true"><i data-lucide="map-pinned"></i></span>
+              <div>
+                <h3>Santos e Região</h3>
+                <p>Mapa demonstrativo da área de atendimento. Este site é um modelo Marvin Sites e não representa um endereço comercial real.</p>
+              </div>
+              <ul class="coverage-list" aria-label="Bairros e cidades atendidas">
+                <li>Santos</li>
+                <li>São Vicente</li>
+                <li>Guarujá</li>
+                <li>Praia Grande</li>
+                <li>Cubatão</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
