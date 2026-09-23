@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Clima Certo — Ar-Condicionado em Santos, SP | Instalação e Manutenção</title>
+  <meta name="description" content="Instalação, manutenção, higienização e recarga de gás de ar-condicionado em Santos e região. Técnicos certificados, todas as marcas.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="generator" content="Marvin Sites — Demonstrativo de Portfólio">
+
+  <meta property="og:title" content="Clima Certo — Ar-Condicionado em Santos, SP">
+  <meta property="og:description" content="Instalação e manutenção de ar-condicionado em Santos. Atendimento rápido, todas as marcas.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23091F38'/%3E%3Cpath d='M21 31a11 11 0 0 1 22 0v13a11 11 0 1 1-22 0z' fill='%2300A8E8'/%3E%3Cpath d='M32 11v42M18 18l28 28M46 18 18 46' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='44' r='6' fill='%23FF6B35'/%3E%3C/svg%3E">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.294.0/lucide.min.js" defer></script>
+
+  <style>
+    :root {
+      --color-primary:      #0F3057;
+      --color-primary-dark: #091F38;
+      --color-accent:       #00A8E8;
+      --color-accent-warm:  #FF6B35;
+      --color-bg:           #F0F8FF;
+      --color-bg-section:   #E8F4FD;
+      --color-text:         #1A2B3C;
+      --color-text-muted:   #5A7A95;
+      --color-border:       #C8DFF0;
+      --color-white:        #FFFFFF;
+
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body:    'Open Sans', sans-serif;
+
+      --text-sm:    0.875rem;
+      --text-base:  1rem;
+      --text-lg:    1.125rem;
+      --text-xl:    1.25rem;
+      --text-2xl:   1.5rem;
+      --text-3xl:   1.875rem;
+      --text-4xl:   2.25rem;
+      --text-5xl:   3.25rem;
+
+      --radius-sm:    4px;
+      --radius-card:  10px;
+      --radius-btn:   6px;
+      --shadow-card:  0 2px 12px rgba(15,48,87,0.08);
+      --transition:   0.18s ease;
+
+      --container:    1160px;
+      --gap:          clamp(16px, 4vw, 40px);
+      --notice-height: 40px;
+      --header-height: 78px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.65;
+    }
+
+    body.nav-open {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--container));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: clamp(64px, 8vw, 104px) 0;
+    }
+
+    .section-title {
+      margin: 0 0 30px;
+      color: var(--color-primary-dark);
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    .section-subtitle {
+      max-width: 680px;
+      margin: -16px 0 34px;
+      color: var(--color-text-muted);
+      font-size: var(--text-lg);
+    }
+
+    .demo-notice {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 10000;
+      min-height: var(--notice-height);
+      background: var(--color-accent);
+      color: var(--color-primary-dark);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      text-align: center;
+      box-shadow: 0 1px 0 rgba(9,31,56,0.12);
+    }
+
+    .demo-notice .container {
+      min-height: var(--notice-height);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .demo-notice a {
+      color: var(--color-primary-dark);
+      border-bottom: 2px solid currentColor;
+    }
+
+    .site-header {
+      position: sticky;
+      top: var(--notice-height);
+      z-index: 9999;
+      background: var(--color-primary-dark);
+      color: var(--color-white);
+      box-shadow: 0 10px 28px rgba(9,31,56,0.18);
+    }
+
+    .header-inner {
+      min-height: var(--header-height);
+      display: grid;
+      grid-template-columns: auto 1fr auto auto;
+      align-items: center;
+      gap: 26px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-heading);
+      font-size: 1.18rem;
+      font-weight: 800;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,0.24);
+      border-radius: 9px;
+      background: rgba(0,168,232,0.14);
+      color: var(--color-accent);
+    }
+
+    .brand-mark svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 26px;
+      color: rgba(255,255,255,0.84);
+      font-weight: 600;
+      font-size: var(--text-sm);
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--color-accent);
+      outline: none;
+    }
+
+    .btn {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 0;
+      border-radius: var(--radius-btn);
+      cursor: pointer;
+      font: 700 var(--text-base)/1 var(--font-heading);
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition), color var(--transition);
+    }
+
+    .btn-primary {
+      padding: 0 24px;
+      background: var(--color-accent);
+      color: var(--color-primary-dark);
+      box-shadow: 0 10px 22px rgba(0,168,232,0.25);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0,168,232,0.34);
+      outline: none;
+    }
+
+    .menu-toggle {
+      width: 46px;
+      height: 46px;
+      display: none;
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: var(--radius-btn);
+      background: transparent;
+      color: var(--color-white);
+    }
+
+    .hero {
+      padding: calc(var(--notice-height) + 42px) 0 84px;
+      background:
+        radial-gradient(circle at 76% 18%, rgba(0,168,232,0.14), transparent 28%),
+        linear-gradient(180deg, var(--color-bg), var(--color-white));
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.85fr);
+      align-items: center;
+      gap: var(--gap);
+    }
+
+    .context-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      margin-bottom: 22px;
+      padding: 8px 12px;
+      border: 1px solid var(--color-border);
+      border-radius: 999px;
+      background: var(--color-white);
+      color: var(--color-primary);
+      font-size: var(--text-sm);
+      font-weight: 700;
+    }
+
+    .context-tag i {
+      width: 16px;
+      height: 16px;
+      color: var(--color-accent);
+    }
+
+    .hero h1 {
+      max-width: 720px;
+      margin: 0;
+      color: var(--color-primary-dark);
+      font-family: var(--font-heading);
+      font-size: clamp(2.7rem, 6vw, var(--text-5xl));
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .hero-copy {
+      max-width: 640px;
+      margin: 24px 0 0;
+      color: var(--color-text-muted);
+      font-size: var(--text-lg);
+    }
+
+    .season-badge {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      max-width: 700px;
+      margin: 28px 0;
+      padding: 14px 16px;
+      border: 1px solid rgba(255,107,53,0.36);
+      border-left: 5px solid var(--color-accent-warm);
+      border-radius: var(--radius-card);
+      background: rgba(255,107,53,0.1);
+      color: #883315;
+      font-weight: 700;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .text-link {
+      color: var(--color-primary);
+      font-weight: 800;
+      border-bottom: 2px solid var(--color-accent);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 520px;
+      display: grid;
+      align-items: end;
+      isolation: isolate;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+      overflow: hidden;
+      min-height: 480px;
+      border: 1px solid var(--color-border);
+      border-radius: 18px;
+      background: var(--color-primary);
+      box-shadow: 0 24px 70px rgba(15,48,87,0.22);
+    }
+
+    .hero-image-wrap img {
+      width: 100%;
+      height: 100%;
+      min-height: 480px;
+      object-fit: cover;
+      filter: saturate(0.96) contrast(1.04);
+    }
+
+    .hero-image-wrap::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 38%;
+      background: linear-gradient(0deg, rgba(9,31,56,0.7), transparent);
+    }
+
+    .temp-display {
+      position: absolute;
+      right: clamp(16px, 3vw, 28px);
+      bottom: 34px;
+      z-index: 2;
+      width: min(78%, 310px);
+      padding: 18px 20px;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 12px;
+      background: var(--color-primary);
+      box-shadow: 0 18px 44px rgba(9,31,56,0.35);
+      color: var(--color-white);
+    }
+
+    .temp-display strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--color-accent);
+      font-family: var(--font-heading);
+      font-size: clamp(2.3rem, 5vw, 3.7rem);
+      line-height: 0.95;
+    }
+
+    .temp-display span {
+      color: rgba(255,255,255,0.88);
+      font-weight: 700;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .service-card,
+    .review-card,
+    .gallery-card {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 300ms ease, transform 300ms ease, border-color var(--transition);
+    }
+
+    .service-card.visible,
+    .review-card.visible,
+    .gallery-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .service-card {
+      min-height: 224px;
+      padding: 24px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      background: var(--color-white);
+      box-shadow: var(--shadow-card);
+    }
+
+    .service-card:hover,
+    .service-card:focus-within {
+      border-color: var(--color-accent);
+      transform: translateY(-4px);
+    }
+
+    .icon-box {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      background: var(--color-bg-section);
+      color: var(--color-primary);
+    }
+
+    .icon-box i {
+      width: 25px;
+      height: 25px;
+    }
+
+    .service-card h3 {
+      margin: 0 0 10px;
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      color: var(--color-primary-dark);
+    }
+
+    .service-card p,
+    .review-card p {
+      margin: 0;
+      color: var(--color-text-muted);
+    }
+
+    .about {
+      background: var(--color-bg-section);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      align-items: center;
+      gap: var(--gap);
+    }
+
+    .field-photo {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid var(--color-border);
+      background: var(--color-white);
+      box-shadow: var(--shadow-card);
+    }
+
+    .field-photo img {
+      width: 100%;
+      aspect-ratio: 5 / 4;
+      object-fit: cover;
+    }
+
+    .stat-pill {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      padding: 18px;
+      border-radius: var(--radius-card);
+      background: rgba(9,31,56,0.9);
+      color: var(--color-white);
+      backdrop-filter: blur(6px);
+    }
+
+    .stat-pill strong {
+      display: block;
+      color: var(--color-accent);
+      font-family: var(--font-heading);
+      font-size: var(--text-3xl);
+      line-height: 1;
+    }
+
+    .differentials {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 17px;
+    }
+
+    .differentials li {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 14px;
+      align-items: start;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--color-border);
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    .check {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--color-white);
+      color: var(--color-accent);
+      font-weight: 800;
+    }
+
+    .reviews-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .rating-box {
+      min-width: 210px;
+      padding: 18px 22px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      background: var(--color-bg);
+      text-align: right;
+    }
+
+    .stars {
+      color: var(--color-accent-warm);
+      letter-spacing: 0;
+      font-size: var(--text-xl);
+    }
+
+    .rating-box strong {
+      display: block;
+      color: var(--color-primary-dark);
+      font-family: var(--font-heading);
+      font-size: var(--text-4xl);
+      line-height: 1;
+    }
+
+    .rating-box span {
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+      font-weight: 700;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .review-card {
+      min-height: 290px;
+      padding: 28px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      background: var(--color-bg);
+    }
+
+    .quote-mark {
+      display: block;
+      height: 44px;
+      color: var(--color-accent);
+      font-family: Georgia, serif;
+      font-size: 4.5rem;
+      line-height: 0.7;
+    }
+
+    .reviewer {
+      margin-top: 24px;
+      color: var(--color-primary-dark);
+      font-weight: 800;
+    }
+
+    .gallery {
+      background: var(--color-bg-section);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .gallery-card {
+      overflow: hidden;
+      border-radius: var(--radius-card);
+      border: 1px solid var(--color-border);
+      background: var(--color-white);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 310px;
+      object-fit: cover;
+      transition: transform 400ms ease;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.035);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+      gap: var(--gap);
+      align-items: stretch;
+    }
+
+    .info-panel,
+    .map-panel {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      background: var(--color-white);
+      box-shadow: var(--shadow-card);
+    }
+
+    .info-panel {
+      padding: 28px;
+    }
+
+    .info-group + .info-group {
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .info-group h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 8px;
+      color: var(--color-primary-dark);
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+    }
+
+    .info-group p {
+      margin: 0;
+      color: var(--color-text-muted);
+    }
+
+    .info-panel .btn {
+      margin-top: 28px;
+      width: 100%;
+    }
+
+    .map-panel {
+      overflow: hidden;
+      min-height: 350px;
+    }
+
+    .map-panel iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 350px;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      background: var(--color-white);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 22px;
+      border: 0;
+      background: transparent;
+      color: var(--color-primary-dark);
+      cursor: pointer;
+      font: 800 var(--text-base)/1.35 var(--font-heading);
+      text-align: left;
+    }
+
+    .faq-question i {
+      flex: 0 0 auto;
+      color: var(--color-accent);
+      transition: transform var(--transition);
+    }
+
+    .faq-item.active .faq-question i {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 260ms ease;
+    }
+
+    .faq-answer p {
+      margin: 0;
+      padding: 0 22px 22px;
+      color: var(--color-text-muted);
+    }
+
+    .final-cta {
+      background: var(--color-primary);
+      color: var(--color-white);
+      text-align: center;
+    }
+
+    .final-cta .season-badge {
+      justify-content: center;
+      width: fit-content;
+      margin: 0 auto 28px;
+      background: rgba(255,107,53,0.16);
+      color: #FFE2D6;
+    }
+
+    .final-cta h2 {
+      max-width: 780px;
+      margin: 0 auto;
+      font-family: var(--font-heading);
+      font-size: clamp(2.4rem, 5vw, 4.2rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .final-cta p {
+      max-width: 760px;
+      margin: 22px auto 30px;
+      color: #9FE7FF;
+      font-size: var(--text-lg);
+    }
+
+    .response-note {
+      margin-top: 16px;
+      opacity: 0.72;
+      font-size: var(--text-sm);
+    }
+
+    .footer {
+      background: var(--color-primary-dark);
+      color: var(--color-white);
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr;
+      gap: var(--gap);
+      padding: 56px 0 38px;
+    }
+
+    .footer h3 {
+      margin: 0 0 16px;
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+    }
+
+    .footer p,
+    .footer a {
+      color: rgba(255,255,255,0.78);
+    }
+
+    .footer ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 9px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .social-icons span {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: var(--radius-btn);
+      color: var(--color-accent);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 22px 0;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.74);
+      font-size: var(--text-sm);
+    }
+
+    .footer-bottom a {
+      color: var(--color-accent);
+      font-weight: 800;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 24px;
+      bottom: 28px;
+      z-index: 9999;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 56px;
+      padding: 0 20px;
+      border-radius: 50px;
+      background: #25D366;
+      color: #062F18;
+      box-shadow: 0 16px 34px rgba(37,211,102,0.34);
+      font-family: var(--font-heading);
+      font-weight: 800;
+      opacity: 0;
+      transform: translateY(18px);
+      pointer-events: none;
+      transition: opacity 260ms ease, transform 260ms ease;
+    }
+
+    .whatsapp-float.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .whatsapp-icon {
+      width: 24px;
+      height: 24px;
+      flex: 0 0 auto;
+    }
+
+    @media (max-width: 960px) {
+      :root {
+        --header-height: 70px;
+      }
+
+      .header-inner {
+        grid-template-columns: 1fr auto auto;
+        gap: 12px;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: calc(var(--notice-height) + var(--header-height));
+        left: 0;
+        right: 0;
+        display: grid;
+        gap: 0;
+        padding: 12px 16px 18px;
+        background: var(--color-primary-dark);
+        border-top: 1px solid rgba(255,255,255,0.12);
+        transform: translateY(-120%);
+        transition: transform 220ms ease;
+      }
+
+      .nav-links.open {
+        transform: translateY(0);
+      }
+
+      .nav-links a {
+        padding: 16px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+
+      .header-cta {
+        min-height: 42px;
+        padding: 0 14px;
+        font-size: var(--text-sm);
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+      }
+
+      .hero {
+        padding-top: 36px;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-media {
+        order: -1;
+      }
+
+      .hero-visual {
+        min-height: auto;
+      }
+
+      .hero-image-wrap,
+      .hero-image-wrap img {
+        min-height: 390px;
+      }
+
+      .services-grid,
+      .reviews-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .reviews-head {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .rating-box {
+        text-align: left;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .demo-notice {
+        font-size: 0.78rem;
+      }
+
+      .demo-notice .container {
+        gap: 6px 12px;
+        padding-block: 6px;
+      }
+
+      .brand span {
+        max-width: 126px;
+        white-space: normal;
+        line-height: 1.05;
+      }
+
+      .header-inner {
+        min-height: 74px;
+      }
+
+      .header-cta {
+        grid-column: 1 / -1;
+        width: 100%;
+        margin-bottom: 12px;
+      }
+
+      .nav-links {
+        top: calc(var(--notice-height) + 122px);
+      }
+
+      .hero {
+        padding-bottom: 62px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.35rem, 12vw, 3.2rem);
+      }
+
+      .hero-copy {
+        font-size: var(--text-base);
+      }
+
+      .hero-actions,
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-actions .btn {
+        min-height: 54px;
+      }
+
+      .hero-image-wrap,
+      .hero-image-wrap img {
+        min-height: 330px;
+      }
+
+      .temp-display {
+        position: static;
+        width: 100%;
+        margin-top: 12px;
+      }
+
+      .services-grid,
+      .reviews-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-card img {
+        height: 250px;
+      }
+
+      .field-photo img {
+        aspect-ratio: 4 / 5;
+      }
+
+      .stat-pill {
+        position: static;
+        border-radius: 0;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .whatsapp-float {
+        right: 16px;
+        bottom: 18px;
+        width: 58px;
+        height: 58px;
+        justify-content: center;
+        padding: 0;
+      }
+
+      .whatsapp-float span {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-notice">
+    <div class="container">
+      <span>Site demonstrativo — Marvin Sites cria páginas assim para o seu negócio.</span>
+      <a href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Quero+um+site+assim+para+meu+neg%C3%B3cio." aria-label="Falar com a Marvin Sites pelo WhatsApp">Quero um site assim</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Clima Certo, início">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 3v18M5 6l14 12M19 6 5 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="3.2" fill="currentColor"/>
+          </svg>
+        </span>
+        <span>Clima Certo</span>
+      </a>
+
+      <nav class="nav-links" id="site-nav" aria-label="Navegação principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a class="btn btn-primary header-cta" href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+o+site+da+Clima+Certo+e+preciso+de+ajuda+com+ar-condicionado.+Podem+me+atender%3F">Chamar no WhatsApp</a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="site-nav" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <div class="context-tag"><i data-lucide="map-pin"></i> Santos e Região — Atendimento rápido</div>
+          <h1 id="hero-title">Seu ar-condicionado<br>não resfria mais?</h1>
+          <p class="hero-copy">Instalação, manutenção e higienização em Santos. Técnicos certificados em todas as marcas. Orçamento pelo WhatsApp — geralmente atendemos no mesmo dia.</p>
+          <div class="season-badge">⚠ Verão 2025/2026 — Alta demanda. Reserve seu horário com antecedência.</div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+o+site+da+Clima+Certo+e+preciso+de+ajuda+com+ar-condicionado.+Podem+me+atender%3F">Chamar no WhatsApp agora</a>
+            <a class="text-link" href="#servicos">Ver nossos serviços</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-visual">
+            <figure class="hero-image-wrap">
+              <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=900&q=82&auto=format&fit=crop" alt="Técnico instalando ar-condicionado split em ambiente residencial" width="900" height="1100" loading="lazy">
+              <figcaption class="temp-display">
+                <strong>38°C</strong>
+                <span>Sinto o calor? A gente resolve.</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicos" aria-labelledby="servicos-title">
+      <div class="container">
+        <h2 class="section-title" id="servicos-title">O que a gente faz</h2>
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="icon-box"><i data-lucide="wind"></i></span>
+            <h3>Instalação de Split</h3>
+            <p>Instalação completa de ar-condicionado split, multi-split e piso-teto. Todas as marcas.</p>
+          </article>
+          <article class="service-card">
+            <span class="icon-box"><i data-lucide="wrench"></i></span>
+            <h3>Manutenção Preventiva</h3>
+            <p>Revisão completa antes do verão para evitar pane no pior momento.</p>
+          </article>
+          <article class="service-card">
+            <span class="icon-box"><i data-lucide="droplets"></i></span>
+            <h3>Higienização e Limpeza</h3>
+            <p>Limpeza profunda com produtos bactericidas. Ar mais limpo e mais eficiente.</p>
+          </article>
+          <article class="service-card">
+            <span class="icon-box"><i data-lucide="thermometer"></i></span>
+            <h3>Recarga de Gás</h3>
+            <p>Recarga de fluido refrigerante com diagnóstico de vazamento incluso.</p>
+          </article>
+          <article class="service-card">
+            <span class="icon-box"><i data-lucide="tool"></i></span>
+            <h3>Conserto e Reparo</h3>
+            <p>Diagnóstico rápido e reparo de aparelhos que param de resfriar ou fazem barulho.</p>
+          </article>
+          <article class="service-card">
+            <span class="icon-box"><i data-lucide="building"></i></span>
+            <h3>Ar-condicionado Comercial</h3>
+            <p>Atendimento para escritórios, lojas, clínicas e condomínios.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="sobre" aria-labelledby="sobre-title">
+      <div class="container about-grid">
+        <div class="field-photo">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=82&auto=format&fit=crop" alt="Técnico com equipamentos verificando componentes de ar-condicionado" width="900" height="720" loading="lazy">
+          <div class="stat-pill">
+            <strong>1.200+</strong>
+            atendimentos realizados em Santos
+          </div>
+        </div>
+        <div>
+          <h2 class="section-title" id="sobre-title">Por que clientes chamam a Clima Certo</h2>
+          <ul class="differentials">
+            <li><span class="check">✓</span><span>Técnicos com certificação NR12 e treinamento de marca</span></li>
+            <li><span class="check">✓</span><span>Atendemos todas as marcas: Daikin, Mitsubishi, Samsung, LG, Electrolux, Midea</span></li>
+            <li><span class="check">✓</span><span>Orçamento sem custo e sem compromisso</span></li>
+            <li><span class="check">✓</span><span>Garantia de serviço por escrito — 90 dias em peças e mão de obra</span></li>
+            <li><span class="check">✓</span><span>Atendimento residencial e comercial em toda Santos e região</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="avaliacoes" aria-labelledby="avaliacoes-title">
+      <div class="container">
+        <div class="reviews-head">
+          <div>
+            <h2 class="section-title" id="avaliacoes-title">O que dizem nossos clientes</h2>
+            <p class="section-subtitle">Avaliações demonstrativas baseadas em situações comuns de Google Maps</p>
+          </div>
+          <div class="rating-box" aria-label="Nota geral 4.9 de 5">
+            <div class="stars">★★★★★</div>
+            <strong>4.9</strong>
+            <span>Nota no Google — 87 avaliações</span>
+          </div>
+        </div>
+        <div class="reviews-grid">
+          <article class="review-card">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p>Aparelho parou no sábado à tarde. Mandei mensagem e me atenderam no dia seguinte pela manhã. Serviço rápido e sem enrolação.</p>
+            <div class="reviewer">Rodrigo M. — Santos</div>
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+          </article>
+          <article class="review-card">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p>Temos 4 aparelhos na clínica. A Clima Certo faz a manutenção preventiva todo semestre e nunca tivemos problema no verão.</p>
+            <div class="reviewer">Clínica Bem Estar</div>
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+          </article>
+          <article class="review-card">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p>Já chamei duas vezes. Na primeira, consertaram o meu Daikin. Na segunda, instalaram um novo split no quarto. Excelente.</p>
+            <div class="reviewer">Marina S. — Aparecida</div>
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery" aria-labelledby="galeria-title">
+      <div class="container">
+        <h2 class="section-title" id="galeria-title">Nossos serviços em campo</h2>
+        <div class="gallery-grid">
+          <figure class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80&auto=format&fit=crop" alt="Técnico da Clima Certo instalando ar-condicionado split em Santos" width="800" height="520" loading="lazy">
+          </figure>
+          <figure class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80&auto=format&fit=crop" alt="Ar-condicionado split instalado em ambiente residencial" width="800" height="520" loading="lazy">
+          </figure>
+          <figure class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop" alt="Manutenção preventiva de ar-condicionado em Santos" width="800" height="520" loading="lazy">
+          </figure>
+          <figure class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80&auto=format&fit=crop" alt="Climatização de ambiente comercial em Santos e região" width="800" height="520" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contato" aria-labelledby="contato-title">
+      <div class="container">
+        <h2 class="section-title" id="contato-title">Localização e horários</h2>
+        <div class="contact-grid">
+          <div class="info-panel">
+            <div class="info-group">
+              <h3><i data-lucide="map-pin"></i> Onde estamos</h3>
+              <p>Rua Euclides da Cunha, 847<br>Aparecida — Santos, SP<br>CEP 11045-002</p>
+            </div>
+            <div class="info-group">
+              <h3><i data-lucide="clock"></i> Horário de atendimento</h3>
+              <p>Segunda a sexta: 7h às 18h<br>Sábado: 8h às 14h<br>Emergências: WhatsApp 24h</p>
+            </div>
+            <div class="info-group">
+              <h3><i data-lucide="phone"></i> Contatos</h3>
+              <p>(13) 99800-0000<br>WhatsApp: (13) 99800-0000<br>contato@climacerto.com.br (fictício)</p>
+            </div>
+            <a class="btn btn-primary" href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+o+site+da+Clima+Certo+e+preciso+de+ajuda+com+ar-condicionado.+Podem+me+atender%3F">Pedir orçamento agora</a>
+          </div>
+          <div class="map-panel">
+            <iframe
+              src="https://www.google.com/maps?q=-23.978,-46.334&z=13&output=embed"
+              width="100%"
+              height="350"
+              style="border:0; border-radius:8px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localização aproximada da Clima Certo em Santos, SP"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 class="section-title" id="faq-title">Perguntas frequentes</h2>
+        <div class="faq-list">
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">Quanto tempo leva uma instalação de ar-condicionado?<i data-lucide="plus"></i></button>
+            <div class="faq-answer"><p>Uma instalação padrão de split residencial leva entre 2 e 4 horas, dependendo da posição do aparelho e da passagem de tubulação. Para instalações em lajes ou ambientes com acesso difícil, pode levar um pouco mais. Sempre informamos o prazo antes de começar.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">Vocês atendem todas as marcas?<i data-lucide="plus"></i></button>
+            <div class="faq-answer"><p>Sim. Trabalhamos com Daikin, Mitsubishi, Samsung, LG, Electrolux, Midea, Springer, Carrier, Gree, Consul e outras marcas. Nossos técnicos têm treinamento técnico específico para cada fabricante.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">Com que frequência devo fazer a manutenção do ar-condicionado?<i data-lucide="plus"></i></button>
+            <div class="faq-answer"><p>O recomendado é a cada 6 meses — especialmente antes do verão. A manutenção preventiva evita panes, melhora a eficiência energética (o ar-condicionado sujo pode consumir até 30% mais energia) e prolonga a vida útil do aparelho.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">O que está incluso na higienização?<i data-lucide="plus"></i></button>
+            <div class="faq-answer"><p>A higienização completa inclui limpeza do filtro, evaporadora, condensadora e bandeja coletora de água com produtos bactericidas. Após a higienização, o aparelho funciona com ar mais limpo e até 15% mais eficiente.</p></div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" type="button" aria-expanded="false">Quanto custa instalar um ar-condicionado?<i data-lucide="plus"></i></button>
+            <div class="faq-answer"><p>O valor varia conforme o modelo, a potência do aparelho, o tipo de instalação e as condições do local. Fazemos orçamento gratuito e sem compromisso — é só chamar no WhatsApp com a foto do local onde será instalado.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="season-badge">⚠ Verão 2025/2026 — agenda de instalação e manutenção costuma lotar antes das ondas de calor.</div>
+        <h2 id="cta-title">O calor não espera.<br>Seu ar-condicionado, também não.</h2>
+        <p>Atendemos Santos, Cubatão, Guarujá, Praia Grande e São Vicente. Mande uma mensagem agora — respondemos rápido.</p>
+        <a class="btn btn-primary" href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+o+site+da+Clima+Certo+e+preciso+de+ajuda+com+ar-condicionado.+Podem+me+atender%3F">Chamar no WhatsApp</a>
+        <div class="response-note">Geralmente respondemos em menos de 1 hora</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-main">
+      <div>
+        <a class="brand" href="#top" aria-label="Clima Certo, voltar ao topo">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 3v18M5 6l14 12M19 6 5 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="12" cy="12" r="3.2" fill="currentColor"/>
+            </svg>
+          </span>
+          <span>Clima Certo</span>
+        </a>
+        <p>Instalação, manutenção e higienização<br>de ar-condicionado em Santos e região.</p>
+        <div class="social-icons" aria-label="Redes sociais demonstrativas">
+          <span aria-label="Instagram demonstrativo"><i data-lucide="instagram"></i></span>
+          <span aria-label="Facebook demonstrativo"><i data-lucide="facebook"></i></span>
+          <span aria-label="YouTube demonstrativo"><i data-lucide="youtube"></i></span>
+        </div>
+      </div>
+      <div>
+        <h3>Links rápidos</h3>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <p>(13) 99800-0000<br>WhatsApp: (13) 99800-0000<br>Rua Euclides da Cunha, 847<br>Aparecida — Santos, SP</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2025 Clima Certo Ar-Condicionado — Site demonstrativo criado pela Marvin Sites</span>
+      <a href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Quero+um+site+assim+para+meu+neg%C3%B3cio.">Quero um site assim para meu negócio</a>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+o+site+da+Clima+Certo+e+preciso+de+ajuda+com+ar-condicionado.+Podem+me+atender%3F" aria-label="Pedir orçamento pelo WhatsApp">
+    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.528 5.849L.057 23.998l6.306-1.653A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.792 9.792 0 01-4.992-1.365l-.358-.213-3.712.973.99-3.619-.234-.372A9.796 9.796 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/>
+    </svg>
+    <span>Pedir orçamento</span>
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) window.lucide.createIcons();
+
+      const nav = document.querySelector('.nav-links');
+      const menuToggle = document.querySelector('.menu-toggle');
+      const headerOffset = () => {
+        const notice = document.querySelector('.demo-notice')?.offsetHeight || 0;
+        const header = document.querySelector('.site-header')?.offsetHeight || 0;
+        return notice + header + 12;
+      };
+
+      menuToggle?.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        document.body.classList.toggle('nav-open', isOpen);
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', (event) => {
+          const targetId = anchor.getAttribute('href');
+          if (!targetId || targetId === '#') return;
+
+          const target = document.querySelector(targetId);
+          if (!target) return;
+
+          event.preventDefault();
+          const top = target.getBoundingClientRect().top + window.scrollY - headerOffset();
+          window.scrollTo({ top, behavior: 'smooth' });
+
+          nav?.classList.remove('open');
+          document.body.classList.remove('nav-open');
+          menuToggle?.setAttribute('aria-expanded', 'false');
+          menuToggle?.setAttribute('aria-label', 'Abrir menu');
+        });
+      });
+
+      document.querySelectorAll('.faq-item').forEach((item) => {
+        const button = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+
+        button?.addEventListener('click', () => {
+          const isActive = item.classList.toggle('active');
+          button.setAttribute('aria-expanded', String(isActive));
+          answer.style.maxHeight = isActive ? `${answer.scrollHeight}px` : '0px';
+        });
+      });
+
+      setTimeout(() => {
+        document.querySelector('.whatsapp-float')?.classList.add('visible');
+      }, 2000);
+
+      const animatedGroups = document.querySelectorAll('.service-card, .review-card, .gallery-card');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.18 });
+
+      animatedGroups.forEach((item) => observer.observe(item));
+    });
+  </script>
+</body>
+</html>
