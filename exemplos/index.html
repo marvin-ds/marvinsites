@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplos de sites por segmento | Marvin Sites</title>
+  <meta name="description" content="Veja modelos demonstrativos de sites profissionais para negócios locais. Exemplos por nicho criados pela Marvin Sites.">
+  <meta name="robots" content="index, follow">
+  <meta name="generator" content="Marvin Sites — Portfólio de Nichos">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0F3057;
+      --primary-dark: #091F38;
+      --accent: #00A8E8;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #128C7E;
+      --bg: #F0F8FF;
+      --surface: #FFFFFF;
+      --section: #E8F4FD;
+      --text: #1A2B3C;
+      --muted: #5A7A95;
+      --border: #C8DFF0;
+      --container: 1160px;
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Open Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--container));
+      margin-inline: auto;
+    }
+
+    .notice {
+      background: var(--accent);
+      color: var(--primary-dark);
+      font-weight: 800;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .notice .container {
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .notice a {
+      border-bottom: 2px solid currentColor;
+    }
+
+    header {
+      background: var(--primary-dark);
+      color: #fff;
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 9px;
+      background: rgba(0,168,232,0.14);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: rgba(255,255,255,0.82);
+      font-weight: 700;
+      font-size: 0.92rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .btn {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 7px;
+      padding: 0 20px;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: #062F18;
+      box-shadow: 0 12px 26px rgba(37,211,102,0.28);
+    }
+
+    .btn-whatsapp:hover,
+    .btn-whatsapp:focus-visible {
+      background: #2BE06D;
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--primary);
+    }
+
+    .hero {
+      padding: clamp(72px, 10vw, 120px) 0 clamp(56px, 8vw, 96px);
+      background:
+        radial-gradient(circle at 82% 18%, rgba(0,168,232,0.16), transparent 28%),
+        linear-gradient(180deg, var(--bg), #fff);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+      gap: clamp(24px, 5vw, 56px);
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 18px;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--font-heading);
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--primary-dark);
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+      line-height: 1.02;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: 1.12rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .featured-card {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface);
+      box-shadow: 0 24px 70px rgba(15,48,87,0.18);
+    }
+
+    .featured-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .featured-content {
+      padding: 22px;
+    }
+
+    .status {
+      display: inline-flex;
+      margin-bottom: 12px;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: rgba(37,211,102,0.16);
+      color: #0F5A2E;
+      font-weight: 800;
+      font-size: 0.8rem;
+    }
+
+    .featured-content h2 {
+      margin: 0 0 8px;
+      color: var(--primary-dark);
+      font-size: 1.45rem;
+    }
+
+    .featured-content p {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .section {
+      padding: clamp(56px, 8vw, 96px) 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      color: var(--primary-dark);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+    }
+
+    .section-head p {
+      max-width: 520px;
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .portfolio-card {
+      min-height: 214px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px;
+      background: var(--surface);
+      box-shadow: 0 2px 12px rgba(15,48,87,0.08);
+    }
+
+    .portfolio-card.active {
+      border-color: var(--accent);
+    }
+
+    .portfolio-card h3 {
+      margin: 0 0 8px;
+      color: var(--primary-dark);
+      font-size: 1.16rem;
+    }
+
+    .portfolio-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .tag {
+      align-self: flex-start;
+      padding: 5px 9px;
+      border-radius: 999px;
+      background: var(--section);
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 0.78rem;
+    }
+
+    .tag.live {
+      background: rgba(37,211,102,0.16);
+      color: #0F5A2E;
+    }
+
+    .card-link {
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-weight: 800;
+      border-bottom: 2px solid var(--accent);
+      width: fit-content;
+    }
+
+    .cta {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+    }
+
+    .cta h2 {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.08;
+    }
+
+    .cta p {
+      max-width: 660px;
+      margin: 18px auto 28px;
+      color: #9FE7FF;
+      font-size: 1.08rem;
+    }
+
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255,255,255,0.76);
+      padding: 28px 0;
+      font-size: 0.92rem;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    footer a {
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .nav {
+        align-items: start;
+        flex-direction: column;
+        padding: 18px 0;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero-actions,
+      .hero-actions .btn,
+      .cta .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="notice">
+    <div class="container">
+      <span>Portfólio demonstrativo da Marvin Sites.</span>
+      <a href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+os+exemplos+da+Marvin+Sites+e+quero+um+or%C3%A7amento+para+meu+neg%C3%B3cio.">Quero um site assim</a>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/">
+        <span class="brand-mark">M</span>
+        <span>Marvin Sites</span>
+      </a>
+      <nav class="nav-links" aria-label="Navegação">
+        <a href="/">Início</a>
+        <a href="#modelos">Modelos</a>
+        <a href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+os+exemplos+da+Marvin+Sites+e+quero+um+or%C3%A7amento+para+meu+neg%C3%B3cio.">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Exemplos por segmento</span>
+          <h1>Veja como seu negócio pode aparecer melhor.</h1>
+          <p>Cada modelo é um site demonstrativo criado para um nicho real de negócio local. A ideia é simples: você não precisa imaginar o resultado; pode ver uma referência pronta para o seu segmento.</p>
+          <div class="hero-actions">
+            <a class="btn btn-whatsapp" href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+os+exemplos+da+Marvin+Sites+e+quero+um+or%C3%A7amento+para+meu+neg%C3%B3cio.">Pedir orçamento</a>
+            <a class="btn btn-secondary" href="#modelos">Ver modelos</a>
+          </div>
+        </div>
+
+        <article class="featured-card">
+          <img src="ar-condicionado/assets/tecnico-instalando-split.png" alt="Modelo demonstrativo de site para empresa de ar-condicionado">
+          <div class="featured-content">
+            <span class="status">Publicado</span>
+            <h2>Ar-condicionado</h2>
+            <p>Modelo demonstrativo para instalação, manutenção, higienização e venda de ar-condicionado.</p>
+            <a class="btn btn-whatsapp" href="ar-condicionado/">Ver modelo publicado</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="modelos">
+      <div class="container">
+        <div class="section-head">
+          <h2>Modelos por nicho</h2>
+          <p>O portfólio começa com ar-condicionado e será expandido para os principais tipos de negócio local.</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card active">
+            <div>
+              <span class="tag live">Publicado</span>
+              <h3>Ar-condicionado</h3>
+              <p>Instalação, manutenção, higienização e climatização comercial.</p>
+            </div>
+            <a class="card-link" href="ar-condicionado/">Ver exemplo</a>
+          </article>
+          <article class="portfolio-card">
+            <div><span class="tag">Próximo</span><h3>Clínica de Estética</h3><p>Captação de clientes, autoridade visual e agenda pelo WhatsApp.</p></div>
+            <span class="card-link">Em breve</span>
+          </article>
+          <article class="portfolio-card">
+            <div><span class="tag">Próximo</span><h3>Eletricista</h3><p>Busca urgente, atendimento rápido e prova de confiança.</p></div>
+            <span class="card-link">Em breve</span>
+          </article>
+          <article class="portfolio-card">
+            <div><span class="tag">Próximo</span><h3>Dentista</h3><p>Confiança local, serviços claros e agendamento fácil.</p></div>
+            <span class="card-link">Em breve</span>
+          </article>
+          <article class="portfolio-card">
+            <div><span class="tag">Próximo</span><h3>Contador</h3><p>Presença B2B para MEIs, pequenas empresas e prestadores.</p></div>
+            <span class="card-link">Em breve</span>
+          </article>
+          <article class="portfolio-card">
+            <div><span class="tag">Próximo</span><h3>Empresa de Reforma</h3><p>Antes e depois, orçamento e serviços para obras locais.</p></div>
+            <span class="card-link">Em breve</span>
+          </article>
+          <article class="portfolio-card">
+            <div><span class="tag">Planejado</span><h3>Salão de Beleza</h3><p>Serviços, resultados visuais e contato rápido.</p></div>
+            <span class="card-link">Em breve</span>
+          </article>
+          <article class="portfolio-card">
+            <div><span class="tag">Planejado</span><h3>Psicólogo</h3><p>Confiança, acolhimento e clareza para agendamento.</p></div>
+            <span class="card-link">Em breve</span>
+          </article>
+          <article class="portfolio-card">
+            <div><span class="tag">Planejado</span><h3>Distribuidora de Bebidas</h3><p>Entrega, atacado e pedidos para bares e eventos.</p></div>
+            <span class="card-link">Em breve</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container">
+        <h2>Seu segmento ainda não está aqui?</h2>
+        <p>A Marvin pode criar uma página demonstrativa para o seu tipo de negócio e adaptar a estrutura para vender melhor no WhatsApp.</p>
+        <a class="btn btn-whatsapp" href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+o+portf%C3%B3lio+da+Marvin+Sites+e+quero+um+or%C3%A7amento+para+um+site+do+meu+segmento.">Falar com a Marvin</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>© 2026 Marvin Sites — Portfólio demonstrativo por segmento</span>
+      <a href="/">Voltar para marvinsites.com.br</a>
+    </div>
+  </footer>
+</body>
+</html>
