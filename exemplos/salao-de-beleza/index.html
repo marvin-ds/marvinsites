@@ -1091,6 +1091,11 @@
         color: var(--color-primary);
       }
 
+      .work-card img {
+        height: clamp(300px, 58vw, 420px);
+        aspect-ratio: auto;
+      }
+
       .work-card:hover img,
       .work-card.hovered img {
         transform: none;
@@ -1126,8 +1131,9 @@
       }
 
       .hero img {
-        height: 50vh;
-        min-height: 380px;
+        height: clamp(300px, 42vh, 360px);
+        min-height: 0;
+        object-position: center 36%;
       }
 
       .hero-panel {
@@ -1144,6 +1150,16 @@
 
       .portfolio-grid {
         grid-template-columns: 1fr;
+      }
+
+      .work-card img {
+        height: clamp(245px, 70vw, 310px);
+      }
+
+      .difference-image img {
+        height: clamp(260px, 72vw, 330px);
+        aspect-ratio: auto;
+        object-position: center;
       }
 
       .price-row {
