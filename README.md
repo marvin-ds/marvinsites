@@ -178,11 +178,11 @@ docs: atualiza README
 
 ## Documentação do projeto
 
-A arquitetura completa, decisões técnicas, estratégia de SEO, roadmap de implementação e checklist de lançamento estão documentados em:
+A porta de entrada vigente para documentação estratégica, operacional, técnica e histórica é:
 
-- `docs/arquitetura.md` — estrutura técnica completa
-- `docs/fundacional.md` — posicionamento, ofertas e estratégia comercial
-- `docs/operacional.md` — rotina de prospecção, metas e funil de vendas
+- `docs/marvin/README.md` — índice documental canônico da Marvin Sites
+
+Os arquivos `docs/fundacional.md`, `docs/operacional.md` e `docs/arquitetura.md` são históricos e não devem ser usados como fonte atual sem passar pelo índice vigente.
 
 ---
 

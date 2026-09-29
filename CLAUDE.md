@@ -4,9 +4,10 @@
 Site institucional/comercial da marca **Marvin Sites**: presença digital local para pequenos negócios brasileiros.
 
 ## Documentação
-- `docs/fundacional.md` — estratégia, posicionamento, nichos, ofertas, público-alvo
-- `docs/operacional.md` — rotina semanal, metas, scripts de venda, checklist
+- `docs/marvin/README.md` — índice documental vigente da Marvin Sites
 - `docs/paleta-oficial.html` — paleta de cores e tokens visuais
+
+`docs/fundacional.md` e `docs/operacional.md` são históricos; use o índice vigente antes de decisões estratégicas ou operacionais.
 
 ## Paleta
 | Token | Hex | Uso |
