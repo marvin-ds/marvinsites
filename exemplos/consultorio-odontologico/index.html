@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Clínica Dr. Rafael Melo — Consultório Odontológico em Ribeirão Preto</title>
+  <meta name="description" content="Consultório odontológico em Ribeirão Preto. Check-up, clareamento, implantes, alinhadores e atendimento para dor. Agende pelo WhatsApp.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="generator" content="Marvin Sites — Demonstrativo de Portfólio">
+  <meta property="og:title" content="Clínica Dr. Rafael Melo — Odontologia em Ribeirão Preto">
+  <meta property="og:description" content="Modelo demonstrativo para consultório odontológico, com agenda pelo WhatsApp, tratamentos claros e prova de confiança.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="og-image.jpg">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230EA5E9'/%3E%3Cpath d='M22 16c-6 3-8 11-5 20l5 14c1 3 5 3 6 0l4-12 4 12c1 3 5 3 6 0l5-14c3-9 1-17-5-20-4-2-7 0-10 2-3-2-6-4-10-2Z' fill='white'/%3E%3Cpath d='M20 31h24' stroke='%2338BDF8' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary: #0EA5E9;
+      --color-primary-dark: #075985;
+      --color-primary-soft: #E0F2FE;
+      --color-accent: #38BDF8;
+      --color-accent-strong: #0284C7;
+      --color-bg: #F0F9FF;
+      --color-bg-soft: #F8FCFF;
+      --color-surface: #FFFFFF;
+      --color-ink: #082F49;
+      --color-text: #16445F;
+      --color-muted: #64748B;
+      --color-border: #CBEAFE;
+      --color-line: #E2F3FD;
+      --color-success: #14B8A6;
+      --color-warm: #F59E0B;
+      --color-white: #FFFFFF;
+      --color-whatsapp: #25D366;
+
+      --font-heading: 'Poppins', system-ui, sans-serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+
+      --text-xs: 0.75rem;
+      --text-sm: 0.875rem;
+      --text-base: 1rem;
+      --text-lg: 1.125rem;
+      --text-xl: 1.25rem;
+      --text-2xl: 1.5rem;
+      --text-3xl: 2rem;
+      --text-4xl: 2.75rem;
+      --text-5xl: 4rem;
+
+      --leading-tight: 1.08;
+      --leading-body: 1.7;
+      --radius-sm: 6px;
+      --radius-card: 8px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 16px 48px rgba(14, 116, 144, 0.10);
+      --shadow-card: 0 10px 34px rgba(8, 47, 73, 0.08);
+      --transition: 0.22s ease;
+      --container: 1120px;
+      --notice-height: 42px;
+      --header-height: 76px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: var(--leading-body);
+    }
+
+    body.nav-locked {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--container));
+      margin-inline: auto;
+    }
+
+    .demo-notice {
+      position: sticky;
+      top: 0;
+      z-index: 10000;
+      min-height: var(--notice-height);
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-size: 0.8125rem;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .demo-notice .container {
+      min-height: var(--notice-height);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .demo-notice a {
+      border-bottom: 1px solid currentColor;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 9000;
+      border-bottom: 1px solid rgba(203, 234, 254, 0.9);
+      background: rgba(248, 252, 255, 0.94);
+      backdrop-filter: blur(18px);
+    }
+
+    .header-inner {
+      min-height: var(--header-height);
+      display: grid;
+      grid-template-columns: minmax(190px, auto) 1fr auto;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      line-height: 1;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: var(--color-white);
+      box-shadow: 0 10px 24px rgba(14, 165, 233, 0.25);
+    }
+
+    .brand-copy {
+      display: grid;
+      gap: 4px;
+    }
+
+    .brand strong {
+      color: var(--color-ink);
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand span {
+      color: var(--color-primary-dark);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      color: var(--color-muted);
+      font-size: var(--text-sm);
+      font-weight: 700;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--color-primary-dark);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      background: var(--color-surface);
+      color: var(--color-primary-dark);
+      cursor: pointer;
+    }
+
+    .menu-toggle span,
+    .menu-toggle span::before,
+    .menu-toggle span::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 2px;
+      border-radius: var(--radius-pill);
+      background: currentColor;
+    }
+
+    .menu-toggle span::before {
+      transform: translateY(-7px);
+    }
+
+    .menu-toggle span::after {
+      transform: translateY(5px);
+    }
+
+    .btn {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 20px;
+      border: 0;
+      border-radius: var(--radius-pill);
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-size: var(--text-sm);
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+      box-shadow: 0 12px 26px rgba(14, 165, 233, 0.22);
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-2px);
+      background: var(--color-primary-dark);
+      box-shadow: 0 16px 34px rgba(7, 89, 133, 0.22);
+    }
+
+    .btn-whatsapp {
+      background: var(--color-whatsapp);
+      color: #062F18;
+      box-shadow: 0 14px 28px rgba(37, 211, 102, 0.25);
+    }
+
+    .btn-whatsapp:hover,
+    .btn-whatsapp:focus-visible {
+      background: #20BD5A;
+      color: #052514;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      color: var(--color-primary-dark);
+      box-shadow: none;
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus-visible {
+      background: var(--color-primary-soft);
+      color: var(--color-primary-dark);
+      box-shadow: none;
+    }
+
+    .mobile-cta {
+      display: none;
+    }
+
+    [data-icon] {
+      width: 22px;
+      height: 22px;
+      display: inline-grid;
+      place-items: center;
+      flex: 0 0 auto;
+      color: currentColor;
+    }
+
+    [data-icon]::before {
+      content: "";
+      width: 1em;
+      height: 1em;
+      display: block;
+      background: currentColor;
+      -webkit-mask: var(--icon) center / contain no-repeat;
+      mask: var(--icon) center / contain no-repeat;
+    }
+
+    [data-icon="tooth"] { --icon: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 3c-4 1-5 6-3 11l2 6c.6 1.8 3 1.7 3.4-.1L12 13l1.6 6.9c.4 1.8 2.8 1.9 3.4.1l2-6c2-5 1-10-3-11-1.6-.4-2.8.1-4 1.1C10.8 3.1 9.6 2.6 8 3Z'/%3E%3C/svg%3E"); }
+    [data-icon="calendar"] { --icon: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 2h2v3h6V2h2v3h3a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3V2Zm13 8H4v10h16V10Z'/%3E%3C/svg%3E"); }
+    [data-icon="spark"] { --icon: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m12 2 2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2Z'/%3E%3C/svg%3E"); }
+    [data-icon="shield"] { --icon: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2 4 5v6c0 5.4 3.3 9.8 8 11 4.7-1.2 8-5.6 8-11V5l-8-3Zm4.7 7.7-5.3 5.3-2.8-2.8L10 10.8l1.4 1.4 3.9-3.9 1.4 1.4Z'/%3E%3C/svg%3E"); }
+    [data-icon="clock"] { --icon: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 5v4.6l3.2 2-1.1 1.7L11 12.7V7h2Z'/%3E%3C/svg%3E"); }
+    [data-icon="pin"] { --icon: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a8 8 0 0 0-8 8c0 5.8 8 12 8 12s8-6.2 8-12a8 8 0 0 0-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z'/%3E%3C/svg%3E"); }
+    [data-icon="phone"] { --icon: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.6 2.5 10 6 8 9c1.2 2.5 3.5 4.8 6 6l3-2 3.5 3.4c.7.7.7 1.8 0 2.5l-1.7 1.7c-.8.8-2 1.1-3 .8C9.7 19.8 4.2 14.3 2.6 8.2c-.3-1 .1-2.2.8-3l1.7-1.7c.7-.7 1.8-.7 2.5 0Z'/%3E%3C/svg%3E"); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 86% 12%, rgba(56, 189, 248, 0.22), transparent 34%),
+        linear-gradient(180deg, #F8FCFF 0%, #E0F2FE 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: auto -8vw -28vw auto;
+      width: 48vw;
+      height: 48vw;
+      border: 1px solid rgba(14, 165, 233, 0.26);
+      border-radius: 50%;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      min-height: calc(100vh - var(--notice-height) - var(--header-height));
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(340px, 0.78fr);
+      align-items: center;
+      gap: clamp(28px, 6vw, 72px);
+      padding: clamp(54px, 7vw, 92px) 0;
+    }
+
+    .eyebrow,
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--color-primary-dark);
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before,
+    .section-label::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: var(--color-accent);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--color-ink);
+      font-family: var(--font-heading);
+      letter-spacing: 0;
+      line-height: var(--leading-tight);
+    }
+
+    .hero h1 {
+      max-width: 720px;
+      margin: 18px 0 0;
+      font-size: clamp(2.8rem, 6vw, var(--text-5xl));
+      font-weight: 800;
+    }
+
+    .hero-copy {
+      max-width: 610px;
+      margin: 22px 0 0;
+      color: var(--color-text);
+      font-size: var(--text-lg);
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 670px;
+      margin-top: 38px;
+    }
+
+    .trust-item {
+      min-height: 92px;
+      padding: 18px;
+      border: 1px solid rgba(203, 234, 254, 0.9);
+      border-radius: var(--radius-card);
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: 0 14px 34px rgba(8, 47, 73, 0.05);
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--color-primary-dark);
+      font-family: var(--font-heading);
+      font-size: var(--text-2xl);
+      line-height: 1;
+    }
+
+    .trust-item span {
+      display: block;
+      margin-top: 8px;
+      color: var(--color-muted);
+      font-size: var(--text-sm);
+      line-height: 1.35;
+    }
+
+    .appointment-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: 18px;
+      background: var(--color-surface);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .appointment-photo {
+      height: clamp(230px, 28vw, 360px);
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+    }
+
+    .appointment-panel {
+      padding: 26px;
+    }
+
+    .appointment-panel h2 {
+      margin-bottom: 10px;
+      font-size: var(--text-2xl);
+    }
+
+    .appointment-panel p {
+      margin-bottom: 18px;
+      color: var(--color-muted);
+      font-size: var(--text-sm);
+    }
+
+    .slot-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .slot {
+      min-height: 56px;
+      padding: 10px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      background: var(--color-bg-soft);
+      color: var(--color-primary-dark);
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .slot.is-selected {
+      border-color: var(--color-primary);
+      background: var(--color-primary);
+      color: var(--color-white);
+    }
+
+    .urgent-strip {
+      background: var(--color-primary-dark);
+      color: var(--color-white);
+    }
+
+    .urgent-strip .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.18);
+    }
+
+    .urgent-item {
+      padding: 22px 18px;
+      background: var(--color-primary-dark);
+    }
+
+    .urgent-item strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      line-height: 1.1;
+    }
+
+    .urgent-item span {
+      display: block;
+      margin-top: 8px;
+      color: rgba(255,255,255,0.74);
+      font-size: var(--text-sm);
+      line-height: 1.45;
+    }
+
+    .section {
+      padding: clamp(64px, 9vw, 112px) 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 0.65fr);
+      align-items: end;
+      gap: clamp(22px, 5vw, 70px);
+      margin-bottom: 34px;
+    }
+
+    .section-title {
+      margin: 14px 0 0;
+      font-size: clamp(2rem, 4.2vw, var(--text-4xl));
+      font-weight: 800;
+    }
+
+    .section-intro {
+      margin: 0;
+      color: var(--color-muted);
+      font-size: var(--text-lg);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      gap: clamp(28px, 5vw, 64px);
+      align-items: center;
+    }
+
+    .about-card {
+      padding: clamp(26px, 4vw, 46px);
+      border-radius: 18px;
+      background: var(--color-surface);
+      box-shadow: var(--shadow-card);
+    }
+
+    .about-card h2 {
+      margin: 14px 0 18px;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-weight: 800;
+    }
+
+    .about-card p {
+      color: var(--color-muted);
+    }
+
+    .check-list {
+      display: grid;
+      gap: 13px;
+      margin: 26px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 12px;
+      color: var(--color-text);
+      font-weight: 700;
+    }
+
+    .check-list li::before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--color-primary-soft);
+      box-shadow: inset 0 0 0 6px var(--color-primary);
+    }
+
+    .image-stack {
+      display: grid;
+      grid-template-columns: 0.82fr 1fr;
+      gap: 16px;
+      align-items: end;
+    }
+
+    .image-stack img {
+      width: 100%;
+      object-fit: cover;
+      box-shadow: var(--shadow-card);
+    }
+
+    .image-stack img:first-child {
+      height: clamp(340px, 38vw, 520px);
+      border-radius: 18px 18px 6px 18px;
+    }
+
+    .image-stack img:last-child {
+      height: clamp(260px, 28vw, 380px);
+      border-radius: 6px 18px 18px 18px;
+    }
+
+    .treatment-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .treatment-card {
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      background: var(--color-surface);
+      box-shadow: var(--shadow-card);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .treatment-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .treatment-card .icon-box {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--color-primary-soft);
+      color: var(--color-primary-dark);
+    }
+
+    .treatment-card h3 {
+      margin: 22px 0 10px;
+      font-size: var(--text-xl);
+    }
+
+    .treatment-card p {
+      margin-bottom: 20px;
+      color: var(--color-muted);
+      font-size: var(--text-sm);
+    }
+
+    .treatment-card a {
+      margin-top: auto;
+      color: var(--color-primary-dark);
+      font-size: var(--text-sm);
+      font-weight: 900;
+    }
+
+    .process {
+      background: var(--color-surface);
+    }
+
+    .process-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+      gap: clamp(28px, 6vw, 76px);
+      align-items: start;
+    }
+
+    .process-aside {
+      position: sticky;
+      top: 120px;
+    }
+
+    .process-aside h2 {
+      margin: 14px 0 16px;
+      font-size: clamp(2rem, 4vw, 3.25rem);
+    }
+
+    .process-aside p {
+      color: var(--color-muted);
+    }
+
+    .process-list {
+      display: grid;
+      gap: 14px;
+      counter-reset: steps;
+    }
+
+    .process-step {
+      position: relative;
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 18px;
+      padding: 22px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      background: linear-gradient(135deg, #FFFFFF, #F6FCFF);
+    }
+
+    .process-step::before {
+      counter-increment: steps;
+      content: "0" counter(steps);
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--color-primary-dark);
+      color: var(--color-white);
+      font-family: var(--font-heading);
+      font-weight: 800;
+    }
+
+    .process-step h3 {
+      margin-bottom: 6px;
+      font-size: var(--text-xl);
+    }
+
+    .process-step p {
+      margin: 0;
+      color: var(--color-muted);
+      font-size: var(--text-sm);
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .team-card {
+      overflow: hidden;
+      border-radius: var(--radius-card);
+      background: var(--color-surface);
+      box-shadow: var(--shadow-card);
+    }
+
+    .team-photo {
+      height: 260px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--color-primary-soft), #FFFFFF);
+      color: var(--color-primary-dark);
+      font-family: var(--font-heading);
+      font-size: 4rem;
+      font-weight: 800;
+    }
+
+    .team-card div:last-child {
+      padding: 24px;
+    }
+
+    .team-card h3 {
+      margin-bottom: 6px;
+      font-size: var(--text-xl);
+    }
+
+    .team-role {
+      color: var(--color-primary-dark);
+      font-size: var(--text-sm);
+      font-weight: 900;
+    }
+
+    .team-card p {
+      margin: 14px 0 0;
+      color: var(--color-muted);
+      font-size: var(--text-sm);
+    }
+
+    .proof {
+      background: var(--color-primary-dark);
+      color: var(--color-white);
+    }
+
+    .proof h2,
+    .proof h3 {
+      color: var(--color-white);
+    }
+
+    .proof .section-label {
+      color: var(--color-accent);
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+      gap: clamp(24px, 5vw, 60px);
+      align-items: start;
+    }
+
+    .rating-card {
+      padding: 30px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 18px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .rating-score {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 18px 0 10px;
+    }
+
+    .rating-score strong {
+      font-family: var(--font-heading);
+      font-size: clamp(3rem, 7vw, 5rem);
+      line-height: 1;
+    }
+
+    .rating-score span {
+      color: var(--color-accent);
+      font-weight: 900;
+    }
+
+    .rating-card p {
+      color: rgba(255,255,255,0.76);
+    }
+
+    .testimonial-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .testimonial {
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: var(--radius-card);
+      background: rgba(255,255,255,0.07);
+    }
+
+    .testimonial p {
+      margin-bottom: 16px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .testimonial span {
+      color: var(--color-accent);
+      font-size: var(--text-sm);
+      font-weight: 900;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(0, 1fr);
+      gap: clamp(24px, 5vw, 58px);
+      align-items: stretch;
+    }
+
+    .contact-card {
+      padding: clamp(26px, 4vw, 42px);
+      border-radius: 18px;
+      background: var(--color-surface);
+      box-shadow: var(--shadow-card);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 18px;
+      margin: 28px 0;
+    }
+
+    .contact-list div {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 14px;
+      color: var(--color-text);
+    }
+
+    .contact-list i {
+      margin-top: 4px;
+      color: var(--color-primary);
+    }
+
+    .map-panel {
+      position: relative;
+      overflow: hidden;
+      min-height: 430px;
+      border: 1px solid var(--color-border);
+      border-radius: 18px;
+      background: #EAF8FF;
+      box-shadow: var(--shadow-card);
+    }
+
+    .map-panel svg {
+      width: 100%;
+      height: 100%;
+      min-height: 430px;
+      display: block;
+    }
+
+    .map-label {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      max-width: 360px;
+      padding: 18px;
+      border-radius: var(--radius-card);
+      background: rgba(255,255,255,0.94);
+      box-shadow: var(--shadow-card);
+    }
+
+    .map-label strong {
+      display: block;
+      color: var(--color-ink);
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+    }
+
+    .map-label span {
+      display: block;
+      margin-top: 4px;
+      color: var(--color-muted);
+      font-size: var(--text-sm);
+    }
+
+    .faq {
+      background: var(--color-bg-soft);
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+      max-width: 860px;
+      margin-inline: auto;
+    }
+
+    .faq-item {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      background: var(--color-surface);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 22px;
+      border: 0;
+      background: transparent;
+      color: var(--color-ink);
+      font-weight: 900;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .faq-icon {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--color-primary-soft);
+      color: var(--color-primary-dark);
+      flex: 0 0 auto;
+      font-size: var(--text-xl);
+      line-height: 1;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.22s ease;
+    }
+
+    .faq-answer p {
+      margin: 0;
+      padding: 0 22px 22px;
+      color: var(--color-muted);
+    }
+
+    .final-cta {
+      background:
+        radial-gradient(circle at 12% 20%, rgba(56, 189, 248, 0.30), transparent 30%),
+        linear-gradient(135deg, var(--color-primary-dark), #0369A1);
+      color: var(--color-white);
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      max-width: 760px;
+      margin: 14px auto 18px;
+      color: var(--color-white);
+      font-size: clamp(2.2rem, 5vw, 4.5rem);
+    }
+
+    .final-cta p {
+      max-width: 620px;
+      margin: 0 auto 28px;
+      color: rgba(255,255,255,0.78);
+      font-size: var(--text-lg);
+    }
+
+    .footer {
+      padding: 46px 0 0;
+      background: var(--color-ink);
+      color: rgba(255,255,255,0.76);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.8fr 0.8fr;
+      gap: 32px;
+      padding-bottom: 40px;
+    }
+
+    .footer h3,
+    .footer strong {
+      color: var(--color-white);
+    }
+
+    .footer ul {
+      display: grid;
+      gap: 8px;
+      margin: 10px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding: 18px 0;
+      font-size: var(--text-sm);
+    }
+
+    .footer-bottom .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom a {
+      color: var(--color-accent);
+      font-weight: 900;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 9500;
+      min-height: 60px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 18px;
+      border-radius: var(--radius-pill);
+      background: var(--color-whatsapp);
+      color: #062F18;
+      font-weight: 900;
+      box-shadow: 0 18px 44px rgba(37, 211, 102, 0.36);
+    }
+
+    .whatsapp-icon {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 auto;
+    }
+
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.42s ease, transform 0.42s ease;
+    }
+
+    .animate-on-scroll.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .header-inner {
+        grid-template-columns: 1fr auto;
+        gap: 14px;
+        padding-block: 12px;
+      }
+
+      .menu-toggle {
+        display: grid;
+      }
+
+      .nav-links {
+        position: absolute;
+        inset: 100% 0 auto;
+        display: grid;
+        justify-content: stretch;
+        gap: 0;
+        padding: 10px 16px 18px;
+        border-bottom: 1px solid var(--color-border);
+        background: var(--color-surface);
+        box-shadow: var(--shadow-card);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .nav-links a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--color-line);
+      }
+
+      .header-cta {
+        display: none;
+      }
+
+      .mobile-cta {
+        display: inline-flex;
+        margin-top: 14px;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .process-layout,
+      .proof-grid,
+      .contact-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-aside {
+        position: static;
+      }
+
+      .section-head {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .treatment-grid,
+      .team-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .demo-notice {
+        position: relative;
+      }
+
+      .demo-notice .container {
+        padding-block: 9px;
+        line-height: 1.4;
+      }
+
+      .site-header {
+        position: relative;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+      .brand strong {
+        font-size: 0.94rem;
+      }
+
+      .hero-grid {
+        min-height: auto;
+        padding: 42px 0 54px;
+      }
+
+      .hero-actions,
+      .hero-actions .btn,
+      .appointment-panel .btn,
+      .contact-card .btn {
+        width: 100%;
+      }
+
+      .trust-row,
+      .urgent-strip .container,
+      .treatment-grid,
+      .team-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-item {
+        min-height: auto;
+      }
+
+      .appointment-photo {
+        height: 260px;
+      }
+
+      .slot-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .urgent-item {
+        padding-inline: 16px;
+      }
+
+      .section {
+        padding-block: 62px;
+      }
+
+      .image-stack {
+        grid-template-columns: 1fr;
+      }
+
+      .image-stack img:first-child,
+      .image-stack img:last-child {
+        height: 280px;
+        border-radius: 14px;
+      }
+
+      .process-step {
+        grid-template-columns: 1fr;
+      }
+
+      .team-photo {
+        height: 170px;
+      }
+
+      .map-panel,
+      .map-panel svg {
+        min-height: 320px;
+      }
+
+      .map-label {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        max-width: none;
+      }
+
+      .whatsapp-float {
+        right: 16px;
+        bottom: 18px;
+        width: 58px;
+        min-height: 58px;
+        justify-content: center;
+        padding: 0;
+      }
+
+      .whatsapp-float span {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="demo-notice">
+    <div class="container">
+      <span>Site demonstrativo — A Marvin Sites cria páginas assim para consultórios odontológicos.</span>
+      <a href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+o+exemplo+de+site+para+dentista+da+Marvin+Sites+e+quero+um+or%C3%A7amento+para+minha+cl%C3%ADnica.">Quero um site assim</a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Clínica Dr. Rafael Melo">
+        <span class="brand-mark"><i data-icon="tooth"></i></span>
+        <span class="brand-copy">
+          <strong>Clínica Dr. Rafael Melo</strong>
+          <span>ODONTOLOGIA INTEGRADA</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Navegação principal">
+        <a href="#tratamentos">Tratamentos</a>
+        <a href="#processo">Consulta</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#contato">Contato</a>
+        <a class="btn btn-whatsapp mobile-cta" href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+o+site+do+Dr.+Rafael+Melo+e+quero+agendar+uma+consulta.+T%C3%AAm+hor%C3%A1rio+dispon%C3%ADvel%3F">Agendar consulta</a>
+      </nav>
+
+      <a class="btn btn-whatsapp header-cta" href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+o+site+do+Dr.+Rafael+Melo+e+quero+agendar+uma+consulta.+T%C3%AAm+hor%C3%A1rio+dispon%C3%ADvel%3F">Agendar consulta</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu"><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Ribeirão Preto — Atendimento com hora marcada</span>
+          <h1 id="hero-title">Um sorriso que você não quer esconder mais.</h1>
+          <p class="hero-copy">Odontologia clara, confortável e planejada. Consulta inicial com diagnóstico visual, plano de tratamento por etapas e explicação sem termos difíceis.</p>
+          <div class="hero-actions">
+            <a class="btn btn-whatsapp" href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+o+site+do+Dr.+Rafael+Melo+e+quero+agendar+uma+consulta.+T%C3%AAm+hor%C3%A1rio+dispon%C3%ADvel%3F">Chamar no WhatsApp</a>
+            <a class="btn btn-secondary" href="#tratamentos">Ver tratamentos</a>
+          </div>
+          <div class="trust-row" aria-label="Indicadores demonstrativos">
+            <div class="trust-item"><strong>12+</strong><span>anos de atuação demonstrativa em odontologia clínica</span></div>
+            <div class="trust-item"><strong>4.9</strong><span>nota simulada no Google com relatos demonstrativos</span></div>
+            <div class="trust-item"><strong>48h</strong><span>janela sugerida para primeira avaliação em casos simples</span></div>
+          </div>
+        </div>
+
+        <aside class="appointment-card" aria-label="Painel de agendamento demonstrativo">
+          <img class="appointment-photo" src="https://images.unsplash.com/photo-1777331903190-341a3dd0441b?w=880&q=84&auto=format&fit=crop" alt="Dentista conversando com paciente em consultório odontológico moderno" width="880" height="660">
+          <div class="appointment-panel">
+            <h2>Primeira consulta</h2>
+            <p>Escolha uma janela inicial. Este painel é demonstrativo; o botão abre uma conversa com a Marvin Sites.</p>
+            <div class="slot-grid" aria-label="Horários demonstrativos">
+              <button class="slot is-selected" type="button">Hoje<br>16:30</button>
+              <button class="slot" type="button">Amanhã<br>09:10</button>
+              <button class="slot" type="button">Sexta<br>14:00</button>
+            </div>
+            <a class="btn btn-whatsapp" href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+o+site+do+Dr.+Rafael+Melo+e+quero+agendar+uma+consulta.+T%C3%AAm+hor%C3%A1rio+dispon%C3%ADvel%3F">Agendar avaliação</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="urgent-strip" aria-label="Caminhos rápidos">
+      <div class="container">
+        <div class="urgent-item"><strong>Estou com dor</strong><span>Triagem por WhatsApp e indicação do melhor horário.</span></div>
+        <div class="urgent-item"><strong>Quero melhorar o sorriso</strong><span>Clareamento, lentes, estética e planejamento gradual.</span></div>
+        <div class="urgent-item"><strong>Preciso voltar à rotina</strong><span>Limpeza, check-up, restaurações e prevenção.</span></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="sobre-title">
+      <div class="container about-grid">
+        <div class="about-card animate-on-scroll">
+          <span class="section-label">Como atendemos</span>
+          <h2 id="sobre-title">Diagnóstico primeiro. Procedimento depois.</h2>
+          <p>O paciente chega com uma dúvida: dor, estética, medo de tratamento longo ou vergonha do sorriso. O site precisa mostrar que existe método, calma e clareza antes de qualquer orçamento.</p>
+          <p>Este modelo organiza o consultório como uma experiência de confiança: o visitante entende os tratamentos, vê a equipe, encontra respostas e chama no WhatsApp sem precisar “decifrar” o serviço.</p>
+          <ul class="check-list">
+            <li>Plano de tratamento explicado por etapas</li>
+            <li>Previsão antes de iniciar procedimentos</li>
+            <li>Ambiente demonstrativo limpo, técnico e acolhedor</li>
+          </ul>
+        </div>
+
+        <div class="image-stack animate-on-scroll">
+          <img src="https://images.unsplash.com/photo-1642844771937-23accb161a3d?w=760&q=84&auto=format&fit=crop" alt="Sala odontológica organizada com cadeira e equipamentos modernos" width="760" height="960" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1771442873038-dda05b6ca447?w=620&q=84&auto=format&fit=crop" alt="Instrumentos odontológicos esterilizados em luvas azuis" width="620" height="740" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tratamentos" aria-labelledby="tratamentos-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-label">Tratamentos</span>
+            <h2 class="section-title" id="tratamentos-title">O paciente encontra o caminho certo pelo problema que quer resolver.</h2>
+          </div>
+          <p class="section-intro">Em vez de uma lista técnica confusa, os serviços são agrupados por intenção: urgência, prevenção, estética, reabilitação e acompanhamento.</p>
+        </div>
+
+        <div class="treatment-grid">
+          <article class="treatment-card animate-on-scroll">
+            <span class="icon-box"><i data-icon="clock"></i></span>
+            <h3>Dor ou urgência</h3>
+            <p>Avaliação inicial para dor, sensibilidade, restaurações quebradas e situações que não podem esperar.</p>
+            <a href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Estou+com+dor+e+vi+o+site+do+Dr.+Rafael+Melo.+Podem+me+orientar%3F">Pedir orientação</a>
+          </article>
+          <article class="treatment-card animate-on-scroll">
+            <span class="icon-box"><i data-icon="shield"></i></span>
+            <h3>Check-up preventivo</h3>
+            <p>Consulta de rotina, profilaxia, revisão de restaurações e plano para evitar tratamentos maiores.</p>
+            <a href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Quero+agendar+um+check-up+odontol%C3%B3gico.+T%C3%AAm+hor%C3%A1rio%3F">Agendar check-up</a>
+          </article>
+          <article class="treatment-card animate-on-scroll">
+            <span class="icon-box"><i data-icon="spark"></i></span>
+            <h3>Clareamento dental</h3>
+            <p>Planejamento estético com avaliação de cor, sensibilidade e expectativa real de resultado.</p>
+            <a href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Tenho+interesse+em+clareamento+dental.+Podem+me+explicar+como+funciona%3F">Quero clarear</a>
+          </article>
+          <article class="treatment-card animate-on-scroll">
+            <span class="icon-box"><i data-icon="tooth"></i></span>
+            <h3>Implantes e prótese</h3>
+            <p>Reabilitação com exame, planejamento por etapas e explicação clara de tempo, fases e cuidados.</p>
+            <a href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Quero+saber+sobre+implantes+e+pr%C3%B3tese.+Como+come%C3%A7o%3F">Ver possibilidades</a>
+          </article>
+          <article class="treatment-card animate-on-scroll">
+            <span class="icon-box"><i data-icon="calendar"></i></span>
+            <h3>Alinhadores e ortodontia</h3>
+            <p>Avaliação de mordida, alinhamento e alternativas para quem quer corrigir o sorriso com previsibilidade.</p>
+            <a href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Quero+avaliar+alinhadores+ou+ortodontia.+T%C3%AAm+agenda%3F">Avaliar sorriso</a>
+          </article>
+          <article class="treatment-card animate-on-scroll">
+            <span class="icon-box"><i data-icon="phone"></i></span>
+            <h3>Odontologia familiar</h3>
+            <p>Rotina de cuidado para adultos e famílias, com lembretes, retorno programado e acompanhamento.</p>
+            <a href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Quero+organizar+as+consultas+odontol%C3%B3gicas+da+fam%C3%ADlia.+Podem+ajudar%3F">Organizar agenda</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="processo" aria-labelledby="processo-title">
+      <div class="container process-layout">
+        <aside class="process-aside">
+          <span class="section-label">Primeira consulta</span>
+          <h2 id="processo-title">O que acontece antes de decidir qualquer tratamento.</h2>
+          <p>Sites odontológicos genéricos mostram procedimentos. Este modelo mostra processo: o que reduz ansiedade, aumenta confiança e melhora a qualidade do contato no WhatsApp.</p>
+          <a class="btn btn-secondary" href="#faq">Ver dúvidas frequentes</a>
+        </aside>
+
+        <div class="process-list">
+          <article class="process-step animate-on-scroll">
+            <div><h3>Escuta e queixa principal</h3><p>O paciente explica dor, objetivo estético, medo ou histórico. A consulta começa pelo que realmente importa.</p></div>
+          </article>
+          <article class="process-step animate-on-scroll">
+            <div><h3>Exame clínico e imagens</h3><p>Quando necessário, o consultório solicita radiografia ou imagem complementar antes de estimar tratamento.</p></div>
+          </article>
+          <article class="process-step animate-on-scroll">
+            <div><h3>Plano por prioridade</h3><p>O paciente entende o que é urgente, o que é preventivo e o que pode ser feito em etapas.</p></div>
+          </article>
+          <article class="process-step animate-on-scroll">
+            <div><h3>Orçamento transparente</h3><p>Valores, prazos e retornos são explicados antes de iniciar. Sem surpresa depois da cadeira.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="equipe" aria-labelledby="equipe-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-label">Equipe demonstrativa</span>
+            <h2 class="section-title" id="equipe-title">Profissionais fictícios, estrutura realista de confiança.</h2>
+          </div>
+          <p class="section-intro">A seção de equipe ajuda o visitante a entender quem atende, quais são as áreas e por que o consultório não é apenas mais um perfil no Instagram.</p>
+        </div>
+
+        <div class="team-grid">
+          <article class="team-card animate-on-scroll">
+            <div class="team-photo" aria-hidden="true">RM</div>
+            <div><h3>Dr. Rafael Melo</h3><span class="team-role">Clínico geral e reabilitação</span><p>Responsável pelo diagnóstico inicial, planejamento por etapas e tratamentos restauradores.</p></div>
+          </article>
+          <article class="team-card animate-on-scroll">
+            <div class="team-photo" aria-hidden="true">LC</div>
+            <div><h3>Dra. Laura Campos</h3><span class="team-role">Estética e clareamento</span><p>Atua em procedimentos estéticos, sensibilidade e cuidado preventivo para manutenção do resultado.</p></div>
+          </article>
+          <article class="team-card animate-on-scroll">
+            <div class="team-photo" aria-hidden="true">AV</div>
+            <div><h3>Dra. Amanda Vieira</h3><span class="team-role">Ortodontia e alinhadores</span><p>Avalia alinhamento, mordida e alternativas para correção gradual do sorriso.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section proof" aria-labelledby="prova-title">
+      <div class="container proof-grid">
+        <div class="rating-card animate-on-scroll">
+          <span class="section-label">Prova social</span>
+          <h2 id="prova-title">Confiança precisa aparecer antes da consulta.</h2>
+          <div class="rating-score"><strong>4.9</strong><span>★★★★★</span></div>
+          <p>Nota e relatos demonstrativos baseados em dúvidas comuns de pacientes. Não representam avaliações reais de um consultório existente.</p>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial animate-on-scroll"><p>"Cheguei com medo de implante e entendi o passo a passo antes de decidir. Isso fez toda diferença."</p><span>Marcelo P. · relato demonstrativo</span></article>
+          <article class="testimonial animate-on-scroll"><p>"A consulta explicou por que eu sentia sensibilidade e o que dava para resolver primeiro."</p><span>Ana C. · relato demonstrativo</span></article>
+          <article class="testimonial animate-on-scroll"><p>"Gostei de saber o valor antes de começar. O plano por etapas deixou tudo mais tranquilo."</p><span>Roberta M. · relato demonstrativo</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contato" aria-labelledby="contato-title">
+      <div class="container contact-grid">
+        <div class="contact-card">
+          <span class="section-label">Contato</span>
+          <h2 class="section-title" id="contato-title">Ribeirão Preto, SP</h2>
+          <div class="contact-list">
+            <div><i data-icon="pin"></i><span>Rua das Acácias, 210 (endereço fictício)<br>Jardim Paulista — Ribeirão Preto, SP</span></div>
+            <div><i data-icon="clock"></i><span>Segunda a sexta: 8h às 18h<br>Sábado: 8h às 12h</span></div>
+            <div><i data-icon="phone"></i><span>(16) 99900-0000 (fictício)<br>WhatsApp: (16) 99900-0000</span></div>
+          </div>
+          <a class="btn btn-whatsapp" href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+o+site+do+Dr.+Rafael+Melo+e+quero+agendar+uma+consulta.+T%C3%AAm+hor%C3%A1rio+dispon%C3%ADvel%3F">Chamar no WhatsApp</a>
+        </div>
+
+        <div class="map-panel" aria-label="Mapa ilustrativo de Ribeirão Preto">
+          <svg viewBox="0 0 760 470" role="img" aria-labelledby="map-title map-desc" preserveAspectRatio="xMidYMid slice">
+            <title id="map-title">Mapa ilustrativo do consultório odontológico</title>
+            <desc id="map-desc">Mapa demonstrativo com ruas fictícias para preservar negócios reais.</desc>
+            <rect width="760" height="470" fill="#EAF8FF"/>
+            <path d="M0 360 C116 322 202 402 340 344 C472 288 576 372 760 296 L760 470 L0 470 Z" fill="#BAE6FD" opacity=".58"/>
+            <g stroke="#CBEAFE" stroke-width="5" stroke-linecap="round">
+              <path d="M78 0 L186 470"/><path d="M268 0 L322 470"/><path d="M470 0 L432 470"/><path d="M650 0 L572 470"/>
+              <path d="M0 82 L760 44"/><path d="M0 168 L760 144"/><path d="M0 260 L760 232"/><path d="M0 346 L760 322"/>
+            </g>
+            <g stroke="#0EA5E9" stroke-width="9" stroke-linecap="round"><path d="M112 284 L714 250"/><path d="M386 0 L424 470"/></g>
+            <g fill="#075985" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">
+              <text x="406" y="98" transform="rotate(84 406 98)">Rua das Acácias</text>
+              <text x="136" y="276" transform="rotate(-4 136 276)">Av. Saúde</text>
+              <text x="510" y="190">Jardim Paulista</text>
+              <text x="286" y="398">Ribeirão Preto</text>
+            </g>
+            <g transform="translate(444 218)"><circle r="36" fill="#075985"/><circle r="15" fill="#FFFFFF"/><path d="M0 45 L-14 24 H14 Z" fill="#075985"/></g>
+          </svg>
+          <div class="map-label"><strong>Clínica Dr. Rafael Melo</strong><span>Mapa ilustrativo. Endereço demonstrativo para preservar negócios reais.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-label">Perguntas frequentes</span>
+            <h2 class="section-title" id="faq-title">Antes de sentar na cadeira.</h2>
+          </div>
+          <p class="section-intro">As dúvidas foram escolhidas para reduzir ansiedade e qualificar melhor quem chama no WhatsApp.</p>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false">A primeira consulta já tem procedimento?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Normalmente é uma avaliação. Procedimentos são indicados depois do diagnóstico e da explicação do plano. Em urgências, a prioridade é controlar dor e orientar o próximo passo.</p></div></article>
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false">Clareamento causa sensibilidade?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Pode causar em alguns casos, por isso a avaliação é importante. O protocolo considera histórico, cor inicial, sensibilidade e expectativa de resultado.</p></div></article>
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false">Dá para parcelar tratamento odontológico?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Este é um site demonstrativo. Em um site real, esta área pode explicar condições, etapas de pagamento e o que precisa ser avaliado antes do orçamento.</p></div></article>
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false">Atendem crianças?<span class="faq-icon">+</span></button><div class="faq-answer"><p>O modelo pode ser adaptado para clínica familiar, odontopediatria ou atendimento adulto. Aqui o foco principal é consultório odontológico geral.</p></div></article>
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false">Por que o site tem noindex?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Porque esta página é demonstrativa e não representa um consultório real. Ela existe como exemplo de portfólio da Marvin Sites.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta" aria-labelledby="cta-title">
+      <div class="container">
+        <span class="section-label">Próximo passo</span>
+        <h2 id="cta-title">Seu consultório também pode passar confiança antes da consulta.</h2>
+        <p>A Marvin cria páginas demonstrativas e sites reais para negócios locais que precisam transformar visitas em conversas no WhatsApp.</p>
+        <a class="btn btn-whatsapp" href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+o+exemplo+de+site+para+dentista+da+Marvin+Sites+e+quero+um+or%C3%A7amento+para+minha+cl%C3%ADnica.">Quero um site assim</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><h3>Clínica Dr. Rafael Melo</h3><p>Consultório odontológico demonstrativo em Ribeirão Preto, SP.</p><p>Rua das Acácias, 210 — Jardim Paulista<br>Ribeirão Preto, SP — CEP 14020-900 (fictício)</p></div>
+      <div><strong>Navegação</strong><ul><li><a href="#tratamentos">Tratamentos</a></li><li><a href="#processo">Primeira consulta</a></li><li><a href="#equipe">Equipe</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><strong>Contato</strong><p>(16) 99900-0000<br>WhatsApp: (16) 99900-0000</p><p>Site demonstrativo. Os dados não pertencem a negócio real.</p></div>
+    </div>
+    <div class="footer-bottom"><div class="container"><span>© 2026 Marvin Sites — Portfólio demonstrativo por segmento</span><a href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+o+exemplo+de+site+para+dentista+da+Marvin+Sites+e+quero+um+or%C3%A7amento+para+minha+cl%C3%ADnica.">Falar com a Marvin</a></div></div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/55[WHATSAPP_MARVIN]?text=Ol%C3%A1!+Vi+o+site+do+Dr.+Rafael+Melo+e+quero+agendar+uma+consulta.+T%C3%AAm+hor%C3%A1rio+dispon%C3%ADvel%3F" aria-label="Chamar no WhatsApp">
+    <svg class="whatsapp-icon" viewBox="0 0 32 32" aria-hidden="true" fill="none"><path d="M26.7 5.2A14.1 14.1 0 0 0 4.6 22.2L3 29l7-1.6A14.1 14.1 0 0 0 26.7 5.2Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M12.1 9.8c-.3-.7-.6-.7-.9-.7h-.8c-.3 0-.8.1-1.2.6-.4.4-1.5 1.5-1.5 3.6s1.6 4.2 1.8 4.5c.2.3 3.1 5 7.7 6.8 3.8 1.5 4.6 1.2 5.4 1.1.8-.1 2.6-1.1 2.9-2.1.4-1 .4-1.9.3-2.1-.1-.2-.4-.3-.9-.6l-2.8-1.4c-.4-.2-.8-.3-1.1.3-.3.4-1.2 1.4-1.5 1.7-.3.3-.5.3-1 .1-.5-.2-2-.7-3.7-2.3-1.4-1.2-2.3-2.7-2.6-3.2-.3-.5 0-.7.2-1 .2-.2.5-.5.7-.8.2-.3.3-.5.5-.8.2-.3.1-.6 0-.8l-1.3-3Z" fill="currentColor"/></svg>
+    <span>Chamar no WhatsApp</span>
+  </a>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        document.body.classList.toggle('nav-locked', isOpen);
+      });
+
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          document.body.classList.remove('nav-locked');
+        });
+      });
+    }
+
+    document.querySelectorAll('.slot').forEach(slot => {
+      slot.addEventListener('click', () => {
+        document.querySelectorAll('.slot').forEach(item => item.classList.remove('is-selected'));
+        slot.classList.add('is-selected');
+      });
+    });
+
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = button.querySelector('.faq-icon');
+        const isOpen = button.getAttribute('aria-expanded') === 'true';
+
+        document.querySelectorAll('.faq-item').forEach(other => {
+          if (other !== item) {
+            other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            other.querySelector('.faq-answer').style.maxHeight = null;
+            other.querySelector('.faq-icon').textContent = '+';
+          }
+        });
+
+        button.setAttribute('aria-expanded', String(!isOpen));
+        answer.style.maxHeight = isOpen ? null : `${answer.scrollHeight}px`;
+        icon.textContent = isOpen ? '+' : '–';
+      });
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(element => observer.observe(element));
+  </script>
+</body>
+</html>
