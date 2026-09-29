@@ -16,6 +16,12 @@ This index points to the current canonical documentation for Marvin Sites.
 | Marvin Starter | [canonical/MARVIN-STARTER-SPEC-V1.0.md](canonical/MARVIN-STARTER-SPEC-V1.0.md) |
 | Strategic governance package | [canonical/PACOTE-GOVERNANCA-ESTRATEGICA-29-09-2026.md](canonical/PACOTE-GOVERNANCA-ESTRATEGICA-29-09-2026.md) |
 
+## Active Strategic Cycle
+
+| Theme | Canonical source |
+|---|---|
+| 90D-01 executive growth plan | [canonical/PLANO-EXECUTIVO-90D-01-MARVIN-SITES-V1.0.md](canonical/PLANO-EXECUTIVO-90D-01-MARVIN-SITES-V1.0.md) |
+
 ## Client Operations
 
 | Theme | Canonical source |
@@ -36,6 +42,7 @@ This index points to the current canonical documentation for Marvin Sites.
 | SaaS / Marvin Local docs | [../marvin-saas/](../marvin-saas/) |
 | Operational governance | `C:\Projetos\marvin-ops` |
 | Strategic operating system | `C:\Projetos\marvin-ops\docs\STRATEGIC-OPERATING-SYSTEM-MARVIN-SITES-V1.0.md` |
+| 90D-01 operational tracking | `C:\Projetos\marvin-ops\docs\90d-01\README.md` |
 | Documentation precedence | `C:\Projetos\marvin-ops\docs\DOCUMENTATION-PRECEDENCE-MATRIX-V1.1.md` |
 | Assistants / agents / decision policy | `C:\Projetos\marvin-ops\docs\INSTRUCOES-ESTRATEGICAS-CONSELHEIRO-MARVIN-SITES-V2.0.md` |
 
