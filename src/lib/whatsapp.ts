@@ -16,7 +16,7 @@ export function gerarLinkWhatsApp({ numero, mensagem, origem, nicho }: WhatsAppP
   return `https://wa.me/${numero}?text=${texto}&${utms}`;
 }
 
-export const WHATSAPP_NUMERO = import.meta.env.PUBLIC_WHATSAPP_NUMBER ?? '5513000000000';
+export const WHATSAPP_NUMERO = import.meta.env.PUBLIC_WHATSAPP_NUMBER ?? '5513997615872';
 
 export const LINKS = {
   hero: gerarLinkWhatsApp({
