@@ -142,7 +142,7 @@ export const gilvanDiagnostic: DiagnosticPage = {
       status: 'good',
       headline: 'Seu Instagram explica bem sua atuação.',
       summary: 'Implantes, próteses, facetas e outros conteúdos aparecem de forma profissional.',
-      opportunity: 'Hoje essas informações estão principalmente dentro das plataformas. A oportunidade é reunir tratamentos, experiência, avaliações, consultório e contato em uma presença própria.',
+      opportunity: 'Hoje essas informações ficam principalmente dentro das plataformas.',
     },
     {
       key: 'confiar',
@@ -150,7 +150,7 @@ export const gilvanDiagnostic: DiagnosticPage = {
       status: 'strong',
       headline: 'Este é um dos seus maiores ativos.',
       summary: 'As avaliações, o conteúdo, o consultório e sua imagem profissional já criam uma base forte de confiança.',
-      opportunity: 'A oportunidade não é fabricar confiança. É aproveitar melhor a confiança que você já construiu.',
+      opportunity: 'A oportunidade é aproveitar melhor esse ativo.',
     },
     {
       key: 'chamar',
@@ -172,19 +172,19 @@ export const gilvanDiagnostic: DiagnosticPage = {
   ],
   discoveryPaths: {
     known: {
-      label: 'Quando a pessoa já conhece você',
-      steps: ['Pesquisa "Gilvan Salvadori Ferro"', 'Google', 'Avaliações', 'Instagram', 'Contato'],
+      label: 'Quando já conhecem seu nome',
+      steps: ['Pesquisa por "Gilvan Salvadori Ferro"', 'Google', 'Avaliações', 'Instagram', 'Contato'],
       conclusion: 'Esse caminho já está muito bem resolvido.',
     },
     unknown: {
-      label: 'Quando a pessoa ainda não conhece você',
-      steps: ['Pesquisa por implantes, facetas ou lentes em Santos', 'Profissionais, clínicas e páginas específicas', 'Comparação', 'Decisão sobre onde aprofundar'],
+      label: 'Quando ainda não conhecem você',
+      steps: ['Pesquisa por implantes, facetas ou lentes em Santos', 'Encontram profissionais, clínicas e páginas sobre esses tratamentos', 'Comparam informações e confiança', 'Decidem onde aprofundar'],
       conclusion: 'Foi aqui que encontramos a principal oportunidade.',
     },
   },
   findings: [
     {
-      title: 'Quando pesquisamos pelo seu nome, sua presença aparece com força.',
+      title: 'Sua presença aparece com força quando pesquisam seu nome',
       body: [
         'Google, avaliações, Instagram e outras referências ajudam a confirmar que a pessoa encontrou o profissional certo.',
       ],
@@ -198,7 +198,7 @@ export const gilvanDiagnostic: DiagnosticPage = {
       evidenceIds: ['google-perfil-mobile', 'google-avaliacoes'],
     },
     {
-      title: 'Seu Instagram já faz um bom trabalho de explicação.',
+      title: 'Seu Instagram já explica bem sua atuação',
       body: [
         'O perfil apresenta tratamentos, consultório, avaliações, localização e um caminho direto para o WhatsApp.',
         'O conteúdo também reforça sua atuação profissional, mostrando procedimentos, ambiente e sua presença como especialista.',
@@ -206,7 +206,7 @@ export const gilvanDiagnostic: DiagnosticPage = {
       evidenceIds: ['instagram-cabecalho', 'instagram-grade'],
     },
     {
-      title: 'A camada que ainda falta é uma presença própria conectando tudo.',
+      title: 'O que ainda falta é conectar tudo em uma presença própria',
       body: [
         'Na própria busca aparecem profissionais levando a pessoa para páginas próprias. No perfil analisado do Dr. Gilvan, o Google ainda não apresenta um website associado.',
       ],
@@ -216,8 +216,8 @@ export const gilvanDiagnostic: DiagnosticPage = {
   searchFinding: {
     title: 'O que encontramos nas buscas por tratamento',
     body: [
-      'Nas pesquisas que analisamos em Santos, encontramos profissionais, clínicas e páginas próprias dedicadas a implantes, facetas e lentes.',
-      'Não encontramos uma presença própria do Dr. Gilvan estruturada da mesma forma nessa amostra.',
+      'Nas buscas que analisamos, encontramos páginas próprias de profissionais e clínicas dedicadas a esses tratamentos. Não encontramos uma página própria sua fazendo esse mesmo papel.',
+      'Isso não significa que você "não aparece no Google". Pelo contrário: sua presença pelo nome é forte.',
     ],
     disclaimer: 'Resultados do Google variam conforme localização, dispositivo e outros fatores. Esta análise não representa promessa de posição ou ranking.',
   },
@@ -226,34 +226,30 @@ export const gilvanDiagnostic: DiagnosticPage = {
     body: [
       'Você não precisa reconstruir sua presença do zero.',
       'Google, avaliações e Instagram já oferecem uma base forte.',
-      'A oportunidade é conectar esses ativos a uma presença própria que organize seus principais tratamentos e ajude a pessoa a entender melhor sua atuação antes de entrar em contato.',
+      'A oportunidade é criar uma presença própria que reúna seus principais tratamentos, aproveite a confiança que você já construiu e facilite o caminho até o contato.',
     ],
-    highlight: 'A oportunidade não é "aparecer no Google". Você já aparece. É criar uma presença própria para conectar melhor Google, tratamentos, avaliações e contato.',
+    highlight: 'Não se trata de simplesmente "aparecer no Google". Você já aparece. Trata-se de representar melhor seus tratamentos também para quem ainda não conhece você.',
   },
   recommendation: {
     title: 'Como organizaríamos essa presença',
-    intro: 'A ideia não é substituir Google ou Instagram. É conectar melhor o que você já construiu.',
+    intro: 'A recomendação fica mais simples quando agrupamos em quatro partes.',
     items: [
-      { title: 'Página principal', body: 'Dr. Gilvan Salvadori Ferro, odontologia em Santos, com uma apresentação clara e humana.' },
-      { title: 'Implantes dentários', body: 'Uma página dedicada a explicar o tratamento, sua abordagem e informações relevantes para quem está pesquisando essa solução.' },
-      { title: 'Facetas e lentes', body: 'Uma presença organizada para quem está avaliando esse tipo de tratamento.' },
-      { title: 'Odontologia biomimética', body: 'Usada principalmente para apresentar sua forma de trabalhar e seu diferencial profissional, sem tratar como demanda direta comprovada.' },
-      { title: 'Sobre Dr. Gilvan', body: 'Experiência, formação e abordagem em linguagem simples.' },
-      { title: 'Avaliações', body: 'Aproveitar a prova real que você já construiu.' },
-      { title: 'Consultório em Santos', body: 'Localização, ambiente e informações práticas.' },
-      { title: 'WhatsApp', body: 'Contato direto e fácil nos pontos em que a pessoa naturalmente decide chamar.' },
+      { title: 'Seus tratamentos', body: 'Implantes, facetas e lentes apresentados de forma clara, além da odontologia biomimética como parte da sua abordagem profissional.' },
+      { title: 'Quem é o Dr. Gilvan', body: 'Experiência, formação, forma de trabalhar e informações que ajudam o paciente a entender melhor sua atuação.' },
+      { title: 'Confiança e consultório', body: 'Avaliações, ambiente, localização e informações práticas reunidas em um só lugar.' },
+      { title: 'Contato fácil', body: 'WhatsApp disponível nos pontos em que a pessoa naturalmente decide entrar em contato.' },
     ],
   },
   nextJourney: {
     title: 'A nova jornada ficaria mais simples',
     steps: ['Pesquisa pelo tratamento', 'Informação clara', 'Avaliações e confiança', 'Dr. Gilvan', 'WhatsApp'],
-    microcopy: 'A ideia não é substituir Google ou Instagram. É conectar melhor o que você já construiu.',
+    microcopy: 'O objetivo é reduzir o esforço de quem quer entender sua atuação e chamar com segurança.',
   },
   googleNote: 'Não existe promessa de posição no Google. Uma presença própria cria páginas e informações que podem ser encontradas e compreendidas, mas a posição depende de diversos fatores externos.',
   cta: {
     title: 'Se fizer sentido, o próximo passo é simples',
-    body: 'Posso te mostrar como estruturaríamos essa presença para o seu caso e qual seria o formato mais adequado.',
-    label: 'Pode me mostrar como ficaria',
+    body: 'Posso te mostrar como organizaríamos essa presença para o seu caso e qual formato faz mais sentido.',
+    label: 'Quero ver como ficaria',
     message: 'Oi, Marcos. Vi o diagnóstico que você preparou para mim. Pode me mostrar como vocês estruturariam essa presença?',
   },
   evidence: [
@@ -263,7 +259,7 @@ export const gilvanDiagnostic: DiagnosticPage = {
       fullImage: `${evidenceBase}/google-nome-original.png`,
       alt: 'Resultado do Google para Dr. Gilvan Salvadori Ferro com resultados pelo nome e painel lateral do perfil.',
       title: 'Google pelo nome',
-      caption: 'A busca pelo nome mostra resultados, avaliações, Instagram e o perfil com 5,0, 68 avaliações e a opção de adicionar website.',
+      caption: 'A busca mostra sua presença, avaliações, Instagram e o perfil com 5,0 e 68 avaliações.',
     },
     {
       id: 'google-perfil-mobile',
@@ -271,7 +267,7 @@ export const gilvanDiagnostic: DiagnosticPage = {
       fullImage: `${evidenceBase}/google-perfil-mobile-original.png`,
       alt: 'Perfil do Google do Dr. Gilvan em visualização vertical com nota, endereço, telefone e avaliações.',
       title: 'Perfil forte no Google',
-      caption: '5,0 com 68 avaliações. Reputação, localização, telefone e horários aparecem com clareza.',
+      caption: 'A reputação, localização, telefone e horários aparecem com clareza.',
     },
     {
       id: 'google-avaliacoes',
@@ -279,7 +275,7 @@ export const gilvanDiagnostic: DiagnosticPage = {
       fullImage: `${evidenceBase}/google-avaliacoes-original.png`,
       alt: 'Tela de avaliações do Google com nota 5,0, 68 avaliações e uma avaliação destacando confiança.',
       title: 'Avaliações que reforçam confiança',
-      caption: 'Uma captura já mostra o suficiente: atenção, competência e confiança aparecem nas próprias palavras dos pacientes.',
+      caption: 'As próprias avaliações reforçam atenção, competência e confiança.',
     },
     {
       id: 'instagram-cabecalho',
@@ -287,7 +283,7 @@ export const gilvanDiagnostic: DiagnosticPage = {
       fullImage: `${evidenceBase}/instagram-cabecalho-original.png`,
       alt: 'Cabeçalho do Instagram do Dr. Gilvan com especialidades, WhatsApp e destaques.',
       title: 'Instagram organizado',
-      caption: 'O perfil apresenta especialidades, WhatsApp e destaques como consultório, avaliações, localização, resultados, tratamentos e dúvidas.',
+      caption: 'O perfil apresenta especialidades, WhatsApp e destaques importantes.',
     },
     {
       id: 'instagram-grade',
@@ -295,7 +291,7 @@ export const gilvanDiagnostic: DiagnosticPage = {
       fullImage: `${evidenceBase}/instagram-grade-original.png`,
       alt: 'Grade do Instagram com conteúdos de consultório, procedimentos, tratamentos e presença profissional.',
       title: 'Conteúdo com autoridade visual',
-      caption: 'A grade mostra consultório, procedimentos, implantes, explicações e presença do especialista.',
+      caption: 'A grade mostra consultório, procedimentos, explicações e presença profissional.',
     },
     {
       id: 'google-oportunidade',
@@ -303,7 +299,7 @@ export const gilvanDiagnostic: DiagnosticPage = {
       fullImage: `${evidenceBase}/google-oportunidade-original.png`,
       alt: 'Busca no Google Maps mostrando resultados patrocinados com website e o perfil do Dr. Gilvan sem website cadastrado.',
       title: 'Oportunidade de presença própria',
-      caption: 'Na mesma tela aparecem caminhos para sites próprios em outros resultados, enquanto o perfil analisado ainda mostra a ausência de website associado.',
+      caption: 'Outros resultados oferecem caminho para site próprio; o perfil analisado ainda não apresenta website associado.',
     },
   ],
 };

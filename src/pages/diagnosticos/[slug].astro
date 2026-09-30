@@ -56,8 +56,7 @@ const ctaHref = gerarLinkWhatsApp({
     <section class="bg-white px-4 py-14 sm:px-6 sm:py-20">
       <div class="mx-auto max-w-5xl">
         <div class="max-w-2xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-conversao">Base existente</p>
-          <h2 class="mt-3 text-3xl font-bold text-petroleo sm:text-4xl">O que você já construiu muito bem</h2>
+          <h2 class="text-3xl font-bold text-petroleo sm:text-4xl">O que você já construiu muito bem</h2>
         </div>
         <ul class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {diagnostic.strengths.map((strength) => (
@@ -70,13 +69,20 @@ const ctaHref = gerarLinkWhatsApp({
       </div>
     </section>
 
-    <DiscoveryPaths known={diagnostic.discoveryPaths.known} unknown={diagnostic.discoveryPaths.unknown} />
+    <DiscoveryPaths known={diagnostic.discoveryPaths.known} unknown={diagnostic.discoveryPaths.unknown}>
+      <div class="mt-8 space-y-4 rounded-2xl border border-nevoa bg-gelo p-5 text-base leading-relaxed text-grafite/75 sm:p-6">
+        {diagnostic.searchFinding.body.map((paragraph) => <p>{paragraph}</p>)}
+        <p class="text-lg font-semibold leading-snug text-petroleo">
+          A oportunidade é representar melhor seus tratamentos também para quem ainda não chegou procurando por "Dr. Gilvan".
+        </p>
+        <p class="border-t border-nevoa pt-4 text-sm text-grafite/65">{diagnostic.searchFinding.disclaimer}</p>
+      </div>
+    </DiscoveryPaths>
 
     <section class="px-4 py-14 sm:px-6 sm:py-20">
       <div class="mx-auto max-w-5xl space-y-12">
         <div class="max-w-2xl">
           <p class="text-sm font-semibold uppercase tracking-[0.16em] text-conversao">Evidências</p>
-          <h2 class="mt-3 text-3xl font-bold text-petroleo sm:text-4xl">Cada captura aparece junto do ponto que ela comprova.</h2>
         </div>
 
         {diagnostic.findings.map((finding, index) => {
@@ -84,10 +90,7 @@ const ctaHref = gerarLinkWhatsApp({
           return (
             <article class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
               <div class="lg:sticky lg:top-24">
-                <span class="inline-flex rounded-full bg-petroleo px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-white">
-                  Achado {index + 1}
-                </span>
-                <h3 class="mt-4 text-2xl font-bold leading-tight text-petroleo">{finding.title}</h3>
+                <h3 class="text-2xl font-bold leading-tight text-petroleo">{finding.title}</h3>
                 <div class="mt-4 space-y-3 text-base leading-relaxed text-grafite/75">
                   {finding.body.map((paragraph) => <p>{paragraph}</p>)}
                 </div>
@@ -96,19 +99,6 @@ const ctaHref = gerarLinkWhatsApp({
             </article>
           );
         })}
-      </div>
-    </section>
-
-    <section class="bg-white px-4 py-14 sm:px-6 sm:py-20">
-      <div class="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-        <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-conversao">Busca por tratamento</p>
-          <h2 class="mt-3 text-3xl font-bold text-petroleo sm:text-4xl">{diagnostic.searchFinding.title}</h2>
-        </div>
-        <div class="space-y-4 text-base leading-relaxed text-grafite/75">
-          {diagnostic.searchFinding.body.map((paragraph) => <p>{paragraph}</p>)}
-          <p class="rounded-2xl border border-conversao/20 bg-conversao/5 p-5 text-sm text-grafite/70">{diagnostic.searchFinding.disclaimer}</p>
-        </div>
       </div>
     </section>
 
