@@ -1,0 +1,27 @@
+---
+import Button from '../ui/Button.astro';
+
+interface Props {
+  title: string;
+  body: string;
+  label: string;
+  href: string;
+}
+
+const { title, body, label, href } = Astro.props;
+---
+
+<section class="px-4 py-14 sm:px-6 sm:py-20">
+  <div class="mx-auto max-w-5xl overflow-hidden rounded-3xl bg-petroleo text-white shadow-2xl shadow-petroleo/20">
+    <div class="grid gap-8 p-6 sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-conversao">Próximo passo</p>
+        <h2 class="mt-3 text-3xl font-bold leading-tight sm:text-4xl">{title}</h2>
+        <p class="mt-4 max-w-2xl text-base leading-relaxed text-white/75">{body}</p>
+      </div>
+      <Button href={href} variant="whatsapp" size="lg" target="_blank" rel="noopener noreferrer" wppPlacement="diagnostic" class="w-full sm:w-auto">
+        {label}
+      </Button>
+    </div>
+  </div>
+</section>

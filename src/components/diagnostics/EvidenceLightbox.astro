@@ -1,0 +1,50 @@
+<dialog id="diagnostic-evidence-dialog" class="m-auto w-[min(94vw,1100px)] rounded-2xl border border-white/10 bg-petroleo p-0 text-white shadow-2xl backdrop:bg-black/75">
+  <div class="flex items-center justify-between gap-4 border-b border-white/10 px-4 py-3">
+    <p id="diagnostic-evidence-title" class="text-sm font-semibold"></p>
+    <button
+      type="button"
+      class="rounded-full bg-white/10 px-3 py-2 text-sm font-semibold text-white hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-conversao"
+      data-evidence-close
+    >
+      Fechar
+    </button>
+  </div>
+  <div class="max-h-[82vh] overflow-auto bg-black/20 p-3">
+    <img id="diagnostic-evidence-image" src="" alt="" class="mx-auto h-auto max-h-[78vh] w-auto max-w-full object-contain" />
+  </div>
+</dialog>
+
+<script>
+  const dialog = document.getElementById('diagnostic-evidence-dialog') as HTMLDialogElement | null;
+  const image = document.getElementById('diagnostic-evidence-image') as HTMLImageElement | null;
+  const title = document.getElementById('diagnostic-evidence-title');
+  const closeButton = document.querySelector('[data-evidence-close]');
+
+  document.querySelectorAll('[data-evidence-open]').forEach((button) => {
+    button.addEventListener('click', () => {
+      if (!dialog || !image || !title) return;
+      const fullImage = button.getAttribute('data-full-image') || '';
+      const evidenceTitle = button.getAttribute('data-title') || 'Evidência';
+      const evidenceId = button.getAttribute('data-evidence-id') || 'unknown';
+
+      image.src = fullImage;
+      image.alt = evidenceTitle;
+      title.textContent = evidenceTitle;
+
+      if (Array.isArray(window.dataLayer)) {
+        window.dataLayer.push({
+          event: 'diagnostic_evidence_open',
+          diagnostic_type: 'manual_local_presence',
+          evidence_id: evidenceId,
+        });
+      }
+
+      dialog.showModal();
+    });
+  });
+
+  closeButton?.addEventListener('click', () => dialog?.close());
+  dialog?.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+</script>

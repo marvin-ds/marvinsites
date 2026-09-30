@@ -1,0 +1,31 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  identity: string;
+  microcopy: string;
+}
+
+const { eyebrow, title, intro, identity, microcopy } = Astro.props;
+---
+
+<section class="bg-petroleo px-4 pb-14 pt-10 text-white sm:px-6 sm:pb-20 sm:pt-16">
+  <div class="mx-auto grid max-w-5xl gap-8 lg:grid-cols-[1fr_0.75fr] lg:items-end">
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-conversao">{eyebrow}</p>
+      <h1 class="mt-4 max-w-3xl text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">{title}</h1>
+      <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/80">{intro}</p>
+    </div>
+
+    <aside class="rounded-2xl border border-white/10 bg-white/10 p-5 shadow-2xl shadow-black/20 backdrop-blur">
+      <div class="flex items-start gap-4">
+        <img src="/logo-mark.png" alt="" class="h-12 w-12 rounded-xl object-cover" width="48" height="48" aria-hidden="true" />
+        <div>
+          <p class="text-sm font-semibold text-white">{identity}</p>
+          <p class="mt-2 text-sm leading-relaxed text-white/70">{microcopy}</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>

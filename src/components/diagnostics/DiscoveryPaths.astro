@@ -1,0 +1,40 @@
+---
+interface Path {
+  label: string;
+  steps: string[];
+  conclusion: string;
+}
+
+interface Props {
+  known: Path;
+  unknown: Path;
+}
+
+const { known, unknown } = Astro.props;
+---
+
+<section class="bg-white px-4 py-14 sm:px-6 sm:py-20">
+  <div class="mx-auto max-w-5xl">
+    <div class="max-w-2xl">
+      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-conversao">Dois caminhos</p>
+      <h2 class="mt-3 text-3xl font-bold text-petroleo sm:text-4xl">Existem dois caminhos diferentes até você.</h2>
+    </div>
+
+    <div class="mt-8 grid gap-5 lg:grid-cols-2">
+      {[known, unknown].map((path, index) => (
+        <article class={`rounded-2xl border p-5 sm:p-6 ${index === 0 ? 'border-resultado/25 bg-resultado/5' : 'border-conversao/30 bg-conversao/5'}`}>
+          <p class={`text-xs font-bold uppercase tracking-[0.16em] ${index === 0 ? 'text-resultado' : 'text-conversao'}`}>{path.label}</p>
+          <ol class="mt-5 space-y-3">
+            {path.steps.map((step) => (
+              <li class="flex gap-3 text-sm leading-relaxed text-grafite/75">
+                <span class="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-petroleo"></span>
+                <span>{step}</span>
+              </li>
+            ))}
+          </ol>
+          <p class="mt-5 rounded-xl bg-white p-4 text-sm font-semibold leading-relaxed text-petroleo shadow-sm">{path.conclusion}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

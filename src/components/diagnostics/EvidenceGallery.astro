@@ -1,0 +1,15 @@
+---
+import EvidenceCard from './EvidenceCard.astro';
+import type { DiagnosticEvidence } from '../../data/diagnostics/gilvan-salvadori-ferro';
+
+interface Props {
+  evidence: DiagnosticEvidence[];
+  priorityFirst?: boolean;
+}
+
+const { evidence, priorityFirst = false } = Astro.props;
+---
+
+<div class="grid gap-4 md:grid-cols-2">
+  {evidence.map((item, index) => <EvidenceCard evidence={item} priority={priorityFirst && index === 0} />)}
+</div>

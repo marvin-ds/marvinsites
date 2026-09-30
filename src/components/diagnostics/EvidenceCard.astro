@@ -1,0 +1,34 @@
+---
+import type { DiagnosticEvidence } from '../../data/diagnostics/gilvan-salvadori-ferro';
+
+interface Props {
+  evidence: DiagnosticEvidence;
+  priority?: boolean;
+}
+
+const { evidence, priority = false } = Astro.props;
+---
+
+<figure class="overflow-hidden rounded-2xl border border-nevoa bg-white shadow-sm">
+  <button
+    type="button"
+    class="group block w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-confianca focus-visible:ring-offset-2"
+    data-evidence-open
+    data-evidence-id={evidence.id}
+    data-full-image={evidence.fullImage}
+    data-title={evidence.title}
+    aria-label={`Ampliar evidência: ${evidence.title}`}
+  >
+    <img
+      src={evidence.image}
+      alt={evidence.alt}
+      class="h-auto w-full bg-gelo object-contain transition-transform duration-300 group-hover:scale-[1.015]"
+      loading={priority ? 'eager' : 'lazy'}
+      decoding="async"
+    />
+  </button>
+  <figcaption class="p-4">
+    <h4 class="text-base font-semibold text-petroleo">{evidence.title}</h4>
+    <p class="mt-2 text-sm leading-relaxed text-grafite/70">{evidence.caption}</p>
+  </figcaption>
+</figure>

@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /obrigado
+Disallow: /diagnosticos/
 Disallow: /.netlify/
 
 # AI crawlers policy: public marketing pages are intentionally open for discovery.

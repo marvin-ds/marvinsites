@@ -9,8 +9,11 @@ interface Props {
   description: string;
   canonical?: string;
   ogImage?: string;
+  ogTitle?: string;
+  ogDescription?: string;
   schema?: object;
   noindex?: boolean;
+  robots?: string;
 }
 
 const {
@@ -18,12 +21,16 @@ const {
   description,
   canonical = Astro.url.href,
   ogImage = '/og-image.jpg',
+  ogTitle = title,
+  ogDescription = description,
   schema = schemaLocalBusiness(),
   noindex = false,
+  robots,
 } = Astro.props;
 
 const siteUrl = 'https://marvinsites.com.br';
 const gtmId = import.meta.env.PUBLIC_GTM_ID ?? '';
+const robotsContent = robots ?? (noindex ? 'noindex, follow' : '');
 ---
 
 <!doctype html>
@@ -37,11 +44,11 @@ const gtmId = import.meta.env.PUBLIC_GTM_ID ?? '';
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    {noindex && <meta name="robots" content="noindex, follow" />}
+    {robotsContent && <meta name="robots" content={robotsContent} />}
 
     <!-- Open Graph -->
-    <meta property="og:title"       content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:title"       content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
     <meta property="og:image"       content={`${siteUrl}${ogImage}`} />
     <meta property="og:url"         content={canonical} />
     <meta property="og:type"        content="website" />
@@ -49,8 +56,8 @@ const gtmId = import.meta.env.PUBLIC_GTM_ID ?? '';
 
     <!-- Twitter Card -->
     <meta name="twitter:card"        content="summary_large_image" />
-    <meta name="twitter:title"       content={title} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:title"       content={ogTitle} />
+    <meta name="twitter:description" content={ogDescription} />
     <meta name="twitter:image"       content={`${siteUrl}${ogImage}`} />
 
     <!-- Fontes — carregamento não-bloqueante -->

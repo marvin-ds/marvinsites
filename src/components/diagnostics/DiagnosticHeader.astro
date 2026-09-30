@@ -1,0 +1,20 @@
+---
+interface Props {
+  leadName: string;
+}
+
+const { leadName } = Astro.props;
+---
+
+<header class="border-b border-white/10 bg-petroleo text-white">
+  <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
+    <a href="/" class="flex items-center gap-3" aria-label="Marvin Sites - página inicial">
+      <img src="/logo-mark.png" alt="" class="h-9 w-9 rounded-lg object-cover" width="36" height="36" aria-hidden="true" />
+      <span class="text-base font-semibold tracking-tight">Marvin <span class="text-confianca">Sites</span></span>
+    </a>
+    <div class="text-right text-xs leading-snug text-white/70 sm:text-sm">
+      <p class="font-medium text-white">Diagnóstico de Presença Digital</p>
+      <p class="hidden sm:block">Preparado para {leadName}</p>
+    </div>
+  </div>
+</header>
