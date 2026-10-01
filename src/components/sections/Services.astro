@@ -5,7 +5,7 @@ import { gerarLinkWhatsApp, WHATSAPP_NUMERO } from '../../lib/whatsapp';
 const solucoes = [
   {
     nome: 'Presença Essencial',
-    descricao: 'Para organizar o básico com clareza: serviços, localização, prova, Google e caminho para o WhatsApp.',
+    descricao: 'Para negócios que precisam organizar o essencial com clareza: serviços, localização, prova e contato.',
     itens: [
       'Presença própria adequada ao negócio',
       'Serviços e diferenciais explicados com clareza',
@@ -13,11 +13,11 @@ const solucoes = [
       'Informações locais consistentes',
       'Base inicial para busca local',
     ],
-    cta: 'Ver se faz sentido',
+    cta: 'Ver se faz sentido para meu negócio',
   },
   {
     nome: 'Presença Profissional',
-    descricao: 'Para negócios que precisam apresentar melhor serviços, equipe, especialidades, autoridade e estrutura.',
+    descricao: 'Para clínicas, escritórios, consultorias e negócios que precisam apresentar serviços, especialidades, equipe, diferenciais e autoridade.',
     itens: [
       'Estrutura mais completa de conteúdo',
       'Mais espaço para prova e diferenciais',
@@ -29,7 +29,7 @@ const solucoes = [
   },
   {
     nome: 'Crescimento Local',
-    descricao: 'Para operações que já têm mais maturidade e precisam evoluir páginas, campanhas, tracking ou novas oportunidades digitais.',
+    descricao: 'Para operações mais estruturadas que precisam evoluir páginas, campanhas, tracking, mensuração ou novos caminhos de aquisição.',
     itens: [
       'Páginas por serviço, região ou campanha',
       'Tracking e mensuração quando aplicável',
@@ -59,12 +59,11 @@ const familias = [
 
     <div>
       <div class="text-center mb-12">
-        <span class="text-xs font-medium text-orange-700 uppercase tracking-widest">Soluções</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-petroleo mt-3 leading-tight">
-          Uma presença adequada ao momento do seu negócio
+        <h2 class="text-3xl sm:text-4xl font-bold text-petroleo leading-tight">
+          Qual estrutura faz sentido para o seu negócio?
         </h2>
         <p class="text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
-          Você não precisa escolher plano antes de entender o cenário. O diagnóstico ajuda a indicar uma estrutura suficiente, sem complexidade desnecessária.
+          Você não precisa decidir isso sozinho. O diagnóstico ajuda a indicar uma estrutura suficiente para o momento atual, sem complexidade desnecessária.
         </p>
       </div>
 
@@ -97,8 +96,8 @@ const familias = [
       </div>
 
       <p class="text-center text-sm text-gray-600 mt-8 max-w-2xl mx-auto">
-        Também existe uma estrutura de entrada para operações simples quando o diagnóstico mostrar que ela é suficiente.
-        Condições, escopo, limites e valor são apresentados antes da contratação.
+        Se sua necessidade for mais simples, o diagnóstico também pode indicar uma estrutura de entrada menor.
+        Antes de decidir, você recebe escopo, investimento inicial, valor mensal e limites de forma clara.
       </p>
     </div>
 
@@ -109,9 +108,6 @@ const familias = [
           <h2 class="text-3xl font-bold text-petroleo mt-3 leading-tight">
             Atendemos diferentes tipos de negócio local.
           </h2>
-          <p class="text-gray-500 mt-4 leading-relaxed">
-            Nem toda família abaixo tem um modelo publicado ainda. Quando não houver referência pronta, avaliamos o cenário e estruturamos a presença adequada.
-          </p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {familias.map((familia) => (
@@ -123,7 +119,7 @@ const familias = [
       </div>
       <div class="mt-8 flex flex-col sm:flex-row gap-3">
         <Button href="#exemplos" variant="secondary">
-          Ver exemplos publicados
+          Ver exemplos
         </Button>
         <Button
           href={gerarLinkWhatsApp({ numero: WHATSAPP_NUMERO, mensagem: 'Olá! Meu segmento não está nos exemplos. Quero avaliar minha presença digital com a Marvin.', origem: 'segmento-nao-listado' })}
@@ -132,7 +128,7 @@ const familias = [
           rel="noopener noreferrer"
           wppPlacement="plans"
         >
-          Meu segmento não está aqui
+          Não encontrou seu segmento? Fale com a gente
         </Button>
       </div>
     </div>

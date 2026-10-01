@@ -1,42 +1,24 @@
 ---
 const processos = [
   {
-    titulo: 'Diagnóstico antes da recomendação',
+    titulo: 'Primeiro analisamos',
     texto: 'Não partimos da ideia de que você precisa refazer tudo.',
   },
   {
-    titulo: 'Seu domínio continua sendo seu',
-    texto: 'A Marvin cuida da configuração, mas o endereço digital do seu negócio permanece em seu nome.',
+    titulo: 'Você vê antes de publicar',
+    texto: 'A primeira versão passa pela sua aprovação antes de entrar no ar.',
   },
   {
-    titulo: 'Preview antes da publicação',
-    texto: 'Você vê e aprova a versão combinada antes de ela entrar em produção.',
+    titulo: 'Seu domínio continua sendo seu',
+    texto: 'O endereço digital do seu negócio permanece em seu nome.',
   },
   {
     titulo: 'Escopo claro antes do início',
-    texto: 'Plano, revisões, prazos, limites e condições são apresentados antes da contratação.',
+    texto: 'Você recebe estrutura, prazo, revisões, limites e condições antes de contratar.',
   },
   {
-    titulo: 'Cuidado depois da publicação',
-    texto: 'A presença não fica abandonada depois da entrega. O acompanhamento segue conforme o plano contratado.',
-  },
-];
-
-const cenarios = [
-  {
-    titulo: 'Negócio dependente de Instagram',
-    situacao: 'O negócio tem movimento nas redes, mas serviços, localização, fotos, prova e contato ficam espalhados entre posts, destaques e conversas.',
-    abordagem: 'A Marvin organizaria uma presença própria para complementar as redes e reunir as informações que a pessoa procura antes de chamar.',
-  },
-  {
-    titulo: 'Empresa estabelecida com presença antiga',
-    situacao: 'A empresa já existe, tem clientes e reputação, mas o site ou página atual não representa mais o nível do serviço, especialmente no celular.',
-    abordagem: 'O diagnóstico verificaria o que ainda funciona e onde a estrutura precisa ser atualizada para explicar melhor serviços, prova, região e contato.',
-  },
-  {
-    titulo: 'Google forte, caminho incompleto',
-    situacao: 'A pessoa encontra a empresa no Google, mas depois precisa juntar informações de várias fontes para entender serviços, diferenciais e próximo passo.',
-    abordagem: 'A Marvin alinharia Google, presença própria e WhatsApp para reduzir atrito sem prometer ranking ou resultado comercial automático.',
+    titulo: 'O cuidado continua',
+    texto: 'Depois da publicação, a Marvin segue cuidando da presença conforme o plano.',
   },
 ];
 ---
@@ -46,12 +28,11 @@ const cenarios = [
 
     <div>
       <div class="text-center mb-12">
-        <span class="text-xs font-medium text-confianca uppercase tracking-widest">Por que confiar</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-petroleo mt-3 leading-tight">
+        <h2 class="text-3xl sm:text-4xl font-bold text-petroleo leading-tight">
           Um processo claro do diagnóstico à publicação.
         </h2>
         <p class="text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
-          Enquanto depoimentos reais autorizados não entram na home, a prova vem do processo: o que acontece, quem aprova e quais limites ficam claros.
+          Você sabe o que será analisado, o que está sendo recomendado e o que acontece antes e depois da publicação.
         </p>
       </div>
 
@@ -62,46 +43,6 @@ const cenarios = [
             <p class="text-sm text-gray-500 leading-relaxed">{item.texto}</p>
           </article>
         ))}
-      </div>
-    </div>
-
-    <div>
-      <div class="text-center mb-12">
-        <span class="text-xs font-medium text-orange-700 uppercase tracking-widest">Situações comuns</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-petroleo mt-3 leading-tight">
-          Cenários demonstrativos, sem fingir que são clientes.
-        </h2>
-        <p class="text-gray-500 mt-4 max-w-2xl mx-auto text-sm leading-relaxed">
-          Os exemplos abaixo não representam clientes ou resultados da Marvin. São situações fictícias construídas a partir de problemas comuns em negócios locais, apenas para mostrar como organizaríamos a presença.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {cenarios.map((c) => (
-          <article class="bg-gelo rounded-2xl border border-nevoa p-6 flex flex-col">
-            <h3 class="text-lg font-bold text-petroleo">{c.titulo}</h3>
-            <div class="mt-5 space-y-4 flex-1">
-              <div>
-                <p class="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">Situação demonstrativa</p>
-                <p class="text-sm text-gray-500 leading-relaxed">{c.situacao}</p>
-              </div>
-              <div>
-                <p class="text-xs font-medium text-gray-500 uppercase tracking-wide mb-1">O que a Marvin organizaria</p>
-                <p class="text-sm text-gray-500 leading-relaxed">{c.abordagem}</p>
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
-
-      <div class="mt-12 bg-petroleo rounded-2xl p-8 text-center">
-        <p class="text-white text-lg font-medium mb-2">
-          Reconheceu algo parecido no seu negócio?
-        </p>
-        <p class="text-white/70 text-sm">
-          Peça um diagnóstico gratuito e veja quais pontos merecem atenção na sua presença digital.
-          <a href="#contato" class="text-orange-400 underline ml-1 hover:text-orange-300">Quero conhecer.</a>
-        </p>
       </div>
     </div>
 
