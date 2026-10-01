@@ -174,6 +174,27 @@ Antes de liberar proposta, revisar:
 - [ ] o valor mensal e consequencia do escopo?
 - [ ] no mobile, o preco nao interrompe a compreensao?
 
+### Regra: linguagem cliente-facing
+
+Se o nome da secao descreve o que o cliente vai entender, pode permanecer.
+
+Se o nome da secao descreve a funcao interna daquele bloco na estrategia de venda, deve ser removido ou reescrito.
+
+Evitar termos internos na interface publica, incluindo:
+
+- reducao de risco;
+- antes do investimento;
+- continuacao do diagnostico;
+- etapa de conversao;
+- prova de valor;
+- objecao;
+- fechamento;
+- gatilho;
+- decisao comercial;
+- argumento de venda.
+
+Tipos tecnicos de conteudo, como pagina, area ou secao, podem existir no modelo de dados, mas nao devem aparecer como rotulos publicos quando so explicam arquitetura interna.
+
 ## Tracking
 
 Eventos permitidos:

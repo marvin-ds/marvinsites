@@ -53,7 +53,7 @@ const proposal: ProposalPage = {
     conclusion: 'A proposta da Marvin não é reconstruir isso. É organizar esses ativos em uma presença própria que represente melhor o seu trabalho.',
   },
   valuePositioning: {
-    eyebrow: 'ANTES DA CONSTRUÇÃO',
+    eyebrow: 'COMO A MARVIN TRABALHA',
     title: 'O trabalho não começa no site.',
     body: [
       'Não estamos propondo apenas construir um site. Estamos propondo organizar e cuidar da presença digital do Dr. Gilvan.',
@@ -178,7 +178,7 @@ const proposal: ProposalPage = {
     ],
   },
   patientJourney: {
-    title: 'Tratamentos prioritários precisam ter espaço próprio.',
+    title: 'Seus principais tratamentos merecem espaço próprio para serem apresentados com clareza.',
     steps: [
       'Pessoa chega por pesquisa, indicação, Google ou Instagram',
       'Encontra a presença organizada',
@@ -502,7 +502,7 @@ const proposal: ProposalPage = {
     ],
   },
   faq: {
-    title: 'Dúvidas importantes antes de decidir',
+    title: 'Antes de seguir, algumas respostas importantes',
     items: [
       {
         question: 'O domínio fica em meu nome?',
