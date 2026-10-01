@@ -2,6 +2,24 @@
 
 ---
 
+## [Proposal Pages V1 Care Rhythm Fix] — 01/10/2026 — Preco depois do valor
+
+### Site
+- Removido o valor mensal da secao de Cuidado Continuo da proposta do Dr. Gilvan.
+- Titulo do bloco alterado para "O que continua sob responsabilidade da Marvin".
+- Mantidas as cinco responsabilidades mensais sem antecipar o preco.
+- Investimento passa a ser a primeira ocorrencia visual dos valores de implantacao e mensalidade.
+
+### Governanca
+- Registrada decisao D041: preco nao interrompe construcao de valor.
+- Atualizada documentacao operacional com regra "preco somente depois do valor" e Gate de Sequencia Comercial.
+
+### Infraestrutura
+- Auditoria Netlify identificou o projeto oficial `marvinsites` e o projeto acidental `transcendent-fairy-69ba57`.
+- Conteudo de diagnostico e proposta confirmado no projeto oficial antes de qualquer remocao externa.
+
+---
+
 ## [Proposal Pages V1 Positioning] — 01/10/2026 — Valor antes e depois da construcao
 
 ### Site

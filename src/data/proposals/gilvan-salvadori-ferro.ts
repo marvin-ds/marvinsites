@@ -403,13 +403,13 @@ const proposal: ProposalPage = {
   },
   monthlyResponsibility: {
     eyebrow: 'CUIDADO CONTÍNUO',
-    title: 'O que os R$297 mantêm sob responsabilidade da Marvin',
-    subtitle: 'A mensalidade não é para “ficar hospedado”: ela mantém a Marvin responsável por parte da presença depois da publicação.',
-    price: 'R$ 297 / mês',
+    title: 'O que continua sob responsabilidade da Marvin',
+    subtitle: 'A publicação não encerra o trabalho. Depois que a presença entra no ar, a Marvin continua responsável pelos principais pontos previstos no plano para que ela permaneça funcionando, atualizada, conectada e acompanhada.',
+    valueStatement: 'Você não precisa administrar a presença depois que ela for publicada.',
     items: [
       {
         title: 'Presença funcionando',
-        body: 'Hospedagem gerenciada, segurança, acompanhamento técnico e correções sob responsabilidade da Marvin.',
+        body: 'Hospedagem gerenciada, segurança, acompanhamento técnico, versionamento e correções sob responsabilidade da Marvin.',
       },
       {
         title: 'Informações atualizadas',
@@ -417,7 +417,7 @@ const proposal: ProposalPage = {
       },
       {
         title: 'Google conectado à presença',
-        body: 'Acompanhamento das principais informações do Perfil da Empresa e conexão correta com o site.',
+        body: 'Acompanhamento das principais informações do Perfil da Empresa e conexão correta com a presença própria.',
         examples: ['site', 'telefone', 'horários', 'endereço', 'serviços'],
       },
       {
@@ -432,6 +432,7 @@ const proposal: ProposalPage = {
     closing: [
       'Você cuida da odontologia.',
       'A Marvin continua responsável pelo cuidado da presença dentro do plano contratado.',
+      'É essa continuidade que evita que a presença seja apenas publicada e depois fique sem acompanhamento.',
     ],
   },
   fairUse: {
@@ -473,8 +474,8 @@ const proposal: ProposalPage = {
     setupDescription: 'Inclui diagnóstico aplicado, organização, estrutura inicial, construção, configuração, Preview, ajustes previstos e publicação.',
     monthlyLabel: 'Cuidado contínuo',
     monthlyPrice: 'R$ 297 / mês',
-    monthlyDescription: 'Mantém a presença sob cuidado da Marvin depois da publicação, dentro dos limites e entregas previstos para o plano.',
-    monthlyIncludes: ['Funcionamento', 'pequenas atualizações', 'Google', 'acompanhamento'],
+    monthlyDescription: 'Mantém a Marvin responsável pelos principais pontos da presença depois da publicação, dentro do escopo do plano.',
+    monthlyIncludes: ['Funcionamento', 'pequenas atualizações', 'Google', 'contato', 'acompanhamento'],
     commercialCondition: {
       enabled: true,
       label: 'Condição inaugural aplicada à implantação deste projeto.',

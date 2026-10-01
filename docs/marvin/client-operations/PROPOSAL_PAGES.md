@@ -78,6 +78,22 @@ Toda proposta deve responder, antes do preco:
 
 Nao alterar preco canonico global dentro da proposta.
 
+### Regra: preco somente depois do valor
+
+Nenhum valor de implantacao ou mensalidade deve aparecer antes da secao de investimento.
+
+Preco nunca deve interromper a construcao de valor. Primeiro o cliente entende a responsabilidade que a Marvin assume; depois ele descobre quanto custa.
+
+A proposta deve primeiro responder:
+
+- o que sera feito;
+- por que aquele escopo;
+- o que continua sob responsabilidade da Marvin;
+- o que o cliente precisa fazer;
+- quais sao os limites.
+
+So depois mostrar preco, para evitar ativar comparacao financeira antes da construcao de valor.
+
 Para Presenca Local Profissional, a referencia vigente e:
 
 - implantacao: R$ 1.497;
@@ -148,6 +164,16 @@ Antes de liberar proposta, revisar:
 - [ ] a proposta parece especifica para o caso?
 - [ ] a proposta explica por que aquele plano e adequado?
 
+### Gate de sequencia comercial
+
+Antes de liberar proposta, revisar:
+
+- [ ] algum preco aparece antes da secao de investimento?
+- [ ] a mensalidade aparece antes de explicar o cuidado continuo?
+- [ ] o leitor entende os beneficios antes de ver o preco?
+- [ ] o valor mensal e consequencia do escopo?
+- [ ] no mobile, o preco nao interrompe a compreensao?
+
 ## Tracking
 
 Eventos permitidos:
@@ -176,7 +202,7 @@ Antes de considerar pronto:
 - proposta e mais consultiva e refinada que o diagnostico;
 - Presenca Digital Local e protagonista;
 - Google aparece na implantacao e no cuidado continuo;
-- mensalidade e compreendida antes do preco;
+- mensalidade e compreendida antes do preco, sem valor numerico antes do investimento;
 - investimento aparece depois de recomendacao, escopo, processo, cuidado continuo, Google e Fair Use;
 - proposta explica por que o escopo e suficiente para o caso;
 - proposta materializa o que sera publicado sem prometer quantidade rigida de paginas;

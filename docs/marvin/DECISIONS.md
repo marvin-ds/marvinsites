@@ -382,6 +382,18 @@ fonte canônica do lead.
 
 ---
 
+## D041 — 01/10/2026 — Preco nao interrompe construcao de valor
+
+**Decisão:** Nenhum valor de implantacao ou mensalidade deve aparecer antes da secao de investimento nas propostas comerciais.
+
+**Regra editorial:** Primeiro a proposta deve construir entendimento de responsabilidade, utilidade concreta, seguranca e limites. So depois deve apresentar implantacao e mensalidade.
+
+**Consequência:** Blocos de cuidado continuo podem explicar responsabilidades e escopo, mas nao devem antecipar o valor mensal. O preco mensal aparece pela primeira vez em Investimento.
+
+**Referência operacional:** `docs/marvin/client-operations/PROPOSAL_PAGES.md`.
+
+---
+
 ## [SET/2026] Portfólio de nichos — decisão estratégica
 
 **Decisão:** Construir 22 sites demonstrativos organizados por nicho de negócio local, hospedados em `marvinsites.com.br/exemplos/[slug]/`.

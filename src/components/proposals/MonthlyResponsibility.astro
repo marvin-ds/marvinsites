@@ -3,7 +3,7 @@ interface Props {
   eyebrow: string;
   title: string;
   subtitle: string;
-  price: string;
+  valueStatement: string;
   items: {
     title: string;
     body: string;
@@ -12,7 +12,7 @@ interface Props {
   closing: string[];
 }
 
-const { eyebrow, title, subtitle, price, items, closing } = Astro.props;
+const { eyebrow, title, subtitle, valueStatement, items, closing } = Astro.props;
 ---
 
 <section class="bg-white px-4 py-14 sm:px-6 sm:py-20">
@@ -23,7 +23,7 @@ const { eyebrow, title, subtitle, price, items, closing } = Astro.props;
           <p class="text-sm font-semibold uppercase tracking-[0.16em] text-conversao">{eyebrow}</p>
           <h2 class="mt-3 text-3xl font-bold leading-tight sm:text-4xl">{title}</h2>
           <p class="mt-4 text-base leading-relaxed text-white/74">{subtitle}</p>
-          <p class="mt-6 text-5xl font-bold tracking-normal text-white sm:text-6xl">{price}</p>
+          <p class="mt-5 rounded-2xl border border-white/10 bg-white/[0.08] p-4 text-base font-semibold leading-relaxed text-white">{valueStatement}</p>
         </div>
 
         <div class="grid gap-3">
@@ -45,7 +45,11 @@ const { eyebrow, title, subtitle, price, items, closing } = Astro.props;
     </div>
 
     <div class="mt-5 rounded-3xl border border-nevoa bg-gelo p-6 sm:p-8">
-      {closing.map((line) => <p class="text-3xl font-bold leading-tight text-petroleo sm:text-4xl">{line}</p>)}
+      <div class="space-y-3">
+        {closing.map((line, index) => (
+          <p class={index < 2 ? 'text-3xl font-bold leading-tight text-petroleo sm:text-4xl' : 'text-base leading-relaxed text-grafite/70'}>{line}</p>
+        ))}
+      </div>
     </div>
   </div>
 </section>

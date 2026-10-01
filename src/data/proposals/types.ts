@@ -149,7 +149,7 @@ export interface ProposalPage {
     eyebrow: string;
     title: string;
     subtitle: string;
-    price: string;
+    valueStatement: string;
     items: {
       title: string;
       body: string;
