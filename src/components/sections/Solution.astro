@@ -1,22 +1,11 @@
 ---
 import Button from '../ui/Button.astro';
 
-const organizamos = [
-  { titulo: 'Presença própria', texto: 'Página ou site adequado à necessidade real do negócio.' },
-  { titulo: 'Serviços', texto: 'O que você faz explicado de forma clara para quem ainda não conhece a empresa.' },
-  { titulo: 'Google', texto: 'Informações coerentes e Perfil da Empresa revisado quando fizer parte do escopo.' },
-  { titulo: 'Prova', texto: 'Avaliações, fotos, equipe, experiência, portfólio e diferenciais verdadeiros.' },
-  { titulo: 'Localização e região', texto: 'Onde sua empresa está, onde atende e quais canais devem ser usados.' },
-  { titulo: 'Contato', texto: 'WhatsApp, telefone, formulário, rota ou agendamento conforme o negócio.' },
-  { titulo: 'Base para busca local', texto: 'Estrutura inicial para ajudar mecanismos de busca a compreender serviços, empresa e região.' },
-  { titulo: 'Medição e evolução', texto: 'Nos escopos adequados, Search Console, Analytics, tracking, páginas adicionais e outras melhorias.' },
-];
-
 const passos = [
   {
     numero: '01',
     titulo: 'Diagnóstico da presença atual',
-    descricao: 'Avaliamos os principais pontos da sua presença: Google, site quando existir, informações, serviços, prova, localização e caminho até o contato.',
+    descricao: 'Olhamos Google, site quando existir, serviços, localização, prova, informações e caminho até o contato.',
   },
   {
     numero: '02',
@@ -40,49 +29,19 @@ const passos = [
   },
 ];
 
-const diagnostico = [
-  { titulo: 'Google', texto: 'Como o negócio aparece e quais informações importantes estão disponíveis.' },
-  { titulo: 'Presença própria', texto: 'Se existe e se explica adequadamente empresa, serviços, região e diferenciais.' },
-  { titulo: 'Confiança', texto: 'Avaliações, fotos, experiência, prova e consistência disponíveis.' },
-  { titulo: 'Contato', texto: 'Quão simples é chegar ao WhatsApp ou próximo passo.' },
-  { titulo: 'Consistência', texto: 'Se Google, site e demais canais apresentam informações coerentes.' },
-  { titulo: 'Mobile', texto: 'Quando houver site, verificamos a experiência básica pelo celular.' },
-];
 ---
 
 <section id="como-funciona" class="bg-gelo py-20 px-4 sm:px-6">
-  <div class="max-w-6xl mx-auto space-y-16">
-
-    <div>
-      <div class="text-center mb-12">
-        <span class="text-xs font-medium text-confianca uppercase tracking-widest">Presença organizada</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-petroleo mt-3 leading-tight">
-          O que podemos organizar na sua presença digital
-        </h2>
-        <p class="text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
-          A entrega concreta muda conforme o cenário. O objetivo é reunir as informações certas para a pessoa encontrar, entender, confiar e chamar.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {organizamos.map((item) => (
-          <article class="bg-white rounded-2xl border border-nevoa p-5">
-            <h3 class="text-base font-semibold text-petroleo mb-2">{item.titulo}</h3>
-            <p class="text-sm text-gray-500 leading-relaxed">{item.texto}</p>
-          </article>
-        ))}
-      </div>
-    </div>
+  <div class="max-w-6xl mx-auto space-y-14">
 
     <div class="bg-petroleo rounded-2xl p-8 sm:p-10 text-white grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center">
       <div>
-        <span class="text-xs font-medium text-conversao uppercase tracking-widest">Diagnóstico antes da oferta</span>
-        <h2 class="text-3xl font-bold mt-3 leading-tight">
-          Antes de recomendar qualquer coisa, a gente olha o que você já tem.
+        <h2 class="text-3xl font-bold leading-tight">
+          Primeiro, entendemos o que você já tem.
         </h2>
         <div class="text-white/75 mt-5 leading-relaxed space-y-3">
           <p>Você pode não precisar começar do zero.</p>
-          <p>A Marvin analisa como seu negócio aparece e se apresenta hoje, identifica o que já funciona e mostra onde existe espaço para organizar melhor a presença.</p>
+          <p>A Marvin analisa como seu negócio aparece hoje, identifica o que já funciona e mostra onde existe espaço para melhorar.</p>
           <p>Só então recomendamos o próximo passo que faça sentido.</p>
         </div>
       </div>
@@ -96,10 +55,12 @@ const diagnostico = [
 
     <div>
       <div class="text-center mb-12">
-        <span class="text-xs font-medium text-confianca uppercase tracking-widest">Como funciona</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-petroleo mt-3 leading-tight">
-          Simples para você. Organizado por trás.
+        <h2 class="text-3xl sm:text-4xl font-bold text-petroleo leading-tight">
+          Como funciona
         </h2>
+        <p class="text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
+          Você entende o cenário, recebe uma recomendação clara e só avança se fizer sentido.
+        </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
@@ -108,27 +69,6 @@ const diagnostico = [
             <span class="text-4xl font-bold text-gray-200" aria-hidden="true">{passo.numero}</span>
             <h3 class="text-base font-semibold text-petroleo mt-3 mb-2">{passo.titulo}</h3>
             <p class="text-gray-500 text-sm leading-relaxed">{passo.descricao}</p>
-          </article>
-        ))}
-      </div>
-    </div>
-
-    <div>
-      <div class="text-center mb-10">
-        <span class="text-xs font-medium text-orange-700 uppercase tracking-widest">O que analisamos</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-petroleo mt-3 leading-tight">
-          O diagnóstico vira uma recomendação compreensível.
-        </h2>
-        <p class="text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
-          Você recebe os principais pontos encontrados, não uma lista técnica difícil de entender.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {diagnostico.map((item) => (
-          <article class="bg-white rounded-2xl border border-nevoa p-5">
-            <h3 class="text-base font-semibold text-petroleo mb-2">{item.titulo}</h3>
-            <p class="text-sm text-gray-500 leading-relaxed">{item.texto}</p>
           </article>
         ))}
       </div>
