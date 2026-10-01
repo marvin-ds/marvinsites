@@ -12,7 +12,7 @@ export const homeFaqs = [
   {
     pergunta: 'Já tenho site. Vocês vão querer refazer tudo?',
     resposta:
-      'Não. Primeiro analisamos se o site atual funciona bem no celular, explica serviços, mostra localização e prova e facilita o contato. Se estiver bem resolvido, isso faz parte do diagnóstico. Se houver lacunas, mostramos quais são.',
+      'Não. Avaliamos se o site atual funciona bem no celular, explica serviços, mostra localização e prova e facilita o contato. Se estiver bem resolvido, isso faz parte do diagnóstico. Se houver lacunas, mostramos quais são.',
   },
   {
     pergunta: 'Já apareço bem no Google. O que a Marvin faria?',
@@ -32,7 +32,7 @@ export const homeFaqs = [
   {
     pergunta: 'Por que existe mensalidade?',
     resposta:
-      'Porque o trabalho não termina quando a presença é publicada. O cuidado contínuo mantém a parte técnica, suporte e pequenas atualizações previstas no plano. Nos níveis maiores podem entrar acompanhamento, tracking e melhorias.',
+      'Porque o trabalho não termina quando a presença é publicada. O cuidado contínuo mantém a parte técnica, suporte e pequenas atualizações previstas no plano. Nos níveis maiores podem entrar acompanhamento, mensuração e melhorias.',
   },
   {
     pergunta: 'O cuidado é ilimitado?',
@@ -47,12 +47,12 @@ export const homeFaqs = [
   {
     pergunta: 'Já anuncio no Google ou Instagram. A Marvin pode ajudar?',
     resposta:
-      'A presença própria pode complementar campanhas com páginas e caminhos de contato mais coerentes. Tracking, páginas específicas e integrações entram quando fizerem sentido para o plano e o objetivo.',
+      'A presença própria pode complementar campanhas com páginas e caminhos de contato mais coerentes. Páginas específicas, mensuração e integrações entram quando fizerem sentido para o plano e o objetivo.',
   },
   {
     pergunta: 'Preciso de uma página ou de um site maior?',
     resposta:
-      'Não é preciso decidir antes. O diagnóstico serve justamente para entender qual estrutura atende sua necessidade sem criar complexidade desnecessária.',
+      'Não é preciso decidir antes. O diagnóstico serve justamente para entender qual estrutura atende sua necessidade sem contratar mais do que você precisa.',
   },
   {
     pergunta: 'Posso cancelar?',

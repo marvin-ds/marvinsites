@@ -16,6 +16,7 @@
 **G4 — Lead Capture Foundation** ✅ PRODUCTION APPROVED
 **G5 — WhatsApp Attribution** ✅ PRODUCTION APPROVED
 **COM-G1 — Commercial Home Reform** ✅ PRODUCTION APPROVED
+**HOME V3.2 — Final Copy Freeze** ✅ READY_FOR_PRODUCTION
 **DOC-SYNC V2 — Documentation Reconciliation** READY_FOR_REVIEW
 
 ## Branch de produção
@@ -24,11 +25,11 @@
 
 ## Branch de trabalho atual
 
-`docs-marvin-documentation-reconciliation-v2`
+`codex/home-v3-2-final` → `main` após aprovação de produção controlada.
 
 ## Working tree
 
-Limpa.
+Limpa após commit/deploy da Home V3.2.
 
 ## O que está concluído
 

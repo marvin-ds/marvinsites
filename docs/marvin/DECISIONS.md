@@ -394,6 +394,16 @@ fonte canônica do lead.
 
 ---
 
+## D042 — 01/10/2026 — Home V3.2 como copy freeze da home institucional
+
+**Decisão:** A Home Institucional V3.2 é a revisão editorial final da tese aprovada em V3. A partir deste Gate, não haverá V4 subjetiva nem reescrita estrutural da home sem evidência nova.
+
+**Regra editorial:** A home deve reduzir explicação, evitar bastidor defensivo, preservar diagnóstico antes da recomendação e deixar portfólio, processo e CTA trabalharem com mais clareza. Preços de entrada continuam fora da publicidade principal da home; transparência acontece por escopo, investimento e mensalidade apresentados antes da decisão comercial.
+
+**Consequência:** Futuras alterações de copy na home exigem evidência de comportamento real, como dados de tráfego, leads, perguntas recorrentes, mapa de calor, busca interna ou feedback comercial qualificado.
+
+---
+
 ## [SET/2026] Portfólio de nichos — decisão estratégica
 
 **Decisão:** Construir 22 sites demonstrativos organizados por nicho de negócio local, hospedados em `marvinsites.com.br/exemplos/[slug]/`.
