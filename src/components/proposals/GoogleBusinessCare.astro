@@ -1,0 +1,44 @@
+---
+interface Props {
+  title: string;
+  intro: string;
+  implementationItems: string[];
+  monthlyTitle: string;
+  monthlyIntro: string;
+  monthlyItems: string[];
+}
+
+const { title, intro, implementationItems, monthlyTitle, monthlyIntro, monthlyItems } = Astro.props;
+---
+
+<section class="bg-white px-4 py-14 sm:px-6 sm:py-20">
+  <div class="mx-auto max-w-5xl">
+    <div class="rounded-3xl border border-confianca/20 bg-gradient-to-b from-white to-gelo p-6 shadow-sm sm:p-10">
+      <div class="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-confianca">Google e presença local</p>
+          <h2 class="mt-3 text-3xl font-bold leading-tight text-petroleo sm:text-4xl">{title}</h2>
+          <p class="mt-4 text-base leading-relaxed text-grafite/75">{intro}</p>
+        </div>
+
+        <ul class="grid gap-3 text-sm leading-relaxed text-grafite/72 sm:grid-cols-2">
+          {implementationItems.map((item) => (
+            <li class="rounded-2xl border border-nevoa bg-white p-4">{item}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-6 rounded-3xl border border-nevoa bg-petroleo p-6 text-white shadow-2xl shadow-petroleo/15 sm:p-10">
+      <div class="max-w-3xl">
+        <h3 class="text-2xl font-bold leading-tight sm:text-3xl">{monthlyTitle}</h3>
+        <p class="mt-4 text-base leading-relaxed text-white/76">{monthlyIntro}</p>
+      </div>
+      <ul class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {monthlyItems.map((item) => (
+          <li class="rounded-2xl border border-white/10 bg-white/[0.08] p-4 text-sm leading-relaxed text-white/78">{item}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

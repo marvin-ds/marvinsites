@@ -2,6 +2,43 @@
 
 ---
 
+## [Proposal Pages V1] — 01/10/2026 — Propostas comerciais reutilizáveis
+
+### Site
+- Criada rota estática `/propostas/[slug]/`.
+- Criada primeira proposta real para Dr. Gilvan Salvadori Ferro, odontologia em Santos/SP.
+- Proposta estruturada como continuidade comercial do diagnóstico: recomendação, escopo, implantação, Google, cuidado contínuo, Fair Use, investimento e CTA.
+- Mantida a hierarquia comercial: preço somente depois de recomendação, escopo, processo, cuidado contínuo, Google e Fair Use resumido.
+
+### Arquitetura
+- Adicionados componentes reutilizáveis em `src/components/proposals/`.
+- Adicionado modelo de dados em `src/data/proposals/types.ts`.
+- Adicionado arquivo data-driven da proposta em `src/data/proposals/gilvan-salvadori-ferro.ts`.
+- Rota usa `import.meta.glob`, reduzindo a criação de novas propostas principalmente a novos arquivos de dados.
+
+### Privacidade e tracking
+- Propostas usam `noindex,nofollow,noarchive`.
+- `/propostas/` bloqueado em `robots.txt`.
+- Propostas permanecem fora do sitemap manual.
+- Open Graph permanece genérico, sem nome do lead e sem preço.
+- Eventos `proposal_view`, `proposal_primary_cta_click` e `proposal_secondary_cta_click` adicionados sem PII.
+
+### Documentação
+- Criado `docs/marvin/client-operations/PROPOSAL_PAGES.md`.
+- Registrada decisão D038 em `docs/marvin/DECISIONS.md`.
+
+### Validação
+- `npm run lint`: PASS.
+- `npm run build`: PASS com `PUBLIC_WHATSAPP_NUMBER`.
+- Testes existentes de consentimento, atribuição, lead capture e WhatsApp: PASS.
+- QA visual automatizado em 360, 375, 390, 412, 768 e 1440: sem overflow horizontal e sem erros de console.
+
+### Infraestrutura
+- Produção inalterada.
+- Sem deploy final.
+
+---
+
 ## [DOC-SYNC V2] — 05/09/2026 — Strategic Documentation Reconciliation
 
 ### Documentação

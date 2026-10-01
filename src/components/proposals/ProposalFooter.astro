@@ -1,0 +1,30 @@
+---
+interface Props {
+  leadName: string;
+  proposalDate: string;
+  tagline: string;
+  preparedForLabel: string;
+  contractNote: string;
+}
+
+const { leadName, proposalDate, tagline, preparedForLabel, contractNote } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-nevoa bg-white px-4 py-10 sm:px-6">
+  <div class="mx-auto flex max-w-5xl flex-col gap-5 text-sm text-grafite/65 lg:flex-row lg:items-center lg:justify-between">
+    <div class="flex items-center gap-3">
+      <img src="/diagnosticos/_shared/marvin-logo-circle.png" alt="" class="h-11 w-11 rounded-full object-cover" width="44" height="44" aria-hidden="true" />
+      <div>
+        <p class="font-semibold text-petroleo">Marvin Sites</p>
+        <p>{tagline}</p>
+      </div>
+    </div>
+    <div class="space-y-1 lg:text-right">
+      <p>{preparedForLabel} <span class="font-semibold text-petroleo">{leadName}</span></p>
+      <p>Data da proposta: {proposalDate}</p>
+      <p class="text-xs text-grafite/50">{contractNote}</p>
+      <p class="text-xs text-grafite/45">© {year} Marcos Vinicius · Marvin Sites</p>
+    </div>
+  </div>
+</footer>

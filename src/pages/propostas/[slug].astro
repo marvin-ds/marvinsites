@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProposalHeader from '../../components/proposals/ProposalHeader.astro';
+import ProposalHero from '../../components/proposals/ProposalHero.astro';
+import StartingPoint from '../../components/proposals/StartingPoint.astro';
+import PresenceJourney from '../../components/proposals/PresenceJourney.astro';
+import ProposalScope from '../../components/proposals/ProposalScope.astro';
+import ImplementationCare from '../../components/proposals/ImplementationCare.astro';
+import GoogleBusinessCare from '../../components/proposals/GoogleBusinessCare.astro';
+import DeliveryProcess from '../../components/proposals/DeliveryProcess.astro';
+import ContinuousCare from '../../components/proposals/ContinuousCare.astro';
+import FairUseSummary from '../../components/proposals/FairUseSummary.astro';
+import InvestmentBlock from '../../components/proposals/InvestmentBlock.astro';
+import RiskReduction from '../../components/proposals/RiskReduction.astro';
+import ProposalCTA from '../../components/proposals/ProposalCTA.astro';
+import ProposalFooter from '../../components/proposals/ProposalFooter.astro';
+import type { ProposalPage } from '../../data/proposals/types';
+
+export function getStaticPaths() {
+  const modules = import.meta.glob<ProposalPage>(['../../data/proposals/*.ts', '!../../data/proposals/types.ts'], {
+    eager: true,
+    import: 'default',
+  });
+  const proposals = Object.values(modules);
+
+  return proposals.map((proposal) => ({
+    params: { slug: proposal.slug },
+    props: { proposal },
+  }));
+}
+
+const { proposal } = Astro.props;
+---
+
+<BaseLayout
+  title={proposal.meta.title}
+  description={proposal.meta.description}
+  robots={proposal.meta.robots}
+  ogTitle={proposal.meta.ogTitle}
+  ogDescription={proposal.meta.ogDescription}
+  ogImage={proposal.meta.ogImage}
+  schema={{ '@context': 'https://schema.org', '@type': 'WebPage', name: proposal.meta.ogTitle }}
+>
+  <ProposalHeader leadName={proposal.lead.name} />
+  <main class="bg-gelo">
+    <ProposalHero {...proposal.hero} />
+    <StartingPoint {...proposal.startingPoint} />
+    <PresenceJourney
+      recommendation={proposal.recommendation}
+      journey={proposal.journey}
+      patientJourney={proposal.patientJourney}
+      presenceMap={proposal.presenceMap}
+    />
+    <ProposalScope scopeGroups={proposal.scopeGroups} />
+    <ImplementationCare {...proposal.implementation} />
+    {proposal.googleBusinessCare.enabled && <GoogleBusinessCare {...proposal.googleBusinessCare} />}
+    <DeliveryProcess process={proposal.process} />
+    <ContinuousCare care={proposal.continuousCare} monthlyReason={proposal.monthlyReason} />
+    <FairUseSummary {...proposal.fairUse} />
+    <InvestmentBlock investment={proposal.investment} />
+    <RiskReduction clarity={proposal.clarity} riskReduction={proposal.riskReduction} />
+    <ProposalCTA {...proposal.cta} />
+  </main>
+  <ProposalFooter
+    leadName={proposal.lead.name}
+    proposalDate={proposal.proposalDate}
+    tagline={proposal.footer.tagline}
+    preparedForLabel={proposal.footer.preparedForLabel}
+    contractNote={proposal.footer.contractNote}
+  />
+
+  <script>
+    if (Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({
+        event: 'proposal_view',
+        proposal_type: 'local_presence_professional',
+      });
+    }
+
+    document.querySelectorAll('[data-proposal-cta]').forEach((element) => {
+      element.addEventListener('click', () => {
+        const action = element.getAttribute('data-proposal-cta') === 'secondary'
+          ? 'proposal_secondary_cta_click'
+          : 'proposal_primary_cta_click';
+
+        if (Array.isArray(window.dataLayer)) {
+          window.dataLayer.push({
+            event: action,
+            proposal_type: 'local_presence_professional',
+          });
+        }
+      });
+    });
+  </script>
+</BaseLayout>

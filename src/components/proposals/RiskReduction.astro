@@ -1,0 +1,31 @@
+---
+import type { ProposalPage } from '../../data/proposals/types';
+
+interface Props {
+  clarity: ProposalPage['clarity'];
+  riskReduction: ProposalPage['riskReduction'];
+}
+
+const { clarity, riskReduction } = Astro.props;
+---
+
+<section class="px-4 py-14 sm:px-6 sm:py-20">
+  <div class="mx-auto grid max-w-5xl gap-5 lg:grid-cols-2">
+    <article class="rounded-3xl border border-nevoa bg-white p-6 shadow-sm sm:p-8">
+      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-conversao">Resultados</p>
+      <h2 class="mt-3 text-3xl font-bold leading-tight text-petroleo">{clarity.title}</h2>
+      <div class="mt-4 space-y-3 text-base leading-relaxed text-grafite/74">
+        {clarity.body.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </article>
+
+    <article class="rounded-3xl border border-confianca/20 bg-petroleo p-6 text-white shadow-2xl shadow-petroleo/15 sm:p-8">
+      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-conversao">Redução de risco</p>
+      <h2 class="mt-3 text-3xl font-bold leading-tight">{riskReduction.title}</h2>
+      <p class="mt-5 rounded-2xl bg-white p-5 text-2xl font-bold leading-tight text-petroleo">{riskReduction.highlight}</p>
+      <div class="mt-5 space-y-3 text-base leading-relaxed text-white/74">
+        {riskReduction.body.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </article>
+  </div>
+</section>

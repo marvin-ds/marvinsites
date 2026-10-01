@@ -1,0 +1,39 @@
+---
+interface Props {
+  scopeGroups: {
+    title: string;
+    body: string;
+    items?: string[];
+  }[];
+}
+
+const { scopeGroups } = Astro.props;
+---
+
+<section class="bg-white px-4 py-14 sm:px-6 sm:py-20">
+  <div class="mx-auto max-w-5xl">
+    <div class="max-w-2xl">
+      <p class="text-sm font-semibold uppercase tracking-[0.16em] text-conversao">Estrutura proposta</p>
+      <h2 class="mt-3 text-3xl font-bold text-petroleo sm:text-4xl">Uma estrutura pensada para o seu caso</h2>
+    </div>
+
+    <div class="mt-8 grid gap-4 sm:grid-cols-2">
+      {scopeGroups.map((group) => (
+        <article class="rounded-3xl border border-nevoa bg-gelo p-6">
+          <h3 class="text-xl font-bold text-petroleo">{group.title}</h3>
+          <p class="mt-3 text-base leading-relaxed text-grafite/72">{group.body}</p>
+          {group.items && (
+            <ul class="mt-4 space-y-2 text-sm leading-relaxed text-grafite/70">
+              {group.items.map((item) => (
+                <li class="flex gap-2">
+                  <span class="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-conversao" aria-hidden="true"></span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

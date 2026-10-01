@@ -344,6 +344,20 @@ fonte canônica do lead.
 
 ---
 
+## D038 — 01/10/2026 — Propostas comerciais reutilizáveis como páginas estáticas privadas
+
+**Decisão:** Propostas comerciais individuais da Marvin Sites usam páginas estáticas em `/propostas/[slug]/`, com conteúdo data-driven em `src/data/proposals/` e componentes reutilizáveis em `src/components/proposals/`.
+
+**Privacidade:** Toda proposta individual deve usar `noindex,nofollow,noarchive`, ficar fora do sitemap, fora de menus/listagens públicas e usar slug não trivial com short-id. Open Graph deve permanecer genérico, sem nome do lead e sem preço.
+
+**Escopo V1:** Sem autenticação, CMS, banco de dados, dashboard, gerador automático, checkout, contrato ou assinatura eletrônica. O fluxo comercial termina no WhatsApp e a formalização acontece depois por contrato.
+
+**Tracking:** Eventos permitidos: `proposal_view`, `proposal_primary_cta_click` e `proposal_secondary_cta_click`, sem PII, sem preço individual e sem slug do lead no `dataLayer`.
+
+**Referência operacional:** `docs/marvin/client-operations/PROPOSAL_PAGES.md`.
+
+---
+
 ## [SET/2026] Portfólio de nichos — decisão estratégica
 
 **Decisão:** Construir 22 sites demonstrativos organizados por nicho de negócio local, hospedados em `marvinsites.com.br/exemplos/[slug]/`.
