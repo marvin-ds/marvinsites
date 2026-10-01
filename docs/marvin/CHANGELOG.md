@@ -2,6 +2,26 @@
 
 ---
 
+## [Proposal Pages V1 Positioning] — 01/10/2026 — Valor antes e depois da construcao
+
+### Site
+- Refinada a proposta do Dr. Gilvan para reduzir risco de leitura como "compra de site".
+- Adicionado bloco "O trabalho nao comeca no site" com cinco camadas da entrega.
+- Reposicionada a recomendacao para mostrar presenca digital como produto percebido.
+- Reforcada a justificativa do plano Profissional pelo nivel de responsabilidade, nao por numero de paginas.
+- Adicionado bloco "O que voce esta contratando" antes do investimento.
+- Mensalidade reescrita como responsabilidade continua, nao hospedagem.
+
+### Governanca
+- Registrada decisao D040: valor da proposta existe antes e depois da construcao.
+- Atualizada documentacao operacional com regra de posicionamento e Gate de Percepcao de Valor.
+
+### Infraestrutura
+- Producao inalterada.
+- Sem merge em `main`.
+
+---
+
 ## [Proposal Pages V1 Refinement] — 01/10/2026 — Clareza de escopo e valor recorrente
 
 ### Site

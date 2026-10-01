@@ -2,40 +2,15 @@
 import type { ProposalPage } from '../../data/proposals/types';
 
 interface Props {
-  recommendation: ProposalPage['recommendation'];
-  journey: ProposalPage['journey'];
   patientJourney: ProposalPage['patientJourney'];
   presenceMap: ProposalPage['presenceMap'];
 }
 
-const { recommendation, journey, patientJourney, presenceMap } = Astro.props;
+const { patientJourney, presenceMap } = Astro.props;
 ---
 
 <section class="px-4 py-14 sm:px-6 sm:py-20">
-  <div class="mx-auto max-w-5xl space-y-12">
-    <div class="rounded-3xl border border-nevoa bg-white p-6 shadow-sm sm:p-10">
-      <div class="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
-        <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.16em] text-conversao">O que estamos propondo</p>
-          <h2 class="mt-3 text-3xl font-bold leading-tight text-petroleo sm:text-4xl">{recommendation.title}</h2>
-          <p class="mt-4 text-base leading-relaxed text-grafite/75">{recommendation.intro}</p>
-        </div>
-
-        <div class="grid gap-3 sm:grid-cols-2">
-          {journey.map((item, index) => (
-            <article class="rounded-2xl border border-nevoa bg-gelo p-5">
-              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-confianca">0{index + 1}</p>
-              <h3 class="mt-2 text-lg font-bold text-petroleo">{item.title}</h3>
-            </article>
-          ))}
-        </div>
-      </div>
-
-      <div class="mt-8 grid gap-2 rounded-2xl bg-petroleo p-4 text-center text-sm font-semibold uppercase tracking-[0.12em] text-white sm:grid-cols-4 sm:text-left">
-        {journey.map((item) => <span>{item.title}</span>)}
-      </div>
-    </div>
-
+  <div class="mx-auto max-w-5xl space-y-8">
     <div class="rounded-3xl bg-petroleo p-6 text-white shadow-2xl shadow-petroleo/20 sm:p-10">
       <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div>

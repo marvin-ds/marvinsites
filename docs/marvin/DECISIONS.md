@@ -370,6 +370,18 @@ fonte canônica do lead.
 
 ---
 
+## D040 — 01/10/2026 — Valor da proposta existe antes e depois da construção
+
+**Decisão:** Propostas Marvin não justificam preço pelo esforço de construir páginas. O valor deve ser apresentado como diagnóstico aplicado, organização, execução, integração local e responsabilidade contínua pela presença digital.
+
+**Regra editorial:** A construção técnica é parte da entrega, mas não deve ser o principal argumento de valor. A proposta também não deve atacar IA, templates, ferramentas ou concorrentes.
+
+**Consequência:** Antes do investimento, a proposta deve deixar claro que a Marvin não vende apenas um site: vende organização e cuidado de presença digital dentro do escopo contratado.
+
+**Referência operacional:** `docs/marvin/client-operations/PROPOSAL_PAGES.md`.
+
+---
+
 ## [SET/2026] Portfólio de nichos — decisão estratégica
 
 **Decisão:** Construir 22 sites demonstrativos organizados por nicho de negócio local, hospedados em `marvinsites.com.br/exemplos/[slug]/`.

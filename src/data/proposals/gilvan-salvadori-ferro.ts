@@ -52,9 +52,44 @@ const proposal: ProposalPage = {
     ],
     conclusion: 'A proposta da Marvin não é reconstruir isso. É organizar esses ativos em uma presença própria que represente melhor o seu trabalho.',
   },
+  valuePositioning: {
+    eyebrow: 'ANTES DA CONSTRUÇÃO',
+    title: 'O trabalho não começa no site.',
+    body: [
+      'Não estamos propondo apenas construir um site. Estamos propondo organizar e cuidar da presença digital do Dr. Gilvan.',
+      'Colocar páginas no ar é apenas uma parte do processo. Antes disso, a Marvin entende o que já funciona, organiza tratamentos e define como cada ponto da presença conduz até o contato.',
+    ],
+    highlight: [
+      'O site é uma das peças.',
+      'A presença digital é o conjunto.',
+    ],
+    layers: [
+      {
+        title: 'Diagnóstico',
+        body: 'Entender o que já funciona e qual estrutura faz sentido.',
+      },
+      {
+        title: 'Organização',
+        body: 'Definir tratamentos, prova, localização e contato.',
+      },
+      {
+        title: 'Execução',
+        body: 'Transformar a estrutura em presença própria validada.',
+      },
+      {
+        title: 'Integração local',
+        body: 'Conectar Google, avaliações, localização e WhatsApp.',
+      },
+      {
+        title: 'Cuidado contínuo',
+        body: 'Manter a presença funcionando e acompanhada dentro do plano.',
+      },
+    ],
+    constellation: ['Google', 'tratamentos', 'avaliações', 'consultório', 'WhatsApp', 'presença própria'],
+  },
   recommendation: {
-    title: 'Mais do que um site: uma presença digital própria para o Dr. Gilvan.',
-    intro: 'A proposta reúne tratamentos, experiência, reputação e contato em uma presença clara.',
+    title: 'Não estamos propondo apenas construir um site.',
+    intro: 'Estamos propondo organizar e cuidar da presença digital do Dr. Gilvan. O site será a base própria dessa presença, mas o trabalho inclui estrutura de informação, tratamentos, reputação, Google, contato, publicação e cuidado contínuo.',
   },
   journey: [
     {
@@ -103,57 +138,57 @@ const proposal: ProposalPage = {
   structurePreview: {
     eyebrow: 'ESTRUTURA INICIAL PREVISTA',
     title: 'O que estará organizado na sua presença',
-    intro: 'A estrutura inicial é suficiente para apresentar seus tratamentos, sua atuação profissional, sua reputação e o caminho até o contato.',
+    intro: 'A estrutura inicial materializa tratamentos, reputação e contato.',
     items: [
       {
         title: 'Página principal',
         type: 'page',
-        body: 'Dr. Gilvan Salvadori Ferro — Odontologia em Santos, com apresentação geral, principais tratamentos, confiança, consultório e caminhos de contato.',
+        body: 'Apresentação geral, confiança, consultório e contato.',
       },
       {
         title: 'Implantes dentários',
         type: 'area',
-        body: 'Área dedicada ao tratamento, conforme conteúdo validado no briefing.',
+        body: 'Área dedicada ao tratamento.',
       },
       {
         title: 'Facetas e lentes',
         type: 'area',
-        body: 'Área dedicada para organizar esse grupo de tratamentos em linguagem clara.',
+        body: 'Área dedicada ao grupo de tratamentos.',
       },
       {
         title: 'Odontologia biomimética',
         type: 'section',
-        body: 'Apresentação da abordagem e do diferencial profissional em linguagem compreensível para o paciente.',
+        body: 'Apresentação da abordagem.',
       },
       {
         title: 'Perfil profissional',
         type: 'section',
-        body: 'Experiência, formação, atuação e forma de trabalhar.',
+        body: 'Experiência, formação e forma de trabalhar.',
       },
       {
         title: 'Avaliações e consultório',
         type: 'section',
-        body: 'Prova real, ambiente, localização e informações práticas reunidas.',
+        body: 'Prova real, ambiente e localização.',
       },
       {
         title: 'Contato',
         type: 'section',
-        body: 'WhatsApp e caminhos principais de contato integrados à presença.',
+        body: 'WhatsApp integrado à presença.',
       },
     ],
   },
   patientJourney: {
-    title: 'Seus principais tratamentos também precisam ter espaço próprio para serem compreendidos.',
+    title: 'Tratamentos prioritários precisam ter espaço próprio.',
     steps: [
       'Pessoa chega por pesquisa, indicação, Google ou Instagram',
-      'Encontra uma presença organizada',
+      'Encontra a presença organizada',
       'Entende tratamentos e abordagem',
       'Conhece o Dr. Gilvan',
       'Vê avaliações e consultório',
-      'Decide se deseja entrar em contato',
+      'Decide se quer entrar em contato',
       'WhatsApp',
     ],
-    body: 'A estrutura será preparada para que implantes, facetas e lentes tenham apresentação própria para quem chega por pesquisas, indicação, Google, Instagram ou outros canais.',
+    body: 'Implantes, facetas e lentes terão apresentação própria para quem chega por pesquisas, indicação, Google, Instagram ou outros canais.',
     note: 'Não existe promessa de posição específica no Google ou quantidade de contatos.',
   },
   presenceMap: {
@@ -176,7 +211,7 @@ const proposal: ProposalPage = {
     items: [
       {
         title: 'Estrutura',
-        body: 'Organização das informações e definição das páginas necessárias.',
+        body: 'Organização das informações e definição da presença necessária.',
       },
       {
         title: 'Conteúdo',
@@ -214,10 +249,8 @@ const proposal: ProposalPage = {
     intro: 'Na implantação, a Marvin revisa as informações principais do Perfil da Empresa e conecta o novo endereço quando a presença for publicada.',
     implementationItems: [
       'revisão das informações principais',
-      'cadastro do novo site quando publicado',
-      'revisão de categoria, endereço, telefone, horários, descrição, serviços e links disponíveis',
-      'alinhamento das informações entre Google, presença própria e Instagram',
-      'correções simples identificadas, quando possível',
+      'conexão do novo endereço',
+      'alinhamento entre Google, presença própria e WhatsApp',
     ],
     monthlyTitle: 'Limites claros para o cuidado com Google',
     monthlyIntro: 'O acompanhamento cobre informações principais e pequenos ajustes previstos no plano.',
@@ -229,13 +262,11 @@ const proposal: ProposalPage = {
     ],
     scopeNote: {
       title: 'O que fica fora deste escopo',
-      body: 'Produção recorrente de conteúdo, campanhas, respostas em escala a avaliações, SEO avançado, monitoramento de ranking e ações extraordinárias no Perfil da Empresa são avaliados separadamente.',
+      body: 'Conteúdo recorrente, campanhas, respostas em escala, SEO avançado, ranking e ações extraordinárias são avaliados separadamente.',
       exclusions: [
         'campanhas de mídia ou anúncios',
         'postagens recorrentes',
         'produção de fotos',
-        'respostas em escala a avaliações',
-        'monitoramento de posição no Google',
       ],
     },
   },
@@ -243,9 +274,9 @@ const proposal: ProposalPage = {
     eyebrow: 'POR QUE ESTA RECOMENDAÇÃO',
     title: 'Por que recomendamos o Presença Local Profissional para o seu caso',
     body: [
-      'Um nível de entrada seria suficiente para uma presença mais simples.',
-      'No seu caso, o diagnóstico mostrou mais de um tratamento prioritário, reputação já construída no Google, informações profissionais a organizar e pontos da presença que precisam continuar acompanhados depois da publicação.',
-      'Por isso, a recomendação é o nível Profissional.',
+      'Um nível de entrada poderia resolver uma presença mais simples.',
+      'No seu caso, encontramos mais de um tratamento prioritário, reputação forte já construída, informações profissionais que precisam ser organizadas, presença própria conectada ao Google e acompanhamento depois da publicação.',
+      'Por isso, o nível Profissional é o que melhor representa o escopo recomendado.',
     ],
     reasons: [
       'mais de um tratamento prioritário',
@@ -253,7 +284,7 @@ const proposal: ProposalPage = {
       'prova e consultório a organizar',
       'acompanhamento contínuo depois da publicação',
     ],
-    highlight: 'Não estamos acrescentando complexidade por acrescentar. Estamos propondo a estrutura necessária para o que encontramos no diagnóstico.',
+    highlight: 'A recomendação não nasce do número de páginas. Nasce do nível de responsabilidade necessário para organizar e cuidar da presença.',
   },
   clientResponsibilities: {
     title: 'Seu papel é simples',
@@ -286,8 +317,8 @@ const proposal: ProposalPage = {
     },
     {
       step: 3,
-      title: 'Produção',
-      body: 'A Marvin organiza conteúdo, estrutura e design.',
+      title: 'Implantação',
+      body: 'A Marvin organiza conteúdo, presença própria e conexão local.',
     },
     {
       step: 4,
@@ -373,12 +404,12 @@ const proposal: ProposalPage = {
   monthlyResponsibility: {
     eyebrow: 'CUIDADO CONTÍNUO',
     title: 'O que os R$297 mantêm sob responsabilidade da Marvin',
-    subtitle: 'Você não precisa administrar a presença depois que ela for publicada.',
+    subtitle: 'A mensalidade não é para “ficar hospedado”: ela mantém a Marvin responsável por parte da presença depois da publicação.',
     price: 'R$ 297 / mês',
     items: [
       {
         title: 'Presença funcionando',
-        body: 'Hospedagem gerenciada, segurança, acompanhamento técnico, versionamento e correções sob responsabilidade da Marvin.',
+        body: 'Hospedagem gerenciada, segurança, acompanhamento técnico e correções sob responsabilidade da Marvin.',
       },
       {
         title: 'Informações atualizadas',
@@ -386,8 +417,8 @@ const proposal: ProposalPage = {
       },
       {
         title: 'Google conectado à presença',
-        body: 'Acompanhamento das principais informações do Perfil da Empresa, conexão correta com o site e consistência dos pontos sob gestão da Marvin.',
-        examples: ['link do site', 'telefone', 'horários', 'endereço', 'serviços', 'links', 'informações principais'],
+        body: 'Acompanhamento das principais informações do Perfil da Empresa e conexão correta com o site.',
+        examples: ['site', 'telefone', 'horários', 'endereço', 'serviços'],
       },
       {
         title: 'Contato funcionando',
@@ -395,7 +426,7 @@ const proposal: ProposalPage = {
       },
       {
         title: 'Presença acompanhada',
-        body: 'Search Console, Analytics quando aplicável e monitoramento previsto no plano para acompanhar os principais pontos da presença.',
+        body: 'Search Console, Analytics quando aplicável e acompanhamento previsto no plano.',
       },
     ],
     closing: [
@@ -411,6 +442,27 @@ const proposal: ProposalPage = {
     ],
     highlight: 'Nenhum excedente é aplicado silenciosamente.',
   },
+  hiringContext: {
+    title: 'O que você está contratando',
+    beforeTitle: 'Antes da publicação',
+    beforeItems: [
+      'diagnóstico aplicado',
+      'organização da presença',
+      'conteúdo inicial',
+      'estrutura e construção',
+      'configuração',
+      'Preview e aprovação',
+    ],
+    afterTitle: 'Depois da publicação',
+    afterItems: [
+      'cuidado técnico',
+      'pequenas atualizações',
+      'Perfil da Empresa no Google',
+      'acompanhamento',
+      'suporte dentro do plano',
+    ],
+    closing: 'Implantação e cuidado contínuo fazem parte da mesma lógica de presença digital.',
+  },
   investment: {
     eyebrow: 'RECOMENDAÇÃO PARA O SEU CASO',
     title: 'Presença Local Profissional',
@@ -418,7 +470,7 @@ const proposal: ProposalPage = {
     planName: 'Presença Local Profissional',
     setupLabel: 'Implantação',
     setupPrice: 'R$ 1.197',
-    setupDescription: 'Inclui planejamento, estrutura inicial, conteúdo, design, configuração, produção, Preview, ajustes previstos e publicação.',
+    setupDescription: 'Inclui diagnóstico aplicado, organização, estrutura inicial, construção, configuração, Preview, ajustes previstos e publicação.',
     monthlyLabel: 'Cuidado contínuo',
     monthlyPrice: 'R$ 297 / mês',
     monthlyDescription: 'Mantém a presença sob cuidado da Marvin depois da publicação, dentro dos limites e entregas previstos para o plano.',
@@ -437,7 +489,7 @@ const proposal: ProposalPage = {
     body: [
       'Nosso trabalho é organizar e cuidar da sua presença digital.',
       'Não seria correto prometer posição específica no Google, quantidade de pacientes, número de contatos ou faturamento.',
-      'O que podemos assumir é a responsabilidade pelo trabalho contratado: construir uma presença profissional, clara, bem organizada e manter seu cuidado dentro do plano.',
+      'O que podemos assumir é a responsabilidade pelo trabalho contratado: organizar, implementar e cuidar da presença dentro do plano.',
     ],
   },
   riskReduction: {
@@ -453,23 +505,23 @@ const proposal: ProposalPage = {
     items: [
       {
         question: 'O domínio fica em meu nome?',
-        answer: 'Sim. O domínio pertence ao cliente. A Marvin cuida da configuração técnica necessária enquanto o serviço estiver ativo.',
+        answer: 'Sim. O domínio pertence ao cliente. A Marvin cuida da configuração técnica enquanto o serviço estiver ativo.',
       },
       {
         question: 'Se eu cancelar no futuro, perco meu domínio?',
-        answer: 'Não. O domínio não fica preso à Marvin. Encerramento, migração, arquivos, licenciamento e responsabilidades serão definidos no contrato.',
+        answer: 'Não. O domínio não fica preso à Marvin. Encerramento, migração, arquivos e responsabilidades serão definidos no contrato.',
       },
       {
         question: 'Preciso ficar alimentando a presença?',
-        answer: 'Não como rotina técnica. A Marvin executa as pequenas alterações previstas no plano. Quando houver mudanças relevantes, você fornece ou aprova o conteúdo necessário.',
+        answer: 'Não como rotina técnica. A Marvin executa pequenas alterações previstas no plano. Mudanças relevantes são fornecidas ou aprovadas por você.',
       },
       {
         question: 'Vou precisar escrever os textos?',
-        answer: 'Não. A Marvin prepara a comunicação inicial a partir do briefing e dos materiais fornecidos, sempre com sua validação antes da publicação.',
+        answer: 'Não. A Marvin prepara a comunicação inicial com sua validação antes da publicação.',
       },
       {
         question: 'O trabalho inclui anúncios?',
-        answer: 'Não nesta proposta. Campanhas de mídia, quando necessárias, são avaliadas separadamente.',
+        answer: 'Não nesta proposta. Campanhas de mídia são avaliadas separadamente.',
       },
     ],
   },
@@ -477,14 +529,14 @@ const proposal: ProposalPage = {
     eyebrow: 'PRÓXIMO PASSO',
     title: 'Se essa estrutura fizer sentido para você, começamos de forma simples.',
     body: [
-      'Formalizamos o projeto, concluímos a implantação e fazemos um briefing com as informações necessárias.',
+      'Formalizamos o projeto e fazemos um briefing com as informações necessárias.',
       'Depois disso, a Marvin prepara a primeira versão para sua aprovação.',
     ],
     primaryLabel: 'Quero seguir com a proposta',
     primaryMessage: 'Oi, Marcos. Vi a proposta e quero seguir com essa estrutura. Como fazemos o próximo passo?',
     secondaryLabel: 'Quero tirar uma dúvida',
     secondaryMessage: 'Oi, Marcos. Vi a proposta e queria esclarecer uma dúvida antes de seguir.',
-    contractNote: 'Clicar no botão indica interesse comercial. A formalização acontece depois, por contrato.',
+    contractNote: 'Clicar no botão indica interesse comercial. A formalização acontece por contrato.',
   },
   footer: {
     tagline: 'Presença Digital Local · Encontrar. Entender. Confiar. Chamar.',

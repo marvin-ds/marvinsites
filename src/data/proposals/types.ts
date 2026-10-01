@@ -32,6 +32,17 @@ export interface ProposalPage {
     }[];
     conclusion: string;
   };
+  valuePositioning: {
+    eyebrow: string;
+    title: string;
+    body: string[];
+    highlight: string[];
+    layers: {
+      title: string;
+      body: string;
+    }[];
+    constellation: string[];
+  };
   recommendation: {
     title: string;
     intro: string;
@@ -150,6 +161,14 @@ export interface ProposalPage {
     title: string;
     body: string[];
     highlight: string;
+  };
+  hiringContext: {
+    title: string;
+    beforeTitle: string;
+    beforeItems: string[];
+    afterTitle: string;
+    afterItems: string[];
+    closing: string;
   };
   investment: {
     eyebrow: string;

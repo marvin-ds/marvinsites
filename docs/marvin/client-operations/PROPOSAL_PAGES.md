@@ -57,6 +57,12 @@ Uma proposta Marvin nao deve apenas mostrar tudo o que podemos fazer.
 
 Ela deve deixar claro por que aquele escopo especifico e suficiente para aquele caso.
 
+Quanto mais facil fica construir paginas com tecnologia, mais importante fica demonstrar o valor que existe antes e depois da construcao: diagnostico, decisao, organizacao, integracao e responsabilidade continua.
+
+Nunca justificar o preco pelo esforco de construir paginas. Justificar pelo conjunto de diagnostico, organizacao, execucao, integracao e cuidado continuo da presenca digital.
+
+A construcao tecnica e parte da entrega, mas nao deve ser o principal argumento de valor.
+
 Toda proposta deve responder, antes do preco:
 
 - por que esta estrutura;
@@ -126,6 +132,21 @@ Antes de liberar proposta, revisar:
 - [ ] explica o trabalho do cliente;
 - [ ] protege margem;
 - [ ] proximo passo proporcional.
+
+### Gate de percepcao de valor
+
+Antes de liberar proposta, revisar:
+
+- [ ] parece que estamos vendendo apenas um site?
+- [ ] o cliente entende que o trabalho comeca antes da construcao?
+- [ ] o cliente entende que Google, WhatsApp e avaliacoes fazem parte da presenca?
+- [ ] o cliente entende que a implantacao inclui decisao e organizacao?
+- [ ] o cliente entende que a mensalidade representa responsabilidade continua?
+- [ ] a tecnologia esta invisivel?
+- [ ] o preco esta sendo justificado pelo valor, nao por complexidade tecnica?
+- [ ] a proposta evita atacar IA, templates ou concorrentes?
+- [ ] a proposta parece especifica para o caso?
+- [ ] a proposta explica por que aquele plano e adequado?
 
 ## Tracking
 
