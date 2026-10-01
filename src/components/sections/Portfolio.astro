@@ -1,11 +1,36 @@
 ---
-const nichos = [
-  { slug: 'clinicas',    label: 'Clínicas e Consultórios', cor: 'bg-blue-50 text-confianca' },
-  { slug: 'contadores',  label: 'Contadores',              cor: 'bg-orange-50 text-orange-700' },
-  { slug: 'reformas',    label: 'Reformas e Construção',   cor: 'bg-green-50 text-resultado' },
-  { slug: 'estetica',    label: 'Estética e Beleza',       cor: 'bg-pink-50 text-pink-700' },
-  { slug: 'turismo',     label: 'Turismo e Hospedagem',    cor: 'bg-purple-50 text-purple-700' },
-  { slug: 'professores', label: 'Professores e Cursos',    cor: 'bg-yellow-50 text-yellow-700' },
+import Button from '../ui/Button.astro';
+import { gerarLinkWhatsApp, WHATSAPP_NUMERO } from '../../lib/whatsapp';
+
+const exemplos = [
+  {
+    nome: 'Clínica de Estética',
+    descricao: 'Serviços, avaliação, prova visual, localização e agendamento pelo WhatsApp.',
+    href: '/exemplos/clinica-estetica/',
+    imagem: 'https://images.unsplash.com/photo-1552693673-1bf958298935?w=760&q=84&auto=format&fit=crop',
+    alt: 'Referência visual do exemplo demonstrativo para clínica de estética',
+  },
+  {
+    nome: 'Dentista',
+    descricao: 'Tratamentos organizados, confiança profissional e chamada clara para consulta.',
+    href: '/exemplos/consultorio-odontologico/',
+    imagem: 'https://images.unsplash.com/photo-1777331903190-341a3dd0441b?w=880&q=84&auto=format&fit=crop',
+    alt: 'Referência visual do exemplo demonstrativo para consultório odontológico',
+  },
+  {
+    nome: 'Salão de Beleza',
+    descricao: 'Portfólio visual, serviços, faixas de preço e caminho direto para agendamento.',
+    href: '/exemplos/salao-de-beleza/',
+    imagem: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1500&q=86&auto=format&fit=crop',
+    alt: 'Referência visual do exemplo demonstrativo para salão de beleza',
+  },
+  {
+    nome: 'Ar-condicionado',
+    descricao: 'Serviços técnicos, urgência, área de atendimento e orçamento pelo WhatsApp.',
+    href: '/exemplos/ar-condicionado/',
+    imagem: '/exemplos/ar-condicionado/assets/tecnico-instalando-split.png',
+    alt: 'Referência visual do exemplo demonstrativo para empresa de ar-condicionado',
+  },
 ];
 ---
 
@@ -13,31 +38,62 @@ const nichos = [
   <div class="max-w-6xl mx-auto">
 
     <div class="text-center mb-12">
-      <span class="text-xs font-medium text-confianca uppercase tracking-widest">Exemplos</span>
+      <span class="text-xs font-medium text-confianca uppercase tracking-widest">Exemplos demonstrativos</span>
       <h2 class="text-3xl sm:text-4xl font-bold text-petroleo mt-3 leading-tight">
-        Veja como fica para o seu segmento
+        Veja como fica na prática.
       </h2>
-      <p class="text-gray-500 mt-4 max-w-lg mx-auto">
-        Clique no seu segmento e veja como a Marvin estruturaria a presença para esse tipo de negócio.
+      <p class="text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
+        Já estruturamos demonstrações para diferentes tipos de negócio para você não precisar imaginar como uma presença pode ser organizada.
+      </p>
+      <p class="text-sm text-petroleo font-medium mt-3">
+        Cada exemplo é demonstrativo da Marvin Sites e foi pensado para o contexto daquele segmento.
       </p>
     </div>
 
-    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-      {nichos.map((nicho) => (
-        <a
-          href={`/nichos/${nicho.slug}`}
-          class="group bg-white rounded-xl border border-nevoa p-6 flex flex-col items-center text-center hover:border-confianca hover:shadow-md transition-all duration-200"
-        >
-          <div class={`w-12 h-12 rounded-xl ${nicho.cor} flex items-center justify-center mb-3 text-xl`}>
-            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253"/>
-            </svg>
-          </div>
-          <span class="text-sm font-medium text-petroleo group-hover:text-confianca transition-colors">
-            {nicho.label}
-          </span>
-        </a>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {exemplos.map((exemplo) => (
+        <article class="group bg-white rounded-2xl border border-nevoa overflow-hidden hover:border-confianca hover:shadow-lg transition-all duration-200">
+          <a href={exemplo.href} class="block">
+            <div class="aspect-[4/3] bg-gray-100 overflow-hidden">
+              <img
+                src={exemplo.imagem}
+                alt={exemplo.alt}
+                width="760"
+                height="570"
+                loading="lazy"
+                class="h-full w-full object-cover group-hover:scale-[1.03] transition-transform duration-300"
+              />
+            </div>
+            <div class="p-5">
+              <p class="text-xs font-semibold text-confianca uppercase tracking-widest mb-2">Publicado</p>
+              <h3 class="text-lg font-bold text-petroleo">{exemplo.nome}</h3>
+              <p class="text-sm text-gray-500 leading-relaxed mt-2">{exemplo.descricao}</p>
+              <span class="inline-flex items-center gap-1 text-sm font-semibold text-confianca mt-4">
+                Ver exemplo
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </div>
+          </a>
+        </article>
       ))}
+    </div>
+
+    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+      <Button href="/exemplos/" variant="secondary" size="lg">
+        Ver todos os exemplos
+      </Button>
+      <Button
+        href={gerarLinkWhatsApp({ numero: WHATSAPP_NUMERO, mensagem: 'Olá! Meu segmento não está nos exemplos. Quero entender como a Marvin pode organizar minha presença digital.', origem: 'portfolio-home-segmento' })}
+        variant="ghost"
+        size="lg"
+        target="_blank"
+        rel="noopener noreferrer"
+        wppPlacement="plans"
+      >
+        Meu segmento não está aqui
+      </Button>
     </div>
 
   </div>

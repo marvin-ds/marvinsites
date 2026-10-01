@@ -26,7 +26,7 @@ export function schemaLocalBusiness() {
       { '@type': 'City', name: 'São Vicente' },
       { '@type': 'Country', name: 'Brasil' },
     ],
-    priceRange: 'R$399+',
+    priceRange: 'Sob consulta',
     sameAs: [],
   };
 }
