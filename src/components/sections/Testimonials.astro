@@ -1,24 +1,20 @@
 ---
 const processos = [
   {
-    titulo: 'Primeiro analisamos',
-    texto: 'Não partimos da ideia de que você precisa refazer tudo.',
-  },
-  {
-    titulo: 'Você vê antes de publicar',
-    texto: 'A primeira versão passa pela sua aprovação antes de entrar no ar.',
-  },
-  {
     titulo: 'Seu domínio continua sendo seu',
     texto: 'O endereço digital do seu negócio permanece em seu nome.',
   },
   {
-    titulo: 'Escopo claro antes do início',
-    texto: 'Você recebe estrutura, prazo, revisões, limites e condições antes de contratar.',
+    titulo: 'Você aprova antes de publicar',
+    texto: 'A primeira versão passa pela sua aprovação antes de entrar no ar.',
   },
   {
-    titulo: 'O cuidado continua',
-    texto: 'Depois da publicação, a Marvin segue cuidando da presença conforme o plano.',
+    titulo: 'Escopo e valores ficam claros',
+    texto: 'Você recebe estrutura, prazo, revisões, limites, investimento e mensalidade antes de decidir.',
+  },
+  {
+    titulo: 'O cuidado continua depois',
+    texto: 'A Marvin segue cuidando da presença dentro do plano contratado.',
   },
 ];
 ---
@@ -29,14 +25,14 @@ const processos = [
     <div>
       <div class="text-center mb-12">
         <h2 class="text-3xl sm:text-4xl font-bold text-petroleo leading-tight">
-          Um processo claro do diagnóstico à publicação.
+          Antes de contratar, você sabe como funciona.
         </h2>
         <p class="text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
-          Você sabe o que será analisado, o que está sendo recomendado e o que acontece antes e depois da publicação.
+          O trabalho começa com clareza sobre responsabilidades, aprovação, limites e cuidado contínuo.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {processos.map((item) => (
           <article class="bg-gelo rounded-2xl border border-nevoa p-5">
             <h3 class="text-base font-semibold text-petroleo mb-2">{item.titulo}</h3>

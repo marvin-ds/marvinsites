@@ -4,38 +4,38 @@ import { gerarLinkWhatsApp, WHATSAPP_NUMERO } from '../../lib/whatsapp';
 
 const solucoes = [
   {
-    nome: 'Presença Essencial',
+    nome: 'Presença Local',
     descricao: 'Para negócios que precisam organizar o essencial com clareza: serviços, localização, prova e contato.',
     itens: [
       'Presença própria adequada ao negócio',
-      'Serviços e diferenciais explicados com clareza',
-      'Contato e WhatsApp em destaque',
+      'Serviços e diferenciais claros',
+      'WhatsApp e contato em destaque',
       'Informações locais consistentes',
-      'Base inicial para busca local',
+      'Base organizada para Google e busca local',
     ],
     cta: 'Ver se faz sentido para meu negócio',
   },
   {
     nome: 'Presença Profissional',
-    descricao: 'Para clínicas, escritórios, consultorias e negócios que precisam apresentar serviços, especialidades, equipe, diferenciais e autoridade.',
+    descricao: 'Para clínicas, escritórios, consultorias e negócios que precisam apresentar com mais profundidade seus serviços, especialidades, equipe, prova e diferenciais.',
     itens: [
       'Estrutura mais completa de conteúdo',
+      'Organização por serviços ou áreas',
       'Mais espaço para prova e diferenciais',
-      'Organização por serviços ou áreas de atuação',
-      'Preview antes da publicação',
-      'Cuidado contínuo da presença',
+      'Presença adequada a operações mais estruturadas',
+      'Cuidado contínuo conforme o plano',
     ],
     cta: 'Quero uma recomendação',
   },
   {
     nome: 'Crescimento Local',
-    descricao: 'Para operações mais estruturadas que precisam evoluir páginas, campanhas, tracking, mensuração ou novos caminhos de aquisição.',
+    descricao: 'Para operações que já têm uma presença estruturada e precisam evoluir páginas, campanhas, mensuração e melhorias contínuas.',
     itens: [
-      'Páginas por serviço, região ou campanha',
-      'Tracking e mensuração quando aplicável',
-      'Acompanhamento e melhorias contínuas',
-      'Escopo personalizado',
-      'Evolução sem mudança silenciosa de valor',
+      'Páginas específicas para serviços, regiões ou campanhas',
+      'Mensuração e acompanhamento quando aplicável',
+      'Evolução contínua da presença',
+      'Escopo conforme a necessidade da operação',
+      'Novas necessidades avaliadas antes de qualquer mudança de escopo',
     ],
     cta: 'Falar sobre meu cenário',
   },
@@ -63,7 +63,10 @@ const familias = [
           Qual estrutura faz sentido para o seu negócio?
         </h2>
         <p class="text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
-          Você não precisa decidir isso sozinho. O diagnóstico ajuda a indicar uma estrutura suficiente para o momento atual, sem complexidade desnecessária.
+          Você não precisa decidir isso sozinho. O diagnóstico ajuda a indicar uma estrutura adequada ao momento do negócio, sem contratar mais do que você precisa.
+        </p>
+        <p class="text-petroleo mt-4 max-w-3xl mx-auto leading-relaxed font-medium">
+          Da presença local essencial a estruturas mais completas para negócios que já anunciam, possuem equipe ou precisam organizar múltiplos serviços.
         </p>
       </div>
 
@@ -96,16 +99,14 @@ const familias = [
       </div>
 
       <p class="text-center text-sm text-gray-600 mt-8 max-w-2xl mx-auto">
-        Se sua necessidade for mais simples, o diagnóstico também pode indicar uma estrutura de entrada menor.
-        Antes de decidir, você recebe escopo, investimento inicial, valor mensal e limites de forma clara.
+        Se sua necessidade for mais simples, o diagnóstico também pode indicar uma estrutura de entrada menor. Antes de decidir, você recebe escopo, investimento inicial, valor mensal e limites de forma clara.
       </p>
     </div>
 
     <div class="bg-gelo rounded-2xl border border-nevoa p-8 sm:p-10">
       <div class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-8 items-start">
         <div>
-          <span class="text-xs font-medium text-confianca uppercase tracking-widest">Para quem é</span>
-          <h2 class="text-3xl font-bold text-petroleo mt-3 leading-tight">
+          <h2 class="text-3xl font-bold text-petroleo leading-tight">
             Atendemos diferentes tipos de negócio local.
           </h2>
         </div>
@@ -118,9 +119,6 @@ const familias = [
         </div>
       </div>
       <div class="mt-8 flex flex-col sm:flex-row gap-3">
-        <Button href="#exemplos" variant="secondary">
-          Ver exemplos
-        </Button>
         <Button
           href={gerarLinkWhatsApp({ numero: WHATSAPP_NUMERO, mensagem: 'Olá! Meu segmento não está nos exemplos. Quero avaliar minha presença digital com a Marvin.', origem: 'segmento-nao-listado' })}
           variant="ghost"
