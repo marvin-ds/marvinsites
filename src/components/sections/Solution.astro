@@ -1,66 +1,135 @@
 ---
+import Button from '../ui/Button.astro';
+
+const organizamos = [
+  { titulo: 'Presença própria', texto: 'Página ou site adequado à necessidade real do negócio.' },
+  { titulo: 'Serviços', texto: 'O que você faz explicado de forma clara para quem ainda não conhece a empresa.' },
+  { titulo: 'Google', texto: 'Informações coerentes e Perfil da Empresa revisado quando fizer parte do escopo.' },
+  { titulo: 'Prova', texto: 'Avaliações, fotos, equipe, experiência, portfólio e diferenciais verdadeiros.' },
+  { titulo: 'Localização e região', texto: 'Onde sua empresa está, onde atende e quais canais devem ser usados.' },
+  { titulo: 'Contato', texto: 'WhatsApp, telefone, formulário, rota ou agendamento conforme o negócio.' },
+  { titulo: 'Base para busca local', texto: 'Estrutura inicial para ajudar mecanismos de busca a compreender serviços, empresa e região.' },
+  { titulo: 'Medição e evolução', texto: 'Nos escopos adequados, Search Console, Analytics, tracking, páginas adicionais e outras melhorias.' },
+];
+
 const passos = [
   {
     numero: '01',
-    titulo: 'Diagnóstico gratuito',
-    descricao: 'Analisamos sua presença digital atual e mostramos os principais pontos que podem estar dificultando confiança e contato — sem compromisso. Diagnóstico entregue em até 24 horas.',
+    titulo: 'Diagnóstico da presença atual',
+    descricao: 'Avaliamos os principais pontos da sua presença: Google, site quando existir, informações, serviços, prova, localização e caminho até o contato.',
   },
   {
     numero: '02',
-    titulo: 'Página pronta em 7 dias',
-    descricao: 'Criamos uma página clara, profissional e conectada ao seu WhatsApp. Você só precisa nos enviar as informações do negócio.',
+    titulo: 'Recomendação clara',
+    descricao: 'Mostramos o que já está funcionando, onde existe oportunidade e qual estrutura faz sentido, sem propor algo maior apenas para aumentar o projeto.',
   },
   {
     numero: '03',
-    titulo: 'Manutenção mensal inclusa',
-    descricao: 'Pequenas alterações e suporte dentro do seu plano. Você foca no negócio, a gente cuida da presença digital.',
+    titulo: 'Produção e Preview',
+    descricao: 'Se você decidir seguir, organizamos conteúdo, estrutura e presença e apresentamos uma primeira versão para sua revisão.',
+  },
+  {
+    numero: '04',
+    titulo: 'Sua aprovação',
+    descricao: 'Você vê o resultado antes da publicação e solicita os ajustes previstos no escopo.',
+  },
+  {
+    numero: '05',
+    titulo: 'Publicação e cuidado contínuo',
+    descricao: 'Depois de aprovada, publicamos e seguimos cuidando da presença dentro do plano contratado.',
   },
 ];
 
-const diferenciais = [
-  'Domínio no seu nome',
-  'Abre rápido no celular',
-  'Botão de WhatsApp sempre visível',
-  'Seus serviços explicados com clareza',
-  'Localização e horário de funcionamento',
-  'SEO local inicial para ajudar o Google a entender seus serviços e região',
+const diagnostico = [
+  { titulo: 'Google', texto: 'Como o negócio aparece e quais informações importantes estão disponíveis.' },
+  { titulo: 'Presença própria', texto: 'Se existe e se explica adequadamente empresa, serviços, região e diferenciais.' },
+  { titulo: 'Confiança', texto: 'Avaliações, fotos, experiência, prova e consistência disponíveis.' },
+  { titulo: 'Contato', texto: 'Quão simples é chegar ao WhatsApp ou próximo passo.' },
+  { titulo: 'Consistência', texto: 'Se Google, site e demais canais apresentam informações coerentes.' },
+  { titulo: 'Mobile', texto: 'Quando houver site, verificamos a experiência básica pelo celular.' },
 ];
 ---
 
-<section class="bg-gelo py-20 px-4 sm:px-6">
-  <div class="max-w-6xl mx-auto">
+<section id="como-funciona" class="bg-gelo py-20 px-4 sm:px-6">
+  <div class="max-w-6xl mx-auto space-y-16">
 
-    <div class="text-center mb-14">
-      <span class="text-xs font-medium text-confianca uppercase tracking-widest">Como funciona</span>
-      <h2 class="text-3xl sm:text-4xl font-bold text-petroleo mt-3 leading-tight">
-        Simples. Rápido. Sem você precisar aprender tecnologia.
-      </h2>
+    <div>
+      <div class="text-center mb-12">
+        <span class="text-xs font-medium text-confianca uppercase tracking-widest">Presença organizada</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-petroleo mt-3 leading-tight">
+          O que podemos organizar na sua presença digital
+        </h2>
+        <p class="text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
+          A entrega concreta muda conforme o cenário. O objetivo é reunir as informações certas para a pessoa encontrar, entender, confiar e chamar.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {organizamos.map((item) => (
+          <article class="bg-white rounded-2xl border border-nevoa p-5">
+            <h3 class="text-base font-semibold text-petroleo mb-2">{item.titulo}</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">{item.texto}</p>
+          </article>
+        ))}
+      </div>
     </div>
 
-    <!-- 3 passos -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-      {passos.map((passo) => (
-        <div class="bg-white rounded-2xl p-7 border border-nevoa">
-          <span class="text-4xl font-bold text-gray-200" aria-hidden="true">{passo.numero}</span>
-          <h3 class="text-lg font-semibold text-petroleo mt-3 mb-2">{passo.titulo}</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">{passo.descricao}</p>
+    <div class="bg-petroleo rounded-2xl p-8 sm:p-10 text-white grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8 items-center">
+      <div>
+        <span class="text-xs font-medium text-conversao uppercase tracking-widest">Diagnóstico antes da oferta</span>
+        <h2 class="text-3xl font-bold mt-3 leading-tight">
+          Antes de recomendar qualquer coisa, a gente olha o que você já tem.
+        </h2>
+        <div class="text-white/75 mt-5 leading-relaxed space-y-3">
+          <p>Você pode não precisar começar do zero.</p>
+          <p>A Marvin analisa como seu negócio aparece e se apresenta hoje, identifica o que já funciona e mostra onde existe espaço para organizar melhor a presença.</p>
+          <p>Só então recomendamos o próximo passo que faça sentido.</p>
         </div>
-      ))}
+      </div>
+      <div class="flex flex-col gap-3">
+        <Button href="#contato" variant="primary" size="lg" class="whitespace-nowrap">
+          Quero meu diagnóstico
+        </Button>
+        <p class="text-sm text-white/70 text-center">Sem compromisso de contratação</p>
+      </div>
     </div>
 
-    <!-- Diferenciais -->
-    <div class="bg-petroleo rounded-2xl p-8 sm:p-10">
-      <p class="text-white/80 text-xs uppercase font-medium tracking-widest mb-6">O que toda página inclui</p>
+    <div>
+      <div class="text-center mb-12">
+        <span class="text-xs font-medium text-confianca uppercase tracking-widest">Como funciona</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-petroleo mt-3 leading-tight">
+          Simples para você. Organizado por trás.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        {passos.map((passo) => (
+          <article class="bg-white rounded-2xl p-6 border border-nevoa">
+            <span class="text-4xl font-bold text-gray-200" aria-hidden="true">{passo.numero}</span>
+            <h3 class="text-base font-semibold text-petroleo mt-3 mb-2">{passo.titulo}</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">{passo.descricao}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <div class="text-center mb-10">
+        <span class="text-xs font-medium text-orange-700 uppercase tracking-widest">O que analisamos</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-petroleo mt-3 leading-tight">
+          O diagnóstico vira uma recomendação compreensível.
+        </h2>
+        <p class="text-gray-500 mt-4 max-w-2xl mx-auto leading-relaxed">
+          Você recebe os principais pontos encontrados, não uma lista técnica difícil de entender.
+        </p>
+      </div>
+
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {diferenciais.map((item) => (
-          <div class="flex items-center gap-3 text-white text-sm">
-            <div class="w-5 h-5 rounded-full bg-resultado/20 flex items-center justify-center flex-shrink-0">
-              <svg class="w-3 h-3 text-resultado" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-            {item}
-          </div>
+        {diagnostico.map((item) => (
+          <article class="bg-white rounded-2xl border border-nevoa p-5">
+            <h3 class="text-base font-semibold text-petroleo mb-2">{item.titulo}</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">{item.texto}</p>
+          </article>
         ))}
       </div>
     </div>

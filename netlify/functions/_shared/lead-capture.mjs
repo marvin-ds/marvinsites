@@ -9,14 +9,21 @@ const URL_LIMIT = 512;
 const TEXT_LIMIT = 500;
 const SEGMENTS = new Set([
   'Clínica / Consultório',
+  'Saúde, estética e bem-estar',
   'Contador / Consultoria',
+  'Contabilidade, Consultorias e B2B',
   'Reforma / Construção',
+  'Construção, Reformas e Manutenção',
   'Estética / Beleza',
   'Professor / Curso',
+  'Educação / Cursos',
   'Turismo / Hospedagem',
   'Restaurante / Delivery',
+  'Alimentação',
   'Imobiliária / Corretor',
+  'Imobiliário',
   'Serviços automotivos',
+  'Serviços técnicos locais',
   'Outro',
 ]);
 const CONSENT_VALUES = new Set(['granted', 'denied']);

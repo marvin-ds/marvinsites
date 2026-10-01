@@ -21,7 +21,7 @@ export const WHATSAPP_NUMERO = import.meta.env.PUBLIC_WHATSAPP_NUMBER ?? '551399
 export const LINKS = {
   hero: gerarLinkWhatsApp({
     numero:   WHATSAPP_NUMERO,
-    mensagem: 'Olá! Quero ver como ficaria meu negócio com um site da Marvin Sites.',
+    mensagem: 'Olá! Quero entender como a Marvin pode organizar a presença digital do meu negócio.',
     origem:   'hero',
   }),
   flutuante: gerarLinkWhatsApp({
