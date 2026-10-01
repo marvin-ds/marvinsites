@@ -4,14 +4,16 @@ import ProposalHeader from '../../components/proposals/ProposalHeader.astro';
 import ProposalHero from '../../components/proposals/ProposalHero.astro';
 import StartingPoint from '../../components/proposals/StartingPoint.astro';
 import PresenceJourney from '../../components/proposals/PresenceJourney.astro';
-import ProposalScope from '../../components/proposals/ProposalScope.astro';
-import ImplementationCare from '../../components/proposals/ImplementationCare.astro';
+import StructurePreview from '../../components/proposals/StructurePreview.astro';
+import RecommendationReason from '../../components/proposals/RecommendationReason.astro';
+import ClientResponsibilities from '../../components/proposals/ClientResponsibilities.astro';
 import GoogleBusinessCare from '../../components/proposals/GoogleBusinessCare.astro';
 import DeliveryProcess from '../../components/proposals/DeliveryProcess.astro';
-import ContinuousCare from '../../components/proposals/ContinuousCare.astro';
-import FairUseSummary from '../../components/proposals/FairUseSummary.astro';
+import MonthlyResponsibility from '../../components/proposals/MonthlyResponsibility.astro';
 import InvestmentBlock from '../../components/proposals/InvestmentBlock.astro';
 import RiskReduction from '../../components/proposals/RiskReduction.astro';
+import ClarityBlock from '../../components/proposals/ClarityBlock.astro';
+import ProposalFAQ from '../../components/proposals/ProposalFAQ.astro';
 import ProposalCTA from '../../components/proposals/ProposalCTA.astro';
 import ProposalFooter from '../../components/proposals/ProposalFooter.astro';
 import type { ProposalPage } from '../../data/proposals/types';
@@ -45,20 +47,22 @@ const { proposal } = Astro.props;
   <main class="bg-gelo">
     <ProposalHero {...proposal.hero} />
     <StartingPoint {...proposal.startingPoint} />
+    <StructurePreview {...proposal.structurePreview} />
     <PresenceJourney
       recommendation={proposal.recommendation}
       journey={proposal.journey}
       patientJourney={proposal.patientJourney}
       presenceMap={proposal.presenceMap}
     />
-    <ProposalScope scopeGroups={proposal.scopeGroups} />
-    <ImplementationCare {...proposal.implementation} />
-    {proposal.googleBusinessCare.enabled && <GoogleBusinessCare {...proposal.googleBusinessCare} />}
+    <RecommendationReason {...proposal.recommendationReason} />
+    <ClientResponsibilities {...proposal.clientResponsibilities} />
     <DeliveryProcess process={proposal.process} />
-    <ContinuousCare care={proposal.continuousCare} monthlyReason={proposal.monthlyReason} />
-    <FairUseSummary {...proposal.fairUse} />
+    <RiskReduction {...proposal.riskReduction} />
+    <MonthlyResponsibility {...proposal.monthlyResponsibility} />
+    {proposal.googleBusinessCare.enabled && <GoogleBusinessCare {...proposal.googleBusinessCare} />}
     <InvestmentBlock investment={proposal.investment} />
-    <RiskReduction clarity={proposal.clarity} riskReduction={proposal.riskReduction} />
+    <ClarityBlock {...proposal.clarity} />
+    <ProposalFAQ {...proposal.faq} />
     <ProposalCTA {...proposal.cta} />
   </main>
   <ProposalFooter

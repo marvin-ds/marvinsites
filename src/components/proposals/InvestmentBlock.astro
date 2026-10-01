@@ -19,15 +19,11 @@ const { investment } = Astro.props;
     <div class="mt-10 grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
       <article class="rounded-3xl border border-nevoa bg-gelo p-6 sm:p-8">
         <p class="text-sm font-semibold uppercase tracking-[0.16em] text-grafite/55">{investment.setupLabel}</p>
-        {investment.commercialCondition?.enabled && (
-          <p class="mt-4 inline-flex rounded-full border border-conversao/25 bg-conversao/10 px-3 py-1 text-sm font-semibold text-orange-700">
-            {investment.commercialCondition.label}
-          </p>
-        )}
         <p class="mt-5 text-5xl font-bold tracking-normal text-petroleo sm:text-6xl">{investment.setupPrice}</p>
         <p class="mt-5 text-base leading-relaxed text-grafite/72">{investment.setupDescription}</p>
         {investment.commercialCondition?.enabled && (
           <p class="mt-5 border-t border-nevoa pt-4 text-sm leading-relaxed text-grafite/62">
+            <span class="font-semibold text-petroleo">{investment.commercialCondition.label}</span>{' '}
             {investment.commercialCondition.note}
           </p>
         )}

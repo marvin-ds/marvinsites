@@ -6,9 +6,14 @@ interface Props {
   monthlyTitle: string;
   monthlyIntro: string;
   monthlyItems: string[];
+  scopeNote?: {
+    title: string;
+    body: string;
+    exclusions: string[];
+  };
 }
 
-const { title, intro, implementationItems, monthlyTitle, monthlyIntro, monthlyItems } = Astro.props;
+const { title, intro, implementationItems, monthlyTitle, monthlyIntro, scopeNote } = Astro.props;
 ---
 
 <section class="bg-white px-4 py-14 sm:px-6 sm:py-20">
@@ -34,11 +39,17 @@ const { title, intro, implementationItems, monthlyTitle, monthlyIntro, monthlyIt
         <h3 class="text-2xl font-bold leading-tight sm:text-3xl">{monthlyTitle}</h3>
         <p class="mt-4 text-base leading-relaxed text-white/76">{monthlyIntro}</p>
       </div>
-      <ul class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        {monthlyItems.map((item) => (
-          <li class="rounded-2xl border border-white/10 bg-white/[0.08] p-4 text-sm leading-relaxed text-white/78">{item}</li>
-        ))}
-      </ul>
+      {scopeNote && (
+        <div class="mt-6 rounded-2xl border border-white/10 bg-white/[0.08] p-5">
+          <h4 class="text-lg font-bold text-white">{scopeNote.title}</h4>
+          <p class="mt-2 text-sm leading-relaxed text-white/72">{scopeNote.body}</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            {scopeNote.exclusions.map((item) => (
+              <span class="rounded-full border border-white/10 px-3 py-1 text-xs font-semibold text-white/64">{item}</span>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   </div>
 </section>

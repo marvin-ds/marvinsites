@@ -46,6 +46,16 @@ export interface ProposalPage {
     body: string;
     items?: string[];
   }[];
+  structurePreview: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    items: {
+      title: string;
+      type?: 'page' | 'section' | 'area';
+      body: string;
+    }[];
+  };
   patientJourney: {
     title: string;
     steps: string[];
@@ -82,6 +92,25 @@ export interface ProposalPage {
     monthlyTitle: string;
     monthlyIntro: string;
     monthlyItems: string[];
+    scopeNote?: {
+      title: string;
+      body: string;
+      exclusions: string[];
+    };
+  };
+  recommendationReason: {
+    eyebrow: string;
+    title: string;
+    body: string[];
+    reasons: string[];
+    highlight: string;
+  };
+  clientResponsibilities: {
+    title: string;
+    highlight: string;
+    body: string;
+    client: string[];
+    closing: string[];
   };
   process: {
     step: number;
@@ -104,6 +133,18 @@ export interface ProposalPage {
     title: string;
     body: string[];
     highlight: string;
+  };
+  monthlyResponsibility: {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+    price: string;
+    items: {
+      title: string;
+      body: string;
+      examples?: string[];
+    }[];
+    closing: string[];
   };
   fairUse: {
     title: string;
@@ -139,6 +180,13 @@ export interface ProposalPage {
     title: string;
     highlight: string;
     body: string[];
+  };
+  faq: {
+    title: string;
+    items: {
+      question: string;
+      answer: string;
+    }[];
   };
   cta: {
     eyebrow: string;

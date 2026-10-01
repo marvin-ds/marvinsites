@@ -2,6 +2,31 @@
 
 ---
 
+## [Proposal Pages V1 Refinement] — 01/10/2026 — Clareza de escopo e valor recorrente
+
+### Site
+- Refinada a proposta do Dr. Gilvan sem alterar rota, plano, preco ou tese comercial.
+- Adicionada estrutura inicial prevista para materializar o que sera organizado.
+- Reescrita a jornada para evitar promessa implicita de descoberta por ranking.
+- Adicionado bloco "Por que recomendamos o Presenca Local Profissional para o seu caso".
+- Adicionado bloco "Seu papel e simples" para explicitar o pouco trabalho exigido do cliente.
+- Movido "Voce ve antes de publicar" para antes do cuidado continuo e do investimento.
+- Centralizada a justificativa dos R$297/mes em um bloco decisivo com cinco responsabilidades mensais.
+- Delimitado o cuidado com Google para evitar escopo implicito.
+- Adicionado FAQ curto sobre dominio, cancelamento, alimentacao da presenca, textos e anuncios.
+- Condicao inaugural ficou mais discreta no bloco de investimento.
+
+### Governanca
+- Registrada decisao D039: propostas devem justificar a suficiencia do escopo.
+- Atualizada documentacao operacional com Validacao por Personas e Gate Persona.
+- Reforcado que pesquisas de mercado/concorrentes sao inteligencia interna e nao copy publica.
+
+### Infraestrutura
+- Producao inalterada.
+- Sem merge em `main`.
+
+---
+
 ## [Proposal Pages V1] — 01/10/2026 — Propostas comerciais reutilizáveis
 
 ### Site

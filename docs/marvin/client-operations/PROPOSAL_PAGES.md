@@ -42,13 +42,31 @@ Obrigatorio:
 3. Definir `slug` com nome legivel e short-id.
 4. Informar lead, segmento e cidade.
 5. Inserir contexto herdado do diagnostico.
-6. Definir recomendacao, escopo, cuidado continuo e Google Business Care.
-7. Definir plano, implantacao, mensalidade e condicao comercial, quando autorizada.
-8. Configurar CTAs de WhatsApp.
-9. Rodar build e testes aplicaveis.
-10. Validar mobile e desktop.
-11. Revisar privacidade, sitemap, noindex, WhatsApp e ausencia de promessas indevidas.
-12. Gerar Preview para revisao comercial.
+6. Definir recomendacao e explicar por que aquele escopo e suficiente para o caso.
+7. Materializar o que entra: estrutura inicial, papel do cliente, cuidado continuo e limites.
+8. Definir plano, implantacao, mensalidade e condicao comercial, quando autorizada.
+9. Configurar CTAs de WhatsApp.
+10. Rodar build e testes aplicaveis.
+11. Validar mobile e desktop.
+12. Revisar privacidade, sitemap, noindex, WhatsApp e ausencia de promessas indevidas.
+13. Gerar Preview para revisao comercial.
+
+## Regra de decisao
+
+Uma proposta Marvin nao deve apenas mostrar tudo o que podemos fazer.
+
+Ela deve deixar claro por que aquele escopo especifico e suficiente para aquele caso.
+
+Toda proposta deve responder, antes do preco:
+
+- por que esta estrutura;
+- o que entra;
+- por que este plano;
+- o que o cliente precisa fornecer;
+- o que a Marvin assume;
+- o que a mensalidade mantem sob responsabilidade da Marvin;
+- o que nao esta incluido;
+- como risco e reduzido antes de publicar.
 
 ## Precos e condicoes
 
@@ -68,6 +86,46 @@ Condicoes especificas devem ficar no arquivo de dados da proposta, em `commercia
 Quando ativo, a copy deve falar de organizacao, acompanhamento, pequenas atualizacoes e consistencia entre Google, presenca propria e WhatsApp.
 
 Nao prometer ranking, topo do Google, quantidade de contatos, gestao diaria, Google Ads, respostas ilimitadas a avaliacoes, producao de fotos ou alteracoes que dependam de aprovacao do Google.
+
+Quando houver cuidado com Google, delimitar de forma visivel:
+
+- informacoes principais;
+- pequenos ajustes previstos no plano;
+- conexao correta com a presenca publicada;
+- itens que exigem avaliacao separada, como campanhas, respostas em escala, postagens recorrentes, producao de fotos, SEO avancado ou monitoramento de ranking.
+
+## Validacao por personas
+
+O Banco de Personas e lente de revisao, nao fonte de fatos sobre o lead.
+
+Use personas para revisar linguagem, clareza, risco percebido, objecoes silenciosas e proporcionalidade do escopo. Nunca use personas para afirmar capacidade financeira, prioridade, comportamento de compra, dores presumidas, urgencia ou fatos individuais.
+
+Persona tambem nao governa preco, Fair Use, limites ou contrato.
+
+### Gate Persona
+
+Antes de liberar proposta, revisar:
+
+- [ ] fala com contexto real;
+- [ ] nao presume faturamento;
+- [ ] nao presume capacidade financeira;
+- [ ] nao presume dor;
+- [ ] traduz tecnologia em beneficio;
+- [ ] reconhece o que ja funciona;
+- [ ] preserva ENCONTRAR -> ENTENDER -> CONFIAR -> CHAMAR;
+- [ ] nao desqualifica Google;
+- [ ] nao desqualifica Instagram;
+- [ ] nao desqualifica indicacao;
+- [ ] nao promete ranking;
+- [ ] nao promete leads;
+- [ ] nao promete vendas;
+- [ ] nao promete faturamento;
+- [ ] mostra o que entra;
+- [ ] mostra o que nao entra;
+- [ ] explica a recorrencia;
+- [ ] explica o trabalho do cliente;
+- [ ] protege margem;
+- [ ] proximo passo proporcional.
 
 ## Tracking
 
@@ -99,8 +157,13 @@ Antes de considerar pronto:
 - Google aparece na implantacao e no cuidado continuo;
 - mensalidade e compreendida antes do preco;
 - investimento aparece depois de recomendacao, escopo, processo, cuidado continuo, Google e Fair Use;
+- proposta explica por que o escopo e suficiente para o caso;
+- proposta materializa o que sera publicado sem prometer quantidade rigida de paginas;
+- proposta explica propriedade de dominio e cancelamento sem inventar regra contratual;
 - nao ha promessa de pacientes, faturamento, ranking ou contatos;
 - Fair Use esta claro sem limites tecnicos publicos;
+- pesquisas de mercado e concorrentes nao aparecem na copy;
+- personas nao aparecem na copy como fatos sobre o lead;
 - CTA nao e aceite contratual;
 - `noindex,nofollow,noarchive` presente;
 - proposta fora do sitemap;

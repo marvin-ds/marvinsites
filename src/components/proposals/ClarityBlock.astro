@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  body: string[];
+}
+
+const { title, body } = Astro.props;
+---
+
+<section class="px-4 py-14 sm:px-6 sm:py-20">
+  <div class="mx-auto max-w-5xl rounded-3xl border border-nevoa bg-white p-6 shadow-sm sm:p-10">
+    <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-conversao">Resultados</p>
+        <h2 class="mt-3 text-3xl font-bold leading-tight text-petroleo sm:text-4xl">{title}</h2>
+      </div>
+      <div class="space-y-3 text-base leading-relaxed text-grafite/75">
+        {body.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </div>
+  </div>
+</section>

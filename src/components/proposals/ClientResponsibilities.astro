@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  highlight: string;
+  body: string;
+  client: string[];
+  closing: string[];
+}
+
+const { title, highlight, body, client, closing } = Astro.props;
+---
+
+<section class="bg-white px-4 py-14 sm:px-6 sm:py-20">
+  <div class="mx-auto max-w-5xl rounded-3xl bg-petroleo p-6 text-white shadow-2xl shadow-petroleo/15 sm:p-10">
+    <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-conversao">Participação do cliente</p>
+        <h2 class="mt-3 text-3xl font-bold leading-tight sm:text-4xl">{title}</h2>
+        <p class="mt-5 rounded-2xl bg-white p-5 text-xl font-bold leading-tight text-petroleo">{highlight}</p>
+        <p class="mt-5 text-base leading-relaxed text-white/74">{body}</p>
+      </div>
+
+      <div class="rounded-3xl border border-white/10 bg-white/[0.08] p-5">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-white/60">Precisamos principalmente de</p>
+        <ul class="mt-5 grid gap-3 sm:grid-cols-2">
+          {client.map((item) => (
+            <li class="rounded-2xl border border-white/10 bg-white/[0.08] p-3 text-sm font-semibold text-white/82">{item}</li>
+          ))}
+        </ul>
+        <div class="mt-6 border-t border-white/10 pt-5">
+          {closing.map((line) => <p class="text-2xl font-bold leading-tight text-white">{line}</p>)}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

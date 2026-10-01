@@ -358,6 +358,18 @@ fonte canônica do lead.
 
 ---
 
+## D039 — 01/10/2026 — Propostas devem justificar suficiência do escopo
+
+**Decisão:** Uma proposta Marvin não deve apenas mostrar tudo o que a Marvin pode fazer. Ela deve deixar claro por que o escopo específico recomendado é suficiente para aquele caso.
+
+**Regra editorial:** Pesquisa de mercado e concorrentes são inteligência interna, não copy pública. Banco de Personas é lente de validação e melhoria, não fonte de fatos sobre o lead.
+
+**Consequência:** Propostas devem explicitar, antes do preço, o que entra, por que o plano foi recomendado, o papel do cliente, o que a mensalidade mantém sob responsabilidade da Marvin, o que não está incluído e como a aprovação antes da publicação reduz risco.
+
+**Referência operacional:** `docs/marvin/client-operations/PROPOSAL_PAGES.md`.
+
+---
+
 ## [SET/2026] Portfólio de nichos — decisão estratégica
 
 **Decisão:** Construir 22 sites demonstrativos organizados por nicho de negócio local, hospedados em `marvinsites.com.br/exemplos/[slug]/`.
