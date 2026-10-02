@@ -1,24 +1,47 @@
-# Marvin Local / SaaS — Documentation Index
+# Marvin Local / SaaS — Documentação Local
 
-LAST_UPDATED: 2026-09-05
+LAST_UPDATED: 2026-10-02
 
-## Canonical Sources
+## Governança corporativa
 
-| Theme | Source |
+O plano corporativo vigente de Marvin Local e Funcionário Digital é governado por `marvin-ops`:
+
+https://github.com/marvin-ds/marvin-ops
+
+Fontes corporativas competentes no DOCS_OWNER:
+
+- D06 — estado atual corporativo;
+- D11 — engenharia e arquitetura transversal;
+- D13 — Marvin Local;
+- D14 — Funcionário Digital;
+- `DECISIONS.md` — decisões formais.
+
+Este diretório preserva documentação técnica e histórica específica do repo `marvin-sites`. Ele não comprova implementação e não redefine roadmap corporativo.
+
+## Documentação local preservada
+
+| Tema | Fonte |
 |---|---|
-| Marvin Local master plan | [MASTER-PLAN.md](MASTER-PLAN.md) |
-| Marvin Local addendum | [MARVIN-LOCAL-ADDENDUM-V1.1.md](MARVIN-LOCAL-ADDENDUM-V1.1.md) |
-| Current SaaS state | [CURRENT.md](CURRENT.md) |
-| SaaS decisions | [DECISIONS.md](DECISIONS.md) |
+| Master plan SaaS histórico/local | [MASTER-PLAN.md](MASTER-PLAN.md) |
+| Estado SaaS local histórico | [CURRENT.md](CURRENT.md) |
+| Decisões SaaS locais históricas | [DECISIONS.md](DECISIONS.md) |
 | Raio-X product spec | [RAIO-X-PRODUCT-SPEC.md](RAIO-X-PRODUCT-SPEC.md) |
 | Radar product spec | [RADAR-PRODUCT-SPEC.md](RADAR-PRODUCT-SPEC.md) |
-| Roadmap | [ROADMAP.md](ROADMAP.md) |
+| Roadmap local | [ROADMAP.md](ROADMAP.md) |
+| API/data/tracking/security specs | `API-SPEC.md`, `DATA-MODEL.md`, `TRACKING-SPEC.md`, `SECURITY-SPEC.md` |
 
-## Current Execution State
+## Arquivo histórico
 
-- Raio-X: NOT STARTED
-- Radar: NOT STARTED
-- Vercel: NOT CREATED
-- `app.marvinsites.com.br`: NOT CONFIGURED
+O antigo addendum Marvin Local foi arquivado em:
 
-Do not treat future SaaS documents as implemented state. `CURRENT.md` and the operations repo remain the source of truth for actual execution status.
+[archive/pre-doc-owner/MARVIN-LOCAL-ADDENDUM-V1.1.md](archive/pre-doc-owner/MARVIN-LOCAL-ADDENDUM-V1.1.md)
+
+Para decisões vigentes, consultar D13 no DOCS_OWNER.
+
+## Estado técnico
+
+- Raio-X: não inferir implementação a partir destes documentos.
+- Radar: não inferir implementação a partir destes documentos.
+- Vercel/app: verificar Git, produção e evidência operacional antes de afirmar estado.
+
+Roadmap/documentação corporativa não comprova implementação.

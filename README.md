@@ -178,11 +178,19 @@ docs: atualiza README
 
 ## Documentação do projeto
 
-A porta de entrada vigente para documentação estratégica, operacional, técnica e histórica é:
+O repositório `marvin-sites` mantém a documentação específica do site institucional e da implementação técnica deste repo.
 
-- `docs/marvin/README.md` — índice documental canônico da Marvin Sites
+A documentação corporativa e de governança da Marvin Sites é mantida em:
 
-Os arquivos `docs/fundacional.md`, `docs/operacional.md` e `docs/arquitetura.md` são históricos e não devem ser usados como fonte atual sem passar pelo índice vigente.
+- https://github.com/marvin-ds/marvin-ops
+
+Entrada local:
+
+- `docs/marvin/README.md` — índice local e ponteiro para o DOCS_OWNER
+
+Roadmap/documentação corporativa não comprova implementação. Para estado técnico do site, verificar este repo e produção.
+
+Os arquivos `docs/fundacional.md`, `docs/operacional.md` e `docs/arquitetura.md` são históricos e não devem ser usados como fonte atual sem passar pelo índice local vigente.
 
 ---
 

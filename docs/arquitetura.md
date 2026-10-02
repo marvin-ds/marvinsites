@@ -1,7 +1,8 @@
 # Marvin Sites — Arquitetura Completa do Site
 
 > **STATUS:** HISTORICAL / SUPERSEDED FOR CLIENT HOSTING ARCHITECTURE.
-> For current client hosting architecture, use `docs/marvin/canonical/ARQUITETURA-NETLIFY-ADDENDUM-V1.1.md`.
+> Corporate engineering governance now lives in `marvin-ops` D11.
+> Use this file only as historical/local implementation context.
 > Netlify is the standard client hosting direction; Atomicat is not standard hosting.
 
 ## Planejamento para build com Claude Code · Netlify via GitHub

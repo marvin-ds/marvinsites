@@ -5,9 +5,13 @@
 **Gate:** COM-G1
 **Data:** 2026-09-03
 
+> **STATUS DOCUMENTAL:** HISTORICAL / LOCAL CONTENT CONTRACT.
+> Precificação, Fair Use e governança comercial corporativa vigentes pertencem ao DOCS_OWNER (`marvin-ops`) D02 e D12.
+> Preserve este arquivo como contexto de implementação do COM-G1 neste repo.
+
 ---
 
-## Decisão de preços canônica
+## Decisão de preços usada no COM-G1
 
 | Estágio | Setup | Mensalidade | Nome do plano |
 |---|---|---|---|
@@ -238,8 +242,8 @@ Manter as 7 perguntas existentes + adicionar:
 
 Content Contract internamente coerente com:
 - docs/fundacional.md ✅
-- docs/marvin/PLANO-MESTRE.md ✅
-- docs/marvin/DECISIONS.md (após D028) ✅
+- docs/marvin/archive/pre-doc-owner/corporate/PLANO-MESTRE.md ✅
+- docs/marvin/archive/pre-doc-owner/corporate/DECISIONS.md (após D028) ✅
 - Sem preços stale ✅
 - Sem Raio-X anunciado ✅
 - Sem prova falsa ✅

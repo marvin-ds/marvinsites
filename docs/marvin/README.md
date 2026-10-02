@@ -1,60 +1,73 @@
-# Marvin Sites — Documentation Index
+# Marvin Sites — Documentação e Governança
 
-LAST_UPDATED: 2026-09-29
+LAST_UPDATED: 2026-10-02
 
-This index points to the current canonical documentation for Marvin Sites.
+## DOCS_OWNER corporativo
 
-## Canonical V2 Documents
+A documentação corporativa e de governança da Marvin Sites é mantida no repositório:
 
-| Theme | Canonical source |
+https://github.com/marvin-ds/marvin-ops
+
+A baseline documental corporativa ativa é o conjunto mantido em `marvin-ops`:
+
+- D01–D18
+- `DECISIONS.md`
+- `CHANGELOG.md`
+
+Para resolver dúvidas:
+
+| Tema | Fonte competente no DOCS_OWNER |
 |---|---|
-| Brand, thesis, principles | [canonical/DOCUMENTO-FUNDACIONAL-MARVIN-SITES-V2.1.md](canonical/DOCUMENTO-FUNDACIONAL-MARVIN-SITES-V2.1.md) |
-| Offer, pricing, acquisition | [canonical/PLANO-MESTRE-COMERCIAL-MARVIN-SITES-V2.1.md](canonical/PLANO-MESTRE-COMERCIAL-MARVIN-SITES-V2.1.md) |
-| Limits and Fair Use | [canonical/CLIENT-PLAN-LIMITS-AND-FAIR-USE-V1.0.md](canonical/CLIENT-PLAN-LIMITS-AND-FAIR-USE-V1.0.md) |
-| Technical roadmap, data, tracking | [canonical/ESPECIFICACAO-TECNICA-ROADMAP-MARVIN-SITES-V2.0.md](canonical/ESPECIFICACAO-TECNICA-ROADMAP-MARVIN-SITES-V2.0.md) |
-| Client hosting addendum | [canonical/ARQUITETURA-NETLIFY-ADDENDUM-V1.1.md](canonical/ARQUITETURA-NETLIFY-ADDENDUM-V1.1.md) |
-| Marvin Starter | [canonical/MARVIN-STARTER-SPEC-V1.0.md](canonical/MARVIN-STARTER-SPEC-V1.0.md) |
-| Strategic governance package | [canonical/PACOTE-GOVERNANCA-ESTRATEGICA-29-09-2026.md](canonical/PACOTE-GOVERNANCA-ESTRATEGICA-29-09-2026.md) |
+| Prevalência documental | D05 |
+| Estado atual corporativo | D06 |
+| Engenharia e arquitetura transversal | D11 |
+| Operação do cliente | D10 |
+| Nichos e verticalização | D15 |
+| Creative System | D16 |
+| Prompts/agentes | D17 |
 
-## Active Strategic Cycle
+Este repositório (`marvin-sites`) mantém somente documentação específica do site institucional e da implementação técnica deste repo. Roadmap/documentação corporativa não comprova implementação. Para estado técnico do site, verificar este repo e produção.
 
-| Theme | Canonical source |
+## Competência do `marvin-sites`
+
+Este repo continua sendo fonte de verdade para:
+
+- código do site institucional;
+- rotas reais, componentes, assets e conteúdo implementado;
+- configuração de build, Netlify e headers específicos do site;
+- integrações efetivamente implementadas neste repo;
+- testes, scripts e runbooks técnicos locais;
+- evidência Git/produção do site institucional.
+
+Este repo não governa corporativamente:
+
+- posicionamento, preços, Fair Use ou estratégia geral;
+- sistema comercial, diagnóstico, Marvin Local ou Funcionário Digital;
+- Creative System, prompts, política documental ou legal corporativo.
+
+## Documentação técnica local preservada
+
+| Tema local | Fonte |
 |---|---|
-| 90D-01 executive growth plan | [canonical/PLANO-EXECUTIVO-90D-01-MARVIN-SITES-V1.0.md](canonical/PLANO-EXECUTIVO-90D-01-MARVIN-SITES-V1.0.md) |
+| Inventário e baseline técnica | [G0-INVENTORY.md](G0-INVENTORY.md) |
+| Deploy e Netlify do site | [DEPLOYMENT-SPEC.md](DEPLOYMENT-SPEC.md) |
+| Dados implementados no site | [DATA-MODEL.md](DATA-MODEL.md) |
+| Tracking/atribuição implementados | [TRACKING-SPEC.md](TRACKING-SPEC.md) |
+| Privacidade local do site | [PRIVACY-SPEC.md](PRIVACY-SPEC.md) |
+| SEO técnico local | [SEO-SPEC.md](SEO-SPEC.md) |
+| Plano de testes local | [TEST-PLAN.md](TEST-PLAN.md) |
+| Lead capture G4 | [G4-LEAD-CAPTURE.md](G4-LEAD-CAPTURE.md) |
+| Attribution G3 | [G3-ATTRIBUTION.md](G3-ATTRIBUTION.md) |
+| Conteúdo COM-G1 | [COM-G1-CONTENT-CONTRACT.md](COM-G1-CONTENT-CONTRACT.md) |
+| Marvin Local / SaaS repo-specific | [../marvin-saas/](../marvin-saas/) |
 
-## Client Operations
+## Histórico arquivado
 
-| Theme | Canonical source |
-|---|---|
-| Provisioning | [client-operations/CLIENT-PROVISIONING-RUNBOOK-V1.0.md](client-operations/CLIENT-PROVISIONING-RUNBOOK-V1.0.md) |
-| DNS | [client-operations/DNS-RUNBOOK-V1.0.md](client-operations/DNS-RUNBOOK-V1.0.md) |
-| Delivery briefing | [client-operations/CLIENT-DELIVERY-BRIEFING-V1.0.md](client-operations/CLIENT-DELIVERY-BRIEFING-V1.0.md) |
-| Offboarding | [client-operations/CLIENT-OFFBOARDING-RUNBOOK-V1.0.md](client-operations/CLIENT-OFFBOARDING-RUNBOOK-V1.0.md) |
+Documentos corporativos antigos que antes viviam neste repo foram preservados em:
 
-## Current State And History
+- [archive/pre-doc-owner/](archive/pre-doc-owner/)
+- [../marvin-saas/archive/pre-doc-owner/](../marvin-saas/archive/pre-doc-owner/)
 
-| Theme | Source |
-|---|---|
-| Current product state | [CURRENT.md](CURRENT.md) |
-| Product decisions | [DECISIONS.md](DECISIONS.md) |
-| Product changelog | [CHANGELOG.md](CHANGELOG.md) |
-| SEO improvement backlog | [SPEC-MELHORIAS-SEO.md](SPEC-MELHORIAS-SEO.md) |
-| SaaS / Marvin Local docs | [../marvin-saas/](../marvin-saas/) |
-| Operational governance | `C:\Projetos\marvin-ops` |
-| Strategic operating system | `C:\Projetos\marvin-ops\docs\STRATEGIC-OPERATING-SYSTEM-MARVIN-SITES-V1.0.md` |
-| 90D-01 operational tracking | `C:\Projetos\marvin-ops\docs\90d-01\README.md` |
-| Documentation precedence | `C:\Projetos\marvin-ops\docs\DOCUMENTATION-PRECEDENCE-MATRIX-V1.1.md` |
-| Assistants / agents / decision policy | `C:\Projetos\marvin-ops\docs\INSTRUCOES-ESTRATEGICAS-CONSELHEIRO-MARVIN-SITES-V2.0.md` |
+Esses arquivos são históricos. Eles não substituem nem competem com o DOCS_OWNER em `marvin-ops`.
 
-## Superseded / Historical Documents
-
-The following documents are preserved for historical continuity and Git traceability. They do not override the current canonical sources above:
-
-- [PLANO-MESTRE.md](PLANO-MESTRE.md) — superseded for offer/pricing by Commercial Master Plan V2.1.
-- [TECH-SPEC.md](TECH-SPEC.md) — superseded for roadmap/tracking/data by Technical Roadmap V2.
-- [ATOMICAT-INTEGRATION.md](ATOMICAT-INTEGRATION.md) — historical/payment research only. Atomicat is not canonical client hosting.
-- [../fundacional.md](../fundacional.md) — historical; superseded for brand/thesis by Documento Fundacional V2.1.
-- [../operacional.md](../operacional.md) — historical; superseded for operational routine by the V2.1 operational document in `marvin-ops`.
-- [../arquitetura.md](../arquitetura.md) — historical; superseded for client hosting by the Netlify Addendum V1.1.
-
-Historical references remain useful for context, but conflict resolution follows the Documentation Precedence Matrix in `marvin-ops/docs/DOCUMENTATION-PRECEDENCE-MATRIX-V1.1.md`.
+Documentos repo-specific não podem redefinir preço, estratégia, arquitetura transversal, claims ou estado corporativo fora de sua competência.
