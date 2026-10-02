@@ -2,7 +2,7 @@
 
 **Atualizar sempre que uma decisão técnica ou estratégica relevante for tomada.**
 
-Numeração: D-MS### (separada dos D### de docs/marvin/DECISIONS.md)
+Numeração: D-MS### (histórica/local; decisões corporativas vigentes vivem no DOCS_OWNER `marvin-ops/DECISIONS.md`)
 
 ---
 

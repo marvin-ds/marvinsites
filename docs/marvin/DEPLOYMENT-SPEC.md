@@ -142,7 +142,7 @@ Configurado em `netlify.toml`:
 
 | Cenário | Arquivos | Resultado esperado |
 |---|---|---|
-| A | `docs/marvin/CURRENT.md` | SKIP (exit 0) |
+| A | `docs/marvin/README.md` | SKIP (exit 0) |
 | B | `supabase/migrations/x.sql` | SKIP (exit 0) |
 | C | `apps/marvin-app/x.ts` | SKIP (exit 0) |
 | D | `src/pages/index.astro` | BUILD (exit 1) |

@@ -9,15 +9,27 @@ Leia este arquivo na íntegra antes de executar qualquer tarefa.
 
 ## Documentação canônica
 
-Toda decisão técnica, estratégica ou de design está documentada em `docs/marvin/`.
-Antes de criar, editar ou deletar qualquer arquivo, verifique se existe documentação
-relevante nessa pasta.
+A documentação corporativa e de governança da Marvin Sites é mantida no repositório
+`marvin-ops`:
+
+```text
+https://github.com/marvin-ds/marvin-ops
+```
+
+Este repositório (`marvin-sites`) mantém a documentação específica do site
+institucional e da implementação técnica deste repo. Antes de criar, editar ou
+deletar qualquer arquivo, consulte primeiro `docs/marvin/README.md` para
+identificar a fonte competente.
 
 Documentos principais:
-- `docs/marvin/TECH-SPEC.md` — especificação técnica geral
-- `docs/marvin/DECISIONS.md` — decisões estratégicas registradas
-- `docs/marvin/CURRENT.md` — status atual e próxima missão
-- `docs/marvin/PORTFOLIO_MARVIN_SITES.md` — portfólio de nichos (ver seção abaixo)
+- `docs/marvin/README.md` — índice local e ponteiro para o DOCS_OWNER
+- `marvin-ops` D05 — prevalência documental
+- `marvin-ops` D06 — estado atual corporativo
+- `marvin-ops` D10 — operação do cliente
+- `marvin-ops` D11 — engenharia e arquitetura transversal
+- `marvin-ops` D15 — nichos e verticalização
+- `marvin-ops` D16 — Creative System
+- `marvin-ops` D17 — prompts/agentes
 
 ---
 
@@ -27,17 +39,22 @@ Documentos principais:
 - Nunca commitar direto em `main` ou `production`
 - Sempre criar branch antes de qualquer mudança
 - Build deve passar antes de qualquer merge
-- Documentar decisões relevantes em `DECISIONS.md`
-- Atualizar `CURRENT.md` ao iniciar e ao concluir cada Gate
+- Decisões corporativas pertencem ao `marvin-ops/DECISIONS.md`
+- Estado corporativo pertence ao `marvin-ops` D06
+- Estado técnico do site deve ser verificado neste repo e em produção
+- Roadmap/documentação corporativa não comprova implementação
 
 ---
 
 ## Portfólio de nichos (`exemplos/`)
 
-Todo arquivo criado, editado ou revisado dentro do diretório `exemplos/` ou qualquer subdiretório dele (`exemplos/[slug]/`) **deve obrigatoriamente seguir** a documentação canônica localizada em:
+Todo arquivo criado, editado ou revisado dentro do diretório `exemplos/` ou qualquer subdiretório dele (`exemplos/[slug]/`) **deve obrigatoriamente seguir** a documentação canônica de portfólio mantida no DOCS_OWNER (`marvin-ops`):
 
 ```text
-docs/marvin/PORTFOLIO_MARVIN_SITES.md
+marvin-ops D15 — Nichos e Verticalização
+marvin-ops D16 — Creative System
+marvin-ops D17 — Biblioteca Mestre de Prompts
+marvin-ops D11 — Engenharia, quando houver regra técnica
 ```
 
 ### Quando esta regra se aplica
@@ -57,7 +74,7 @@ Esta regra se aplica a qualquer tarefa que envolva:
 
 Antes de criar ou editar qualquer arquivo em `exemplos/`, o agente deve:
 
-1. **Ler** `docs/marvin/PORTFOLIO_MARVIN_SITES.md` na íntegra.
+1. **Consultar** o DOCS_OWNER (`marvin-ops`) para D15, D16, D17 e D11.
 2. **Identificar** o nicho sendo trabalhado na tabela da seção 4.
 3. **Confirmar** o slug de URL correto na tabela (ex: `psicologo`, não `psicolog`).
 4. **Usar** a paleta de cores definida na seção 6.2 para o nicho em questão.
@@ -104,7 +121,7 @@ exemplos/
 ### Sequência de trabalho obrigatória ao criar um novo site
 
 ```text
-1. Ler docs/marvin/PORTFOLIO_MARVIN_SITES.md (seções 4, 5, 6, 7, 8, 9)
+1. Consultar `marvin-ops` D15, D16, D17 e D11 conforme competência
 2. Executar prompt de pesquisa de referências (seção 9.1)
 3. Buscar e validar URLs de imagens Unsplash (seção 9.5 + tabela 7.3)
 4. Executar prompt de geração (seção 9.2) com todos os parâmetros preenchidos
@@ -125,7 +142,7 @@ feat(portfolio): adiciona site demonstrativo — [nicho]
 - Fontes: [heading font] + [body font]
 - Checklist seção 10: aprovado
 
-Refs: docs/marvin/PORTFOLIO_MARVIN_SITES.md — Nicho #[número]
+Refs: marvin-ops D15/D16/D17/D11 — Nicho #[número]
 ```
 
 ### Padrão de commit para edições em sites existentes
@@ -136,25 +153,25 @@ fix(portfolio): [descrição da correção] — [nicho]
 [Descrição do que foi corrigido e por quê]
 
 Checklist afetado: [itens do checklist revisados]
-Refs: docs/marvin/PORTFOLIO_MARVIN_SITES.md
+Refs: marvin-ops D15/D16/D17/D11
 ```
 
 ### O que fazer se surgir dúvida durante a execução
 
 Se houver ambiguidade sobre qualquer aspecto técnico, visual ou de conteúdo de um site de portfólio, a ordem de consulta é:
 
-1. `docs/marvin/PORTFOLIO_MARVIN_SITES.md` — documento canônico (fonte primária)
-2. `docs/marvin/DECISIONS.md` — decisões estratégicas registradas
+1. `marvin-ops` D15/D16/D17/D11 — fontes canônicas conforme competência
+2. `marvin-ops/DECISIONS.md` — decisões estratégicas registradas
 3. Documentos no `system prompt` do projeto Marvin Sites (via Project Knowledge)
 4. Perguntar ao usuário antes de prosseguir (nunca adivinhar)
 
-Nunca tomar decisão de design, copy ou estrutura por conta própria sem base na documentação. Em caso de divergência entre documentos, o `PORTFOLIO_MARVIN_SITES.md` tem precedência para tudo relacionado ao portfólio.
+Nunca tomar decisão de design, copy ou estrutura por conta própria sem base na documentação. Em caso de divergência entre documentos, `marvin-ops` D05 define a prevalência documental.
 
 ### Atualizações ao documento de portfólio
 
-Se durante a execução de uma tarefa for identificada necessidade de atualizar o documento canônico (ex: novo nicho, correção de especificação, novo design token), o agente deve:
+Se durante a execução de uma tarefa for identificada necessidade de atualizar documentação canônica corporativa (ex: novo nicho, correção de especificação, novo design token), o agente deve:
 
-1. **Não** modificar o `PORTFOLIO_MARVIN_SITES.md` por conta própria.
+1. **Não** modificar documentos corporativos canônicos por conta própria neste repo.
 2. **Registrar** a necessidade de atualização em um comentário no PR ou na mensagem de commit.
 3. **Aguardar** aprovação do responsável para atualizar o documento.
 

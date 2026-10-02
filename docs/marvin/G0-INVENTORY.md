@@ -440,6 +440,6 @@ Gate 1 pode iniciar após confirmações acima. Branch: `feat/marvin-g1-supabase
 ## Arquivos criados/alterados neste Gate
 
 - `docs/marvin/G0-INVENTORY.md` — este documento (criado)
-- `docs/marvin/CURRENT.md` — atualizado
-- `docs/marvin/DECISIONS.md` — D008 adicionado
-- `docs/marvin/CHANGELOG.md` — registro do Gate 0
+- `docs/marvin/archive/pre-doc-owner/corporate/CURRENT.md` — histórico atualizado no Gate
+- `docs/marvin/archive/pre-doc-owner/corporate/DECISIONS.md` — histórico com D008
+- `docs/marvin/archive/pre-doc-owner/corporate/CHANGELOG.md` — histórico do Gate 0

@@ -1,7 +1,7 @@
 # Marvin Sites — Documento Operacional
 
 > **STATUS:** HISTORICAL / SUPERSEDED FOR OPERATIONAL ROUTINE.
-> For current operational routine, use `C:\Projetos\marvin-ops\docs\DOCUMENTO-OPERACIONAL-MARVIN-SITES-V2.0.md`.
+> Current corporate operational routine is governed by `marvin-ops` D07.
 > Preserve this file as historical context only.
 
 ## Camada de execução: onde começa, quanto por semana, metas e como conduzir a conversa de venda

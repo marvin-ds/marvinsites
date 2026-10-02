@@ -1,7 +1,7 @@
 # **Documento Fundacional — Marvin Sites**
 
 > **STATUS:** HISTORICAL / SUPERSEDED FOR CANONICAL STRATEGY.
-> For current brand, thesis and principles, use `docs/marvin/canonical/DOCUMENTO-FUNDACIONAL-MARVIN-SITES-V2.0.md`.
+> For current brand, thesis and principles, use `marvin-ops` D01.
 > Preserve this file as historical context only.
 
 ## **1\. Visão geral do projeto**
